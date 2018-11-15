@@ -1,7 +1,2 @@
-'use strict';
-
-module.exports = avatar;
-
-function avatar() {
-    // TODO
-}
+module.exports=function(){};
+//# sourceMappingURL=avatar.js.map

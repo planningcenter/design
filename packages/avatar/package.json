@@ -6,6 +6,9 @@
   "homepage": "https://github.com/planningcenter/consent#readme",
   "license": "MIT",
   "main": "lib/avatar.js",
+  "umd:main": "lib/avatar.umd.js",
+  "module": "lib/avatar.mjs",
+  "source": "src/avatar.js",
   "style": "lib/avatar.css",
   "directories": {
     "lib": "lib",
@@ -22,7 +25,9 @@
     "url": "git+https://github.com/planningcenter/consent.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "microbundle",
+    "dev": "microbundle watch"
   },
   "bugs": {
     "url": "https://github.com/planningcenter/consent/issues"
