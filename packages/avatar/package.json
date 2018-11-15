@@ -15,7 +15,8 @@
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "lib",
+    "avatar.css"
   ],
   "publishConfig": {
     "access": "public"
