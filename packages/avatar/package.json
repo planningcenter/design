@@ -8,8 +8,8 @@
   "main": "lib/avatar.js",
   "umd:main": "lib/avatar.umd.js",
   "module": "lib/avatar.mjs",
-  "source": "src/avatar.js",
-  "style": "lib/avatar.css",
+  "source": "avatar.js",
+  "style": "avatar.css",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
