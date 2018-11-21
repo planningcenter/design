@@ -1,9 +1,13 @@
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
 # consent
-Some CSS-based components
+Some CSS-based React components
 
-## Questions
+## Packages
+
+* [Avatar](/packages/avatar)
+
+## Ongoing questions
 
 * can i use a global @scope in the project root?
 * can i use a global public/private key in project root?
