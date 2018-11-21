@@ -2,10 +2,14 @@
   "name": "root",
   "private": true,
   "devDependencies": {
+    "cypress": "^3.1.1",
     "lerna": "^3.4.3",
     "microbundle": "^0.7.0"
   },
   "peerDependencies": {
     "react": "^16.6.3"
+  },
+  "scripts": {
+    "cypress:open": "cypress open"
   }
 }
