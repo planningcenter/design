@@ -2,9 +2,12 @@
 [![Generic badge](https://img.shields.io/badge/maintained%20by-global%20design-green.svg)](https://shields.io/)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
-# consent
+# twain
 
-Some CSS-based React components
+> Never the twain shall meet
+
+Non-configurable, CSS-driven components for React and everything else.
+Design for Planning Center apps.
 
 ## Packages
 
