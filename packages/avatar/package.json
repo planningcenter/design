@@ -31,5 +31,8 @@
   },
   "bugs": {
     "url": "https://github.com/planningcenter/twain/issues"
+  },
+  "peerDependencies": {
+    "react": "^16.6.3"
   }
 }
