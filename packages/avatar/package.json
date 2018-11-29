@@ -1,9 +1,9 @@
 {
-  "name": "@consent/avatar",
+  "name": "@twain/avatar",
   "version": "1.0.0-alpha.5",
   "description": "avatar",
   "author": "Michael Chan <mijoch@gmail.com>",
-  "homepage": "https://github.com/planningcenter/consent#readme",
+  "homepage": "https://github.com/planningcenter/twain#readme",
   "license": "MIT",
   "main": "lib/avatar.js",
   "umd:main": "lib/avatar.umd.js",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/planningcenter/consent.git"
+    "url": "git+https://github.com/planningcenter/twain.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
@@ -31,6 +31,6 @@
     "dev": "microbundle --jsx watch"
   },
   "bugs": {
-    "url": "https://github.com/planningcenter/consent/issues"
+    "url": "https://github.com/planningcenter/twain/issues"
   }
 }

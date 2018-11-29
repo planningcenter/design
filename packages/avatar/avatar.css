@@ -51,7 +51,7 @@
 
 .Avatar--inset_true {
   background-color: white;
-  background-color: var(--consent-avatar-inset-color, white);
+  background-color: var(--twain-avatar-inset-color, white);
 }
 
 /* 2D modifiers */

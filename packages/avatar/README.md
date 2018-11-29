@@ -1,19 +1,19 @@
-# `@consent/avatar`
+# `@twain/avatar`
 
 > A circular image representing one person
 
 ## Usage
 
-`npm -i @consent/avatar`
+`npm -i @twain/avatar`
 
-- [NPM](https://www.npmjs.com/package/@consent/avatar)
-- [UNPKG](http://unpkg.com/@consent/avatar)
+- [NPM](https://www.npmjs.com/package/@twain/avatar)
+- [UNPKG](http://unpkg.com/@twain/avatar)
 
 ### React
 
 ```jsx
-import Avatar from "@consent/avatar";
-import "@consent/avatar.css";
+import Avatar from "@twain/avatar";
+import "@twain/avatar.css";
 
 <Avatar
   src="path/to/avatar.png"
@@ -49,6 +49,6 @@ Insets the component
 
 ```css
 :root {
-  --consent-avatar-inset-color: white;
+  --twain-avatar-inset-color: white;
 }
 ```
