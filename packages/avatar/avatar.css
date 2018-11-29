@@ -33,8 +33,8 @@
   height: 48px;
 }
 .Avatar--size_7 {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
 }
 .Avatar--size_8 {
   width: 64px;
@@ -49,6 +49,7 @@
   height: 112px;
 }
 
+.Avatar--inset,
 .Avatar--inset_true {
   background-color: white;
   background-color: var(--twain-avatar-inset-color, white);
@@ -56,25 +57,35 @@
 
 /* 2D modifiers */
 
-.Avatar--size_3.Avatar--inset_true,
+.Avatar--size_3.Avatar--inset,
+.Avatar--size_3.Avatar--inset_true {
+  padding: 2px;
+}
+.Avatar--size_4.Avatar--inset,
 .Avatar--size_4.Avatar--inset_true {
   padding: 2px;
 }
+.Avatar--size_5.Avatar--inset,
 .Avatar--size_5.Avatar--inset_true {
-  padding: 2.5px;
+  padding: 3px;
 }
+.Avatar--size_6.Avatar--inset,
 .Avatar--size_6.Avatar--inset_true {
   padding: 3px;
 }
+.Avatar--size_7.Avatar--inset,
 .Avatar--size_7.Avatar--inset_true {
-  padding: 3.5px;
+  padding: 4px;
 }
+.Avatar--size_8.Avatar--inset,
 .Avatar--size_8.Avatar--inset_true {
   padding: 4px;
 }
+.Avatar--size_9.Avatar--inset,
 .Avatar--size_9.Avatar--inset_true {
-  padding: 4.5px;
+  padding: 5px;
 }
+.Avatar--size_profile.Avatar--inset,
 .Avatar--size_profile.Avatar--inset_true {
-  padding: 7px;
+  padding: 5px;
 }
