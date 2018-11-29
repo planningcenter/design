@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/planningcenter/twain/issues"
   },
-  "peerDependencies": {
+  "dependencies": {
     "react": "^16.6.3"
   }
 }
