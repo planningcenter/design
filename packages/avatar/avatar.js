@@ -1,10 +1,12 @@
 import React from "react";
 
-export let sizes = [3, 4, 5, 6, 7, 8, 9, "20px", "profile"];
+// Allow a contextual mode? Strict (default) only allows supported values but you can opt out?
 
-export let insetSizes = sizes
-  .filter(size => !["20px"].includes(size))
-  .concat([undefined]);
+// export let sizes = [3, 4, 5, 6, 7, 8, 9, "20px", "profile"];
+
+// export let insetSizes = sizes
+//   .filter(size => !["20px"].includes(size))
+//   .concat([undefined]);
 
 export function Avatar({
   as: As = "span",
@@ -16,7 +18,8 @@ export function Avatar({
   children,
   ...props
 }) {
-  let img = <img src={src} alt={alt} />;
+  let imgProps = { src, alt };
+  let img = <img {...imgProps} />;
 
   return (
     <As
@@ -27,7 +30,9 @@ export function Avatar({
       ].join(" ")}
       {...props}
     >
-      {typeof children === "function" ? children(img) : img}
+      {typeof children === "function"
+        ? children(img, imgProps)
+        : img}
     </As>
   );
 }
