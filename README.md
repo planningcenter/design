@@ -2,20 +2,10 @@
 [![Generic badge](https://img.shields.io/badge/maintained%20by-global%20design-green.svg)](https://shields.io/)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
-# twain
+# design
 
-> Never the twain shall meet
-
-Non-configurable, CSS-driven components for React and everything else.
-Design for Planning Center apps.
+Global Design maintained packages.
 
 ## Packages
 
-- [Avatar](/packages/avatar)
-
-## Ongoing questions
-
-- can i use a global @scope in the project root?
-- can i use a global public/private key in project root?
-- can i use the local lerna?
-- `Object.assign` is used in builds. Do I need to polyfill that or will the app bundler?
+- [@twain/avatar](/twain/avatar)
