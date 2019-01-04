@@ -426,7 +426,7 @@ export class Topbar extends React.Component<
       >
         <AppsMenu
           env={this.props.env}
-          apps={appsMenuFormatter(this.props.apps, this.props.appName)}
+          apps={appsMenuFormatter(this.props.apps)}
           visible={this.state.appsMenuVisible}
           toggle={() =>
             this.setState(({ appsMenuVisible }) => ({
@@ -676,39 +676,38 @@ export class Topbar extends React.Component<
                 className="NotSmallTopbar__connected-people-list"
                 style={{ margin: 0, padding: 0, listStyleType: "none" }}
               >
-                {connectedPeopleMenuFormatter(
-                  this.props.connectedPeople,
-                  this.props.orgName,
-                ).map(({ id, attributes: person }) => (
-                  <HoverableListItem component="li" key={id}>
-                    <a
-                      href={`${pcoUrl(this.props.env)(
-                        "accounts",
-                      )}/link/new?to=${id}&return=${this.props.appName}%2f`}
-                      data-turbolinks={false}
-                      onClick={() => {
-                        this.props.requestClearAppsCache();
-                        this.props.requestClearConnectedPeopleCache();
-                        return;
-                      }}
-                      style={{
-                        marginLeft: "16px",
-                        paddingRight: "16px",
-                        lineHeight: "48px",
-                        display: "block",
-                        color: "#444",
-                        whiteSpace: "nowrap",
-                        borderTop: "1px solid #ddd",
-                        textDecoration: "none",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        ...fontFamily,
-                      }}
-                    >
-                      {person.organization_name}
-                    </a>
-                  </HoverableListItem>
-                ))}
+                {connectedPeopleMenuFormatter(this.props.connectedPeople).map(
+                  ({ id, attributes: person }) => (
+                    <HoverableListItem component="li" key={id}>
+                      <a
+                        href={`${pcoUrl(this.props.env)(
+                          "accounts",
+                        )}/link/new?to=${id}&return=${this.props.appName}%2f`}
+                        data-turbolinks={false}
+                        onClick={() => {
+                          this.props.requestClearAppsCache();
+                          this.props.requestClearConnectedPeopleCache();
+                          return;
+                        }}
+                        style={{
+                          marginLeft: "16px",
+                          paddingRight: "16px",
+                          lineHeight: "48px",
+                          display: "block",
+                          color: "#444",
+                          whiteSpace: "nowrap",
+                          borderTop: "1px solid #ddd",
+                          textDecoration: "none",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                          ...fontFamily,
+                        }}
+                      >
+                        {person.organization_name}
+                      </a>
+                    </HoverableListItem>
+                  ),
+                )}
               </ul>
             </div>
 

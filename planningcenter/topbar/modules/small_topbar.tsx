@@ -120,17 +120,16 @@ export class Topbar extends React.Component<
             this.props.requestAppsFetch();
             this.props.requestConnectedPeopleFetch();
 
-            return this.setState(
-              ({ userMenuVisible }) =>
-                userMenuVisible
-                  ? {
-                      routesMenuVisible: false,
-                      userMenuVisible: false,
-                    }
-                  : {
-                      routesMenuVisible: false,
-                      userMenuVisible: true,
-                    },
+            return this.setState(({ userMenuVisible }) =>
+              userMenuVisible
+                ? {
+                    routesMenuVisible: false,
+                    userMenuVisible: false,
+                  }
+                : {
+                    routesMenuVisible: false,
+                    userMenuVisible: true,
+                  },
             );
           }}
         >
@@ -269,7 +268,7 @@ export class Topbar extends React.Component<
                   }}
                 >
                   <ul style={{ padding: 0, margin: 0 }}>
-                    {appsMenuFormatter(this.props.apps, this.props.appName).map(
+                    {appsMenuFormatter(this.props.apps).map(
                       ({ attributes: { name } }) => (
                         <li
                           key={name}
@@ -343,8 +342,7 @@ export class Topbar extends React.Component<
                       </div>
 
                       <div style={{ ...IEFlex1 }}>
-                        <style
-                        >{`.SmallTopbar__connected-people-list > *:first-child > * { border-top-width: 0 !important }`}</style>
+                        <style>{`.SmallTopbar__connected-people-list > *:first-child > * { border-top-width: 0 !important }`}</style>
                         <ul
                           className="SmallTopbar__connected-people-list"
                           style={{
@@ -357,7 +355,6 @@ export class Topbar extends React.Component<
                         >
                           {connectedPeopleMenuFormatter(
                             this.props.connectedPeople,
-                            this.props.orgName,
                           ).map(({ id, attributes: person }) => (
                             <li key={id}>
                               <a
@@ -481,17 +478,16 @@ export class Topbar extends React.Component<
             lineHeight: "48px",
           }}
           onClick={() =>
-            this.setState(
-              ({ routesMenuVisible }) =>
-                routesMenuVisible
-                  ? {
-                      routesMenuVisible: false,
-                      userMenuVisible: false,
-                    }
-                  : {
-                      routesMenuVisible: true,
-                      userMenuVisible: false,
-                    },
+            this.setState(({ routesMenuVisible }) =>
+              routesMenuVisible
+                ? {
+                    routesMenuVisible: false,
+                    userMenuVisible: false,
+                  }
+                : {
+                    routesMenuVisible: true,
+                    userMenuVisible: false,
+                  },
             )
           }
         >

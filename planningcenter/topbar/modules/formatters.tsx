@@ -12,31 +12,16 @@ const sortByAttribute = (attr: string) => (arr: any[]): any[] =>
     .slice()
     .sort((a, b) => a.attributes[attr].localeCompare(b.attributes[attr]));
 
-const withoutItemContainingAttributeValue = (attr: string) => (
-  value: string,
-) => (arr: any[]): any[] =>
-  arr.reduce(
+export const appsMenuFormatter = (apps: App[]): App[] =>
+  sortByAttribute("name")(apps).reduce(
     (acc, item) =>
-      (item.attributes[attr] || "") === value ||
-      (item.attributes[attr] || "") === "Church Center" ||
-      (item.attributes[attr] || "") === "API"
+      (item.attributes.name || "") === "Church Center" ||
+      (item.attributes.name || "") === "API"
         ? acc
         : acc.concat([item]),
     [],
   );
 
-export const appsMenuFormatter = (
-  apps: App[],
-  excludedAppName: string,
-): App[] =>
-  withoutItemContainingAttributeValue("name")(excludedAppName)(
-    sortByAttribute("name")(apps),
-  );
-
 export const connectedPeopleMenuFormatter = (
   connectedPeople: ConnectedPerson[],
-  excludedOrgName: string,
-): ConnectedPerson[] =>
-  withoutItemContainingAttributeValue("name")(excludedOrgName)(
-    sortByAttribute("organization_name")(connectedPeople),
-  );
+): ConnectedPerson[] => sortByAttribute("organization_name")(connectedPeople);
