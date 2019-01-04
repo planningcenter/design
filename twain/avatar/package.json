@@ -3,7 +3,7 @@
   "version": "1.0.0-alpha.11",
   "description": "avatar",
   "author": "Michael Chan <mijoch@gmail.com>",
-  "homepage": "https://github.com/planningcenter/twain#readme",
+  "homepage": "https://github.com/planningcenter/design#readme",
   "license": "MIT",
   "main": "lib/avatar.js",
   "umd:main": "lib/avatar.umd.js",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/planningcenter/twain.git"
+    "url": "git+https://github.com/planningcenter/design.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
@@ -30,7 +30,7 @@
     "dev": "microbundle --jsx React.createElement --name TwainAvatar watch"
   },
   "bugs": {
-    "url": "https://github.com/planningcenter/twain/issues"
+    "url": "https://github.com/planningcenter/design/issues"
   },
   "peerDependencies": {
     "react": "^16.6.3"
