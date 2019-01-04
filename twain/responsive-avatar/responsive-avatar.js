@@ -1,42 +1,22 @@
 import React from "react";
 import Avatar from "@twain/avatar";
 
-function ResponsiveAvatar({ ...props }) {
-  return <Avatar {...props} />;
-}
-
-export default ResponsiveAvatar;
-
-
-function Thing() {
+function ResponsiveAvatar({ sizeFrom = {}, ...props }) {
   return (
-
-
-    <Avatar
-      size={{ default: 3; md: 3; lg: 5 }}
-      src="src.png"
-      alt="alt text"
-    />
-
     <Avatar
       size={3}
+      className={Object.entries({ md: 4, lg: 5 })
+        .map(
+          ([query, size]) =>
+            `@${query}__Avatar--size_${size}`
+        )
+        .join(" ")
+        .trim()}
       sizeFrom={{ md: 4, lg: 5 }}
       src="src.png"
       alt="alt text"
     />
-
-  )
+  );
 }
 
-// <ResponsiveAvatar
-//   before={ sm: 3, lg: 5 }
-//   src="src.png"
-//   alt="alt text"
-// />
-// 
-// <ResponsiveAvatar
-//   for={ sm: 3, lg: 5 }
-//   src="src.png"
-//   size={4}
-//   alt="alt text"
-// />
+export default ResponsiveAvatar;
