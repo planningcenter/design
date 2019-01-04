@@ -10,7 +10,6 @@ export function StyledRoot({ children, style, ...nativeProps }): JSX.Element {
         position: "relative",
         alignItems: "center",
         color: "white",
-        fontFamily: "Lato",
         WebkitFontSmoothing: "antialiased",
         MozOsxFontSmoothing: "grayscale",
         ...style,

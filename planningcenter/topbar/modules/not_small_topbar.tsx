@@ -809,7 +809,7 @@ export class Route extends React.Component<
           paddingRight: "12px",
           fontSize: "14px",
           color: "white",
-          fontWeight: "bold",
+          fontWeight: 600,
           textDecoration: "none",
           textTransform: "capitalize",
           backgroundColor: getBackgroundColor(),

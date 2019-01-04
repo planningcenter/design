@@ -437,7 +437,7 @@ export class Topbar extends React.Component<
                     <Unbutton
                       style={{
                         color: "white",
-                        fontWeight: "bold",
+                        fontWeight: 600,
                         fontSize: "15px",
                         letterSpacing: "-.05em",
                       }}
@@ -458,7 +458,7 @@ export class Topbar extends React.Component<
                       data-turbolinks={false}
                       style={{
                         color: "white",
-                        fontWeight: "bold",
+                        fontWeight: 600,
                         fontSize: "15px",
                         letterSpacing: "-.05em",
                         textDecoration: "none",
@@ -477,7 +477,7 @@ export class Topbar extends React.Component<
           style={{
             ...IEFlex1,
             textAlign: "center",
-            fontWeight: "bold",
+            fontWeight: 600,
             lineHeight: "48px",
           }}
           onClick={() =>
@@ -519,7 +519,7 @@ export const Route = ({ active, ...props }) => (
       backgroundColor: "#444",
       borderBottom: "1px solid #333",
       color: "#fff",
-      fontWeight: "bold",
+      fontWeight: 600,
       textTransform: "capitalize",
       textDecoration: "none",
       lineHeight: "47px",

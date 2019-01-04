@@ -3,7 +3,7 @@ export const slightBackgroundTransition = {
 };
 
 export const fontFamily = {
-  fontFamily: `"Lato", sans-serif`,
+  fontFamily: `inherit`,
 };
 
 export const IEFlex1 = {
