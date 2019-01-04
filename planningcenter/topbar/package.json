@@ -1,0 +1,40 @@
+{
+  "name": "@planningcenter/topbar",
+  "version": "3.0.1-0",
+  "license": "UNLICENSED",
+  "description": "Planning Center application Topbar",
+  "main": "dist/topbar.js",
+  "umd:main": "dist/topbar.umd.js",
+  "module": "dist/topbar.m.js",
+  "source": "index.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "webpack-dev-server",
+    "test": "jest",
+    "prepublish": "yarn build",
+    "generate-toc": "node ./scripts/generate-toc.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/planningcenter/javascript.git",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "private": false,
+  "dependencies": {
+    "superagent": "^3.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.5",
+    "@types/react-dom": "^16.0.5",
+    "html-webpack-plugin": "^3.0.6",
+    "markdown-toc": "^1.2.0",
+    "react-dom": "^16.3.2",
+    "rollup": "^1.0.1",
+    "rollup-plugin-typescript2": "^0.17.0",
+    "ts-loader": "^4.0.1",
+    "typescript": "^3.0.1",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.0"
+  }
+}
