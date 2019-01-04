@@ -1,0 +1,191 @@
+@media only screen and (min-width: 480px) {
+  .\@xs__Avatar--size_20px {
+    width: 20px;
+    height: 20px;
+  }
+  .\@xs__Avatar--size_3 {
+    width: 24px;
+    height: 24px;
+  }
+  .\@xs__Avatar--size_4 {
+    width: 32px;
+    height: 32px;
+  }
+  .\@xs__Avatar--size_5 {
+    width: 40px;
+    height: 40px;
+  }
+  .\@xs__Avatar--size_6 {
+    width: 48px;
+    height: 48px;
+  }
+  .\@xs__Avatar--size_7 {
+    width: 56px;
+    height: 56px;
+  }
+  .\@xs__Avatar--size_8 {
+    width: 64px;
+    height: 64px;
+  }
+  .\@xs__Avatar--size_9 {
+    width: 72px;
+    height: 72px;
+  }
+  .\@xs__Avatar--size_profile {
+    width: 112px;
+    height: 112px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .\@sm__Avatar--size_20px {
+    width: 20px;
+    height: 20px;
+  }
+  .\@sm__Avatar--size_3 {
+    width: 24px;
+    height: 24px;
+  }
+  .\@sm__Avatar--size_4 {
+    width: 32px;
+    height: 32px;
+  }
+  .\@sm__Avatar--size_5 {
+    width: 40px;
+    height: 40px;
+  }
+  .\@sm__Avatar--size_6 {
+    width: 48px;
+    height: 48px;
+  }
+  .\@sm__Avatar--size_7 {
+    width: 56px;
+    height: 56px;
+  }
+  .\@sm__Avatar--size_8 {
+    width: 64px;
+    height: 64px;
+  }
+  .\@sm__Avatar--size_9 {
+    width: 72px;
+    height: 72px;
+  }
+  .\@sm__Avatar--size_profile {
+    width: 112px;
+    height: 112px;
+  }
+}
+@media only screen and (min-width: 720px) {
+  .\@md__Avatar--size_20px {
+    width: 20px;
+    height: 20px;
+  }
+  .\@md__Avatar--size_3 {
+    width: 24px;
+    height: 24px;
+  }
+  .\@md__Avatar--size_4 {
+    width: 32px;
+    height: 32px;
+  }
+  .\@md__Avatar--size_5 {
+    width: 40px;
+    height: 40px;
+  }
+  .\@md__Avatar--size_6 {
+    width: 48px;
+    height: 48px;
+  }
+  .\@md__Avatar--size_7 {
+    width: 56px;
+    height: 56px;
+  }
+  .\@md__Avatar--size_8 {
+    width: 64px;
+    height: 64px;
+  }
+  .\@md__Avatar--size_9 {
+    width: 72px;
+    height: 72px;
+  }
+  .\@md__Avatar--size_profile {
+    width: 112px;
+    height: 112px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .\@lg__Avatar--size_20px {
+    width: 20px;
+    height: 20px;
+  }
+  .\@lg__Avatar--size_3 {
+    width: 24px;
+    height: 24px;
+  }
+  .\@lg__Avatar--size_4 {
+    width: 32px;
+    height: 32px;
+  }
+  .\@lg__Avatar--size_5 {
+    width: 40px;
+    height: 40px;
+  }
+  .\@lg__Avatar--size_6 {
+    width: 48px;
+    height: 48px;
+  }
+  .\@lg__Avatar--size_7 {
+    width: 56px;
+    height: 56px;
+  }
+  .\@lg__Avatar--size_8 {
+    width: 64px;
+    height: 64px;
+  }
+  .\@lg__Avatar--size_9 {
+    width: 72px;
+    height: 72px;
+  }
+  .\@lg__Avatar--size_profile {
+    width: 112px;
+    height: 112px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .\@xl__Avatar--size_20px {
+    width: 20px;
+    height: 20px;
+  }
+  .\@xl__Avatar--size_3 {
+    width: 24px;
+    height: 24px;
+  }
+  .\@xl__Avatar--size_4 {
+    width: 32px;
+    height: 32px;
+  }
+  .\@xl__Avatar--size_5 {
+    width: 40px;
+    height: 40px;
+  }
+  .\@xl__Avatar--size_6 {
+    width: 48px;
+    height: 48px;
+  }
+  .\@xl__Avatar--size_7 {
+    width: 56px;
+    height: 56px;
+  }
+  .\@xl__Avatar--size_8 {
+    width: 64px;
+    height: 64px;
+  }
+  .\@xl__Avatar--size_9 {
+    width: 72px;
+    height: 72px;
+  }
+  .\@xl__Avatar--size_profile {
+    width: 112px;
+    height: 112px;
+  }
+}

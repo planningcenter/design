@@ -1,0 +1,41 @@
+{
+  "name": "@twain/responsive-avatar",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "homepage": "https://github.com/planningcenter/design#readme",
+  "license": "MIT",
+  "main": "lib/responsive-avatar.js",
+  "umd:main": "lib/responsive-avatar.umd.js",
+  "module": "lib/responsive-avatar.js.mjs",
+  "source": "responsive-avatar.js",
+  "style": "responsive-avatar.css",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib",
+    "responsive-avatar.css"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planningcenter/design.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "microbundle --jsx React.createElement --name TwainResponsiveAvatar",
+    "dev": "microbundle --jsx React.createElement --name TwainResponsiveAvatar watch"
+  },
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  },
+  "dependencies": {
+    "@twain/avatar": "^1.0.0-alpha.11"
+  },
+  "peerDependencies": {
+    "react": "^16.6.3"
+  }
+}
