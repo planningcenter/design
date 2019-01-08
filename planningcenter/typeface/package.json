@@ -1,0 +1,24 @@
+{
+  "name": "@planningcenter/typeface",
+  "version": "0.1.0-alpha.0",
+  "description": "Planning Center Typefaces",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "homepage": "https://github.com/planningcenter/design#readme",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planningcenter/design.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  }
+}
