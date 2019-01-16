@@ -1,6 +1,11 @@
 # `@planningcenter/typeface`
 
 ## Usage
+```
+yarn add @planningcenter/typeface
+```
+
+## Usage
 Setup for Rails Planning Center Rails apps using Sprockets.
 
 ```
