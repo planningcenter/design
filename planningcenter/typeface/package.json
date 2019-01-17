@@ -6,7 +6,8 @@
   "homepage": "https://github.com/planningcenter/design#readme",
   "license": "MIT",
   "files": [
-    "lib"
+    "sans-serif.css",
+    "monospace.css"
   ],
   "publishConfig": {
     "access": "public"
