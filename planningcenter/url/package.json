@@ -1,0 +1,27 @@
+{
+  "name": "@planningcenter/url",
+  "version": "1.0.3-alpha.0",
+  "description": "A dumb url origin generator in JS",
+  "main": "dist/url.js",
+  "umd:main": "dist/url.umd.js",
+  "module": "dist/url.m.js",
+  "source": "index.js",
+  "repository": "https://github.com/planningcenter/design.git",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "license": "UNLICENSED",
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "pretest": "npm run build",
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  },
+  "homepage": "https://github.com/planningcenter/design/blob/master/packages/url/README.md",
+  "private": false
+}
