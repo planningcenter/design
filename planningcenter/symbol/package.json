@@ -1,0 +1,42 @@
+{
+  "name": "@planningcenter/symbol",
+  "version": "2.0.5-alpha.0",
+  "description": "A component for presenting external SVG symbols via file-loader",
+  "main": "dist/symbol.js",
+  "umd:main": "dist/symbol.umd.js",
+  "module": "dist/symbol.m.js",
+  "source": "tmp/symbol.js",
+  "repository": "@planningcenter/javascript",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "babel": "./node_modules/.bin/babel src -d tmp",
+    "build": "npm run -s babel && microbundle",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "browsers": [
+              "defaults"
+            ]
+          }
+        }
+      ]
+    ]
+  }
+}
