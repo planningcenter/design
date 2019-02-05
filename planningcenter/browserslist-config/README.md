@@ -15,3 +15,7 @@ npm i @planningcenter/browserlist-config
   "extends @planningcenter/browserslist-config"
 ]
 ```
+
+### Additional instructions
+
+https://github.com/browserslist/browserslist#shareable-configs
