@@ -1,0 +1,22 @@
+{
+  "name": "@planningcenter/browserslist-config",
+  "version": "1.0.0-alpha.0",
+  "description": "Planning Center browser support codified for Node environments.",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/browserlist-config",
+  "license": "MIT",
+  "main": "browserlist-config.js",
+  "files": [
+    "browserlist-config.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planningcenter/design.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  }
+}
