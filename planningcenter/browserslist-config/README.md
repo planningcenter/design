@@ -5,7 +5,7 @@ Our browser support codified for Node
 ## Installation
 
 ```bash
-npm i @planningcenter/browserlist-config
+npm i @planningcenter/browserslist-config
 ```
 
 ## Usage
