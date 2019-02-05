@@ -1,6 +1,6 @@
 # `browserslist-config`
 
-Our browser support codified for Node environments
+Our browser support codified for Node
 
 ## Installation
 
@@ -16,6 +16,10 @@ npm i @planningcenter/browserlist-config
 ]
 ```
 
-### Additional instructions
+## App configuration
+
+You can use this in your project via [babel-preset-env](https://babeljs.io/docs/en/babel-preset-env#options).
+
+## Additional resources
 
 https://github.com/browserslist/browserslist#shareable-configs
