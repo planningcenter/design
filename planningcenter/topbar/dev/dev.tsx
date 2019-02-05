@@ -473,7 +473,7 @@ ReactDOM.render(
     <SampleTopbar
       userAvatarPath="https://avatars.planningcenteronline.com/uploads/person/5170951-1401820995/avatar.1.jpg"
       userId="1"
-      userName="Juan Valdez"
+      userName="Juan Valdez one two three four five six"
       orgName="National Federation of Coffee National Federation of Coffee National Federation of Coffee"
       platformAnnouncements={staticPlatformAnnouncements}
     />

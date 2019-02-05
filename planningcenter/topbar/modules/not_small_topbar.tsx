@@ -582,13 +582,21 @@ export class Topbar extends React.Component<
                       whiteSpace: "nowrap",
                     }}
                   >
-                    {this.props.userName}
+                    <div
+                      style={{
+                        overflow: "hidden",
+                        whiteSpace: "nowrap",
+                        maxWidth: "13em",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {this.props.userName}
+                    </div>
                   </div>
 
                   {this.props.linkToProfile && (
                     <small
                       style={{
-                        marginLeft: "64px",
                         fontSize: "12px",
                         color: "#666",
                         ...fontFamily,
