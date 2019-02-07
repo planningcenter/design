@@ -578,16 +578,16 @@ export class Topbar extends React.Component<
                     style={{
                       ...IEFlex1,
                       ...fontFamily,
+                      maxWidth: "240px",
+                      marginRight: 8,
                       color: "#444",
-                      whiteSpace: "nowrap",
+                      overflow: "hidden",
                     }}
                   >
                     <div
                       style={{
                         overflow: "hidden",
                         whiteSpace: "nowrap",
-                        maxWidth: "240px",
-                        marginRight: "12px",
                         textOverflow: "ellipsis",
                       }}
                     >
