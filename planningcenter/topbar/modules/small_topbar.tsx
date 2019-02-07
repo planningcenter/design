@@ -330,13 +330,13 @@ export class Topbar extends React.Component<
                         <div
                           style={{
                             fontSize: "15px",
-                            lineHeight: "1em",
+                            lineHeight: "16px",
                             marginBottom: "8px",
                           }}
                         >
                           <strong>{this.props.userName}</strong>
                         </div>
-                        <div style={{ lineHeight: "1em", color: "#444" }}>
+                        <div style={{ lineHeight: "16px", color: "#444" }}>
                           {this.props.orgName}
                         </div>
                       </div>
