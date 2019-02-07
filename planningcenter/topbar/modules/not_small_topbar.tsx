@@ -464,7 +464,7 @@ export class Topbar extends React.Component<
 
         <div
           style={{
-            marginLeft: "1rem",
+            marginLeft: "16px",
             position: "relative",
             whiteSpace: "nowrap",
             cursor: "pointer",
@@ -510,7 +510,7 @@ export class Topbar extends React.Component<
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
-                  maxWidth: "15em",
+                  maxWidth: "240px",
                 }}
               >
                 {this.props.orgName}
@@ -541,7 +541,7 @@ export class Topbar extends React.Component<
               color: "#525252",
               right: 0,
               marginTop: "8px",
-              maxWidth: "20em",
+              maxWidth: "320px",
               ...(this.state.userMenuVisible
                 ? {
                     visibility: "visible",
@@ -578,7 +578,7 @@ export class Topbar extends React.Component<
                     style={{
                       ...IEFlex1,
                       ...fontFamily,
-                      maxWidth: "13em",
+                      maxWidth: "240px",
                       marginRight: 8,
                       color: "#444",
                       overflow: "hidden",
@@ -740,7 +740,7 @@ export class Topbar extends React.Component<
               }}
             >
               <svg
-                style={{ marginRight: ".75em" }}
+                style={{ marginRight: "12px" }}
                 width="12px"
                 height="10px"
                 viewBox="0 0 12 10"
@@ -769,7 +769,7 @@ export class Topbar extends React.Component<
           </Popup>
         </PopupRoot>
 
-        <Unbutton style={{ marginLeft: "1rem" }} id="jsLaunchHelpdesk">
+        <Unbutton style={{ marginLeft: "16px" }} id="jsLaunchHelpdesk">
           <HelpIcon colors={this.props.colors} />
         </Unbutton>
       </StyledRoot>
