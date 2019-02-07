@@ -586,7 +586,8 @@ export class Topbar extends React.Component<
                       style={{
                         overflow: "hidden",
                         whiteSpace: "nowrap",
-                        maxWidth: "13em",
+                        maxWidth: "11.25em",
+                        marginRight: ".5em",
                         textOverflow: "ellipsis",
                       }}
                     >
