@@ -74,16 +74,21 @@ export class PointBreak extends React.Component<
 
 export class DisplaySwitch extends React.Component<
   {
+    smallBreakpoints: String[];
     smallTopbar: (breakpointShorthand: string) => React.ReactElement<any>;
     notSmallTopbar: (breakpointShortand: string) => React.ReactElement<any>;
   },
   {}
 > {
+  public static defaultProps = {
+    smallBreakpoints: ["xs", "sm"],
+  };
+
   render() {
     return (
       <PointBreak
         render={(breakpoint) => {
-          if (["xs", "sm"].indexOf(breakpoint) !== -1) {
+          if (this.props.smallBreakpoints.indexOf(breakpoint) !== -1) {
             return this.props.smallTopbar(breakpoint);
           }
 
