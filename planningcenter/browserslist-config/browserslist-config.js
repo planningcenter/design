@@ -1,8 +1,8 @@
 "use strict";
 
 module.exports = [
-  "last 2 Firefox major version",
-  "last 2 Chrome major version",
+  "last 2 Firefox major versions",
+  "last 2 Chrome major versions",
   "last 2 edge major versions",
   "Explorer 11",
   "ExplorerMobile 11",
