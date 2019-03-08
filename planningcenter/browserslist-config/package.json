@@ -5,9 +5,9 @@
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/browserslist-config",
   "license": "MIT",
-  "main": "browserlist-config.js",
+  "main": "browserslist-config.js",
   "files": [
-    "browserlist-config.js"
+    "browserslist-config.js"
   ],
   "publishConfig": {
     "access": "public"
