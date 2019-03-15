@@ -1,7 +1,7 @@
 import React from "react";
 import classnames from "classnames";
 
-export function unstable_classSelectorsFromProps(predicate = false) {
+function classSelectorsFromProps(predicate = false) {
   return (cls = "") => {
     return (props = null) => {
       return (predicate
@@ -18,11 +18,26 @@ export function unstable_classSelectorsFromProps(predicate = false) {
 }
 
 export function getScaledButtonClasses({ height }) {
-  return unstable_classSelectorsFromProps(height)("ScaledButton")({ height });
+  return classSelectorsFromProps(height)("ScaledButton")({ height });
 }
 
 export function getRestfulButtonClasses({ action }) {
-  return unstable_classSelectorsFromProps(action)("RestfulButton")({ action });
+  return classSelectorsFromProps(action)("RestfulButton")({ action });
+}
+
+export function PutButton(props) {
+  // action is intentionally overridden
+  return <ComposedButton {...props} action="put" />;
+}
+
+export function DestroyButton(props) {
+  // action is intentionally overridden
+  return <ComposedButton {...props} action="destroy" />;
+}
+
+export function CancelButton(props) {
+  // action is intentionally overridden
+  return <ComposedButton {...props} action="cancel" />;
 }
 
 export function ComposedButton({
@@ -50,21 +65,6 @@ export function ComposedButton({
       {...props}
     />
   );
-}
-
-export function PutButton(props) {
-  // action is intentionally overridden
-  return <ComposedButton {...props} action="put" />;
-}
-
-export function DestroyButton(props) {
-  // action is intentionally overridden
-  return <ComposedButton {...props} action="destroy" />;
-}
-
-export function CancelButton(props) {
-  // action is intentionally overridden
-  return <ComposedButton {...props} action="cancel" />;
 }
 
 export default ComposedButton;
