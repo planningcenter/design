@@ -1,25 +1,28 @@
 import React from "react";
 import classnames from "classnames";
 
-function classSelectorsFromProps(cls = "", props = {}) {
-  return [
-    `${cls}`,
-    ...Object.entries(props).map(
-      ([property, value]) => `${cls}--${property}_${value}`
-    )
-  ].join(" ");
+export function unstable_classSelectorsFromProps(predicate = false) {
+  return (cls = "") => {
+    return (props = null) => {
+      return (predicate
+        ? [
+            `${cls}`,
+            ...Object.entries(props).map(
+              ([property, value]) => `${cls}--${property}_${value}`
+            )
+          ]
+        : []
+      ).join(" ");
+    };
+  };
 }
 
 export function getScaledButtonClasses({ height }) {
-  return height
-    ? classSelectorsFromProps("ScaledButton", { height })
-    : "";
+  return unstable_classSelectorsFromProps(height)("ScaledButton")({ height });
 }
 
 export function getRestfulButtonClasses({ action }) {
-  return action
-    ? classSelectorsFromProps("RestfulButton", { action })
-    : "";
+  return unstable_classSelectorsFromProps(action)("RestfulButton")({ action });
 }
 
 export function ComposedButton({
