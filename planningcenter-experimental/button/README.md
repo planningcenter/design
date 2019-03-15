@@ -2,6 +2,9 @@
 
 > An experimental Button, used in Planning Center Publishing
 
+## Examples
+https://codesandbox.io/s/1358wv7x33
+
 ## Installation
 
 ```bash
