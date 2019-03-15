@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter-experimental/button",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An experimental planning center button",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter-experimental/button",
@@ -33,7 +33,7 @@
     "url": "https://github.com/planningcenter/design/issues"
   },
   "peerDependencies": {
-    "react": "^16.6.3",
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "react": "^16.6.3"
   }
 }
