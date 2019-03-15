@@ -7,7 +7,7 @@
   "license": "MIT",
   "main": "lib/button.js",
   "umd:main": "lib/button.umd.js",
-  "module": "lib/button.js.mjs",
+  "module": "lib/button.mjs",
   "source": "button.js",
   "style": "button.css",
   "directories": {
