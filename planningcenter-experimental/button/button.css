@@ -1,0 +1,120 @@
+:root {
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+.Button {
+  -moz-appearance: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  appearance: none;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  position: relative;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: 100ms all ease-in-out;
+  font-size: 14px;
+  padding: 0 16px;
+  line-height: 32px;
+}
+
+/* element Button */
+
+input[type="submit"].Button {
+  text-align: center;
+}
+button.Button {
+}
+a.Button {
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Button */
+.Button {
+  border-color: #969cab;
+  background: linear-gradient(180deg, #dde2e9 0%, #c8cfd9 100%);
+  color: #252931;
+}
+
+.Button.focus,
+.Button:focus {
+  box-shadow: 0 0 0 0.2em rgba(3, 102, 214, 0.3);
+}
+
+.ScaledButton {
+}
+
+.ScaledButton--height_2\.5 {
+  line-height: 20px;
+  font-size: 12px;
+  padding: 0 6px;
+  border-radius: 2.5px;
+}
+.ScaledButton--height_3 {
+  line-height: 24px;
+  font-size: 12px;
+  padding: 0 8px;
+  border-radius: 3px;
+}
+.ScaledButton--height_4 {
+  line-height: 32px;
+  font-size: 14px;
+  padding: 0 12px;
+  border-radius: 4px;
+}
+.ScaledButton--height_5 {
+  line-height: 40px;
+  font-size: 16px;
+  padding: 0 16px;
+  border-radius: 5px;
+}
+.ScaledButton--height_6 {
+  line-height: 48px;
+  font-size: 18px;
+  padding: 0 24px;
+  border-radius: 6px;
+}
+
+/* RestfulButton */
+.RestfulButton--action_put {
+  background: linear-gradient(180deg, #27a744 0%, #0a9329 100%);
+  border: 1px solid #10862b;
+  color: #ffffff;
+}
+
+.RestfulButton--action_put.focus,
+.RestfulButton--action_put:focus {
+  box-shadow: 0 0 0 0.2em #cae6d1;
+}
+
+.RestfulButton--action_destroy {
+  background: linear-gradient(180deg, #cb2c06 0%, #cb2c06 100%);
+  border: 1px solid #af0000;
+  color: #ffffff;
+}
+
+.RestfulButton--action_destroy.focus,
+.RestfulButton--action_destroy:focus {
+  box-shadow: 0 0 0 0.2em #f4d3cb;
+}
+
+/* CancelButton */
+.RestfulButton--action_cancel {
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  color: #006cff;
+}

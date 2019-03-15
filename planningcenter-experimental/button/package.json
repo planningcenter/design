@@ -1,0 +1,39 @@
+{
+  "name": "@planningcenter-experimental/button",
+  "version": "0.0.0",
+  "description": "An experimental planning center button",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter-experimental/button",
+  "license": "MIT",
+  "main": "lib/button.js",
+  "umd:main": "lib/button.umd.js",
+  "module": "lib/button.js.mjs",
+  "source": "button.js",
+  "style": "button.css",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib",
+    "button.css"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planningcenter/design.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "microbundle --jsx React.createElement --name PlanningCenterExperimentalButton",
+    "dev": "microbundle --jsx React.createElement --name PlanningCenterExperimentalButton watch"
+  },
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  },
+  "peerDependencies": {
+    "react": "^16.6.3",
+    "classnames": "^2.2.6"
+  }
+}
