@@ -5,10 +5,14 @@
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.0",
     "@babel/preset-react": "^7.0.0",
+    "@zeit/next-css": "^1.0.1",
     "babel-jest": "^24.5.0",
+    "classnames": "^2.2.6",
     "jest": "^24.5.0",
     "lerna": "^3.13.1",
     "microbundle": "^0.11.0",
+    "next": "^8.0.3",
+    "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-testing-library": "^6.0.1"
   },
@@ -16,6 +20,10 @@
     "react": "^16.6.3"
   },
   "scripts": {
-    "test": "jest"
-  }
+    "test": "jest",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {}
 }
