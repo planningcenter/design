@@ -1,3 +1,10 @@
-// next.config.js
+const withMDX = require("@zeit/next-mdx")({
+  extension: /.mdx?$/
+});
 const withCSS = require("@zeit/next-css");
-module.exports = withCSS();
+
+module.exports = withCSS(
+  withMDX({
+    pageExtensions: ["js", "jsx", "md", "mdx"]
+  })
+);
