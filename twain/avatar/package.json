@@ -7,7 +7,7 @@
   "license": "MIT",
   "main": "lib/avatar.js",
   "umd:main": "lib/avatar.umd.js",
-  "module": "lib/avatar.js.mjs",
+  "module": "lib/avatar.mjs",
   "source": "avatar.js",
   "style": "avatar.css",
   "directories": {
@@ -25,7 +25,6 @@
     "url": "git+https://github.com/planningcenter/design.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
     "build": "microbundle --jsx React.createElement --name TwainAvatar",
     "dev": "microbundle --jsx React.createElement --name TwainAvatar watch"
   },

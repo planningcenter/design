@@ -10,7 +10,6 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "webpack-dev-server",
-    "test": "jest",
     "prepublish": "yarn build",
     "generate-toc": "node ./scripts/generate-toc.js"
   },

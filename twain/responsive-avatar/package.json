@@ -25,7 +25,6 @@
     "url": "git+https://github.com/planningcenter/design.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
     "build": "microbundle --jsx React.createElement --name TwainResponsiveAvatar",
     "dev": "microbundle --jsx React.createElement --name TwainResponsiveAvatar watch"
   },

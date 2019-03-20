@@ -6,6 +6,12 @@
 
 Global Design maintained packages.
 
+## Scripts
+
+```
+test: run all the tests
+```
+
 ## Packages
 
 - [@twain/avatar](/twain/avatar)
