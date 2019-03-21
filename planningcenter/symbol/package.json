@@ -18,7 +18,7 @@
   "files": [
     "dist"
   ],
-  "gitHead": "b7e3454423c709cf329f68dd43d5dc0736bacad7",
+  "gitHead": "b51550b8677bc15fdb064a3bc475e052e3d87269",
   "peerDependencies": {
     "react": "^16.8.4"
   }
