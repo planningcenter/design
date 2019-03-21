@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/url",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A dumb url origin generator in JS",
   "main": "dist/url.js",
   "umd:main": "dist/url.umd.js",
