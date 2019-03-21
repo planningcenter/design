@@ -26,12 +26,14 @@
   },
   "scripts": {
     "build": "microbundle --jsx React.createElement --name TwainAvatar",
-    "dev": "microbundle --jsx React.createElement --name TwainAvatar watch"
+    "dev": "microbundle --jsx React.createElement --name TwainAvatar watch",
+    "prepublish": "npm run build"
   },
   "bugs": {
     "url": "https://github.com/planningcenter/design/issues"
   },
   "peerDependencies": {
     "react": "^16.6.3"
-  }
+  },
+  "gitHead": "a3bd6408ea5e14a98b83e4bd11807d625573a551"
 }

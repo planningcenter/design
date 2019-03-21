@@ -10,7 +10,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "webpack-dev-server",
-    "prepublish": "yarn build",
+    "prepublish": "npm run build",
     "generate-toc": "node ./scripts/generate-toc.js"
   },
   "files": [
@@ -35,5 +35,6 @@
     "webpack": "^4.1.1",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.0"
-  }
+  },
+  "gitHead": "a3bd6408ea5e14a98b83e4bd11807d625573a551"
 }

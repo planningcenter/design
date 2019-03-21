@@ -26,7 +26,8 @@
   },
   "scripts": {
     "build": "microbundle --jsx React.createElement --name TwainResponsiveAvatar",
-    "dev": "microbundle --jsx React.createElement --name TwainResponsiveAvatar watch"
+    "dev": "microbundle --jsx React.createElement --name TwainResponsiveAvatar watch",
+    "prepublish": "npm run build"
   },
   "bugs": {
     "url": "https://github.com/planningcenter/design/issues"
@@ -36,5 +37,6 @@
   },
   "peerDependencies": {
     "react": "^16.6.3"
-  }
+  },
+  "gitHead": "a3bd6408ea5e14a98b83e4bd11807d625573a551"
 }

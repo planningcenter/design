@@ -24,5 +24,6 @@
     "url": "https://github.com/planningcenter/design/issues"
   },
   "homepage": "https://github.com/planningcenter/design/blob/master/packages/url/README.md",
-  "private": false
+  "private": false,
+  "gitHead": "a3bd6408ea5e14a98b83e4bd11807d625573a551"
 }
