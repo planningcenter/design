@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/symbol",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "A component for presenting external SVG symbols via file-loader",
   "main": "dist/symbol.js",
   "umd:main": "dist/symbol.umd.js",

@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/browserslist-config",
-  "version": "1.0.0-alpha.8",
+  "version": "1.0.0-alpha.9",
   "description": "Planning Center browser support codified for Node environments.",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/browserslist-config",
