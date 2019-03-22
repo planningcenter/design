@@ -10,6 +10,7 @@ Global Design maintained packages.
 
 ```
 test: run all the tests
+setup: link and execute npm install on all projects
 ```
 
 ## Packages
