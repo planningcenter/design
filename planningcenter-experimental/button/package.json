@@ -10,10 +10,8 @@
   "module": "dist/button.mjs",
   "source": "button.js",
   "style": "button.css",
-  "directories": {
-    "dist": "dist"
-  },
   "files": [
+    "dist",
     "button.css"
   ],
   "publishConfig": {

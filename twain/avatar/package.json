@@ -10,10 +10,8 @@
   "module": "dist/avatar.mjs",
   "source": "avatar.js",
   "style": "avatar.css",
-  "directories": {
-    "dist": "dist"
-  },
   "files": [
+    "dist",
     "avatar.css"
   ],
   "publishConfig": {

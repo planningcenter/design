@@ -13,9 +13,9 @@
     "prepublish": "npm run build",
     "generate-toc": "node ./scripts/generate-toc.js"
   },
-  "directories": {
-    "dist": "dist"
-  },
+  "files": [
+    "dist"
+  ],
   "repository": "https://github.com/planningcenter/javascript.git",
   "author": "Michael Chan <mijoch@gmail.com>",
   "private": false,

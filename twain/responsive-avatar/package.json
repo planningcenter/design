@@ -7,13 +7,11 @@
   "license": "MIT",
   "main": "dist/responsive-avatar.js",
   "umd:main": "dist/responsive-avatar.umd.js",
-  "module": "dist/responsive-avatar.js.mjs",
+  "module": "dist/responsive-avatar.mjs",
   "source": "responsive-avatar.js",
   "style": "responsive-avatar.css",
-  "directories": {
-    "dist": "dist"
-  },
   "files": [
+    "dist",
     "responsive-avatar.css"
   ],
   "publishConfig": {
