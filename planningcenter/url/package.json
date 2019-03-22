@@ -14,8 +14,8 @@
     "index.js"
   ],
   "scripts": {
-    "build": "microbundle",
-    "dev": "microbundle watch",
+    "build": "microbundle --jsx React.createElement --name PlanningCenterUrl",
+    "dev": "microbundle watch --jsx React.createElement --name PlanningCenterUrl",
     "pretest": "npm run build",
     "prepublish": "npm run build",
     "test": "jest"
@@ -25,5 +25,8 @@
   },
   "homepage": "https://github.com/planningcenter/design/blob/master/packages/url/README.md",
   "private": false,
-  "gitHead": "4debdee8cad56f8bed90a626c46974ce521ca074"
+  "gitHead": "4debdee8cad56f8bed90a626c46974ce521ca074",
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
 }

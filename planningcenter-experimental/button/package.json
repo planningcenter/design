@@ -35,5 +35,8 @@
     "classnames": "^2.2.6",
     "react": "^16.6.3"
   },
-  "gitHead": "4debdee8cad56f8bed90a626c46974ce521ca074"
+  "gitHead": "4debdee8cad56f8bed90a626c46974ce521ca074",
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
 }
