@@ -9,6 +9,9 @@
   "repository": "https://github.com/planningcenter/design.git",
   "author": "Michael Chan <mijoch@gmail.com>",
   "license": "MIT",
+  "directories": {
+    "dist": "dist"
+  },
   "files": [
     "index.js"
   ],
