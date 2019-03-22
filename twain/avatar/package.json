@@ -5,16 +5,15 @@
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design#readme",
   "license": "MIT",
-  "main": "lib/avatar.js",
-  "umd:main": "lib/avatar.umd.js",
-  "module": "lib/avatar.mjs",
+  "main": "dist/avatar.js",
+  "umd:main": "dist/avatar.umd.js",
+  "module": "dist/avatar.mjs",
   "source": "avatar.js",
   "style": "avatar.css",
   "directories": {
-    "lib": "lib"
+    "dist": "dist"
   },
   "files": [
-    "lib",
     "avatar.css"
   ],
   "publishConfig": {

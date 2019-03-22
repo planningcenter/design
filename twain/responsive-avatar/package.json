@@ -5,16 +5,15 @@
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design#readme",
   "license": "MIT",
-  "main": "lib/responsive-avatar.js",
-  "umd:main": "lib/responsive-avatar.umd.js",
-  "module": "lib/responsive-avatar.js.mjs",
+  "main": "dist/responsive-avatar.js",
+  "umd:main": "dist/responsive-avatar.umd.js",
+  "module": "dist/responsive-avatar.js.mjs",
   "source": "responsive-avatar.js",
   "style": "responsive-avatar.css",
   "directories": {
-    "lib": "lib"
+    "dist": "dist"
   },
   "files": [
-    "lib",
     "responsive-avatar.css"
   ],
   "publishConfig": {

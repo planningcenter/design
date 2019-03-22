@@ -5,7 +5,7 @@
   "description": "Planning Center application Topbar",
   "main": "dist/topbar.js",
   "umd:main": "dist/topbar.umd.js",
-  "module": "dist/topbar.m.js",
+  "module": "dist/topbar.mjs",
   "source": "index.ts",
   "scripts": {
     "build": "rollup -c",
@@ -13,9 +13,9 @@
     "prepublish": "npm run build",
     "generate-toc": "node ./scripts/generate-toc.js"
   },
-  "files": [
-    "dist"
-  ],
+  "directories": {
+    "dist": "dist"
+  },
   "repository": "https://github.com/planningcenter/javascript.git",
   "author": "Michael Chan <mijoch@gmail.com>",
   "private": false,
