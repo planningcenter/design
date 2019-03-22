@@ -64,5 +64,8 @@ typings/
 lib
 dist
 
+# Rollup/TypeScript
+.rpt2_cache
+
 # OS
 .DS_Store
