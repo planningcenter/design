@@ -10,7 +10,14 @@ Global Design maintained packages.
 
 ```
 test: run all the tests
-setup: link and execute npm install on all projects
+```
+
+## Setup
+
+```bash
+git clone git@github.com:planningcenter/design.git
+cd design
+lerna bootstrap
 ```
 
 ## Packages
