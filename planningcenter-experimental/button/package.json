@@ -35,5 +35,8 @@
   "gitHead": "4debdee8cad56f8bed90a626c46974ce521ca074",
   "devDependencies": {
     "microbundle": "^0.11.0"
+  },
+  "dependencies": {
+    "@planningcenter/utilities": "^0.0.3"
   }
 }

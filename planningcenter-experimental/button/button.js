@@ -1,28 +1,18 @@
 import React from "react";
 import classnames from "classnames";
 
-function classSelectorsFromProps(predicate = false) {
-  return (cls = "") => {
-    return (props = null) => {
-      return (predicate
-        ? [
-            `${cls}`,
-            ...Object.entries(props).map(
-              ([property, value]) => `${cls}--${property}_${value}`
-            )
-          ]
-        : []
-      ).join(" ");
-    };
-  };
-}
+import { UNSTABLE_getClassSelectorsFromProps as getClassSelectorsFromProps } from "@planningcenter/utilities";
 
 export function getScaledButtonClasses({ height }) {
-  return classSelectorsFromProps(height)("ScaledButton")({ height });
+  return getClassSelectorsFromProps("ScaledButton")([
+    "height"
+  ])({ height });
 }
 
 export function getRestfulButtonClasses({ action }) {
-  return classSelectorsFromProps(action)("RestfulButton")({ action });
+  return getClassSelectorsFromProps("RestfulButton")([
+    "action"
+  ])({ action });
 }
 
 export function PutButton(props) {
