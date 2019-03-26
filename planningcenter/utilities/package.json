@@ -1,0 +1,33 @@
+{
+  "name": "@planningcenter/utilities",
+  "version": "0.0.0",
+  "description": "Support function for components",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/utilities",
+  "license": "MIT",
+  "source": "utilities.js",
+  "main": "dist/utilities.js",
+  "module": "dist/utilities.mjs",
+  "umd:main": "dist/utilities.umd.js",
+  "amdName": "planningcenter_utilities",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planningcenter/design.git"
+  },
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  },
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
+}
