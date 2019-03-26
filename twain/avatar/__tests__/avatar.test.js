@@ -36,8 +36,8 @@ test("inset prop", () => {
   const { getByTestId } = render(
     <Avatar inset={true} data-testid="inset" />
   );
-  expect(getByTestId("inset").className).toBe(
-    "Avatar Avatar--inset_true"
+  expect(getByTestId("inset").className).toContain(
+    "Avatar--inset"
   );
 });
 
@@ -106,5 +106,32 @@ test("Unsupported size props, with strict=false", () => {
   );
   expect(getByTestId("size-10").className).toContain(
     "Avatar--size_10"
+  );
+});
+
+test("Responsive", () => {
+  const { getByTestId } = render(
+    <React.Fragment>
+      <Avatar
+        size={{ small: 2, medium: 3, large: 4 }}
+        inset={true}
+        strict={false}
+        data-testid="responsive"
+      />
+    </React.Fragment>
+  );
+
+  expect(
+    getByTestId("responsive").className.split(" ")
+  ).toEqual(
+    expect.arrayContaining([
+      "StyledAvatar",
+      "StyledAvatar--inset",
+      "ResponsiveScaledAvatar",
+      "@small__ResponsiveScaledAvatar--size_2",
+      "@medium__ResponsiveScaledAvatar--size_3",
+      "@large__ResponsiveScaledAvatar--size_4",
+      "Avatar"
+    ])
   );
 });

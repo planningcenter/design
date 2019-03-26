@@ -1,4 +1,6 @@
 import React from "react";
+import classnames from "classnames";
+import { UNSTABLE_getClassSelectorsFromProps as getClassSelectorsFromProps } from "@planningcenter/utilities";
 
 // TODO: add ability to opt-out of base-class.
 //       maybe a context-based scope?
@@ -9,7 +11,7 @@ import React from "react";
 
 let sizes = [2.5, 3, 4, 5, 6, 7, 8, 9];
 
-export function Avatar({
+export function ComposedAvatar({
   as: As = "span",
   size: incomingSize,
   strict = true,
@@ -31,13 +33,28 @@ export function Avatar({
 
   return (
     <As
-      className={[
-        "Avatar",
-        inset && "Avatar--inset_true",
-        size && `Avatar--size_${size}`
-      ]
-        .join(" ")
-        .trim()}
+      className={classnames(
+        className,
+        getClassSelectorsFromProps("StyledAvatar")([
+          "inset"
+        ])({
+          inset
+        }),
+        typeof size === "object" &&
+          size !== null && [
+            "ResponsiveAvatar",
+            getClassSelectorsFromProps(
+              "ResponsiveScaledAvatar"
+            )(["size"])({ size })
+          ],
+        typeof size !== "object" &&
+          getClassSelectorsFromProps("ScaledAvatar")([
+            "size"
+          ])({
+            size
+          }),
+        "Avatar"
+      )}
       {...props}
     >
       {typeof children === "function"
@@ -47,4 +64,4 @@ export function Avatar({
   );
 }
 
-export default Avatar;
+export default ComposedAvatar;
