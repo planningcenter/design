@@ -8,12 +8,12 @@ test("Interface. Move to TS and delete these.", () => {
   expect(getClassSelectorsFromProps()()()).toBe("");
 
   expect(getClassSelectorsFromProps("Base")()()).toBe(
-    "Base"
+    ""
   );
 
   expect(
     getClassSelectorsFromProps("Base")(["height"])()
-  ).toBe("Base");
+  ).toBe("");
 
   expect(
     getClassSelectorsFromProps("Base")(["height"])({
@@ -27,7 +27,7 @@ test("All modifying properties must be whitelisted via options array", () => {
     getClassSelectorsFromProps("Base")()({
       other: "ignored"
     })
-  ).toBe("Base");
+  ).toBe("");
 });
 
 test("Where modifying options are provided, classes are generated", () => {
@@ -47,7 +47,7 @@ test("No modifying classes are provided for options when props don't exist", () 
     getClassSelectorsFromProps("Base")(["height", "other"])(
       {}
     )
-  ).toBe("Base");
+  ).toBe("");
 });
 
 test("Objects are supported and interpreted as breakpoint blocks", () => {

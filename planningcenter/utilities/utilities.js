@@ -3,10 +3,12 @@ export function UNSTABLE_getClassSelectorsFromProps(
 ) {
   return (options = []) => {
     return (props = {}) => {
-      return [
-        `${block}`,
-        ...(options.length
-          ? options.map(modifierName => {
+      return (options.length
+        ? [
+            options.filter(k => props[k]).length
+              ? `${block}`
+              : "", // if there are any hits, add the base class
+            ...options.map(modifierName => {
               let modifierValue = props[modifierName];
 
               if (modifierValue === null) {
@@ -44,8 +46,9 @@ export function UNSTABLE_getClassSelectorsFromProps(
                 modifierValue
               });
             })
-          : [])
-      ]
+          ]
+        : []
+      )
         .join(" ")
         .trim();
     };
