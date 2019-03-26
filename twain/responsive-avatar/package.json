@@ -1,6 +1,6 @@
 {
   "name": "@twain/responsive-avatar",
-  "version": "0.1.0-alpha.11",
+  "version": "0.1.0-alpha.12",
   "description": "> TODO: description",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design#readme",
@@ -30,7 +30,7 @@
     "url": "https://github.com/planningcenter/design/issues"
   },
   "dependencies": {
-    "@twain/avatar": "^0.1.0-alpha.11"
+    "@twain/avatar": "^0.1.0-alpha.12"
   },
   "peerDependencies": {
     "react": "^16.6.3"
