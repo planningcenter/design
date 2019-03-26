@@ -9,8 +9,12 @@ export function UNSTABLE_getClassSelectorsFromProps(
           ? options.map(modifierName => {
               let modifierValue = props[modifierName];
 
+              if (modifierValue === null) {
+                return;
+              }
+
               if (typeof modifierValue === "undefined") {
-                return "";
+                return;
               }
 
               if (typeof modifierValue === "object") {
