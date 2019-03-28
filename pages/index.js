@@ -2,10 +2,6 @@ import React from "react";
 import Link from "next/link";
 import "github-markdown-css";
 
-// TODO: there seems to be a problem with the build
-import Avatar from "../twain/avatar/lib/avatar.mjs";
-import "../twain/avatar/avatar.css";
-
 function Home() {
   return (
     <div

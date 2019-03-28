@@ -1,7 +1,7 @@
-'use strict';
+// 'use strict';
 
-const resourceHeader = require('..');
+// const resourceHeader = require('..');
 
-describe('@planningcenter/resource-header', () => {
-    it('needs tests');
-});
+// describe('@planningcenter/resource-header', () => {
+//     it('needs tests');
+// });

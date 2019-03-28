@@ -1,6 +1,7 @@
 import React from "react";
 import classnames from "classnames";
-import { UNSTABLE_getClassSelectorsFromProps as getClassSelectorsFromProps } from "@planningcenter/utilities";
+// TODO: inlined temporarily
+import { UNSTABLE_getClassSelectorsFromProps as getClassSelectorsFromProps } from "../../planningcenter/utilities";
 
 // TODO: add ability to opt-out of base-class.
 //       maybe a context-based scope?

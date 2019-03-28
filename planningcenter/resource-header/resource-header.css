@@ -1,0 +1,28 @@
+.ResourceHeader__TabContainer {
+}
+.ResourceHeader__SummaryContainer {
+}
+.ResourceHeader__FlexSpacer {
+}
+.ResourceHeader__Title {
+}
+.ResourceHeader__Tab {
+}
+.ResourceHeader__Avatar {
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 112px;
+  height: 112px;
+  padding: 5px;
+  background-color: white;
+  background-color: var(--twain-avatar-inset-color, white);
+}
+
+.ResourceHeader__Avatar > img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -3,11 +3,11 @@ import Link from "next/link";
 import "github-markdown-css";
 
 // TODO: there seems to be a problem with the build
-import { ComposedButton as Button } from "../../planningcenter-experimental/button/lib/button.mjs";
+import { ComposedButton as Button } from "../../planningcenter-experimental/button/dist/button.mjs";
 import "../../planningcenter-experimental/button/button.css";
 import Readme from "../../planningcenter-experimental/button/README.md";
 
-function Home() {
+export default function() {
   return (
     <div
       className="markdown-body"
@@ -39,5 +39,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

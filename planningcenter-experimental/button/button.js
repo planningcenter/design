@@ -1,7 +1,8 @@
 import React from "react";
 import classnames from "classnames";
 
-import { UNSTABLE_getClassSelectorsFromProps as getClassSelectorsFromProps } from "@planningcenter/utilities";
+// TODO: momentarily inlined for site
+import { UNSTABLE_getClassSelectorsFromProps as getClassSelectorsFromProps } from "../../planningcenter/utilities";
 
 export function getScaledButtonClasses({ height }) {
   return getClassSelectorsFromProps("ScaledButton")([

@@ -82,18 +82,3 @@ export function Tab({ target, children, style, ...props }) {
     </a>
   );
 }
-
-export function Container({ style, ...props }) {
-  return (
-    <div
-      style={{
-        flexDirection: "column",
-        backgroundColor: "lightgray",
-        paddingLeft: 24,
-        paddingRight: 24,
-        ...style
-      }}
-      {...props}
-    />
-  );
-}
