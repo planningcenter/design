@@ -27,10 +27,19 @@ export function SummaryContainer(props) {
 }
 
 export function FlexSpacer({ space, ...props }) {
-  return <div style={{ margin: space ? space * 4 : "auto" }} {...props} />;
+  return (
+    <div
+      style={{ margin: space ? space * 4 : "auto" }}
+      {...props}
+    />
+  );
 }
 
-export function PageTitle({ as: As = "span", style, ...props }) {
+export function PageTitle({
+  as: As = "span",
+  style,
+  ...props
+}) {
   return (
     <As
       style={{
@@ -49,9 +58,14 @@ export function Tab({ target, children, style, ...props }) {
   return (
     <a
       style={{
-        backgroundColor: target === true ? "white" : "rgba(255,255,255, .8)",
+        backgroundColor:
+          target === true
+            ? "white"
+            : "rgba(255,255,255, .8)",
         boxShadow:
-          target === true ? null : "inset 0 -6px 6px -8px rgba(0,0,0, .1)", // EDIT: added
+          target === true
+            ? null
+            : "inset 0 -6px 6px -8px rgba(0,0,0, .1)", // EDIT: added
         fontWeight: target === true ? 700 : 400,
         color: target === true ? "#000" : "#444",
         paddingRight: 24,
