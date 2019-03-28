@@ -1,8 +1,8 @@
 {
   "packages": [
-    "twain/*",
     "planningcenter/*",
-    "planningcenter-experimental/*"
+    "planningcenter-experimental/*",
+    "twain/*"
   ],
   "version": "independent"
 }
