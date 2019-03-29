@@ -1,13 +1,14 @@
 import React from "react";
 
 export function Detail({
+  componentName = "",
   name,
   version,
   peerDependencies
 }) {
   return (
     <section>
-      <h1>Avatar</h1>
+      <h1>{componentName}</h1>
       <table>
         <tbody>
           <tr>

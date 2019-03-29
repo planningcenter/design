@@ -31,6 +31,22 @@ export function CancelButton(props) {
   return <ComposedButton {...props} action="cancel" />;
 }
 
+// TODO: Add APIs
+//       * add ButtonCluster__Button class to children
+//       * get provide `height` on Context
+export function ButtonCluster({
+  as: As = "div",
+  className,
+  ...props
+}) {
+  return (
+    <As
+      className={classnames(className, "ButtonCluster")}
+      {...props}
+    />
+  );
+}
+
 export function ComposedButton({
   action,
   as: As = "button",

@@ -3,7 +3,10 @@ import Link from "next/link";
 import "github-markdown-css";
 
 // TODO: there seems to be a problem with the build
-import { ComposedButton as Button } from "../../planningcenter-experimental/button/dist/button.mjs";
+import {
+  ComposedButton as Button,
+  ButtonCluster
+} from "../../planningcenter-experimental/button/dist/button.mjs";
 import "../../planningcenter-experimental/button/button.css";
 import Readme from "../../planningcenter-experimental/button/README.md";
 import pkg from "../../planningcenter-experimental/button/package.json";
@@ -19,7 +22,7 @@ export default function() {
         <a href="/">Home</a>
       </Link>
 
-      <Detail {...pkg} />
+      <Detail {...pkg} componentName="Button" />
 
       <section>
         <h2>Button</h2>
@@ -50,6 +53,27 @@ export default function() {
               🔽
             </span>
           </Button>
+
+          <ButtonCluster>
+            <Button
+              height={5}
+              className="ButtonCluster__Button"
+            >
+              One
+            </Button>
+            <Button
+              height={5}
+              className="ButtonCluster__Button"
+            >
+              Two
+            </Button>
+            <Button
+              height={5}
+              className="ButtonCluster__Button"
+            >
+              Three
+            </Button>
+          </ButtonCluster>
         </div>
       </section>
 
