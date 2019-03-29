@@ -14,6 +14,11 @@ export {
 } from "./modules/small_topbar";
 
 export {
+  Topbar as MediumTopbar,
+  Route as MediumRoute,
+} from "./modules/medium_topbar";
+
+export {
   default as PlatformAnnouncements,
   StyleProvider as PlatformAnnouncementsStyleProvider,
   StyledAnnouncement as StyledPlatformAnnouncement,

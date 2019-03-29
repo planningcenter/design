@@ -4,6 +4,8 @@ import * as ReactDOM from "react-dom";
 import {
   NotSmallTopbar,
   NotSmallRoute,
+  MediumTopbar,
+  MediumRoute,
   SmallTopbar,
   SmallRoute,
   DisplaySwitch,
@@ -327,6 +329,7 @@ class SampleTopbar extends React.Component<
                 />
 
                 <DisplaySwitch
+                  mediumBreakpoints={["md", "lg"]}
                   smallTopbar={() => (
                     <div style={{ backgroundColor: shared.colors.base0 }}>
                       <SmallTopbar
@@ -369,6 +372,30 @@ class SampleTopbar extends React.Component<
                         )}
                       />
                     </div>
+                  )}
+                  mediumTopbar={() => (
+                    <MediumTopbar
+                      {...shared}
+                      userAvatarPath={this.props.userAvatarPath}
+                      routes={staticData.routes.map(([name, uri]) => (
+                        <MediumRoute
+                          key={name}
+                          href={uri}
+                          active={name === staticData.activeRoute}
+                        >
+                          {name}
+                        </MediumRoute>
+                      ))}
+                      currentRouteComponent={({ style, ...props }) => (
+                        <span
+                          {...props}
+                          style={{
+                            ...style,
+                            textShadow: `${shared.colors.base2} 0 1px 1px`,
+                          }}
+                        />
+                      )}
+                    />
                   )}
                   notSmallTopbar={(activeBreakpoint) => (
                     <NotSmallTopbar
