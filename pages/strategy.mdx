@@ -1,0 +1,44 @@
+# Strategy
+
+## One function
+
+All components will be are simple wrappers around a single class-resolution function.
+
+`@planningcenter/utilities`
+
+```js
+export function UNSTABLE_getBemSelector({
+  block = "",
+  element = "",
+  modifierName = "",
+  modifierValue = ""
+} = {}) {
+  function getModifier(name, value) {
+    if (!name || !value) {
+      return;
+    }
+
+    if (value === true) {
+      return `--${name}`;
+    }
+
+    return `--${name}_${value}`;
+  }
+
+  return [
+    block && `${block}`,
+    element && `__${element}`,
+    getModifier(modifierName, modifierValue)
+  ].join("");
+}
+```
+
+Media queries complicate this a little so here is a target function for getting classnames from propse.
+But classes all get resolved via this function.
+Understand this function and you understand the tooling.
+
+## BEM
+
+- [Naming convention](https://en.bem.info/methodology/naming-convention/)
+- [Practical BEM](https://github.com/chantastic/practical-bem)
+- [css-patterns](https://github.com/chantastic/css-patterns) — going only with part of this

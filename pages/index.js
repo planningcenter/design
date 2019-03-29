@@ -32,6 +32,9 @@ function Home() {
           </Link>
         </li>
       </ul>
+      <Link>
+        <a href="/strategy">strategy</a>
+      </Link>
     </div>
   );
 }
