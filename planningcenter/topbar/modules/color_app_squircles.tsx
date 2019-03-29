@@ -169,6 +169,45 @@ export function People(): JSX.Element[] {
   ];
 }
 
+export function Publishing(): JSX.Element[] {
+  return [
+    <defs key="def">
+      <linearGradient
+        id="linear-gradient"
+        x1="2.047"
+        y1="2.036"
+        x2="17.969"
+        y2="17.958"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" stop-color="#787882" />
+        <stop offset="1" stop-color="#5f5f69" />
+      </linearGradient>
+      <linearGradient
+        id="linear-gradient-2"
+        x1="2.03"
+        y1="2.03"
+        x2="17.952"
+        y2="17.952"
+        gradientTransform="translate(2.563 -2.028) rotate(13.283)"
+        xlinkHref="#linear-gradient"
+      />
+    </defs>,
+    <title>publishing-squircle</title>,
+    <path
+      d="M19.96,10c0,7.962-1.991,9.952-9.952,9.952S.056,17.959.056,10,2.047.045,10.008.045,19.96,2.036,19.96,10Z"
+      fill="url(#linear-gradient)"
+    />,
+    <circle
+      cx="9.991"
+      cy="9.991"
+      r="9.951"
+      transform="translate(-2.028 2.563) rotate(-13.283)"
+      fill="url(#linear-gradient-2)"
+    />,
+  ];
+}
+
 export function Registrations(): JSX.Element[] {
   return [
     <defs key="def">

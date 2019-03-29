@@ -72,6 +72,15 @@ export function People({ color, ...platformProps }): JSX.Element {
   );
 }
 
+export function Publishing({ color, ...platformProps }): JSX.Element {
+  return (
+    <path
+      fill={color}
+      d="M7.287,13.575a.478.478,0,0,1-.477.477H5.856a.478.478,0,0,1-.477-.477V6.407a.478.478,0,0,1,.477-.477H6.81a.478.478,0,0,1,.477.477Zm7.293,0a.477.477,0,0,1-.477.477H9.268a.478.478,0,0,1-.477-.477V12.6a.478.478,0,0,1,.477-.477H14.1a.477.477,0,0,1,.477.477Zm0-3.473a.477.477,0,0,1-.476.477H9.268a.478.478,0,0,1-.477-.477V6.407a.478.478,0,0,1,.477-.477H14.1a.477.477,0,0,1,.477.477Z"
+    />
+  );
+}
+
 export function Registrations({ color, ...platformProps }): JSX.Element {
   return (
     <path

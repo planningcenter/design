@@ -26,6 +26,12 @@ const apps = [
   },
   {
     type: "App",
+    id: "2",
+    attributes: { name: "Publishing", url: "http://people.pco.test" },
+    links: { self: "http://api.pco.test/people/v2/apps/3" },
+  },
+  {
+    type: "App",
     id: "3",
     attributes: { name: "People", url: "http://people.pco.test" },
     links: { self: "http://api.pco.test/people/v2/apps/3" },
