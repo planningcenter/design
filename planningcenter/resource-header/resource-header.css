@@ -1,13 +1,36 @@
 .ResourceHeader__TabContainer {
+  display: flex;
+  align-items: top;
+  padding-left: 24px;
+  padding-right: 24px;
 }
+
 .ResourceHeader__SummaryContainer {
+  display: flex;
+  align-items: center;
+  padding: 24px;
 }
+
 .ResourceHeader__FlexSpacer {
 }
+
 .ResourceHeader__Title {
+  margin: 0;
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
 }
+
 .ResourceHeader__Tab {
+  padding-right: 24px;
+  padding-left: 24px;
+  margin-right: 8px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 14px;
+  line-height: 40px;
 }
+
 .ResourceHeader__Avatar {
   box-sizing: border-box;
   display: inline-block;

@@ -19,6 +19,13 @@ function Home() {
         </li>
         <li>
           <Link>
+            <a href="/planningcenter/resource-header">
+              @planningcenter/resource-header
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link>
             <a href="/planningcenter-experimental/button">
               @planningcenter-experimental/button
             </a>
