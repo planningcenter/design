@@ -5,13 +5,22 @@
   padding-right: 24px;
 }
 
+.ResourceHeader__TabContainer > * + * {
+  margin-left: 8px;
+}
+
 .ResourceHeader__SummaryContainer {
   display: flex;
   align-items: center;
   padding: 24px;
 }
 
+.ResourceHeader__SummaryContainer > * + * {
+  margin-left: 24px;
+}
+
 .ResourceHeader__FlexSpacer {
+  margin: auto;
 }
 
 .ResourceHeader__Title {
@@ -24,7 +33,6 @@
 .ResourceHeader__Tab {
   padding-right: 24px;
   padding-left: 24px;
-  margin-right: 8px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   font-size: 14px;

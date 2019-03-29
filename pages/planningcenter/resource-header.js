@@ -63,23 +63,16 @@ export default function() {
 
         <div style={{ backgroundColor: "lightgreen" }}>
           <SummaryContainer>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center"
-              }}
-            >
-              <div>
-                <Avatar src="https://placekitten.com/112/112" />
-              </div>
-              <div style={{ marginLeft: 24 }}>
-                <Title>A Kitty</Title>
-                <br />
-                <span>555-555-01234</span>
-                <span style={{ marginLeft: 8 }}>
-                  kitty@placeholder.net
-                </span>
-              </div>
+            <div>
+              <Avatar src="https://placekitten.com/112/112" />
+            </div>
+            <div>
+              <Title>A Kitty</Title>
+              <br />
+              <span>555-555-01234</span>
+              <span style={{ marginLeft: 8 }}>
+                kitty@placeholder.net
+              </span>
             </div>
           </SummaryContainer>
           <TabContainer>

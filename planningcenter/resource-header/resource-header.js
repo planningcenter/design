@@ -33,10 +33,14 @@ export function SummaryContainer({
   );
 }
 
-export function FlexSpacer({ space, ...props }) {
+export function FlexSpacer({ space, className, ...props }) {
   return (
     <div
-      style={{ margin: space ? space * 4 : "auto" }}
+      className={classnames(
+        className,
+        "ResourceHeader__FlexSpacer"
+      )}
+      style={space ? { margin: space * 4 } : null}
       {...props}
     />
   );
