@@ -37,11 +37,14 @@ a.Button {
 /* Button */
 .Button {
   border-color: #969cab;
-  background: linear-gradient(180deg, #dde2e9 0%, #c8cfd9 100%);
+  background: linear-gradient(
+    180deg,
+    #dde2e9 0%,
+    #c8cfd9 100%
+  );
   color: #252931;
 }
 
-.Button.focus,
 .Button:focus {
   box-shadow: 0 0 0 0.2em rgba(3, 102, 214, 0.3);
 }
@@ -81,33 +84,53 @@ a.Button {
 }
 
 /* RestfulButton */
+/* RestfulButton--action_put */
 .RestfulButton--action_put {
-  background: linear-gradient(180deg, #27a744 0%, #0a9329 100%);
+  background: linear-gradient(
+    180deg,
+    #27a744 0%,
+    #0a9329 100%
+  );
   border: 1px solid #10862b;
   color: #ffffff;
 }
-
-.RestfulButton--action_put.focus,
 .RestfulButton--action_put:focus {
   box-shadow: 0 0 0 0.2em #cae6d1;
 }
+.RestfulButton--action_put:hover {
+}
+.RestfulButton--action_put:active {
+}
 
+/* RestfulButton--action_destroy */
 .RestfulButton--action_destroy {
-  background: linear-gradient(180deg, #cb2c06 0%, #cb2c06 100%);
+  background: linear-gradient(
+    180deg,
+    #cb2c06 0%,
+    #cb2c06 100%
+  );
   border: 1px solid #af0000;
   color: #ffffff;
 }
-
-.RestfulButton--action_destroy.focus,
 .RestfulButton--action_destroy:focus {
   box-shadow: 0 0 0 0.2em #f4d3cb;
 }
+.RestfulButton--action_put:hover {
+}
+.RestfulButton--action_put:active {
+}
 
-/* CancelButton */
+/* RestfulButton--action_cancel */
 .RestfulButton--action_cancel {
   background: transparent;
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
   color: #006cff;
+}
+.RestfulButton--action_destroy:focus {
+}
+.RestfulButton--action_destroy:hover {
+}
+.RestfulButton--action_destroy:active {
 }

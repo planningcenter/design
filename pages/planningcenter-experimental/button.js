@@ -36,6 +36,20 @@ export default function() {
           >
             A Button
           </Button>
+
+          <Button
+            onClick={() => alert("howdy")}
+            action="put"
+            height={6}
+          >
+            A Button{" "}
+            {/* TODO: extract this component for left and right usage */}
+            <span
+              style={{ marginLeft: 8, marginRight: -8 }}
+            >
+              🔽
+            </span>
+          </Button>
         </div>
       </section>
 
