@@ -5,7 +5,8 @@ import "github-markdown-css";
 import { ComposedAvatar as Avatar } from "../../twain/avatar";
 import "../../twain/avatar/avatar.css";
 import Readme from "../../twain/avatar/README.md";
-import { version } from "../../twain/avatar/package.json";
+import pkg from "../../twain/avatar/package.json";
+import { Detail } from "../../pages_support/package";
 
 export default function() {
   return (
@@ -16,7 +17,9 @@ export default function() {
       <Link>
         <a href="/">Home</a>
       </Link>
-      <section>latest: {version}</section>
+
+      <Detail {...pkg} />
+
       <section>
         <h2>Avatar</h2>
         <div

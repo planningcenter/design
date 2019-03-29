@@ -12,7 +12,8 @@ import {
 } from "../../planningcenter/resource-header/resource-header.js";
 import "../../planningcenter/resource-header/resource-header.css";
 import Readme from "../../planningcenter/resource-header/README.md";
-import { version } from "../../planningcenter/resource-header/package.json";
+import pkg from "../../planningcenter/resource-header/package.json";
+import { Detail } from "../../pages_support/package";
 
 function PlaceholderButton(props) {
   return (
@@ -35,7 +36,7 @@ export default function() {
         <a href="/">Home</a>
       </Link>
 
-      <section>latest: {version}</section>
+      <Detail {...pkg} />
 
       <section>
         <h2>Resource Header</h2>

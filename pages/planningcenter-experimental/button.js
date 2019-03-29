@@ -6,6 +6,8 @@ import "github-markdown-css";
 import { ComposedButton as Button } from "../../planningcenter-experimental/button/dist/button.mjs";
 import "../../planningcenter-experimental/button/button.css";
 import Readme from "../../planningcenter-experimental/button/README.md";
+import pkg from "../../planningcenter-experimental/button/package.json";
+import { Detail } from "../../pages_support/package";
 
 export default function() {
   return (
@@ -16,6 +18,8 @@ export default function() {
       <Link>
         <a href="/">Home</a>
       </Link>
+
+      <Detail {...pkg} />
 
       <section>
         <h2>Button</h2>
