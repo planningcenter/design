@@ -52,3 +52,36 @@ Insets the component
   --twain-avatar-inset-color: white;
 }
 ```
+
+## Specification
+
+### Definition
+
+An image representing one person.
+
+### Treatment
+
+- Shape: _circle_
+- Dimensions: _height == width_
+- Border: _optional_
+  - excluded: _20px_
+  - scale: _roundUp(size _ .05)\*
+  - min: _2px_
+  - max: _5px_
+
+### Size
+
+Absolute height/width must be a multiple of 8px, with a single exception for _20px_.
+
+Applications may choose to implement a subset of standard sizes.
+
+#### standard sizes:
+
+- 20px
+- 24px
+- 32px
+- 40px
+- 48px
+- 56px
+- 64px
+- 72px
