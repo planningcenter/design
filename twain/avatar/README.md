@@ -65,9 +65,12 @@ An image representing one person.
 - Dimensions: _height == width_
 - Border: _optional_
   - excluded: _20px_
+  - size: _.5 * (absolute-avatar-size / 8px)_ (rounded up for better browser support)
   - scale: _roundUp(size _ .05)\*
   - min: _2px_
   - max: _5px_
+  - position: _inside_
+  - color: _variable_ (default: white)
 
 ### Size
 
