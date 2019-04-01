@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/topbar",
-  "version": "4.4.0",
+  "version": "4.5.0",
   "license": "UNLICENSED",
   "description": "Planning Center application Topbar",
   "main": "dist/topbar.js",
