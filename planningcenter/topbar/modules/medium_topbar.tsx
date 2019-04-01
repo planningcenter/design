@@ -125,6 +125,7 @@ export class Topbar extends React.Component<
         style={{
           paddingLeft: 8,
           paddingRight: 8,
+          ...this.props.style,
         }}
       >
         <AppsMenu

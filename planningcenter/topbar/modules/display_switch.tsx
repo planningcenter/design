@@ -89,11 +89,9 @@ export class DisplaySwitch extends React.Component<
 
   render() {
     if (this.props.mediumTopbar) {
-      console.log("reached");
       return (
         <PointBreak
           render={(breakpoint) => {
-            console.log(breakpoint);
             if (this.props.smallBreakpoints.indexOf(breakpoint) !== -1) {
               return this.props.smallTopbar(breakpoint);
             }
