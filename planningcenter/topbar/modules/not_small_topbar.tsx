@@ -10,13 +10,15 @@ import { MonoAppIcon } from "./mono_app_icon";
 import { MonoAppName } from "./mono_app_name";
 import { ColorAppIcon } from "./color_app_icon";
 
-class AppsButton extends React.Component<
+// TODO: extract to component. Used now by MediumTopbar
+export class AppsButton extends React.Component<
   {
     appName: string;
     colors: any;
     expanded: boolean;
     style?: object;
     onClick: any;
+    displayIconOnly?: boolean;
   },
   {
     entered: boolean;
@@ -31,6 +33,10 @@ class AppsButton extends React.Component<
     };
   }
 
+  public static defaultProps = {
+    displayIconOnly: false,
+  };
+
   render() {
     const {
       appName,
@@ -38,6 +44,7 @@ class AppsButton extends React.Component<
       expanded,
       style = null,
       onClick,
+      displayIconOnly,
       ...nativeProps
     } = this.props;
 
@@ -74,20 +81,27 @@ class AppsButton extends React.Component<
           colors={this.props.colors}
           size={24}
         />
-        <div style={{ margin: 4 }} />
-        <MonoAppName
-          appName={appName.replace(/[\s-]/, "")}
-          color="#fff"
-          size={24}
-        />
-        <div style={{ margin: 4 }} />
-        <DisclosureChevronIcon colors={colors} style={{ display: "block" }} />
+        {!displayIconOnly && [
+          <div key="spacer-1" style={{ margin: 4 }} />,
+          <MonoAppName
+            appName={appName.replace(/[\s-]/, "")}
+            color="#fff"
+            size={24}
+            key="mono-app-name"
+          />,
+          <div key="space-2" style={{ margin: 4 }} />,
+          <DisclosureChevronIcon
+            key="disclosure-chevron-icon"
+            colors={colors}
+            style={{ display: "block" }}
+          />,
+        ]}
       </Unbutton>
     );
   }
 }
 
-class HoverableListItem extends React.Component<
+export class HoverableListItem extends React.Component<
   {
     component?: any;
     style?: object;
@@ -127,7 +141,7 @@ class HoverableListItem extends React.Component<
   }
 }
 
-class Hoverable extends React.Component<
+export class Hoverable extends React.Component<
   {
     component?: any;
     style?: object;
@@ -176,7 +190,8 @@ class Hoverable extends React.Component<
   }
 }
 
-const AppsMenu = (props) => (
+// TODO: extract to component. Used now by MediumTopbar
+export const AppsMenu = (props) => (
   <PopupRoot>
     <Popup
       style={{
@@ -272,7 +287,7 @@ const HelpIcon = ({ colors }) => (
   </svg>
 );
 
-class Outsider extends React.Component<
+export class Outsider extends React.Component<
   {
     component: any;
     cleanup: boolean;
@@ -314,7 +329,7 @@ class Outsider extends React.Component<
   }
 }
 
-class PopupRoot extends React.Component<{ style?: object }, {}> {
+export class PopupRoot extends React.Component<{ style?: object }, {}> {
   render() {
     const { style = null, ...nativeProps } = this.props;
 
@@ -332,7 +347,7 @@ class PopupRoot extends React.Component<{ style?: object }, {}> {
   }
 }
 
-const Popup: React.StatelessComponent<{
+export const Popup: React.StatelessComponent<{
   component?: any;
   style?: object;
   onOutsideClick?: any;

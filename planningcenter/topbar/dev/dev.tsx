@@ -29,7 +29,7 @@ const apps = [
   {
     type: "App",
     id: "2",
-    attributes: { name: "Publishin", url: "http://people.pco.test" },
+    attributes: { name: "Publishing", url: "http://people.pco.test" },
     links: { self: "http://api.pco.test/people/v2/apps/3" },
   },
   {
@@ -341,15 +341,6 @@ class SampleTopbar extends React.Component<
                         userId={this.props.userId}
                         userName={this.props.userName}
                         orgName={this.props.orgName}
-                        currentRouteComponent={({ style, ...props }) => (
-                          <span
-                            {...props}
-                            style={{
-                              ...style,
-                              textShadow: `${shared.colors.base2} 0 1px 1px`,
-                            }}
-                          />
-                        )}
                         requestAppsFetch={appsActions.fetch}
                         requestClearConnectedPeopleCache={
                           connectedPeopleActions.remove
@@ -376,12 +367,27 @@ class SampleTopbar extends React.Component<
                   mediumTopbar={() => (
                     <MediumTopbar
                       {...shared}
+                      requestAppsFetch={appsActions.fetch}
                       userAvatarPath={this.props.userAvatarPath}
-                      routes={staticData.routes.map(([name, uri]) => (
+                      connectedPeople={connectedPeople}
+                      userId={this.props.userId}
+                      userName={this.props.userName}
+                      orgName={this.props.orgName}
+                      linkToProfile={true}
+                      apps={apps}
+                      requestClearAppsCache={appsActions.remove}
+                      requestClearConnectedPeopleCache={
+                        connectedPeopleActions.remove
+                      }
+                      requestConnectedPeopleFetch={connectedPeopleActions.fetch}
+                      routes={staticData.routes.map(([name, uri], i) => (
                         <MediumRoute
                           key={name}
                           href={uri}
                           active={name === staticData.activeRoute}
+                          style={{
+                            ...(i && { borderTop: "1px solid #ddd" }),
+                          }}
                         >
                           {name}
                         </MediumRoute>
