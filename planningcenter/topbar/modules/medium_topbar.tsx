@@ -531,6 +531,7 @@ export const Route = ({ active, style, ...props }) => (
       color: "#444",
       fontWeight: 600,
       minWidth: "6em",
+      whiteSpace: "nowrap",
       textTransform: "capitalize",
       textDecoration: "none",
       lineHeight: "47px",
