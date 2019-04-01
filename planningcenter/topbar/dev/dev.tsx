@@ -27,7 +27,7 @@ const apps = [
   {
     type: "App",
     id: "2",
-    attributes: { name: "Publishing", url: "http://people.pco.test" },
+    attributes: { name: "Publishin", url: "http://people.pco.test" },
     links: { self: "http://api.pco.test/people/v2/apps/3" },
   },
   {

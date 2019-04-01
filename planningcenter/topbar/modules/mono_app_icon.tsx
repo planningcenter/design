@@ -41,7 +41,11 @@ export function MonoAppIcon({
 
       <Squircle />
 
-      {React.createElement(AppSymbols[appName], { color: colors.base0 })}
+      {AppSymbols[appName] ? (
+        React.createElement(AppSymbols[appName], { color: colors.base0 })
+      ) : (
+        <div>appName not supported</div>
+      )}
     </svg>
   );
 }

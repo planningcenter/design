@@ -17,8 +17,12 @@ export function ColorAppIcon({
       viewBox="0 0 20 20"
       style={{ display: "block" }}
     >
-      {ColorAppSquircles[appName]()}
-      {React.createElement(AppSymbols[appName], { color: "#fff" })}
+      {ColorAppSquircles[appName] ? ColorAppSquircles[appName]() : <span />}
+      {AppSymbols[appName] ? (
+        React.createElement(AppSymbols[appName], { color: "#fff" })
+      ) : (
+        <div>appName not supported</div>
+      )}
     </svg>
   );
 }
