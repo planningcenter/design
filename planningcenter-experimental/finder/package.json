@@ -1,0 +1,36 @@
+{
+  "name": "@planningcenter-experimental/finder",
+  "version": "0.0.0",
+  "description": "Components for building a resource Finder in React",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter-experimental/finder",
+  "license": "MIT",
+  "main": "dist/finder.js",
+  "umd:main": "dist/finder.umd.js",
+  "module": "dist/finder.mjs",
+  "source": "finder.js",
+  "amdName": "PLANNINGCENTER.Finder",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planningcenter/design.git"
+  },
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  },
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  }
+}
