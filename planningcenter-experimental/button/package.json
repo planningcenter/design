@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter-experimental/button",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "An experimental planning center button",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter-experimental/button",
@@ -38,6 +38,6 @@
     "microbundle": "^0.11.0"
   },
   "dependencies": {
-    "@planningcenter/utilities": "^0.0.3"
+    "@planningcenter/utilities": "^0.0.4"
   }
 }
