@@ -6,6 +6,7 @@
   "umd:main": "dist/url.umd.js",
   "module": "dist/url.mjs",
   "source": "index.js",
+  "amdName": "PLANNINGCENTER.url",
   "repository": "https://github.com/planningcenter/design.git",
   "author": "Michael Chan <mijoch@gmail.com>",
   "license": "MIT",
@@ -13,8 +14,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "microbundle --jsx React.createElement --name PlanningCenterUrl",
-    "dev": "microbundle watch --jsx React.createElement --name PlanningCenterUrl",
+    "build": "microbundle --jsx React.createElement",
+    "dev": "microbundle --jsx React.createElement watch",
     "pretest": "npm run build",
     "prepublish": "npm run build",
     "test": "jest"

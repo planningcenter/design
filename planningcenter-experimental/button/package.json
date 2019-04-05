@@ -10,6 +10,7 @@
   "module": "dist/button.mjs",
   "source": "button.js",
   "style": "button.css",
+  "amdName": "PLANNINGCENTER.EXPERIMENTAL.Button",
   "files": [
     "dist",
     "button.css"
@@ -22,8 +23,8 @@
     "url": "git+https://github.com/planningcenter/design.git"
   },
   "scripts": {
-    "build": "microbundle --jsx React.createElement --name PlanningCenterExperimentalButton",
-    "dev": "microbundle --jsx React.createElement --name PlanningCenterExperimentalButton watch"
+    "build": "microbundle --jsx React.createElement",
+    "dev": "microbundle --jsx React.createElement watch"
   },
   "bugs": {
     "url": "https://github.com/planningcenter/design/issues"

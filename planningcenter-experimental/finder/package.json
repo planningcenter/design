@@ -9,7 +9,7 @@
   "umd:main": "dist/finder.umd.js",
   "module": "dist/finder.mjs",
   "source": "finder.js",
-  "amdName": "PLANNINGCENTER.Finder",
+  "amdName": "PLANNINGCENTER.EXPERIMENTAL.Finder",
   "files": [
     "dist"
   ],
@@ -21,8 +21,8 @@
     "url": "git+https://github.com/planningcenter/design.git"
   },
   "scripts": {
-    "build": "microbundle",
-    "dev": "microbundle watch"
+    "build": "microbundle --jsx React.createElement",
+    "dev": "microbundle watch --jsx React.createElement"
   },
   "bugs": {
     "url": "https://github.com/planningcenter/design/issues"

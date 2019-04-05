@@ -10,11 +10,11 @@
   "module": "dist/avatar.mjs",
   "source": "avatar.js",
   "style": "avatar.css",
+  "amdName": "PLANNINGCENTER.Avatar",
   "files": [
     "dist",
     "avatar.css"
   ],
-  "amdName": "PLANNINGCENTER.Avatar",
   "publishConfig": {
     "access": "public"
   },
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "build": "microbundle --jsx React.createElement",
-    "dev": "microbundle --jsx React.createElement",
+    "dev": "microbundle --jsx React.createElement watch",
     "prepublish": "npm run build"
   },
   "bugs": {

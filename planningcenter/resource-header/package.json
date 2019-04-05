@@ -8,7 +8,7 @@
   "source": "resource-header.js",
   "main": "dist/resource-header.js",
   "module": "dist/resource-header.mjs",
-  "amdName": "planningcenter_resourceheader",
+  "amdName": "PLANNINGCENTER.ResourceHeader",
   "files": [
     "dist"
   ],
@@ -20,8 +20,8 @@
     "url": "git+https://github.com/planningcenter/design.git"
   },
   "scripts": {
-    "build": "microbundle",
-    "dev": "microbundle watch"
+    "build": "microbundle --jsx React.createElement",
+    "dev": "microbundle --jsx React.createElement watch"
   },
   "bugs": {
     "url": "https://github.com/planningcenter/design/issues"

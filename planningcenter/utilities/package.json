@@ -9,7 +9,7 @@
   "main": "dist/utilities.js",
   "module": "dist/utilities.mjs",
   "umd:main": "dist/utilities.umd.js",
-  "amdName": "planningcenter_utilities",
+  "amdName": "PLANNINGCENTER.utilities",
   "files": [
     "dist"
   ],
