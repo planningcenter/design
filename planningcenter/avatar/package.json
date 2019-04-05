@@ -1,6 +1,6 @@
 {
-  "name": "@twain/avatar",
-  "version": "0.1.0-alpha.14",
+  "name": "@planningcenter/avatar",
+  "version": "0.0.0",
   "description": "avatar",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design#readme",
@@ -14,6 +14,7 @@
     "dist",
     "avatar.css"
   ],
+  "amdName": "PLANNINGCENTER.Avatar",
   "publishConfig": {
     "access": "public"
   },
@@ -22,8 +23,8 @@
     "url": "git+https://github.com/planningcenter/design.git"
   },
   "scripts": {
-    "build": "microbundle --jsx React.createElement --name TwainAvatar",
-    "dev": "microbundle --jsx React.createElement --name TwainAvatar watch",
+    "build": "microbundle --jsx React.createElement",
+    "dev": "microbundle --jsx React.createElement",
     "prepublish": "npm run build"
   },
   "bugs": {

@@ -1,19 +1,19 @@
-# `@twain/avatar`
+# `@planningcenter/avatar`
 
 > A circular image representing one person
 
 ## Usage
 
-`npm -i @twain/avatar`
+`npm -i @planningcenter/avatar`
 
-- [NPM](https://www.npmjs.com/package/@twain/avatar)
-- [UNPKG](http://unpkg.com/@twain/avatar)
+- [NPM](https://www.npmjs.com/package/@planningcenter/avatar)
+- [UNPKG](http://unpkg.com/@planningcenter/avatar)
 
 ### React
 
 ```jsx
-import Avatar from "@twain/avatar";
-import "@twain/avatar.css";
+import Avatar from "@planningcenter/avatar";
+import "@planningcenter/avatar.css";
 
 <Avatar
   src="path/to/avatar.png"
@@ -49,7 +49,7 @@ Insets the component
 
 ```css
 :root {
-  --twain-avatar-inset-color: white;
+  --planningcenter-avatar-inset-color: white;
 }
 ```
 
@@ -65,7 +65,7 @@ An image representing one person.
 - Dimensions: _height == width_
 - Border: _optional_
   - excluded: _20px_
-  - size: _.5 * (absolute-avatar-size / 8px)_ (rounded up for better browser support)
+  - size: _.5 \* (absolute-avatar-size / 8px)_ (rounded up for better browser support)
   - scale: _roundUp(size _ .05)\*
   - min: _2px_
   - max: _5px_

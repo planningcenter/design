@@ -22,7 +22,7 @@ lerna bootstrap
 
 ## Packages
 
-- [@twain/avatar](/twain/avatar)
+- [@planningcenter/avatar](/planningcenter/avatar)
 
 ## Structure
 

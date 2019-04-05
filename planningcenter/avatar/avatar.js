@@ -66,11 +66,11 @@ export function getScaledClasses(
 }
 
 function getConstrainedSize(size, strict) {
-  if (strict && sizes.includes(size)) {
-    return size;
+  if (strict && !sizes.includes(size)) {
+    return;
   }
 
-  return null;
+  return size;
 }
 
 export function ComposedAvatar({

@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 import "github-markdown-css";
 
-import { ComposedAvatar as Avatar } from "../../twain/avatar/avatar.js";
-import "../../twain/avatar/avatar.css";
-import Readme from "../../twain/avatar/README.md";
-import pkg from "../../twain/avatar/package.json";
+import { ComposedAvatar as Avatar } from "../../planningcenter/avatar/avatar.js";
+import "../../planningcenter/avatar/avatar.css";
+import Readme from "../../planningcenter/avatar/README.md";
+import pkg from "../../planningcenter/avatar/package.json";
 import { Detail } from "../../pages_support/package";
 
 export default function() {

@@ -1,9 +1,4 @@
-# twain
-
-> Never the twain shall meet
-
-Non-configurable, CSS-driven components for React and everything else.
-Design for Planning Center apps.
+# @planningcenter
 
 ## Ongoing questions
 
