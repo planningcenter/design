@@ -14,82 +14,365 @@
   object-fit: cover;
 }
 
-/* 1D modifiers*/
+/* ScaledAvatar */
 
-.Avatar--size_20px {
+.ScaledAvatar--size_2\.5 {
   width: 20px;
   height: 20px;
+  --styled-avatar--inset_padding: 0;
 }
-.Avatar--size_3 {
+
+.ScaledAvatar--size_3 {
   width: 24px;
   height: 24px;
+  --styled-avatar--inset_padding: 2px;
 }
-.Avatar--size_4 {
+
+.ScaledAvatar--size_4 {
   width: 32px;
   height: 32px;
+  --styled-avatar--inset_padding: 2px;
 }
-.Avatar--size_5 {
+
+.ScaledAvatar--size_5 {
   width: 40px;
   height: 40px;
+  --styled-avatar--inset_padding: 3px;
 }
-.Avatar--size_6 {
+
+.ScaledAvatar--size_6 {
   width: 48px;
   height: 48px;
+  --styled-avatar--inset_padding: 3px;
 }
-.Avatar--size_7 {
+
+.ScaledAvatar--size_7 {
   width: 56px;
   height: 56px;
+  --styled-avatar--inset_padding: 4px;
 }
-.Avatar--size_8 {
+
+.ScaledAvatar--size_8 {
   width: 64px;
   height: 64px;
+  --styled-avatar--inset_padding: 4px;
 }
-.Avatar--size_9 {
+
+.ScaledAvatar--size_9 {
   width: 72px;
   height: 72px;
-}
-.Avatar--size_profile {
-  width: 112px;
-  height: 112px;
+  --styled-avatar--inset_padding: 5px;
 }
 
-.Avatar--inset,
-.Avatar--inset_true {
+/* StyledAvatar */
+
+.StyledAvatar--inset {
   background-color: white;
   background-color: var(--twain-avatar-inset-color, white);
+  padding: var(--styled-avatar--inset_padding);
 }
 
-/* 2D modifiers */
+/* ResponsiveAvatar */
 
-.Avatar--size_3.Avatar--inset,
-.Avatar--size_3.Avatar--inset_true {
-  padding: 2px;
+.ResponsiveScaledAvatar {
 }
-.Avatar--size_4.Avatar--inset,
-.Avatar--size_4.Avatar--inset_true {
-  padding: 2px;
+
+@media only screen and (min-width: 0) {
+  .\@mn__ResponsiveScaledAvatar--size_2\.5 {
+    width: 20px;
+    height: 20px;
+    --styled-avatar--inset_padding: 0;
+  }
+
+  .\@mn__ResponsiveScaledAvatar--size_3 {
+    width: 24px;
+    height: 24px;
+    --styled-avatar--inset_padding: 2px;
+  }
+
+  .\@mn__ResponsiveScaledAvatar--size_4 {
+    width: 32px;
+    height: 32px;
+    --styled-avatar--inset_padding: 2px;
+  }
+
+  .\@mn__ResponsiveScaledAvatar--size_5 {
+    width: 40px;
+    height: 40px;
+    --styled-avatar--inset_padding: 3px;
+  }
+
+  .\@mn__ResponsiveScaledAvatar--size_6 {
+    width: 48px;
+    height: 48px;
+    --styled-avatar--inset_padding: 3px;
+  }
+
+  .\@mn__ResponsiveScaledAvatar--size_7 {
+    width: 56px;
+    height: 56px;
+    --styled-avatar--inset_padding: 4px;
+  }
+
+  .\@mn__ResponsiveScaledAvatar--size_8 {
+    width: 64px;
+    height: 64px;
+    --styled-avatar--inset_padding: 4px;
+  }
+
+  .\@mn__ResponsiveScaledAvatar--size_9 {
+    width: 72px;
+    height: 72px;
+    --styled-avatar--inset_padding: 5px;
+  }
 }
-.Avatar--size_5.Avatar--inset,
-.Avatar--size_5.Avatar--inset_true {
-  padding: 3px;
+
+@media only screen and (min-width: 480px) {
+  .\@xs__ResponsiveScaledAvatar--size_2\.5 {
+    width: 20px;
+    height: 20px;
+    --styled-avatar--inset_padding: 0;
+  }
+
+  .\@xs__ResponsiveScaledAvatar--size_3 {
+    width: 24px;
+    height: 24px;
+    --styled-avatar--inset_padding: 2px;
+  }
+
+  .\@xs__ResponsiveScaledAvatar--size_4 {
+    width: 32px;
+    height: 32px;
+    --styled-avatar--inset_padding: 2px;
+  }
+
+  .\@xs__ResponsiveScaledAvatar--size_5 {
+    width: 40px;
+    height: 40px;
+    --styled-avatar--inset_padding: 3px;
+  }
+
+  .\@xs__ResponsiveScaledAvatar--size_6 {
+    width: 48px;
+    height: 48px;
+    --styled-avatar--inset_padding: 3px;
+  }
+
+  .\@xs__ResponsiveScaledAvatar--size_7 {
+    width: 56px;
+    height: 56px;
+    --styled-avatar--inset_padding: 4px;
+  }
+
+  .\@xs__ResponsiveScaledAvatar--size_8 {
+    width: 64px;
+    height: 64px;
+    --styled-avatar--inset_padding: 4px;
+  }
+
+  .\@xs__ResponsiveScaledAvatar--size_9 {
+    width: 72px;
+    height: 72px;
+    --styled-avatar--inset_padding: 5px;
+  }
 }
-.Avatar--size_6.Avatar--inset,
-.Avatar--size_6.Avatar--inset_true {
-  padding: 3px;
+
+@media only screen and (min-width: 600px) {
+  .\@sm__ResponsiveScaledAvatar--size_2\.5 {
+    width: 20px;
+    height: 20px;
+    --styled-avatar--inset_padding: 0;
+  }
+
+  .\@sm__ResponsiveScaledAvatar--size_3 {
+    width: 24px;
+    height: 24px;
+    --styled-avatar--inset_padding: 2px;
+  }
+
+  .\@sm__ResponsiveScaledAvatar--size_4 {
+    width: 32px;
+    height: 32px;
+    --styled-avatar--inset_padding: 2px;
+  }
+
+  .\@sm__ResponsiveScaledAvatar--size_5 {
+    width: 40px;
+    height: 40px;
+    --styled-avatar--inset_padding: 3px;
+  }
+
+  .\@sm__ResponsiveScaledAvatar--size_6 {
+    width: 48px;
+    height: 48px;
+    --styled-avatar--inset_padding: 3px;
+  }
+
+  .\@sm__ResponsiveScaledAvatar--size_7 {
+    width: 56px;
+    height: 56px;
+    --styled-avatar--inset_padding: 4px;
+  }
+
+  .\@sm__ResponsiveScaledAvatar--size_8 {
+    width: 64px;
+    height: 64px;
+    --styled-avatar--inset_padding: 4px;
+  }
+
+  .\@sm__ResponsiveScaledAvatar--size_9 {
+    width: 72px;
+    height: 72px;
+    --styled-avatar--inset_padding: 5px;
+  }
 }
-.Avatar--size_7.Avatar--inset,
-.Avatar--size_7.Avatar--inset_true {
-  padding: 4px;
+
+@media only screen and (min-width: 720px) {
+  .\@md__ResponsiveScaledAvatar--size_2\.5 {
+    width: 20px;
+    height: 20px;
+    --styled-avatar--inset_padding: 0;
+  }
+
+  .\@md__ResponsiveScaledAvatar--size_3 {
+    width: 24px;
+    height: 24px;
+    --styled-avatar--inset_padding: 2px;
+  }
+
+  .\@md__ResponsiveScaledAvatar--size_4 {
+    width: 32px;
+    height: 32px;
+    --styled-avatar--inset_padding: 2px;
+  }
+
+  .\@md__ResponsiveScaledAvatar--size_5 {
+    width: 40px;
+    height: 40px;
+    --styled-avatar--inset_padding: 3px;
+  }
+
+  .\@md__ResponsiveScaledAvatar--size_6 {
+    width: 48px;
+    height: 48px;
+    --styled-avatar--inset_padding: 3px;
+  }
+
+  .\@md__ResponsiveScaledAvatar--size_7 {
+    width: 56px;
+    height: 56px;
+    --styled-avatar--inset_padding: 4px;
+  }
+
+  .\@md__ResponsiveScaledAvatar--size_8 {
+    width: 64px;
+    height: 64px;
+    --styled-avatar--inset_padding: 4px;
+  }
+
+  .\@md__ResponsiveScaledAvatar--size_9 {
+    width: 72px;
+    height: 72px;
+    --styled-avatar--inset_padding: 5px;
+  }
 }
-.Avatar--size_8.Avatar--inset,
-.Avatar--size_8.Avatar--inset_true {
-  padding: 4px;
+
+@media only screen and (min-width: 960px) {
+  .\@lg__ResponsiveScaledAvatar--size_2\.5 {
+    width: 20px;
+    height: 20px;
+    --styled-avatar--inset_padding: 0;
+  }
+
+  .\@lg__ResponsiveScaledAvatar--size_3 {
+    width: 24px;
+    height: 24px;
+    --styled-avatar--inset_padding: 2px;
+  }
+
+  .\@lg__ResponsiveScaledAvatar--size_4 {
+    width: 32px;
+    height: 32px;
+    --styled-avatar--inset_padding: 2px;
+  }
+
+  .\@lg__ResponsiveScaledAvatar--size_5 {
+    width: 40px;
+    height: 40px;
+    --styled-avatar--inset_padding: 3px;
+  }
+
+  .\@lg__ResponsiveScaledAvatar--size_6 {
+    width: 48px;
+    height: 48px;
+    --styled-avatar--inset_padding: 3px;
+  }
+
+  .\@lg__ResponsiveScaledAvatar--size_7 {
+    width: 56px;
+    height: 56px;
+    --styled-avatar--inset_padding: 4px;
+  }
+
+  .\@lg__ResponsiveScaledAvatar--size_8 {
+    width: 64px;
+    height: 64px;
+    --styled-avatar--inset_padding: 4px;
+  }
+
+  .\@lg__ResponsiveScaledAvatar--size_9 {
+    width: 72px;
+    height: 72px;
+    --styled-avatar--inset_padding: 5px;
+  }
 }
-.Avatar--size_9.Avatar--inset,
-.Avatar--size_9.Avatar--inset_true {
-  padding: 5px;
-}
-.Avatar--size_profile.Avatar--inset,
-.Avatar--size_profile.Avatar--inset_true {
-  padding: 5px;
+
+@media only screen and (min-width: 1200px) {
+  .\@xl__ResponsiveScaledAvatar--size_2\.5 {
+    width: 20px;
+    height: 20px;
+    --styled-avatar--inset_padding: 0;
+  }
+
+  .\@xl__ResponsiveScaledAvatar--size_3 {
+    width: 24px;
+    height: 24px;
+    --styled-avatar--inset_padding: 2px;
+  }
+
+  .\@xl__ResponsiveScaledAvatar--size_4 {
+    width: 32px;
+    height: 32px;
+    --styled-avatar--inset_padding: 2px;
+  }
+
+  .\@xl__ResponsiveScaledAvatar--size_5 {
+    width: 40px;
+    height: 40px;
+    --styled-avatar--inset_padding: 3px;
+  }
+
+  .\@xl__ResponsiveScaledAvatar--size_6 {
+    width: 48px;
+    height: 48px;
+    --styled-avatar--inset_padding: 3px;
+  }
+
+  .\@xl__ResponsiveScaledAvatar--size_7 {
+    width: 56px;
+    height: 56px;
+    --styled-avatar--inset_padding: 4px;
+  }
+
+  .\@xl__ResponsiveScaledAvatar--size_8 {
+    width: 64px;
+    height: 64px;
+    --styled-avatar--inset_padding: 4px;
+  }
+
+  .\@xl__ResponsiveScaledAvatar--size_9 {
+    width: 72px;
+    height: 72px;
+    --styled-avatar--inset_padding: 5px;
+  }
 }

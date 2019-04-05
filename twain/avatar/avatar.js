@@ -10,11 +10,72 @@ import { UNSTABLE_getClassSelectorsFromProps as getClassSelectorsFromProps } fro
 //   .filter(size => ![2.5].includes(size))
 //   .concat([undefined]);
 
-let sizes = [2.5, 3, 4, 5, 6, 7, 8, 9];
+let breakpoints = ["mn", "xs", "sm", "md", "lg", "xl"];
+
+export let sizes = [2.5, 3, 4, 5, 6, 7, 8, 9];
+
+export function getStyledClasses({ inset }) {
+  return getClassSelectorsFromProps("StyledAvatar")([
+    "inset"
+  ])({
+    inset
+  });
+}
+
+export function getResponsiveScaledClasses(
+  { size: incomingSizes },
+  strict = true
+) {
+  if (
+    typeof incomingSizes !== "object" ||
+    incomingSizes === null
+  )
+    return;
+
+  let size = {};
+
+  Object.entries(incomingSizes).forEach(([bp, s]) => {
+    if (!strict) {
+      return (size[bp] = s);
+    }
+
+    if (breakpoints.includes(bp) && sizes.includes(s)) {
+      return (size[bp] = s);
+    }
+
+    return;
+  });
+
+  return getClassSelectorsFromProps(
+    "ResponsiveScaledAvatar"
+  )(["size"])({ size: size });
+}
+
+export function getScaledClasses(
+  { size: incomingSize },
+  strict = true
+) {
+  let size = getConstrainedSize(incomingSize, strict);
+
+  return (
+    typeof size !== "object" &&
+    getClassSelectorsFromProps("ScaledAvatar")(["size"])({
+      size
+    })
+  );
+}
+
+function getConstrainedSize(size, strict) {
+  if (strict && sizes.includes(size)) {
+    return size;
+  }
+
+  return null;
+}
 
 export function ComposedAvatar({
   as: As = "span",
-  size: incomingSize,
+  size,
   strict = true,
   src,
   alt,
@@ -26,34 +87,13 @@ export function ComposedAvatar({
   let imgProps = { src, alt };
   let img = <img {...imgProps} />;
 
-  let size = incomingSize;
-
-  if (strict && !sizes.includes(incomingSize)) {
-    size = null;
-  }
-
   return (
     <As
       className={classnames(
         className,
-        getClassSelectorsFromProps("StyledAvatar")([
-          "inset"
-        ])({
-          inset
-        }),
-        typeof size === "object" &&
-          size !== null && [
-            "ResponsiveAvatar",
-            getClassSelectorsFromProps(
-              "ResponsiveScaledAvatar"
-            )(["size"])({ size })
-          ],
-        typeof size !== "object" &&
-          getClassSelectorsFromProps("ScaledAvatar")([
-            "size"
-          ])({
-            size
-          }),
+        getResponsiveScaledClasses({ size }, strict),
+        getScaledClasses({ size }, strict),
+        getStyledClasses({ inset }),
         "Avatar"
       )}
       {...props}
