@@ -4,59 +4,48 @@
 
 # design
 
-Global Design maintained packages.
+Global Design maintained packages
+
+## Packages
+
+- [@planningcenter/avatar](/planningcenter/avatar)
+- [@planningcenter/browserslist-config](/planningcenter/browserslist-config)
+- [@planningcenter/resource-header](/planningcenter/resource-header)
+- [@planningcenter/symbol](/planningcenter/symbol)
+- [@planningcenter/topbar](/planningcenter/topbar)
+- [@planningcenter/typeface](/planningcenter/typeface)
+- [@planningcenter/url](/planningcenter/url)
+- [@planningcenter/utilities](/planningcenter/utilities)
+- [@planningcenter-experimental/button](/planningcenter-experimental/button)
+- [@planningcenter-experimental/finder](/planningcenter-experimental/finder)
 
 ## Scripts
 
+Most common scripts:
+
 ```
-test: run all the tests
+| Command                     | Description                                    |
+| :-------------------------- | :--------------------------------------------- |
+| `npm test`                  | Run tests across packages                      |
+| `npm run dev`               | Start dev server for Next.js app in /pages     |
+| `lerna list`                | List packages                                  |
+| `lerna diff`                | Diff all packages against the last release     |
+| `lerna create <name> [loc]` | Diff a single package against the last release |
+| `lerna diff [pkg-name]`     | Diff a single package against the last release |
+| `lerna publish`             | Publish all changed packages                   |
+| `lerna help`                | See all the other things you can do            |
 ```
 
 ## Setup
 
 ```bash
-git clone git@github.com:planningcenter/design.git
+git clone git@github.com:planningcenter/design.git ~/Code/design
 cd design
-lerna bootstrap
+lerna bootstrap # install all package-local dependencies and links
 ```
-
-## Packages
-
-- [@planningcenter/avatar](/planningcenter/avatar)
 
 ## Structure
 
-`planningcenter/design` is a single repository with many independent, linked NPM packages.
-This is frequently referred to as a [Monorepo](https://developer.atlassian.com/blog/2015/10/monorepos-in-git/).
-Projects like [babel](https://github.com/babel/babel) and [react](https://github.com/facebook/react) use this structure to manage related but independent packages.
-
-Keeping these independent projects in one repository has one destinct advantage:
-included packages can be linked for local, cross-package development.
-
-Here's an example...
-
-Say you're working in `@planningcenter-experimental/finder` and need to add a feature to `@planningcenter/url`. Instead of having find that repo, clone it, make a few blind change, publish, and re-`npm install`, you're able to develop and publish changes to both in one place.
-
-## Publishing
-
-**this section copied from @planningcenter/javascript. out of date.**
-
-[Lerna](https://lernajs.io) manages publishing at the root of the project.
-This is big conceptual differenceMono form `1:1` package:repo projects.
-
-A typical workflow looks like this:
-
-- Navigate to your project in the `/packages` directory
-- Develop using the scripts setup there
-- Navigate back to the root and run `npm lerna publish`
-- Follow the the prompts to select a new version appropriate for your changes
-
-Here are additional commands you might find helpful:
-
-| Command                 | Description                                     |
-| :---------------------- | :---------------------------------------------- |
-| `lerna ls`              | List packages                                   |
-| `lerna diff`            | Diff all packages against the last release      |
-| `lerna diff [pkg-name]` | Diff a single package against the last release. |
-| `lerna publish`         | Publish all packages                            |
-| `lerna help`            | See all the other cool things you can do        |
+`planningcenter/design` is a single repository with several independent modules —  
+[Monorepo](https://developer.atlassian.com/blog/2015/10/monorepos-in-git/), qolloquially.
+[Babel](https://github.com/babel/babel) and [React](https://github.com/facebook/react) use this structure to manage related but independent packages.
