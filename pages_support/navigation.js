@@ -37,6 +37,30 @@ export default function() {
           </li>
         )}
       />
+
+      <strong>guides</strong>
+      <OrganizationProjectList
+        items={["extension"]}
+        renderItem={p => (
+          <li>
+            <Link>
+              <a href={`/guides/${p}`}>{p}</a>
+            </Link>
+          </li>
+        )}
+      />
+
+      <strong>tools</strong>
+      <OrganizationProjectList
+        items={["entity-builder"]}
+        renderItem={p => (
+          <li>
+            <Link>
+              <a href={`/tools/${p}`}>{p}</a>
+            </Link>
+          </li>
+        )}
+      />
     </React.Fragment>
   );
 }
