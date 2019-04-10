@@ -180,8 +180,8 @@ export function Publishing(): JSX.Element[] {
         y2="17.958"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#787882" />
-        <stop offset="1" stop-color="#5f5f69" />
+        <stop offset="0" stopColor="#787882" />
+        <stop offset="1" stopColor="#5f5f69" />
       </linearGradient>
       <linearGradient
         id="linear-gradient-2"
