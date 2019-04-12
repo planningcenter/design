@@ -4,7 +4,7 @@
 
 # design
 
-Global Design maintained packages
+Global Design supported packages
 
 ## Packages
 
@@ -21,31 +21,33 @@ Global Design maintained packages
 
 ## Scripts
 
-Most common scripts:
+Common scripts:
 
-```
-| Command                     | Description                                    |
-| :-------------------------- | :--------------------------------------------- |
-| `npm test`                  | Run tests across packages                      |
-| `npm run dev`               | Start dev server for Next.js app in /pages     |
-| `lerna list`                | List packages                                  |
-| `lerna diff`                | Diff all packages against the last release     |
-| `lerna create <name> [loc]` | Diff a single package against the last release |
-| `lerna diff [pkg-name]`     | Diff a single package against the last release |
-| `lerna publish`             | Publish all changed packages                   |
-| `lerna help`                | See all the other things you can do            |
-```
+| Command                          | Description                                                                        | Options   |
+| :------------------------------- | :--------------------------------------------------------------------------------- | :-------- |
+| `npm test`                       | Run tests for all packages                                                         | `--watch` |
+| `npm run dev`                    | Start development server for [Next.js](https://nextjs.org) app in [/pages](/pages) |           |
+| `lerna publish`                  | Publish all changed packages                                                       |           |
+| `lerna changed`                  | List local packages that have changed since the last tagged release                |           |
+| `lerna create <name> [location]` | Create new package, with `name`, at `location`                                     |           |
+| `lerna help`                     | See all the other things you can do with Lerna                                     |           |
+
+## Project navigation
+
+| File/Dir                       | Why it's here                                                                                                                                                              |
+| :----------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pages/`                       | Pages for [Next.js](https://nextjs.org)-generated documentation                                                                                                            |
+| `pages-support/`               | Shared components in support of documentation                                                                                                                              |
+| `planningcenter/`              | Packages published to the [`@planningcenter` npm org](https://www.npmjs.com/org/planningcenter).<br />**Components design and specified in collaboration with all teams.** |
+| `planningcenter-experimental/` | Packages published to the [`@planningcenter` npm org](https://www.npmjs.com/org/planningcenter)<br />**Components design by Global Design for app teams.**                 |
+| `babel.config.js/`             | Babel config for Next.js-generated documentation                                                                                                                           |
+| `next.config.js/`              | Config for Next.js-generated documentation                                                                                                                                 |
 
 ## Setup
 
 ```bash
+npm i -g lerna
 git clone git@github.com:planningcenter/design.git ~/Code/design
-cd design
-lerna bootstrap # install all package-local dependencies and links
+cd ~/Code/design
+lerna bootstrap # install and link all package-local dependencies
 ```
-
-## Structure
-
-`planningcenter/design` is a single repository with several independent modules —  
-[Monorepo](https://developer.atlassian.com/blog/2015/10/monorepos-in-git/), qolloquially.
-[Babel](https://github.com/babel/babel) and [React](https://github.com/facebook/react) use this structure to manage related but independent packages.
