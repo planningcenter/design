@@ -28,8 +28,7 @@
     "test": "jest",
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "setup": "lerna link && lerna exec npm install"
+    "start": "next start"
   },
   "dependencies": {}
 }
