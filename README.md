@@ -40,8 +40,9 @@ Common scripts:
 | `pages-support/`               | Shared components in support of documentation                                                                                                                              |
 | `planningcenter/`              | Packages published to the [`@planningcenter` npm org](https://www.npmjs.com/org/planningcenter).<br />**Components design and specified in collaboration with all teams.** |
 | `planningcenter-experimental/` | Packages published to the [`@planningcenter` npm org](https://www.npmjs.com/org/planningcenter)<br />**Components design by Global Design for app teams.**                 |
-| `babel.config.js/`             | Babel config for Next.js-generated documentation                                                                                                                           |
-| `next.config.js/`              | Config for Next.js-generated documentation                                                                                                                                 |
+| `babel.config.js`              | Babel config for tests                                                                                                                                                     |
+| `next.config.js`               | Config for Next.js-generated documentation                                                                                                                                 |
+| `.circleci/config.yml`         | CircleCI config for continuous integration                                                                                                                                 |
 
 ## Setup
 
