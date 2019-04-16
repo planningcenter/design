@@ -1,7 +1,7 @@
 import React from "react";
 import classnames from "classnames";
 // TODO: inlined temporarily
-import { UNSTABLE_getClassSelectorsFromProps as getClassSelectorsFromProps } from "../../planningcenter/utilities";
+import { UNSTABLE_getClassSelectorsFromProps as getClassSelectorsFromProps } from "../utilities";
 
 // TODO: add ability to opt-out of base-class.
 //       maybe a context-based scope?
@@ -15,9 +15,7 @@ let breakpoints = ["mn", "xs", "sm", "md", "lg", "xl"];
 export let sizes = [2.5, 3, 4, 5, 6, 7, 8, 9];
 
 export function getStyledClasses({ inset }) {
-  return getClassSelectorsFromProps("StyledAvatar")([
-    "inset"
-  ])({
+  return getClassSelectorsFromProps("StyledAvatar")(["inset"])({
     inset
   });
 }
@@ -26,11 +24,7 @@ export function getResponsiveScaledClasses(
   { size: incomingSizes },
   strict = true
 ) {
-  if (
-    typeof incomingSizes !== "object" ||
-    incomingSizes === null
-  )
-    return;
+  if (typeof incomingSizes !== "object" || incomingSizes === null) return;
 
   let size = {};
 
@@ -46,15 +40,12 @@ export function getResponsiveScaledClasses(
     return;
   });
 
-  return getClassSelectorsFromProps(
-    "ResponsiveScaledAvatar"
-  )(["size"])({ size: size });
+  return getClassSelectorsFromProps("ResponsiveScaledAvatar")(["size"])({
+    size: size
+  });
 }
 
-export function getScaledClasses(
-  { size: incomingSize },
-  strict = true
-) {
+export function getScaledClasses({ size: incomingSize }, strict = true) {
   let size = getConstrainedSize(incomingSize, strict);
 
   return (
@@ -98,9 +89,7 @@ export function ComposedAvatar({
       )}
       {...props}
     >
-      {typeof children === "function"
-        ? children(img, imgProps)
-        : img}
+      {typeof children === "function" ? children(img, imgProps) : img}
     </As>
   );
 }
