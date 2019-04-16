@@ -5,7 +5,6 @@
   "description": "Planning Center application Topbar",
   "main": "dist/topbar.js",
   "umd:main": "dist/topbar.umd.js",
-  "module": "dist/topbar.mjs",
   "source": "index.ts",
   "amdName": "PLANNINGCENTER.Topbar",
   "scripts": {
