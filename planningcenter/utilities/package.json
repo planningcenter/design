@@ -5,10 +5,8 @@
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/utilities",
   "license": "MIT",
-  "source": "utilities.js",
   "main": "dist/utilities.js",
-  "module": "dist/utilities.mjs",
-  "umd:main": "dist/utilities.umd.js",
+  "source": "utilities.js",
   "amdName": "PLANNINGCENTER.utilities",
   "files": [
     "dist"

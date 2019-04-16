@@ -6,8 +6,6 @@
   "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter-experimental/finder",
   "license": "MIT",
   "main": "dist/finder.js",
-  "umd:main": "dist/finder.umd.js",
-  "module": "dist/finder.mjs",
   "source": "finder.js",
   "amdName": "PLANNINGCENTER.EXPERIMENTAL.Finder",
   "files": [

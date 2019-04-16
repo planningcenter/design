@@ -6,8 +6,6 @@
   "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter-experimental/button",
   "license": "MIT",
   "main": "dist/button.js",
-  "umd:main": "dist/button.umd.js",
-  "module": "dist/button.mjs",
   "source": "button.js",
   "style": "button.css",
   "amdName": "PLANNINGCENTER.EXPERIMENTAL.Button",

@@ -3,8 +3,6 @@
   "version": "3.0.0",
   "description": "A component for presenting external SVG symbols via file-loader",
   "main": "dist/symbol.js",
-  "umd:main": "dist/symbol.umd.js",
-  "module": "dist/symbol.mjs",
   "source": "symbol.js",
   "amdName": "PLANNINGCENTER.Symbol",
   "repository": "https://github.com/planningcenter/design.git",

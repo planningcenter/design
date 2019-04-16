@@ -8,7 +8,7 @@ import Layout from "../../pages_support/layout";
 import {
   ComposedButton as Button,
   ButtonCluster
-} from "../../planningcenter-experimental/button/dist/button.mjs";
+} from "../../planningcenter-experimental/button/button.js";
 import "../../planningcenter-experimental/button/button.css";
 import Readme from "../../planningcenter-experimental/button/README.md";
 import pkg from "../../planningcenter-experimental/button/package.json";

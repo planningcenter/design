@@ -5,9 +5,8 @@
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design/",
   "license": "MIT",
-  "source": "resource-header.js",
   "main": "dist/resource-header.js",
-  "module": "dist/resource-header.mjs",
+  "source": "resource-header.js",
   "amdName": "PLANNINGCENTER.ResourceHeader",
   "files": [
     "dist"

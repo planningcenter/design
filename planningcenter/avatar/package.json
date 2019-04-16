@@ -6,8 +6,6 @@
   "homepage": "https://github.com/planningcenter/design#readme",
   "license": "MIT",
   "main": "dist/avatar.js",
-  "umd:main": "dist/avatar.umd.js",
-  "module": "dist/avatar.mjs",
   "source": "avatar.js",
   "style": "avatar.css",
   "amdName": "PLANNINGCENTER.Avatar",
