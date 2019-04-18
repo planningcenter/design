@@ -6,12 +6,12 @@
   "homepage": "https://github.com/planningcenter/design#readme",
   "license": "MIT",
   "main": "dist/avatar.js",
-  "source": "avatar.js",
-  "style": "avatar.css",
+  "source": "src/avatar.js",
+  "style": "css/avatar.css",
   "amdName": "PLANNINGCENTER.Avatar",
   "files": [
     "dist",
-    "avatar.css"
+    "css"
   ],
   "publishConfig": {
     "access": "public"
@@ -21,8 +21,8 @@
     "url": "git+https://github.com/planningcenter/design.git"
   },
   "scripts": {
-    "build": "microbundle --jsx React.createElement",
-    "dev": "microbundle --jsx React.createElement watch",
+    "build": "microbundle build --jsx React.createElement --format cjs",
+    "dev": "microbundle watch --jsx React.createElement",
     "prepublish": "npm run build"
   },
   "bugs": {
@@ -33,9 +33,8 @@
   },
   "gitHead": "c8480d0688c8aa26ede8a1d3b30edfe81a105a78",
   "devDependencies": {
-    "microbundle": "^0.11.0"
+    "microbundle": "^0.11.0",
+    "postcss-cli": "^6.1.2"
   },
-  "dependencies": {
-    "@planningcenter/utilities": "^0.0.6"
-  }
+  "dependencies": {}
 }

@@ -1,0 +1,30 @@
+{
+  "name": "@planningcenten/system",
+  "version": "0.0.0",
+  "description": "Design System tokens and fixed values",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/system",
+  "license": "MIT",
+  "main": "dist/system.js",
+  "source": "src/system.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planningcenter/design.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "microbundle --format cjs"
+  },
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  },
+  "dependencies": {
+    "microbundle": "^0.11.0"
+  }
+}

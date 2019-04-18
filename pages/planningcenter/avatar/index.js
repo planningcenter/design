@@ -7,11 +7,8 @@ import "github-markdown-css";
 
 import Layout from "../../../pages_support/layout";
 
-import {
-  ComposedAvatar as Avatar,
-  sizes
-} from "../../../planningcenter/avatar/avatar.js";
-import "../../../planningcenter/avatar/avatar.css";
+import { Avatar, sizes } from "../../../planningcenter/avatar/src/avatar";
+import "../../../planningcenter/avatar/css/avatar.css";
 import Readme from "../../../planningcenter/avatar/README.md";
 import pkg from "../../../planningcenter/avatar/package.json";
 import { Detail } from "../../../pages_support/package";
