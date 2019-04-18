@@ -1,5 +1,5 @@
 {
-  "name": "@planningcenten/system",
+  "name": "@planningcenter/system",
   "version": "0.0.1",
   "description": "Design System tokens and fixed values",
   "author": "Michael Chan <mijoch@gmail.com>",
@@ -26,5 +26,6 @@
   },
   "dependencies": {
     "microbundle": "^0.11.0"
-  }
+  },
+  "gitHead": "e6b8e771e36a7a95397bd3682b92358f370b251b"
 }
