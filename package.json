@@ -11,6 +11,7 @@
     "@zeit/next-mdx": "^1.2.0",
     "babel-jest": "^24.5.0",
     "classnames": "^2.2.6",
+    "cypress": "^3.2.0",
     "github-markdown-css": "^3.0.1",
     "jest": "^24.5.0",
     "lerna": "^3.13.2",
@@ -21,7 +22,8 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-testing-library": "^6.0.1",
-    "rollup": "^1.10.0"
+    "rollup": "^1.10.0",
+    "start-server-and-test": "^1.7.13"
   },
   "peerDependencies": {
     "react": "^16.6.3"
@@ -30,7 +32,8 @@
     "test": "jest",
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "cypress": "cypress open",
+    "spec": "start-server-and-test dev http://localhost:3000 cypress"
   },
   "dependencies": {}
 }
