@@ -2,15 +2,9 @@ import React from "react";
 import { render, cleanup } from "react-testing-library";
 
 // TODO: this should eventually test lib/*
-import Avatar from "../avatar.js";
+import { Avatar } from "../src/avatar.js";
 
 afterEach(cleanup);
-
-test("testing", () => {
-  const { getByTestId } = render(<Avatar inset={true} data-testid="inset" />);
-
-  expect(getByTestId("inset")).toBe(0);
-});
 
 test("No props", () => {
   const { getByTestId } = render(<Avatar data-testid="no-props" />);
