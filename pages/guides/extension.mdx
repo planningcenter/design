@@ -1,0 +1,146 @@
+import "github-markdown-css";
+
+# Extension
+
+Planning Center components are built for extensibility.
+
+The goal is that you can extend them to your team's degree of comfort.
+
+Prefer CSS Class selectors? No problem.  
+Want functions to generate those for you from props? Got it.  
+You like full control of your React components? No problem.
+
+This guide will lead you through degrees of abstraction.  
+Starting with the least permenant and developing from there.
+
+## `style`
+
+The style prop is the least perminant way to extend any component.  
+Styles are completely isolated at the call site.
+
+```jsx
+<Avatar
+  style={{ marginLeft: 16 }}
+  alt="A kitty"
+  src="http://placekitten.com/200/300"
+/>
+```
+
+### Take it further
+
+For standard system values, you can use provided functions from `@planningcenter/system`.  
+These the same values used by `@planningcenter` components.
+
+```jsx
+import { space } from "@planningcenter/system";
+
+<Avatar
+  style={{ marginLeft: space(2), borderColor: "purple" }}
+  alt="A kitty"
+  src="http://placekitten.com/200/300"
+/>;
+```
+
+## `className`
+
+You may have existing CSS styles that you'd like to use with these components.  
+Go ahead.
+
+`@planningcenter` component exports an `Element`, which is the base structure of the component.  
+You can examine that to make sure existing styles are compatable with more complex structures.
+
+```jsx
+<Text className="MySpecialText MySpecialText--decoration_flower" />
+```
+
+### Taking it further
+
+See [getEntityClassNamesFromProps](#getEntityClassNamesFromProps).
+
+## `getEntityClassNamesFromProps`
+
+`getEntityClassNamesFromProps` is used to map props to BEM-style classnames.  
+It can be used directly.
+
+```jsx
+import { getEntityClassNamesFromProps } from "@planningcenter/system";
+
+<Text
+  className={getEntityClassNamesFromProps("MySpecialText", {
+    decoration: "flower"
+  })}
+/>;
+```
+
+Most commonly, you'll use this to author your own components:
+
+```jsx
+import { Text } from "@planningcenter/text";
+import { getEntityClassNamesFromProps } from "@planningcenter/system";
+
+export function MySpecialText(props) {
+  return (
+    <Text className={getEntityClassNamesFromProps("MySpecialText", props)} />
+  );
+}
+```
+
+## `get*FromProps` and `Element`
+
+Each component exposes it's pre-composed prop-to-className functions.  
+If you decide to take full control of you components,
+You could do this:
+
+```jsx
+import { Element, getSizeClasses } from "@planningcenter/text";
+import { getEntityClassNamesFromProps } from "@planningcenter/system";
+
+export function MySpecialText({ className, size, ...props }) {
+  return (
+    <Element
+      className={[
+        getSizeClasses({ size }),
+        getEntityClassNamesFromProps("MySpecialText", props),
+        "Text"
+      ]}
+    />
+  );
+}
+```
+
+## `as` prop
+
+`@planningcenter` components can be injected with a base component.  
+This means that you can inject them with new API capailities.
+
+```jsx
+import BoxModelBox from "../my/app/box_model_box";
+import { space } from "@planningcenter/system";
+
+<Text as={Box} marginLeft={space(1)} padding={space(2)}>
+  Some text
+</Text>;
+```
+
+### Take it further
+
+If you have some abstract base class that you really like,  
+you could inject it into all components and only consume your app's abstractions.
+
+```jsx
+import { Avatar } from "@planningcenter/avatar";
+import { Text } from "@planningcenter/text";
+import BoxModelBox from "../my/app/box_model_box";
+
+function SpanBox(props) {
+  return <Box as="span" {...props} />;
+}
+
+export function Text(props) {
+  return <Text as={SpanBox} />;
+}
+
+export function Avatar(props) {
+  return <Avatar as={SpanBox} {...props} />;
+}
+```
