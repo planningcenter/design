@@ -49,6 +49,10 @@ export function mapPropsToClassNames(block = "") {
   };
 }
 
+function dasherize(str) {
+  return str.replace(/([A-Z])/g, g => `-${g[0].toLowerCase()}`);
+}
+
 function getSelector({
   block = "",
   element = "",
@@ -61,10 +65,10 @@ function getSelector({
     }
 
     if (value === true) {
-      return `--${name}`;
+      return `--${dasherize(name)}`;
     }
 
-    return `--${name}_${value}`;
+    return `--${dasherize(name)}_${value}`;
   }
 
   return [

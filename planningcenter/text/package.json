@@ -1,0 +1,33 @@
+{
+  "name": "@planningcenter/text",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "homepage": "https://github.com/planningcenter/design#readme",
+  "license": "MIT",
+  "main": "dist/text.js",
+  "source": "src/text.js",
+  "style": "css/text.css",
+  "files": [
+    "dist",
+    "css"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planningcenter/design.git"
+  },
+  "scripts": {
+    "build": "microbundle build --jsx React.createElement --format cjs",
+    "dev": "microbundle watch --jsx React.createElement",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  },
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
+}
