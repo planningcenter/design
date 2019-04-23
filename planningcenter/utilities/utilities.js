@@ -1,13 +1,9 @@
-export function UNSTABLE_getClassSelectorsFromProps(
-  block = ""
-) {
+export function mapPropsToClassNames(block = "") {
   return (options = []) => {
     return (props = {}) => {
       return (options.length
         ? [
-            options.filter(k => props[k]).length
-              ? `${block}`
-              : "", // if there are any hits, add the base class
+            options.filter(k => props[k]).length ? `${block}` : "", // if there are any hits, add the base class
             ...options.map(modifierName => {
               let modifierValue = props[modifierName];
 
@@ -22,25 +18,23 @@ export function UNSTABLE_getClassSelectorsFromProps(
               if (typeof modifierValue === "object") {
                 let classes = [];
 
-                Object.entries(props).forEach(
-                  ([modifierName, valuesAt]) =>
-                    Object.entries(valuesAt).forEach(
-                      ([at, modifierValue]) =>
-                        classes.push(
-                          UNSTABLE_getBemSelector({
-                            block: `@${at}`,
-                            element: block,
-                            modifierName,
-                            modifierValue
-                          })
-                        )
+                Object.entries(props).forEach(([modifierName, valuesAt]) =>
+                  Object.entries(valuesAt).forEach(([at, modifierValue]) =>
+                    classes.push(
+                      getSelector({
+                        block: `@${at}`,
+                        element: block,
+                        modifierName,
+                        modifierValue
+                      })
                     )
+                  )
                 );
 
                 return classes.join(" ").trim();
               }
 
-              return UNSTABLE_getBemSelector({
+              return getSelector({
                 block,
                 modifierName,
                 modifierValue
@@ -55,7 +49,7 @@ export function UNSTABLE_getClassSelectorsFromProps(
   };
 }
 
-export function UNSTABLE_getBemSelector({
+function getSelector({
   block = "",
   element = "",
   modifierName = "",
