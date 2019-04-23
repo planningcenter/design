@@ -2,18 +2,14 @@ import React from "react";
 import classnames from "classnames";
 
 // TODO: momentarily inlined for site
-import { UNSTABLE_getClassSelectorsFromProps as getClassSelectorsFromProps } from "../../planningcenter/utilities";
+import { mapPropsToClassNames } from "../../planningcenter/utilities/src/utilities";
 
 export function getScaledButtonClasses({ height }) {
-  return getClassSelectorsFromProps("ScaledButton")([
-    "height"
-  ])({ height });
+  return mapPropsToClassNames("ScaledButton")(["height"])({ height });
 }
 
 export function getRestfulButtonClasses({ action }) {
-  return getClassSelectorsFromProps("RestfulButton")([
-    "action"
-  ])({ action });
+  return mapPropsToClassNames("RestfulButton")(["action"])({ action });
 }
 
 export function PutButton(props) {
@@ -34,17 +30,8 @@ export function CancelButton(props) {
 // TODO: Add APIs
 //       * add ButtonCluster__Button class to children
 //       * get provide `height` on Context
-export function ButtonCluster({
-  as: As = "div",
-  className,
-  ...props
-}) {
-  return (
-    <As
-      className={classnames(className, "ButtonCluster")}
-      {...props}
-    />
-  );
+export function ButtonCluster({ as: As = "div", className, ...props }) {
+  return <As className={classnames(className, "ButtonCluster")} {...props} />;
 }
 
 export function ComposedButton({

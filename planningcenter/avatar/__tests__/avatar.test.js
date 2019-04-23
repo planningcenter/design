@@ -42,13 +42,15 @@ test("Supported size props", () => {
       <Avatar size={9} data-testid="size-9" />
     </React.Fragment>
   );
-  expect(getByTestId("size-2.5").className).toContain("Avatar--size_2.5");
-  expect(getByTestId("size-3").className).toContain("Avatar--size_3");
-  expect(getByTestId("size-4").className).toContain("Avatar--size_4");
-  expect(getByTestId("size-5").className).toContain("Avatar--size_5");
-  expect(getByTestId("size-6").className).toContain("Avatar--size_6");
-  expect(getByTestId("size-7").className).toContain("Avatar--size_7");
-  expect(getByTestId("size-8").className).toContain("Avatar--size_8");
+  expect(getByTestId("size-2.5").className).toContain(
+    "PointGridAvatar--size_2.5"
+  );
+  expect(getByTestId("size-3").className).toContain("PointGridAvatar--size_3");
+  expect(getByTestId("size-4").className).toContain("PointGridAvatar--size_4");
+  expect(getByTestId("size-5").className).toContain("PointGridAvatar--size_5");
+  expect(getByTestId("size-6").className).toContain("PointGridAvatar--size_6");
+  expect(getByTestId("size-7").className).toContain("PointGridAvatar--size_7");
+  expect(getByTestId("size-8").className).toContain("PointGridAvatar--size_8");
 });
 
 test("Unsupported size props, with strict=false", () => {
@@ -60,11 +62,15 @@ test("Unsupported size props, with strict=false", () => {
     </React.Fragment>
   );
 
-  expect(getByTestId("size-20px").className).toContain("Avatar--size_20px");
-  expect(getByTestId("size-profile").className).toContain(
-    "Avatar--size_profile"
+  expect(getByTestId("size-20px").className).toContain(
+    "PointGridAvatar--size_20px"
   );
-  expect(getByTestId("size-10").className).toContain("Avatar--size_10");
+  expect(getByTestId("size-profile").className).toContain(
+    "PointGridAvatar--size_profile"
+  );
+  expect(getByTestId("size-10").className).toContain(
+    "PointGridAvatar--size_10"
+  );
 });
 
 test("Responsive", () => {
@@ -83,10 +89,10 @@ test("Responsive", () => {
     expect.arrayContaining([
       "StyledAvatar",
       "StyledAvatar--inset",
-      "ResponsiveScaledAvatar",
-      "@small__ResponsiveScaledAvatar--size_2",
-      "@medium__ResponsiveScaledAvatar--size_3",
-      "@large__ResponsiveScaledAvatar--size_4",
+      "ResponsivePointGridAvatar",
+      "@small__ResponsivePointGridAvatar--size_2",
+      "@medium__ResponsivePointGridAvatar--size_3",
+      "@large__ResponsivePointGridAvatar--size_4",
       "Avatar"
     ])
   );

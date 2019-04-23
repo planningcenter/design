@@ -7,11 +7,13 @@ import "github-markdown-css";
 
 import Layout from "../../../pages_support/layout";
 
-import { Avatar, sizes } from "../../../planningcenter/avatar/src/avatar";
+import { Avatar, SIZES } from "../../../planningcenter/avatar/src/avatar";
 import "../../../planningcenter/avatar/css/avatar.css";
 import Readme from "../../../planningcenter/avatar/README.md";
 import pkg from "../../../planningcenter/avatar/package.json";
 import { Detail } from "../../../pages_support/package";
+
+const sizes = [2.5, ...SIZES];
 
 function AvatarBuilder() {
   let [alt, updateAlt] = React.useState("A kitty");

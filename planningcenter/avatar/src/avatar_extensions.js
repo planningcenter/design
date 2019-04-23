@@ -1,26 +1,21 @@
 // TODO: inlined temporarily
-import { UNSTABLE_getClassSelectorsFromProps as getEntityClassesFromProps } from "../../utilities";
-import { BREAKPOINTS } from "../../system/src/system.js";
+import { mapPropsToClassNames } from "../../utilities/src/utilities";
+import { BREAKPOINTS, SIZES as SYSTEM_SIZES } from "../../system/src/system.js";
 
-// TODO: add check for inset
-// export let insetSizes = sizes
-//   .filter(size => ![2.5].includes(size))
-//   .concat([undefined]);
+export const SIZES = [2.5, ...SYSTEM_SIZES.filter(s => s >= 3), 9];
 
-export let sizes = [2.5, 3, 4, 5, 6, 7, 8, 9];
-
-export function getSizeClasses({ size: incomingSize }, strict = true) {
+export function getPointGridClassNames({ size: incomingSize }, strict = true) {
   let size = getConstrainedSize(incomingSize, strict);
 
   return (
     typeof size !== "object" &&
-    getEntityClassesFromProps("ScaledAvatar")(["size"])({
+    mapPropsToClassNames("PointGridAvatar")(["size"])({
       size
     })
   );
 }
 
-export function getResponsiveSizeClasses(
+export function getResponsivePointGridClassNames(
   { size: incomingSizes },
   strict = true
 ) {
@@ -33,20 +28,20 @@ export function getResponsiveSizeClasses(
       return (size[bp] = s);
     }
 
-    if (Object.keys(BREAKPOINTS).includes(bp) && sizes.includes(s)) {
+    if (Object.keys(BREAKPOINTS).includes(bp) && SIZES.includes(s)) {
       return (size[bp] = s);
     }
 
     return;
   });
 
-  return getEntityClassesFromProps("ResponsiveScaledAvatar")(["size"])({
+  return mapPropsToClassNames("ResponsivePointGridAvatar")(["size"])({
     size: size
   });
 }
 
-export function getStyleClasses({ inset }) {
-  return getEntityClassesFromProps("StyledAvatar")(["inset"])({
+export function getStyledClassNames({ inset }) {
+  return mapPropsToClassNames("StyledAvatar")(["inset"])({
     inset
   });
 }
@@ -54,7 +49,7 @@ export function getStyleClasses({ inset }) {
 // private
 
 function getConstrainedSize(size, strict) {
-  if (strict && !sizes.includes(size)) return;
+  if (strict && !SIZES.includes(size)) return;
 
   return size;
 }

@@ -1,4 +1,4 @@
-import { mapPropsToClassNames } from "../utilities.js";
+import { mapPropsToClassNames } from "../src/utilities.js";
 
 // TODO:
 test("Interface. Move to TS and delete these.", () => {

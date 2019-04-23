@@ -2,7 +2,7 @@ import React from "react";
 
 import Layout from "../../../pages_support/layout";
 
-import { Avatar, sizes } from "../../../planningcenter/avatar/src/avatar";
+import { Avatar, SIZES } from "../../../planningcenter/avatar/src/avatar";
 
 export default function() {
   return (
@@ -17,7 +17,7 @@ export default function() {
       </section>
       <section>
         <h1>Sizes</h1>
-        {sizes.map(size => (
+        {SIZES.map(size => (
           <Avatar
             data-spec-size={`${size * 8}px`}
             src="http://placekitten.com/200/300"
@@ -29,7 +29,7 @@ export default function() {
 
       <section>
         <h1>Inset</h1>
-        {sizes.map(size => (
+        {SIZES.map(size => (
           <Avatar
             data-spec-size-inset={`${size * 8}px`}
             src="http://placekitten.com/200/300"

@@ -6,8 +6,7 @@
   "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/utilities",
   "license": "MIT",
   "main": "dist/utilities.js",
-  "module": "dist/utilities.mjs",
-  "source": "utilities.js",
+  "source": "src/utilities.js",
   "amdName": "PLANNINGCENTER.utilities",
   "files": [
     "dist"

@@ -1,9 +1,9 @@
 import React from "react";
 import classnames from "classnames";
 import {
-  getResponsiveSizeClasses,
-  getSizeClasses,
-  getStyleClasses
+  getResponsivePointGridClassNames,
+  getPointGridClassNames,
+  getStyledClassNames
 } from "./avatar_extensions";
 export * from "./avatar_extensions";
 
@@ -12,9 +12,9 @@ export function Avatar({ size, strict = true, inset, className, ...props }) {
     <Element
       className={classnames(
         className,
-        getResponsiveSizeClasses({ size }, strict),
-        getSizeClasses({ size }, strict),
-        getStyleClasses({ inset }),
+        getResponsivePointGridClassNames({ size }, strict),
+        getPointGridClassNames({ size }, strict),
+        getStyledClassNames({ inset }),
         "Avatar"
       )}
       {...props}

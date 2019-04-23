@@ -14,51 +14,51 @@
   object-fit: cover;
 }
 
-/* ScaledAvatar */
+/* PointGridAvatar */
 
-.ScaledAvatar--size_2\.5 {
+.PointGridAvatar--size_2\.5 {
   width: 20px;
   height: 20px;
   --styled-avatar--inset_padding: 0;
 }
 
-.ScaledAvatar--size_3 {
+.PointGridAvatar--size_3 {
   width: 24px;
   height: 24px;
   --styled-avatar--inset_padding: 2px;
 }
 
-.ScaledAvatar--size_4 {
+.PointGridAvatar--size_4 {
   width: 32px;
   height: 32px;
   --styled-avatar--inset_padding: 2px;
 }
 
-.ScaledAvatar--size_5 {
+.PointGridAvatar--size_5 {
   width: 40px;
   height: 40px;
   --styled-avatar--inset_padding: 3px;
 }
 
-.ScaledAvatar--size_6 {
+.PointGridAvatar--size_6 {
   width: 48px;
   height: 48px;
   --styled-avatar--inset_padding: 3px;
 }
 
-.ScaledAvatar--size_7 {
+.PointGridAvatar--size_7 {
   width: 56px;
   height: 56px;
   --styled-avatar--inset_padding: 4px;
 }
 
-.ScaledAvatar--size_8 {
+.PointGridAvatar--size_8 {
   width: 64px;
   height: 64px;
   --styled-avatar--inset_padding: 4px;
 }
 
-.ScaledAvatar--size_9 {
+.PointGridAvatar--size_9 {
   width: 72px;
   height: 72px;
   --styled-avatar--inset_padding: 5px;
@@ -72,55 +72,55 @@
   padding: var(--styled-avatar--inset_padding);
 }
 
-/* ResponsiveAvatar */
+/* ResponsivePointGridAvatarAvatar */
 
-.ResponsiveScaledAvatar {
+.ResponsivePointGridAvatar {
 }
 
 @media only screen and (min-width: 0) {
-  .\@mn__ResponsiveScaledAvatar--size_2\.5 {
+  .\@mn__ResponsivePointGridAvatar--size_2\.5 {
     width: 20px;
     height: 20px;
     --styled-avatar--inset_padding: 0;
   }
 
-  .\@mn__ResponsiveScaledAvatar--size_3 {
+  .\@mn__ResponsivePointGridAvatar--size_3 {
     width: 24px;
     height: 24px;
     --styled-avatar--inset_padding: 2px;
   }
 
-  .\@mn__ResponsiveScaledAvatar--size_4 {
+  .\@mn__ResponsivePointGridAvatar--size_4 {
     width: 32px;
     height: 32px;
     --styled-avatar--inset_padding: 2px;
   }
 
-  .\@mn__ResponsiveScaledAvatar--size_5 {
+  .\@mn__ResponsivePointGridAvatar--size_5 {
     width: 40px;
     height: 40px;
     --styled-avatar--inset_padding: 3px;
   }
 
-  .\@mn__ResponsiveScaledAvatar--size_6 {
+  .\@mn__ResponsivePointGridAvatar--size_6 {
     width: 48px;
     height: 48px;
     --styled-avatar--inset_padding: 3px;
   }
 
-  .\@mn__ResponsiveScaledAvatar--size_7 {
+  .\@mn__ResponsivePointGridAvatar--size_7 {
     width: 56px;
     height: 56px;
     --styled-avatar--inset_padding: 4px;
   }
 
-  .\@mn__ResponsiveScaledAvatar--size_8 {
+  .\@mn__ResponsivePointGridAvatar--size_8 {
     width: 64px;
     height: 64px;
     --styled-avatar--inset_padding: 4px;
   }
 
-  .\@mn__ResponsiveScaledAvatar--size_9 {
+  .\@mn__ResponsivePointGridAvatar--size_9 {
     width: 72px;
     height: 72px;
     --styled-avatar--inset_padding: 5px;
@@ -128,49 +128,49 @@
 }
 
 @media only screen and (min-width: 480px) {
-  .\@xs__ResponsiveScaledAvatar--size_2\.5 {
+  .\@xs__ResponsivePointGridAvatar--size_2\.5 {
     width: 20px;
     height: 20px;
     --styled-avatar--inset_padding: 0;
   }
 
-  .\@xs__ResponsiveScaledAvatar--size_3 {
+  .\@xs__ResponsivePointGridAvatar--size_3 {
     width: 24px;
     height: 24px;
     --styled-avatar--inset_padding: 2px;
   }
 
-  .\@xs__ResponsiveScaledAvatar--size_4 {
+  .\@xs__ResponsivePointGridAvatar--size_4 {
     width: 32px;
     height: 32px;
     --styled-avatar--inset_padding: 2px;
   }
 
-  .\@xs__ResponsiveScaledAvatar--size_5 {
+  .\@xs__ResponsivePointGridAvatar--size_5 {
     width: 40px;
     height: 40px;
     --styled-avatar--inset_padding: 3px;
   }
 
-  .\@xs__ResponsiveScaledAvatar--size_6 {
+  .\@xs__ResponsivePointGridAvatar--size_6 {
     width: 48px;
     height: 48px;
     --styled-avatar--inset_padding: 3px;
   }
 
-  .\@xs__ResponsiveScaledAvatar--size_7 {
+  .\@xs__ResponsivePointGridAvatar--size_7 {
     width: 56px;
     height: 56px;
     --styled-avatar--inset_padding: 4px;
   }
 
-  .\@xs__ResponsiveScaledAvatar--size_8 {
+  .\@xs__ResponsivePointGridAvatar--size_8 {
     width: 64px;
     height: 64px;
     --styled-avatar--inset_padding: 4px;
   }
 
-  .\@xs__ResponsiveScaledAvatar--size_9 {
+  .\@xs__ResponsivePointGridAvatar--size_9 {
     width: 72px;
     height: 72px;
     --styled-avatar--inset_padding: 5px;
@@ -178,49 +178,49 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .\@sm__ResponsiveScaledAvatar--size_2\.5 {
+  .\@sm__ResponsivePointGridAvatar--size_2\.5 {
     width: 20px;
     height: 20px;
     --styled-avatar--inset_padding: 0;
   }
 
-  .\@sm__ResponsiveScaledAvatar--size_3 {
+  .\@sm__ResponsivePointGridAvatar--size_3 {
     width: 24px;
     height: 24px;
     --styled-avatar--inset_padding: 2px;
   }
 
-  .\@sm__ResponsiveScaledAvatar--size_4 {
+  .\@sm__ResponsivePointGridAvatar--size_4 {
     width: 32px;
     height: 32px;
     --styled-avatar--inset_padding: 2px;
   }
 
-  .\@sm__ResponsiveScaledAvatar--size_5 {
+  .\@sm__ResponsivePointGridAvatar--size_5 {
     width: 40px;
     height: 40px;
     --styled-avatar--inset_padding: 3px;
   }
 
-  .\@sm__ResponsiveScaledAvatar--size_6 {
+  .\@sm__ResponsivePointGridAvatar--size_6 {
     width: 48px;
     height: 48px;
     --styled-avatar--inset_padding: 3px;
   }
 
-  .\@sm__ResponsiveScaledAvatar--size_7 {
+  .\@sm__ResponsivePointGridAvatar--size_7 {
     width: 56px;
     height: 56px;
     --styled-avatar--inset_padding: 4px;
   }
 
-  .\@sm__ResponsiveScaledAvatar--size_8 {
+  .\@sm__ResponsivePointGridAvatar--size_8 {
     width: 64px;
     height: 64px;
     --styled-avatar--inset_padding: 4px;
   }
 
-  .\@sm__ResponsiveScaledAvatar--size_9 {
+  .\@sm__ResponsivePointGridAvatar--size_9 {
     width: 72px;
     height: 72px;
     --styled-avatar--inset_padding: 5px;
@@ -228,49 +228,49 @@
 }
 
 @media only screen and (min-width: 720px) {
-  .\@md__ResponsiveScaledAvatar--size_2\.5 {
+  .\@md__ResponsivePointGridAvatar--size_2\.5 {
     width: 20px;
     height: 20px;
     --styled-avatar--inset_padding: 0;
   }
 
-  .\@md__ResponsiveScaledAvatar--size_3 {
+  .\@md__ResponsivePointGridAvatar--size_3 {
     width: 24px;
     height: 24px;
     --styled-avatar--inset_padding: 2px;
   }
 
-  .\@md__ResponsiveScaledAvatar--size_4 {
+  .\@md__ResponsivePointGridAvatar--size_4 {
     width: 32px;
     height: 32px;
     --styled-avatar--inset_padding: 2px;
   }
 
-  .\@md__ResponsiveScaledAvatar--size_5 {
+  .\@md__ResponsivePointGridAvatar--size_5 {
     width: 40px;
     height: 40px;
     --styled-avatar--inset_padding: 3px;
   }
 
-  .\@md__ResponsiveScaledAvatar--size_6 {
+  .\@md__ResponsivePointGridAvatar--size_6 {
     width: 48px;
     height: 48px;
     --styled-avatar--inset_padding: 3px;
   }
 
-  .\@md__ResponsiveScaledAvatar--size_7 {
+  .\@md__ResponsivePointGridAvatar--size_7 {
     width: 56px;
     height: 56px;
     --styled-avatar--inset_padding: 4px;
   }
 
-  .\@md__ResponsiveScaledAvatar--size_8 {
+  .\@md__ResponsivePointGridAvatar--size_8 {
     width: 64px;
     height: 64px;
     --styled-avatar--inset_padding: 4px;
   }
 
-  .\@md__ResponsiveScaledAvatar--size_9 {
+  .\@md__ResponsivePointGridAvatar--size_9 {
     width: 72px;
     height: 72px;
     --styled-avatar--inset_padding: 5px;
@@ -278,49 +278,49 @@
 }
 
 @media only screen and (min-width: 960px) {
-  .\@lg__ResponsiveScaledAvatar--size_2\.5 {
+  .\@lg__ResponsivePointGridAvatar--size_2\.5 {
     width: 20px;
     height: 20px;
     --styled-avatar--inset_padding: 0;
   }
 
-  .\@lg__ResponsiveScaledAvatar--size_3 {
+  .\@lg__ResponsivePointGridAvatar--size_3 {
     width: 24px;
     height: 24px;
     --styled-avatar--inset_padding: 2px;
   }
 
-  .\@lg__ResponsiveScaledAvatar--size_4 {
+  .\@lg__ResponsivePointGridAvatar--size_4 {
     width: 32px;
     height: 32px;
     --styled-avatar--inset_padding: 2px;
   }
 
-  .\@lg__ResponsiveScaledAvatar--size_5 {
+  .\@lg__ResponsivePointGridAvatar--size_5 {
     width: 40px;
     height: 40px;
     --styled-avatar--inset_padding: 3px;
   }
 
-  .\@lg__ResponsiveScaledAvatar--size_6 {
+  .\@lg__ResponsivePointGridAvatar--size_6 {
     width: 48px;
     height: 48px;
     --styled-avatar--inset_padding: 3px;
   }
 
-  .\@lg__ResponsiveScaledAvatar--size_7 {
+  .\@lg__ResponsivePointGridAvatar--size_7 {
     width: 56px;
     height: 56px;
     --styled-avatar--inset_padding: 4px;
   }
 
-  .\@lg__ResponsiveScaledAvatar--size_8 {
+  .\@lg__ResponsivePointGridAvatar--size_8 {
     width: 64px;
     height: 64px;
     --styled-avatar--inset_padding: 4px;
   }
 
-  .\@lg__ResponsiveScaledAvatar--size_9 {
+  .\@lg__ResponsivePointGridAvatar--size_9 {
     width: 72px;
     height: 72px;
     --styled-avatar--inset_padding: 5px;
@@ -328,49 +328,49 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .\@xl__ResponsiveScaledAvatar--size_2\.5 {
+  .\@xl__ResponsivePointGridAvatar--size_2\.5 {
     width: 20px;
     height: 20px;
     --styled-avatar--inset_padding: 0;
   }
 
-  .\@xl__ResponsiveScaledAvatar--size_3 {
+  .\@xl__ResponsivePointGridAvatar--size_3 {
     width: 24px;
     height: 24px;
     --styled-avatar--inset_padding: 2px;
   }
 
-  .\@xl__ResponsiveScaledAvatar--size_4 {
+  .\@xl__ResponsivePointGridAvatar--size_4 {
     width: 32px;
     height: 32px;
     --styled-avatar--inset_padding: 2px;
   }
 
-  .\@xl__ResponsiveScaledAvatar--size_5 {
+  .\@xl__ResponsivePointGridAvatar--size_5 {
     width: 40px;
     height: 40px;
     --styled-avatar--inset_padding: 3px;
   }
 
-  .\@xl__ResponsiveScaledAvatar--size_6 {
+  .\@xl__ResponsivePointGridAvatar--size_6 {
     width: 48px;
     height: 48px;
     --styled-avatar--inset_padding: 3px;
   }
 
-  .\@xl__ResponsiveScaledAvatar--size_7 {
+  .\@xl__ResponsivePointGridAvatar--size_7 {
     width: 56px;
     height: 56px;
     --styled-avatar--inset_padding: 4px;
   }
 
-  .\@xl__ResponsiveScaledAvatar--size_8 {
+  .\@xl__ResponsivePointGridAvatar--size_8 {
     width: 64px;
     height: 64px;
     --styled-avatar--inset_padding: 4px;
   }
 
-  .\@xl__ResponsiveScaledAvatar--size_9 {
+  .\@xl__ResponsivePointGridAvatar--size_9 {
     width: 72px;
     height: 72px;
     --styled-avatar--inset_padding: 5px;
