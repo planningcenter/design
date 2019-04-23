@@ -7,7 +7,7 @@
   "source": "index.ts",
   "amdName": "PLANNINGCENTER.Topbar",
   "scripts": {
-    "build": "microbundle",
+    "build": "microbundle --format cjs",
     "dev": "webpack-dev-server",
     "prepublish": "npm run build",
     "generate-toc": "node ./scripts/generate-toc.js"

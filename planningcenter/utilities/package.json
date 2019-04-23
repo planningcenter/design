@@ -20,7 +20,7 @@
     "url": "git+https://github.com/planningcenter/design.git"
   },
   "scripts": {
-    "build": "microbundle",
+    "build": "microbundle --format cjs",
     "dev": "microbundle watch"
   },
   "bugs": {

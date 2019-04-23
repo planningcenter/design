@@ -19,7 +19,7 @@
     "url": "git+https://github.com/planningcenter/design.git"
   },
   "scripts": {
-    "build": "microbundle --jsx React.createElement",
+    "build": "microbundle --jsx React.createElement --format cjs",
     "dev": "microbundle --jsx React.createElement watch"
   },
   "bugs": {

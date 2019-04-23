@@ -1,6 +1,6 @@
 // TODO: inlined temporarily
 import { UNSTABLE_getClassSelectorsFromProps as getEntityClassesFromProps } from "../../utilities";
-import { breakpoints } from "../../system/src/system.js";
+import { BREAKPOINTS } from "../../system/src/system.js";
 
 // TODO: add check for inset
 // export let insetSizes = sizes
@@ -33,7 +33,7 @@ export function getResponsiveSizeClasses(
       return (size[bp] = s);
     }
 
-    if (Object.keys(breakpoints).includes(bp) && sizes.includes(s)) {
+    if (Object.keys(BREAKPOINTS).includes(bp) && sizes.includes(s)) {
       return (size[bp] = s);
     }
 

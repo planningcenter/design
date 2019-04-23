@@ -10,7 +10,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "microbundle --jsx React.createElement",
+    "build": "microbundle --jsx React.createElement --format cjs",
     "dev": "microbundle --jsx React.createElement watch",
     "prepublish": "npm run build"
   },
