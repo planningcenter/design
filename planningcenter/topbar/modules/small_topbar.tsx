@@ -389,7 +389,7 @@ export class Topbar extends React.Component<
                         </ul>
                       </div>
                       <div>
-                        {this.props.connectedPeople.length && (
+                        {this.props.connectedPeople.length > 0 && (
                           <a
                             href={`${pcoUrl(this.props.env)(
                               "accounts",
