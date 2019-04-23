@@ -1,4 +1,8 @@
-const BREAKPOINTS = {
+export const UNIT = 8;
+
+export const NUDGE = 4;
+
+export const BREAKPOINTS = {
   mn: 0,
   xs: 480,
   sm: 600,
@@ -7,17 +11,11 @@ const BREAKPOINTS = {
   xl: 1200
 };
 
-const SIZES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+export const SIZES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
-const SCALE = [0, 1, 2, 4, 8, 16, 32, 64, 128];
+export const SCALE = [0, 1, 2, 4, 8, 16, 32, 64, 128];
 
-const TYPE_SCALE = [30, 25, 21, 18, 16, 14, 12, 10];
-
-const UNIT = 8;
-
-function bound(value) {
-  return value || 0;
-}
+export const TYPE_SCALE = [30, 25, 21, 18, 16, 14, 12, 10];
 
 export function size(depth) {
   return bound(UNIT * SIZES[depth]);
@@ -37,4 +35,8 @@ export function breakpoint(depth) {
       ? BREAKPOINTS[depth] || 0
       : Object.values(BREAKPOINTS)[depth] || 0;
   return bound(value);
+}
+
+function bound(value) {
+  return value || 0;
 }
