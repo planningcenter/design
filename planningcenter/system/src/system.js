@@ -1,4 +1,4 @@
-export const UNIT = 8;
+export const POINT = 8;
 
 export const NUDGE = 4;
 
@@ -18,7 +18,7 @@ export const SCALE = [0, 1, 2, 4, 8, 16, 32, 64, 128];
 export const TYPE_SCALE = [30, 25, 21, 18, 16, 14, 12, 10];
 
 export function size(depth) {
-  return bound(UNIT * SIZES[depth]);
+  return bound(POINT * SIZES[depth]);
 }
 
 export function fontSize(depth) {
@@ -26,7 +26,7 @@ export function fontSize(depth) {
 }
 
 export function scale(depth) {
-  return bound(UNIT * SCALE[depth]);
+  return bound(POINT * SCALE[depth]);
 }
 
 export function breakpoint(depth) {
