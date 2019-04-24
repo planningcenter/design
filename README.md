@@ -12,6 +12,7 @@ Global Design supported packages
 - [@planningcenter/browserslist-config](/planningcenter/browserslist-config)
 - [@planningcenter/components](/planningcenter/components)
 - [@planningcenter/resource-header](/planningcenter/resource-header)
+- [@planningcenter/services-extensions](/planningcenter/services-extensions)
 - [@planningcenter/symbol](/planningcenter/symbol)
 - [@planningcenter/system](/planningcenter/system)
 - [@planningcenter/text](/planningcenter/text)
