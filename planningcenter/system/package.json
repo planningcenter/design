@@ -18,7 +18,6 @@
     "url": "git+https://github.com/planningcenter/design.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
     "build": "microbundle --format cjs"
   },
   "bugs": {
