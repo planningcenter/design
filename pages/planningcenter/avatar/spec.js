@@ -9,6 +9,11 @@ import { SIZES } from "../../../planningcenter/avatar/src/avatar";
 export default function() {
   return (
     <Layout>
+      <style jsx>{`
+        :root {
+          --planningcenter-avatar-inset-color: lightgray;
+        }
+      `}</style>
       <section>
         <h1>Style</h1>
         <Avatar

@@ -2,13 +2,17 @@ import React from "react";
 
 export function Detail({
   componentName = "",
+  description = "",
   name,
   version,
   peerDependencies
 }) {
   return (
-    <section>
+    <React.Fragment>
       <h1>{componentName}</h1>
+      <blockquote>
+        <p>{description}</p>
+      </blockquote>
       <table>
         <tbody>
           <tr>
@@ -57,6 +61,6 @@ export function Detail({
           </tr>
         </tbody>
       </table>
-    </section>
+    </React.Fragment>
   );
 }

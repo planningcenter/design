@@ -1,7 +1,7 @@
 {
   "name": "@planningcenter/text",
   "version": "0.0.2",
-  "description": "> TODO: description",
+  "description": "An inline text element on a modular scale",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design#readme",
   "license": "MIT",

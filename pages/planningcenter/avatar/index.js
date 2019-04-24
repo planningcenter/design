@@ -161,11 +161,7 @@ export default function() {
   return (
     <Layout>
       <div className="markdown-body">
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-
-        <Detail {...pkg} />
+        <Detail componentName="Avatar" {...pkg} />
 
         <section>
           <h2>Markup Builder</h2>

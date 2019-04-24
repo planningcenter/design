@@ -24,11 +24,7 @@ export default function() {
   return (
     <Layout>
       <div className="markdown-body">
-        <Link>
-          <a href="/">Home</a>
-        </Link>
-
-        <Detail {...pkg} />
+        <Detail componentName="ResourceHeader" {...pkg} />
 
         <section>
           <h2>Resource Header</h2>

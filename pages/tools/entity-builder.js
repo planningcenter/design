@@ -71,10 +71,6 @@ function Home() {
   return (
     <Layout>
       <div className="markdown-body">
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-
         <h1>BEM Entity Generator</h1>
 
         <div

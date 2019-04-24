@@ -61,6 +61,18 @@ export default function() {
           </li>
         )}
       />
+
+      <strong>other</strong>
+      <OrganizationProjectList
+        items={["philosophy"]}
+        renderItem={p => (
+          <li>
+            <Link>
+              <a href={`/${p}`}>{p}</a>
+            </Link>
+          </li>
+        )}
+      />
     </React.Fragment>
   );
 }

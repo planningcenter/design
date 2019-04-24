@@ -23,15 +23,7 @@ export default function() {
   return (
     <Layout>
       <div className="markdown-body">
-        <Link>
-          <a href="/">Home</a>
-        </Link>
-
-        <Detail
-          name={pkg.name}
-          version={pkg.version}
-          peerDependencies={pkg.peerDependencies}
-        />
+        <Detail componentName="Text" {...pkg} />
 
         <Text>Default</Text>
         <br />

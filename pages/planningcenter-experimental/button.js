@@ -18,10 +18,6 @@ export default function() {
   return (
     <Layout>
       <div className="markdown-body">
-        <Link>
-          <a href="/">Home</a>
-        </Link>
-
         <Detail {...pkg} componentName="Button" />
 
         <section>
