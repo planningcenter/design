@@ -1,0 +1,37 @@
+{
+  "name": "@planningcenter/components",
+  "version": "0.0.0",
+  "description": "The entire collection of @planningcenter/components",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/components",
+  "license": "MIT",
+  "main": "dist/components.js",
+  "source": "src/components.js",
+  "style": "css/components.css",
+  "amdName": "PLANNINGCENTER.COMPONENTS",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planningcenter/design.git"
+  },
+  "scripts": {
+    "build": "npm run build:dev & npm run build:css",
+    "build:dev": "microbundle build --jsx React.createElement --format cjs",
+    "build:css": "postcss -o css/components.css src/*.css",
+    "dev": "microbundle watch --jsx React.createElement --format cjs",
+    "prepublish": "npm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  },
+  "devDependencies": {
+    "microbundle": "^0.11.0",
+    "postcss-cli": "^6.1.2",
+    "postcss-import": "^12.0.1"
+  }
+}

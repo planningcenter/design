@@ -7,17 +7,15 @@ import "github-markdown-css";
 
 import Layout from "../../../pages_support/layout";
 
-import { Avatar, SIZES } from "../../../planningcenter/avatar/src/avatar";
-import "../../../planningcenter/avatar/css/avatar.css";
+import { Avatar } from "../../../planningcenter/components/src/components";
+import { SIZES } from "../../../planningcenter/avatar/src/avatar";
 import Readme from "../../../planningcenter/avatar/README.md";
 import pkg from "../../../planningcenter/avatar/package.json";
 import { Detail } from "../../../pages_support/package";
 
-const sizes = [2.5, ...SIZES];
-
 function AvatarBuilder() {
   let [alt, updateAlt] = React.useState("A kitty");
-  let [src, updateSrc] = React.useState("http://placekitten.com/200/300");
+  let [src, updateSrc] = React.useState("/static/200x300_kitten.jpeg");
   let [inset, updateInset] = React.useState(false);
   let [size, updateSize] = React.useState(4);
   let [responsiveSizes, updateResponsiveSizes] = React.useState({
@@ -85,7 +83,7 @@ function AvatarBuilder() {
           updateSize(e.target.value);
         }}
       >
-        {sizes.map(size => (
+        {SIZES.map(size => (
           <option value={size} key={size}>
             {size} — {size * 8}px
           </option>
@@ -119,7 +117,7 @@ function AvatarBuilder() {
                 }}
               >
                 <option value="ignore">Ignore</option>
-                {sizes.map(size => (
+                {SIZES.map(size => (
                   <option value={size} key={size}>
                     {size} — {size * 8}px
                   </option>
@@ -187,7 +185,7 @@ export default function() {
           >
             <span onClick={() => alert("tada!")}>
               <Avatar
-                src="http://placekitten.com/200/300"
+                src="/static/200x300_kitten.jpeg"
                 alt="a cute kitten"
                 size={8}
                 inset={true}
@@ -207,7 +205,7 @@ export default function() {
               {`.ScaledAvatar--size_whatever { height: 40px; width: 40px }`}
             </style>
             <Avatar
-              src="http://placekitten.com/200/300"
+              src="/static/200x300_kitten.jpeg"
               alt="a cute kitten"
               size="whatever"
               strict={false}
@@ -223,59 +221,59 @@ export default function() {
               padding: 16
             }}
           >
-            <Avatar src="http://placekitten.com/200/300" alt="a cute kitten" />
+            <Avatar src="/static/200x300_kitten.jpeg" alt="a cute kitten" />
 
             <Avatar
-              src="http://placekitten.com/200/300"
+              src="/static/200x300_kitten.jpeg"
               alt="a cute kitten"
               size={2.5}
               inset={true}
             />
 
             <Avatar
-              src="http://placekitten.com/200/300"
+              src="/static/200x300_kitten.jpeg"
               alt="a cute kitten"
               size={3}
               inset={true}
             />
 
             <Avatar
-              src="http://placekitten.com/200/300"
+              src="/static/200x300_kitten.jpeg"
               alt="a cute kitten"
               size={4}
               inset={true}
             />
 
             <Avatar
-              src="http://placekitten.com/200/300"
+              src="/static/200x300_kitten.jpeg"
               alt="a cute kitten"
               size={5}
               inset={true}
             />
 
             <Avatar
-              src="http://placekitten.com/200/300"
+              src="/static/200x300_kitten.jpeg"
               alt="a cute kitten"
               size={6}
               inset={true}
             />
 
             <Avatar
-              src="http://placekitten.com/200/300"
+              src="/static/200x300_kitten.jpeg"
               alt="a cute kitten"
               size={7}
               inset={true}
             />
 
             <Avatar
-              src="http://placekitten.com/200/300"
+              src="/static/200x300_kitten.jpeg"
               alt="a cute kitten"
               size={8}
               inset={true}
             />
 
             <Avatar
-              src="http://placekitten.com/200/300"
+              src="/static/200x300_kitten.jpeg"
               alt="a cute kitten"
               size={9}
               inset={true}
@@ -291,7 +289,7 @@ export default function() {
             }}
           >
             <Avatar
-              src="http://placekitten.com/200/300"
+              src="/static/200x300_kitten.jpeg"
               alt="a cute kitten"
               size={{
                 mn: 3,
@@ -306,7 +304,7 @@ export default function() {
             />
 
             <Avatar
-              src="http://placekitten.com/200/300"
+              src="/static/200x300_kitten.jpeg"
               alt="a cute kitten"
               size={{
                 mn: 8,

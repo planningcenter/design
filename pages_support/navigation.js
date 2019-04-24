@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import "github-markdown-css";
 
-let planningcenter = ["avatar", "resource-header"];
+let planningcenter = ["avatar", "text", "resource-header"];
 let planningcenter_experimental = ["button"];
 
 function OrganizationProjectList({

@@ -2,7 +2,9 @@
 import { mapPropsToClassNames } from "../../utilities/src/utilities";
 import { BREAKPOINTS, SIZES as SYSTEM_SIZES } from "../../system/src/system.js";
 
-export const SIZES = [2.5, ...SYSTEM_SIZES.filter(s => s >= 3), 9];
+export const SIZES = Array.from(
+  new Set([2.5, ...SYSTEM_SIZES.filter(s => s >= 3), 9])
+).sort();
 
 export function getPointGridClassNames({ size: incomingSize }, strict = true) {
   let size = getConstrainedSize(incomingSize, strict);

@@ -15,20 +15,16 @@ export function Detail({
             <td>Install</td>
             <td>yarn add {name}</td>
           </tr>
-          <tr>
-            <td>Install dependencies</td>
-            <td>
-              yarn add{" "}
-              {Object.keys(peerDependencies).join(" ")}
-            </td>
-          </tr>
+          {peerDependencies && (
+            <tr>
+              <td>Install dependencies</td>
+              <td>yarn add {Object.keys(peerDependencies).join(" ")}</td>
+            </tr>
+          )}
           <tr>
             <td>npm</td>
             <td>
-              <a
-                href={`https://www.npmjs.com/package/${name}`}
-                target="_blank"
-              >
+              <a href={`https://www.npmjs.com/package/${name}`} target="_blank">
                 {name}
               </a>
             </td>
@@ -50,10 +46,7 @@ export function Detail({
           <tr>
             <td>Bundle</td>
             <td>
-              <a
-                href={`https://unpkg.com/${name}/dist/`}
-                target="_blank"
-              >
+              <a href={`https://unpkg.com/${name}/dist/`} target="_blank">
                 unpkg.com
               </a>
             </td>
