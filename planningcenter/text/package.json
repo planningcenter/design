@@ -21,8 +21,7 @@
   },
   "scripts": {
     "build": "microbundle build --jsx React.createElement --format cjs",
-    "dev": "microbundle watch --jsx React.createElement",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "dev": "microbundle watch --jsx React.createElement"
   },
   "bugs": {
     "url": "https://github.com/planningcenter/design/issues"
