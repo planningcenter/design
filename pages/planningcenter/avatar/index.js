@@ -160,10 +160,7 @@ function AvatarBuilder() {
 export default function() {
   return (
     <Layout>
-      <div
-        className="markdown-body"
-        style={{ maxWidth: "40em", padding: "2em 4em" }}
-      >
+      <div className="markdown-body">
         <Link href="/">
           <a>Home</a>
         </Link>

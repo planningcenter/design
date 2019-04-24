@@ -23,10 +23,7 @@ function PlaceholderButton(props) {
 export default function() {
   return (
     <Layout>
-      <div
-        className="markdown-body"
-        style={{ maxWidth: "40em", padding: "2em 4em" }}
-      >
+      <div className="markdown-body">
         <Link>
           <a href="/">Home</a>
         </Link>
