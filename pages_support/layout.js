@@ -1,9 +1,11 @@
 import React from "react";
-import Link from "next/link";
 import Navigation from "./navigation";
 import "github-markdown-css";
 import "../planningcenter/typeface/sans-serif.css";
 import "../planningcenter/components/css/components.css";
+import "../planningcenter/system/css/system.css";
+import "../pages_support/page.css";
+import "../pages_support/github-markdown-css-overrides.css";
 
 export default function(props) {
   return (
@@ -22,6 +24,7 @@ export default function(props) {
           }
           .TwoColumnNavRightLayout__Main {
             width: auto;
+            max-width: 50em;
             padding: 2rem;
           }
           .TwoColumnNavRightLayout__Nav {

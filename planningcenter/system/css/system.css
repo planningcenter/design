@@ -1,0 +1,55 @@
+:root {
+  --point: 8px;
+  --nudge: 4px;
+}
+
+:root {
+  --size_0: 0;
+  --size_1: 8px;
+  --size_2: 16px;
+  --size_3: 24px;
+  --size_4: 32px;
+  --size_5: 40px;
+  --size_6: 48px;
+  --size_7: 56px;
+  --size_8: 64px;
+}
+
+:root {
+  --scale_0: 0;
+  --scale_1: 8px;
+  --scale_2: 16px;
+  --scale_3: 32px;
+  --scale_4: 64px;
+  --scale_5: 128px;
+  --scale_6: 256px;
+  --scale_7: 512px;
+  --scale_8: 1024px;
+}
+
+:root {
+  --type-scale_0: 30px;
+  --type-scale_1: 25px;
+  --type-scale_2: 21px;
+  --type-scale_3: 18px;
+  --type-scale_4: 16px;
+  --type-scale_5: 14px;
+  --type-scale_6: 12px;
+  --type-scale_7: 10px;
+}
+
+/* presented here for parity.
+ * not useful until env() is standardized
+ * https://drafts.csswg.org/css-env-1/
+ */
+
+/*
+:root {
+  --screen_mn: 0;
+  --screen_xs: 480px;
+  --screen_sm: 600px;
+  --screen_md: 720px;
+  --screen_lg: 960px;
+  --screen_xl: 1200px;
+}
+*/

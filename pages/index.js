@@ -1,6 +1,5 @@
 import React from "react";
 import Navigation from "../pages_support/navigation";
-import "github-markdown-css";
 
 function Home() {
   return (

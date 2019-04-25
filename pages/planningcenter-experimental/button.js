@@ -1,6 +1,4 @@
 import React from "react";
-import Link from "next/link";
-import "github-markdown-css";
 
 import Layout from "../../pages_support/layout";
 

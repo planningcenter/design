@@ -1,7 +1,5 @@
 import React from "react";
-import Link from "next/link";
 import { getSelector } from "../../planningcenter/utilities/src/utilities";
-import "github-markdown-css";
 import Layout from "../../pages_support/layout";
 
 function getComposedBlockName(block, composed) {

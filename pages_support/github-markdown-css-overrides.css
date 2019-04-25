@@ -1,0 +1,50 @@
+.markdown-body {
+  font-size: var(--type-scale_5);
+}
+.markdown-body h1 {
+  font-size: var(--type-scale_1);
+}
+
+.markdown-body h2 {
+  font-size: var(--type-scale_2);
+}
+
+.markdown-body h3 {
+  font-size: var(--type-scale_3);
+}
+
+.markdown-body h4 {
+  font-size: var(--type-scale_4);
+}
+
+.markdown-body h5 {
+  font-size: var(--type-scale_5);
+}
+
+.markdown-body h6 {
+  font-size: var(--type-scale_6);
+}
+
+.markdown-body p {
+  margin-bottom: var(--point);
+}
+
+.markdown-body .f6 {
+  font-size: var(--type-scale_6);
+}
+
+.markdown-body kbd {
+  font-size: var(--type-scale_7);
+}
+
+.markdown-body .blob-num {
+  font-size: var(--type-scale_7);
+}
+
+.markdown-body .blob-code-inner {
+  font-size: var(--type-scale_7);
+}
+
+.markdown-body kbd {
+  font-size: var(--type-scale_7);
+}

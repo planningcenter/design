@@ -2,8 +2,6 @@ import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import prettier from "prettier/standalone";
 import htmlParser from "prettier/parser-html";
-import Link from "next/link";
-import "github-markdown-css";
 
 import Layout from "../../../pages_support/layout";
 
