@@ -22,7 +22,7 @@ Starting with the least permenant and developing from there.
 
 ## `style`
 
-The style prop is the least perminant way to extend any component.  
+The style prop is the least perminant way to extend a component.  
 Styles are completely isolated at the call site.
 
 ```jsx
@@ -36,7 +36,7 @@ Styles are completely isolated at the call site.
 ### Take it further
 
 For standard system values, you can use provided functions from `@planningcenter/system`.  
-These the same values used by `@planningcenter` components.
+These same values used by `@planningcenter` components.
 
 ```jsx
 import { space } from "@planningcenter/system";
@@ -51,26 +51,23 @@ import { space } from "@planningcenter/system";
 ## `className`
 
 You may have existing CSS styles that you'd like to use with these components.  
-Go ahead.
-
-`@planningcenter` component exports an `Element`, which is the base structure of the component.  
-You can examine that to make sure existing styles are compatable with more complex structures.
+Go ahead!
 
 ```jsx
-<Text className="MySpecialText MySpecialText--decoration_flower" />
+<Text className="fw-b MySpecialText MySpecialText--decoration_flower" />
 ```
 
 ### Taking it further
 
-See [getEntityClassNamesFromProps](#getEntityClassNamesFromProps).
+See [mapPropstoClassNames](#mapPropsToClassNames).
 
-## `getEntityClassNamesFromProps`
+## `mapPropsToClassNames`
 
-`getEntityClassNamesFromProps` is used to map props to BEM-style classnames.  
+`mapPropsToClassNames` is used to map props to BEM Entity-style classnames.  
 It can be used directly.
 
 ```jsx
-import { getEntityClassNamesFromProps } from "@planningcenter/system";
+import { mapPropsToClassNames } from "@planningcenter/utilities";
 
 <Text
   className={getEntityClassNamesFromProps("MySpecialText", {
@@ -82,34 +79,39 @@ import { getEntityClassNamesFromProps } from "@planningcenter/system";
 Most commonly, you'll use this to author your own components:
 
 ```jsx
-import { Text } from "@planningcenter/text";
-import { getEntityClassNamesFromProps } from "@planningcenter/system";
+import { Text, getExtensions } from "@planningcenter/text";
+import { mapPropsToClassNames } from "@planningcenter/utilities";
 
 export function MySpecialText(props) {
   return (
-    <Text className={getEntityClassNamesFromProps("MySpecialText", props)} />
+    <Text
+      className={
+        (mapPropsToClassNames("MySpecialText", props), getExtensions())
+      }
+    />
   );
 }
 ```
 
-## `get*FromProps` and `Element`
+## `get*FromProps`
 
-Each component exposes it's pre-composed prop-to-className functions.  
-If you decide to take full control of you components,
+Each component exposes it's pre-composed propToClassName functions.  
+If you decide to take full control of you components,  
 You could do this:
 
 ```jsx
-import { Element, getSizeClasses } from "@planningcenter/text";
-import { getEntityClassNamesFromProps } from "@planningcenter/system";
+import { Text, getSizeClasses } from "@planningcenter/text";
+import { mapPropsToClassNames } from "@planningcenter/utilities";
 
 export function MySpecialText({ className, size, ...props }) {
   return (
-    <Element
+    <Text
       className={[
         getSizeClasses({ size }),
         getEntityClassNamesFromProps("MySpecialText", props),
         "Text"
       ]}
+      {...props}
     />
   );
 }

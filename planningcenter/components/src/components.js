@@ -10,7 +10,6 @@ import {
   getStyledClassNames
 } from "../../avatar/src/avatar";
 
-
 export function Avatar({ size, strict = true, inset, className, ...props }) {
   return (
     <AvatarElement
@@ -30,7 +29,6 @@ import {
   getFontScaleClassNames
 } from "../../text/src/text";
 
-// import * from "../../resource-header/src/resource-header"
 export function Text({ fontSize, strict = true, className, ...props }) {
   return (
     <TextElement
