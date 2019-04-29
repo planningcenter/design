@@ -15,7 +15,9 @@ export const SIZES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 export const SCALE = [0, 1, 2, 4, 8, 16, 32, 64, 128];
 
-export const TYPE_SCALE = [30, 25, 21, 18, 16, 14, 12, 10];
+export const TYPE_SCALE = [10, 12, 14, 16, 18, 21, 25, 30];
+
+export const HEADING_SCALE = TYPE_SCALE.slice(2, 8).reverse();
 
 export function size(depth) {
   return bound(POINT * SIZES[depth]);

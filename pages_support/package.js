@@ -1,5 +1,11 @@
 import React from "react";
 
+function titlize(name) {
+  let _name = name.split("/")[1];
+
+  return _name.charAt(0).toUpperCase() + _name.slice(1);
+}
+
 export function Detail({
   componentName = "",
   description = "",
@@ -9,7 +15,7 @@ export function Detail({
 }) {
   return (
     <React.Fragment>
-      <h1>{componentName}</h1>
+      <h1>{componentName || titlize(name)}</h1>
       <blockquote>
         <p>{description}</p>
       </blockquote>

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-let planningcenter = ["avatar", "text", "resource-header"];
+let planningcenter = ["avatar", "text", "resource-header", "system"];
 let planningcenter_experimental = ["button"];
 
 function OrganizationProjectList({
