@@ -30,7 +30,7 @@
 :root {
   --type-scale_0: 10px;
   --type-scale_1: 12px;
-  --type-scale_2: 14px;
+  --type-scale_2: 14px; /* default */
   --type-scale_3: 16px;
   --type-scale_4: 18px;
   --type-scale_5: 21px;
@@ -38,15 +38,15 @@
   --type-scale_7: 30px;
 }
 
+/* TODO: a possible outome that seems confusing */
 :root {
-  --heading-scale_0: var(--type-scale_7);
-  --heading-scale_1: var(--type-scale_6);
-  --heading-scale_2: var(--type-scale_5);
-  --heading-scale_3: var(--type-scale_4);
-  --heading-scale_4: var(--type-scale_3);
-  --heading-scale_5: var(--type-scale_2);
-  --heading-scale_6: var(--type-scale_1);
-  --heading-scale_7: var(--type-scale_0);
+  --heading-size_1: var(--type-scale_6);
+  --heading-size_2: var(--type-scale_5);
+  --heading-size_3: var(--type-scale_4);
+  --heading-size_4: var(--type-scale_3);
+  --heading-size_5: var(--type-scale_2);
+  --heading-size_6: var(--type-scale_1);
+  --heading-size_7: var(--type-scale_0);
 }
 
 /* presented here for parity.
