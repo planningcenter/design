@@ -5,6 +5,62 @@ import Layout from "../pages_support/layout";
 
 # Philosophy
 
+## State
+
+> Bunches O' Frameworks
+
+While not all of frameworks have names,  
+Each app has sets of patterns, tools, and practices.
+
+These are important.  
+They're represent the innovations of that app.
+
+Teams need the autonomy to make decisions at the app level without consensus.  
+This is good.
+
+## Problem
+
+> Failed at extension
+
+The failing of Interfaces is that it lacks clear methods of extension.
+
+At the time that it was extracted,  
+We thought customization was enough: variables.
+
+But, without guidance, app-side extensions of Interfaces made it impossible to work on without breaking other apps.  
+This problem magnified by the platform-level integration of Topbar.
+
+Apps needed framework level updates,  
+Which made it hard to merge breaking style changes.
+
+## Struggle
+
+We've been steadily moving away from Interfaces by
+
+- investing in app-side frameworks and solutions
+- extrating icons, `topbar` and `url` functionality from the style lib
+- blowing up Interfaces into individual selectors — to make removal easy
+- adding `minions.css`, for avoiding abstractions altogether
+
+## A Bright Spot
+
+> @planningcenter/icons
+
+Almost all teams are regularly committing to `icons` — from individual illustrations to SVG and build-step fixes.  
+It's not perfect but it's a big success toward cross team collaboration.
+
+### Takeaways
+
+1. We prefer the safety of an application-specific sandbox
+2. We are capable of managing the complexities of publishing and versioning npm packages
+3. We want better first-class methods for extending and exploring
+
+### What I'd Like to Take Further
+
+The biggest failing of icons is that everything remains siloed.
+
+We'd like to fix that by marking a clear path from app-specific code to shared-library code.
+
 ## Goal
 
 > Guided Autonomy
@@ -12,46 +68,28 @@ import Layout from "../pages_support/layout";
 To provide a path to a shared designer experience — where sharing is easier than not sharing.  
 Do this using framework-agnostic web standards for the long-term agility of Planning Center.
 
-## A Bright Spot
-
-> @planningcenter/icons
-
-Almost all teams are regularly committing to `icons` — from individual illustrations to SVG and build-step fixes.
-
-### Takeaways
-
-1. Designers prefer the safety of an application-specific sandbox
-2. Designers are very capable of managing the complexities of publishing and versioning npm packages
-
-### What I'd Like to Take Further
-
-The biggest failing of icons is that everything remains siloed.
-
-I'd like to fix that by marking a clear path from app-specific code to shared-library code
-
-## The Problem at Hand
-
-Up to this point we've lived in two distant lands.  
-On one side there is an authoritarian library, gatekeeping every PR.  
-On the other side, Mad Max.
-
-I want to open up a dialog in a third space.
-
 ## The vision
 
 `Extensions`
 
-I want to create a space that preserves autonomy but grants developers access to tooling.
+We want to create a space that preserves autonomy but grants developers access to tooling.
 
-### Opt-in Complexity (support all designers)
+### Host company-wide discussions to suss out standards
 
-### Standards First (support all platforms)
+- Create spec
+- Codify system values
 
-### Copy-Paste Extensibility
+### Opt-in Complexity
 
-### Monorepo Structure
+- Bootstrap-style 2-import install
+- Copy-pastable, injectable, and extensible
 
-### Generators and Generative Documentation
+### Standards First
+
+- Support our platform yesterday, today, and tomarrow
+- Allow extensability by other, platform-targeting stacks
+
+### Pull requests welcome, not required
 
   </div>
 </Layout>

@@ -30,7 +30,7 @@
 :root {
   --type-scale_0: 10px;
   --type-scale_1: 12px;
-  --type-scale_2: 14px; /* default */
+  --type-scale_2: 14px;
   --type-scale_3: 16px;
   --type-scale_4: 18px;
   --type-scale_5: 21px;
@@ -39,7 +39,7 @@
 }
 
 /* TODO: a possible outome that seems confusing */
-:root {
+/* :root {
   --heading-size_1: var(--type-scale_6);
   --heading-size_2: var(--type-scale_5);
   --heading-size_3: var(--type-scale_4);
@@ -47,7 +47,7 @@
   --heading-size_5: var(--type-scale_2);
   --heading-size_6: var(--type-scale_1);
   --heading-size_7: var(--type-scale_0);
-}
+} */
 
 /* presented here for parity.
  * not useful until env() is standardized

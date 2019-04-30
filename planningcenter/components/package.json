@@ -10,6 +10,7 @@
   "style": "css/components.css",
   "amdName": "PLANNINGCENTER.COMPONENTS",
   "files": [
+    "css",
     "dist"
   ],
   "publishConfig": {
@@ -33,5 +34,10 @@
     "microbundle": "^0.11.0",
     "postcss-cli": "^6.1.2",
     "postcss-import": "^12.0.1"
+  },
+  "dependencies": {
+    "@planningcenter/avatar": "0.0.11",
+    "@planningcenter/resource-header": "0.0.7",
+    "@planningcenter/text": "0.0.2"
   }
 }
