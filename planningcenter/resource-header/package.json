@@ -10,6 +10,7 @@
   "style": "css/resource-header.css",
   "amdName": "PLANNINGCENTER.ResourceHeader",
   "files": [
+    "css",
     "dist"
   ],
   "publishConfig": {
