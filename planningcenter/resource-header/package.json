@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/resource-header",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Components for resource headers with actions and tabs for property navigation",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design/",
