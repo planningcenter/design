@@ -41,3 +41,9 @@ export function Text({ fontSize, strict = true, className, ...props }) {
     />
   );
 }
+
+import TextInputElement from "../../text-input/src/text-input";
+
+export function TextInput({ ...props }) {
+  return <TextInputElement {...props} />;
+}

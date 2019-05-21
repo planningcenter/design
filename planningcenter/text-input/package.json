@@ -1,0 +1,32 @@
+{
+  "name": "@planningcenter/text-input",
+  "version": "0.0.0",
+  "description": "A Planning Center Text Input",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "homepage": "https://github.com/planningcenter/design#readme",
+  "license": "MIT",
+  "main": "dist/text-input.js",
+  "source": "src/text-input.js",
+  "style": "css/text-input.css",
+  "files": [
+    "dist",
+    "css"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planningcenter/design.git"
+  },
+  "scripts": {
+    "build": "microbundle build --jsx React.createElement --format cjs",
+    "dev": "microbundle watch --jsx React.createElement"
+  },
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  },
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
+}
