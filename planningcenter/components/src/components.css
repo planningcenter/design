@@ -1,4 +1,5 @@
 @import "../../avatar";
 @import "../../text";
 @import "../../text-input";
+@import "../../text-input-extensions/point-grid/point-grid.css";
 @import "../../resource-header";

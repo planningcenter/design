@@ -24,34 +24,25 @@ export default function() {
       <div>
         <Detail componentName="TextInput" {...pkg} />
 
-        <TextInput
-          {...someInput}
-          className="PointGridTextInput--height_5"
-          placeholder="Placeholder"
-        />
+        <br />
+        <br />
+
+        <TextInput {...someInput} height={5} placeholder="Placeholder" />
 
         <br />
         <br />
 
-        <TextInput {...someInput} placeholder="Placeholder" />
+        <TextInput {...someInput} height={4} placeholder="Placeholder" />
 
         <br />
         <br />
 
-        <TextInput
-          {...someInput}
-          className="PointGridTextInput--height_3"
-          placeholder="Placeholder"
-        />
+        <TextInput {...someInput} height={3} placeholder="Placeholder" />
 
         <br />
         <br />
 
-        <TextInput
-          {...someInput}
-          className="PointGridTextInput--height_2.5"
-          placeholder="Placeholder"
-        />
+        <TextInput {...someInput} height={2.5} placeholder="Placeholder" />
         <style>
           {`
           .show-css-custom-properties::after {

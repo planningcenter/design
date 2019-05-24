@@ -43,7 +43,16 @@ export function Text({ fontSize, strict = true, className, ...props }) {
 }
 
 import TextInputElement from "../../text-input/src/text-input";
+import { getPointGridClassNames as getTextInputPointGridClassNames } from "../../text-input-extensions/point-grid/point-grid";
 
-export function TextInput({ ...props }) {
-  return <TextInputElement {...props} />;
+export function TextInput({ className, height, strict = true, ...props }) {
+  return (
+    <TextInputElement
+      className={classnames(
+        className,
+        getTextInputPointGridClassNames({ height }, strict)
+      )}
+      {...props}
+    />
+  );
 }

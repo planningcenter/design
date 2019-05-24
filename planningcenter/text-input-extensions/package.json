@@ -1,0 +1,21 @@
+{
+  "name": "@planningcenter/text-input-extensions",
+  "version": "0.0.0",
+  "description": "A Planning Center Text Input Extensions",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "homepage": "https://github.com/planningcenter/design#readme",
+  "license": "MIT",
+  "files": [
+    "css"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planningcenter/design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  }
+}
