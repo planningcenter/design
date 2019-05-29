@@ -9,8 +9,7 @@
   "scripts": {
     "build": "microbundle --format cjs",
     "dev": "webpack-dev-server",
-    "prepublish": "npm run build",
-    "generate-toc": "node ./scripts/generate-toc.js"
+    "prepublish": "npm run build"
   },
   "files": [
     "dist"
@@ -28,9 +27,10 @@
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
     "html-webpack-plugin": "^3.0.6",
-    "markdown-toc": "^1.2.0",
     "microbundle": "^0.11.0",
+    "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "rollup": "^1.12.4",
     "ts-loader": "^5.4.5",
     "typescript": "^3.5.1",
     "webpack": "^4.32.2",
