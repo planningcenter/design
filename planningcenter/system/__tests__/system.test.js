@@ -28,14 +28,14 @@ describe("fontSize", () => {
     return assertFunctionInputOutput(fontSize, i, o);
   }
 
-  it("returns 30 with input 0", () => assertFontSize(0, 30));
-  it("returns 25 with input 1", () => assertFontSize(1, 25));
-  it("returns 21 with input 2", () => assertFontSize(2, 21));
-  it("returns 18 with input 3", () => assertFontSize(3, 18));
-  it("returns 16 with input 4", () => assertFontSize(4, 16));
-  it("returns 14 with input 5", () => assertFontSize(5, 14));
-  it("returns 12 with input 6", () => assertFontSize(6, 12));
-  it("returns 10 with input 7", () => assertFontSize(7, 10));
+  it("returns 30 with input 0", () => assertFontSize(0, 10));
+  it("returns 25 with input 1", () => assertFontSize(1, 12));
+  it("returns 21 with input 2", () => assertFontSize(2, 14));
+  it("returns 18 with input 3", () => assertFontSize(3, 16));
+  it("returns 16 with input 4", () => assertFontSize(4, 18));
+  it("returns 14 with input 5", () => assertFontSize(5, 21));
+  it("returns 12 with input 6", () => assertFontSize(6, 25));
+  it("returns 10 with input 7", () => assertFontSize(7, 30));
   it("returns 0 with out-of-bounds inputs", () => {
     outOfBounds.forEach(v => assertFontSize(v, 0));
   });
