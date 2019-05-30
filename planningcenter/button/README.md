@@ -1,4 +1,4 @@
-# `@planningcenter-experimental/button`
+# `@planningcenter/button`
 
 > An experimental Button, used in Planning Center Publishing
 
@@ -8,15 +8,15 @@ https://codesandbox.io/s/1358wv7x33
 ## Installation
 
 ```bash
-yarn add @planningcenter-experimental/button
+yarn add @planningcenter/button
 ```
 
 ## Usage
 
 ```jsx
 import React from "React";
-import { ComposedButton as Button } from "@planningcenter-experimental/button";
-import "@planningcenter-experimental/button/button.css";
+import { ComposedButton as Button } from "@planningcenter/button";
+import "@planningcenter/button/button.css";
 
 function App() {
   return <Button>A button</Button>;
@@ -36,8 +36,8 @@ import {
   PutButton,
   DeleteButton,
   CancelButton
-} from "@planningcenter-experimental/button";
-import "@planningcenter-experimental/button/button.css";
+} from "@planningcenter/button";
+import "@planningcenter/button/button.css";
 
 function App() {
   return (
@@ -64,8 +64,8 @@ function App() {
 
 ```jsx
 import React from "React";
-import { ComposedButton as Button } from "@planningcenter-experimental/button";
-import "@planningcenter-experimental/button/button.css";
+import { ComposedButton as Button } from "@planningcenter/button";
+import "@planningcenter/button/button.css";
 
 function App() {
   return (
@@ -92,8 +92,8 @@ function App() {
 
 ```jsx
 import React from "react";
-import { ComposedButton as Button } from "@planningcenter-experimental/button";
-import "@planningcenter-experimental/button/button.css";
+import { ComposedButton as Button } from "@planningcenter/button";
+import "@planningcenter/button/button.css";
 
 function App() {
   return (
@@ -131,8 +131,8 @@ This can be helpful in use with `Box` components that exist as the base element 
 
 ```jsx
 import React from "react";
-import { ComposedButton as Button } from "@planningcenter-experimental/button";
-import "@planningcenter-experimental/button/button.css";
+import { ComposedButton as Button } from "@planningcenter/button";
+import "@planningcenter/button/button.css";
 
 function App() {
   return (
@@ -184,7 +184,7 @@ You can pass it all your `props`.
 Or just the ones we care about.
 
 ```js
-import { getRestfulButtonClasses } from "@planningcenter-experimental/buttons";
+import { getRestfulButtonClasses } from "@planningcenter/buttons";
 
 let classes = getScaledButtonClasses({ action: "destroy" });
 // => "RestfulButton RestfulButton--action_destroy"
@@ -199,7 +199,7 @@ You can pass it all your `props`.
 Or just the ones we care about.
 
 ```js
-import { getRestfulButtonClasses } from "@planningcenter-experimental/buttons";
+import { getRestfulButtonClasses } from "@planningcenter/buttons";
 
 let classes = getRestfulButtonClasses({ height: 3 });
 // => "RestfulButton RestfulButton--height_3"

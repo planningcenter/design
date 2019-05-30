@@ -1,14 +1,14 @@
 {
-  "name": "@planningcenter-experimental/button",
-  "version": "0.5.5",
+  "name": "@planningcenter/button",
+  "version": "0.0.0",
   "description": "An experimental planning center button",
   "author": "Michael Chan <mijoch@gmail.com>",
-  "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter-experimental/button",
+  "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/button",
   "license": "MIT",
   "main": "dist/button.js",
   "source": "button.js",
   "style": "button.css",
-  "amdName": "PLANNINGCENTER.EXPERIMENTAL.Button",
+  "amdName": "PLANNINGCENTER.Button",
   "files": [
     "dist",
     "button.css"

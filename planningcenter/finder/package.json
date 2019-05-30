@@ -1,13 +1,13 @@
 {
-  "name": "@planningcenter-experimental/finder",
+  "name": "@planningcenter/finder",
   "version": "0.0.6",
   "description": "Components for building a resource Finder in React",
   "author": "Michael Chan <mijoch@gmail.com>",
-  "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter-experimental/finder",
+  "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/finder",
   "license": "MIT",
   "main": "dist/finder.js",
   "source": "finder.js",
-  "amdName": "PLANNINGCENTER.EXPERIMENTAL.Finder",
+  "amdName": "PLANNINGCENTER.Finder",
   "files": [
     "dist"
   ],
