@@ -1,7 +1,4 @@
 {
-  "packages": [
-    "planningcenter/*",
-    "planningcenter-experimental/*"
-  ],
+  "packages": ["planningcenter/*"],
   "version": "independent"
 }
