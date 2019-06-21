@@ -32,6 +32,7 @@ function AvatarBuilder() {
     lg: "ignore",
     xl: "ignore"
   });
+  let [inactive, updateInactive] = React.useState(false);
 
   let formattedResponsiveSizes = Object.entries(responsiveSizes)
     .filter(([_, v]) => v !== "ignore")
@@ -45,6 +46,7 @@ function AvatarBuilder() {
       alt={alt}
       src={src}
       inset={inset}
+      inactive={inactive}
       size={
         size === "responsive" ? formattedResponsiveSizes : parseFloat(size, 10)
       }
@@ -77,7 +79,18 @@ function AvatarBuilder() {
       <input
         id="avatar-builder_inset"
         type="checkbox"
+        checked={inset}
         onChange={e => updateInset(e.target.checked)}
+      />
+
+      <br />
+
+      <label htmlFor="avatar-builder_inactive">Inactive</label>
+      <input
+        id="avatar-builder_inactive"
+        type="checkbox"
+        checked={inactive}
+        onChange={e => updateInactive(e.target.checked)}
       />
 
       <br />
@@ -156,7 +169,9 @@ function AvatarBuilder() {
           .replace(",", ", ")
           .replace(":", ": ")
       : parseInt(size * 10, 10) / 10
-  }}${inset ? `\n  inset={${inset}}` : ""}
+  }}${inset ? `\n  inset={${inset}}` : ""}${
+          inactive ? `\n  inactive={${inactive}}` : ""
+        }
 />`}</code>
       </pre>
     </React.Fragment>
@@ -211,6 +226,14 @@ export default function() {
               inset={true}
             />
           </div>
+        </section>
+
+        <section>
+          <Avatar
+            inactive
+            src="/static/200x300_kitten.jpeg"
+            alt="a cute kitten"
+          />
         </section>
 
         <section>

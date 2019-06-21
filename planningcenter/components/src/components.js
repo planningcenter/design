@@ -3,21 +3,31 @@
 import React from "react";
 import classnames from "classnames";
 
+import { Avatar as AvatarElement } from "../../avatar/src/avatar";
 import {
-  Avatar as AvatarElement,
   getResponsivePointGridClassNames,
-  getPointGridClassNames,
-  getStyledClassNames
-} from "../../avatar/src/avatar";
+  getPointGridClassNames
+} from "../../avatar/extension/point-grid";
+import { getStyledClassNames } from "../../avatar/extension/styled";
+import { getInactiveClassNames } from "../../avatar/extension/inactive";
 
-export function Avatar({ size, strict = true, inset, className, ...props }) {
+export function Avatar({
+  size,
+  strict = true,
+  inactive = false,
+  inset,
+  className,
+  ...props
+}) {
+  console.log(inactive);
   return (
     <AvatarElement
       className={classnames(
         className,
         getResponsivePointGridClassNames({ size }, strict),
         getPointGridClassNames({ size }, strict),
-        getStyledClassNames({ inset })
+        getStyledClassNames({ inset }),
+        getInactiveClassNames({ inactive })
       )}
       {...props}
     />

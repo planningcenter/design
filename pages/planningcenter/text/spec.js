@@ -11,11 +11,11 @@ export default function() {
       <section data-spec-group="size">
         <h1>Sizes</h1>
         {[
-          ["x-small", [TYPE_SCALE[7]]],
-          ["small", [TYPE_SCALE[6]]],
-          ["medium", [TYPE_SCALE[5]]],
-          ["large", [TYPE_SCALE[4]]],
-          ["x-large", [TYPE_SCALE[3]]]
+          ["x-small", [TYPE_SCALE[0]]],
+          ["small", [TYPE_SCALE[1]]],
+          ["medium", [TYPE_SCALE[2]]],
+          ["large", [TYPE_SCALE[3]]],
+          ["x-large", [TYPE_SCALE[4]]]
         ].map(([subjectiveSize, size]) => (
           <p>
             <Text data-spec-font-size={size} fontSize={subjectiveSize}>

@@ -1,4 +1,4 @@
-describe("Avatar style", () => {
+describe("Text style", () => {
   beforeEach(() => {
     cy.visit("/planningcenter/text/spec");
   });

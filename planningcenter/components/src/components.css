@@ -1,5 +1,10 @@
 @import "../../avatar";
+@import "../../avatar/extension/point-grid";
+@import "../../avatar/extension/styled";
+@import "../../avatar/extension/inactive";
+
 @import "../../text";
 @import "../../text-input";
 @import "../../text-input-extensions/point-grid/point-grid.css";
+
 @import "../../resource-header";

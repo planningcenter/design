@@ -1,6 +1,9 @@
 import React from "react";
-import classnames from "classnames";
-export * from "./avatar_extensions";
+import { SIZES as SYSTEM_SIZES } from "../../system/src/system";
+
+export const SIZES = Array.from(
+  new Set([2.5, ...SYSTEM_SIZES.filter(s => s >= 3), 9])
+).sort();
 
 export function Avatar({
   as: As = "span",
@@ -14,7 +17,7 @@ export function Avatar({
   let img = <img {...imgProps} />;
 
   return (
-    <As className={classnames([className, "Avatar"])} {...props}>
+    <As className={[className, "Avatar"].join(" ")} {...props}>
       {typeof children === "function" ? children(img, imgProps) : img}
     </As>
   );
