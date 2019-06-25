@@ -48,12 +48,12 @@ export function ComposedButton({
 
   return (
     <As
-      className={classnames(
+      className={[
         className,
         getRestfulButtonClasses({ action }),
         getScaledButtonClasses({ height }),
         "Button"
-      )}
+      ].join(" ")}
       {...elementProps}
       {...props}
     />
