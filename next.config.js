@@ -10,7 +10,6 @@ module.exports = withCSS(
   withMDX({
     extension: /.mdx?$/,
     pageExtensions: ["js", "md", "mdx"],
-    options: { hastPlugins: [rehypePrism] },
-    target: "serverless"
+    options: { hastPlugins: [rehypePrism] }
   })
 );
