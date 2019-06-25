@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/system",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Design System tokens and fixed values",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/system",
