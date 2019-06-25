@@ -1,10 +1,9 @@
 import React from "react";
-import classnames from "classnames";
 
 export function TabContainer({ as: As = "div", className, ...props }) {
   return (
     <As
-      className={classnames("ResourceHeader__TabContainer", className)}
+      className={["ResourceHeader__TabContainer", className].join(" ")}
       {...props}
     />
   );
@@ -13,7 +12,7 @@ export function TabContainer({ as: As = "div", className, ...props }) {
 export function SummaryContainer({ as: As = "div", className, ...props }) {
   return (
     <As
-      className={classnames("ResourceHeader__SummaryContainer", className)}
+      className={["ResourceHeader__SummaryContainer", className].join(" ")}
       {...props}
     />
   );
@@ -22,7 +21,7 @@ export function SummaryContainer({ as: As = "div", className, ...props }) {
 export function FlexSpacer({ space, className, ...props }) {
   return (
     <div
-      className={classnames(className, "ResourceHeader__FlexSpacer")}
+      className={[className, "ResourceHeader__FlexSpacer"].join(" ")}
       style={space ? { margin: space * 4 } : null}
       {...props}
     />
@@ -31,14 +30,14 @@ export function FlexSpacer({ space, className, ...props }) {
 
 export function Title({ as: As = "span", className, ...props }) {
   return (
-    <As className={classnames("ResourceHeader__Title", className)} {...props} />
+    <As className={["ResourceHeader__Title", className].join(" ")} {...props} />
   );
 }
 
 export function Tab({ target, className, children, style, ...props }) {
   return (
     <a
-      className={classnames(className, "ResourceHeader__Tab")}
+      className={[className, "ResourceHeader__Tab"].join(" ")}
       style={{
         ...(target
           ? {
@@ -73,7 +72,7 @@ export function Avatar({
   let img = <img {...imgProps} />;
 
   return (
-    <As className={classnames(className, "ResourceHeader__Avatar")} {...props}>
+    <As className={[className, "ResourceHeader__Avatar"].join(" ")} {...props}>
       {typeof children === "function" ? children(img, imgProps) : img}
     </As>
   );

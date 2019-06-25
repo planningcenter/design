@@ -1,67 +1,11 @@
-// TODO: should we lock to versions or direct source?
-//       starting with source
-import React from "react";
-import classnames from "classnames";
+export { Avatar } from "./composed-avatar";
+export { SIZES as AVATAR_SIZES } from "../../avatar/src/avatar";
 
-import { Avatar as AvatarElement } from "../../avatar/src/avatar";
-import {
-  getResponsivePointGridClassNames,
-  getPointGridClassNames
-} from "../../avatar/extension/point-grid";
-import { getStyledClassNames } from "../../avatar/extension/styled";
-import { getInactiveClassNames } from "../../avatar/extension/inactive";
+import * as ResourceHeader from "../../resource-header/src/resource-header";
+export { ResourceHeader };
 
-export function Avatar({
-  size,
-  strict = true,
-  inactive = false,
-  inset,
-  className,
-  ...props
-}) {
-  return (
-    <AvatarElement
-      className={classnames(
-        className,
-        getResponsivePointGridClassNames({ size }, strict),
-        getPointGridClassNames({ size }, strict),
-        getStyledClassNames({ inset }),
-        getInactiveClassNames({ inactive })
-      )}
-      {...props}
-    />
-  );
-}
+export { Text } from "./composed-text";
+export { SIZES as TEXT_SIZES } from "../../text/src/text";
 
-import {
-  Text as TextElement,
-  getFontScaleClassNames
-} from "../../text/src/text";
-
-export function Text({ fontSize, strict = true, className, ...props }) {
-  return (
-    <TextElement
-      className={classnames(
-        className,
-        getFontScaleClassNames({ fontSize }),
-        "Text"
-      )}
-      {...props}
-    />
-  );
-}
-
-import TextInputElement from "../../text-input/src/text-input";
-import { getPointGridClassNames as getTextInputPointGridClassNames } from "../../text-input-extensions/point-grid/point-grid";
-
-export function TextInput({ className, height, strict = true, ...props }) {
-  return (
-    <TextInputElement
-      className={classnames(
-        className,
-        getTextInputPointGridClassNames({ height }, strict)
-      )}
-      {...props}
-    />
-  );
-}
+export { TextInput } from "./composed-text-input";
+export { SIZES as TEXT_INPUT_SIZES } from "../../text-input/src/text-input";

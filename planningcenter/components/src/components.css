@@ -4,7 +4,9 @@
 @import "../../avatar/extension/inactive";
 
 @import "../../text";
+@import "../../text/extension/font-scale";
+
 @import "../../text-input";
-@import "../../text-input-extensions/point-grid/point-grid.css";
+@import "../../text-input/extension/point-grid";
 
 @import "../../resource-header";

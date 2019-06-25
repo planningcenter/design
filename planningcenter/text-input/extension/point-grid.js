@@ -1,6 +1,5 @@
 import { mapPropsToClassNames } from "../../utilities/src/utilities";
-
-export const SIZES = Array.from(new Set([2.5, 3, 4, 5]));
+import { SIZES } from "../src/text-input";
 
 export function getPointGridClassNames(
   { height: incomingHeight },

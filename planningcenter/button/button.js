@@ -1,5 +1,4 @@
 import React from "react";
-import classnames from "classnames";
 
 // TODO: momentarily inlined for site
 import { mapPropsToClassNames } from "../../planningcenter/utilities/src/utilities";
@@ -31,7 +30,7 @@ export function CancelButton(props) {
 //       * add ButtonCluster__Button class to children
 //       * get provide `height` on Context
 export function ButtonCluster({ as: As = "div", className, ...props }) {
-  return <As className={classnames(className, "ButtonCluster")} {...props} />;
+  return <As className={[className, "ButtonCluster"].join(" ")} {...props} />;
 }
 
 export function ComposedButton({

@@ -3,7 +3,8 @@ import React from "react";
 import "../../../planningcenter/components/css/components.css";
 import {
   Text,
-  TEXT_SIZES
+  TextInput,
+  TEXT_INPUT_SIZES
 } from "../../../planningcenter/components/src/components";
 
 import Layout from "../../../pages_support/components-layout";
@@ -12,10 +13,10 @@ import { Sheet } from "../../../pages_support/sheet";
 export default function() {
   return (
     <Layout>
-      <h1>Text</h1>
+      <h1>TextInput</h1>
 
       <section>
-        <Text>Here's some text.</Text>
+        <TextInput />
       </section>
 
       <section>
@@ -27,18 +28,7 @@ export default function() {
             flexDirection: "column"
           }}
         >
-          {TEXT_SIZES.map(size => (
-            <React.Fragment>
-              <Text fontSize={size}>
-                Here's some{" "}
-                <strong>
-                  <code>{size}</code>
-                </strong>{" "}
-                text.
-              </Text>
-              <br />
-            </React.Fragment>
-          ))}
+          <Preview />
         </Sheet>
       </section>
     </Layout>
@@ -48,15 +38,10 @@ export default function() {
 export function Preview() {
   return (
     <React.Fragment>
-      {["x-small", "small", "medium", "large", "x-large"].map(size => (
+      {TEXT_INPUT_SIZES.map(height => (
         <React.Fragment>
-          <Text fontSize={size}>
-            Here's some{" "}
-            <strong>
-              <code>{size}</code>
-            </strong>{" "}
-            text.
-          </Text>
+          <TextInput height={height} placeholder={`height: ${height}`} />
+
           <br />
         </React.Fragment>
       ))}

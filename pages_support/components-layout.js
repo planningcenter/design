@@ -44,7 +44,13 @@ export default function(props) {
             </Text>
 
             <ul style={{ paddingLeft: "1.2em", listStyleType: "circle" }}>
-              {[["all", ""], "avatar", "text"].map(component => (
+              {[
+                ["all", ""],
+                "avatar",
+                "resource-header",
+                "text",
+                "text-input"
+              ].map(component => (
                 <li>
                   <Link>
                     {typeof component === "string" ? (

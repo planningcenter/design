@@ -1,6 +1,5 @@
 // import React from "react";
 import Layout from "../pages_support/layout";
-import classnames from "classnames";
 
 import { Avatar as AvatarBase } from "../planningcenter/components/src/components";
 import { getStatusClassNames } from "../planningcenter/services-extensions/src/services-extensions";
@@ -9,7 +8,7 @@ import "../planningcenter/services-extensions/css/services-extensions.css";
 function Avatar({ className, status, ...props }) {
   return (
     <AvatarBase
-      className={classnames(className, getStatusClassNames({ status }))}
+      className={[className, getStatusClassNames({ status })].join(" ")}
       {...props}
     />
   );

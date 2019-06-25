@@ -28,7 +28,6 @@
     "url": "https://github.com/planningcenter/design/issues"
   },
   "peerDependencies": {
-    "classnames": "^2.2.6",
     "react": "^16.6.3"
   },
   "gitHead": "c8480d0688c8aa26ede8a1d3b30edfe81a105a78",

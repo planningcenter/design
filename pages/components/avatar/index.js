@@ -1,7 +1,10 @@
 import React from "react";
 
 import "../../../planningcenter/components/css/components.css";
-import { Avatar } from "../../../planningcenter/components/src/components";
+import {
+  Avatar,
+  AVATAR_SIZES
+} from "../../../planningcenter/components/src/components";
 
 import Layout from "../../../pages_support/components-layout";
 import { Sheet } from "../../../pages_support/sheet";
@@ -23,7 +26,7 @@ export default function() {
             display: "flex"
           }}
         >
-          {[2.5, 3, 4, 5, 6, 7, 8, 9].map(size => (
+          {AVATAR_SIZES.map(size => (
             <Avatar size={size} src="/static/200x300_kitten.jpeg" />
           ))}
         </Sheet>
@@ -38,7 +41,7 @@ export default function() {
             backgroundColor: "hsl(0, 0%, 60%)"
           }}
         >
-          {[2.5, 3, 4, 5, 6, 7, 8, 9].map(size => {
+          {AVATAR_SIZES.map(size => {
             let inset = size === 2.5 ? 0 : Math.round(size / 2);
 
             return (
