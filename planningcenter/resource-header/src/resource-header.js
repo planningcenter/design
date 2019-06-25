@@ -1,5 +1,8 @@
 import React from "react";
 
+// TODO: lock to version && remove direct link
+import { Avatar as AvatarElement } from "../../avatar/src/avatar";
+
 export function TabContainer({ as: As = "div", className, ...props }) {
   return (
     <As
@@ -60,20 +63,11 @@ export function Tab({ target, className, children, style, ...props }) {
   );
 }
 
-export function Avatar({
-  as: As = "span",
-  src,
-  alt,
-  className,
-  children,
-  ...props
-}) {
-  let imgProps = { src, alt };
-  let img = <img {...imgProps} />;
-
+export function Avatar({ className, ...props }) {
   return (
-    <As className={[className, "ResourceHeader__Avatar"].join(" ")} {...props}>
-      {typeof children === "function" ? children(img, imgProps) : img}
-    </As>
+    <AvatarElement
+      className={[className, "ResourceHeader__Avatar"].join(" ")}
+      {...props}
+    />
   );
 }
