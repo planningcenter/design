@@ -19,7 +19,6 @@ export function Avatar({
   className,
   ...props
 }) {
-  console.log(inactive);
   return (
     <AvatarElement
       className={classnames(

@@ -1,21 +1,21 @@
-describe("Text style", () => {
-  beforeEach(() => {
-    cy.visit("/planningcenter/text/spec");
+describe("Text Spec", () => {
+  before(() => {
+    cy.visit("/components/text");
   });
 
-  it("modifies fontSize with subjective classNames", () => {
-    function assertSizeByTestId(selector, size) {
+  it("can be 10, 12, 14, 16, or 18 pixel font-size", () => {
+    function assertSize(size, selector = "Text") {
       // TODO: could speed this up by getting all then filtering
       return cy.get(selector).should(s => {
         expect(s).to.have.css("font-size", size);
       });
     }
 
-    assertSizeByTestId(`[data-spec-font-size=10]`, "10px");
-    assertSizeByTestId(`[data-spec-font-size=12]`, "12px");
-    assertSizeByTestId(`[data-spec-font-size=14]`, "14px");
-    assertSizeByTestId(`[data-spec-font-size=16]`, "16px");
-    assertSizeByTestId(`[data-spec-font-size=18]`, "18px");
+    assertSize("10px", ".FontScaleText--font-size_x-small");
+    assertSize("12px", ".FontScaleText--font-size_small");
+    assertSize("14px", ".FontScaleText--font-size_medium");
+    assertSize("16px", ".FontScaleText--font-size_large");
+    assertSize("18px", ".FontScaleText--font-size_x-large");
   });
 });
 

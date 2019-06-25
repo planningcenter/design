@@ -35,15 +35,19 @@ export default function(props) {
         `}
       </style>
       <div className="sans-serif TwoColumnNavRightLayout">
-        <div className="TwoColumnNavRightLayout__Main">
-          {props.children}
-        </div>
+        <div className="TwoColumnNavRightLayout__Main">{props.children}</div>
         <div className="TwoColumnNavRightLayout__Nav">
           <ul>
-            {["avatar"].map(component => (
-              <Link>
-                <a href={`/components/${component}`}>{component}</a>
-              </Link>
+            {[["all", ""], "avatar", "text"].map(component => (
+              <li>
+                <Link>
+                  {typeof component === "string" ? (
+                    <a href={`/components/${component}`}>{component}</a>
+                  ) : (
+                    <a href={`/components${component[1]}`}>{component[0]}</a>
+                  )}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>
