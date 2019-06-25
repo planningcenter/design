@@ -1,16 +1,16 @@
 import React from "react";
 
-import Layout from "../../pages_support/layout";
+import Layout from "../pages_support/layout";
 
 // TODO: there seems to be a problem with the build
 import {
   ComposedButton as Button,
   ButtonCluster
-} from "../../planningcenter-experimental/button/button.js";
-import "../../planningcenter-experimental/button/button.css";
-import Readme from "../../planningcenter-experimental/button/README.md";
-import pkg from "../../planningcenter-experimental/button/package.json";
-import { Detail } from "../../pages_support/package";
+} from "../planningcenter/button/button.js";
+import "../planningcenter/button/button.css";
+import Readme from "../planningcenter/button/README.md";
+import pkg from "../planningcenter/button/package.json";
+import { Detail } from "../pages_support/package";
 
 export default function() {
   return (

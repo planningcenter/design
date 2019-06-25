@@ -3,13 +3,13 @@ import React from "react";
 // import prettier from "prettier/standalone";
 // import htmlParser from "prettier/parser-html";
 
-import Layout from "../../../pages_support/layout";
+import Layout from "../pages_support/layout";
 
-import "../../../planningcenter/components/css/components.css";
-import { TextInput } from "../../../planningcenter/components/src/components";
+import "../planningcenter/components/css/components.css";
+import { TextInput } from "../planningcenter/components/src/components";
 
-import pkg from "../../../planningcenter/text-input/package.json";
-import { Detail } from "../../../pages_support/package";
+import pkg from "../planningcenter/text-input/package.json";
+import { Detail } from "../pages_support/package";
 
 function useInput(initialValue = "") {
   let [value, updateValue] = React.useState(initialValue);

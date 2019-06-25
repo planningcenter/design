@@ -1,11 +1,11 @@
 import React from "react";
 
-import Layout from "../../../pages_support/layout";
+import Layout from "../pages_support/layout";
 
-import { Text } from "../../../planningcenter/components/src/components";
-import ReadMe from "../../../planningcenter/components/README.md";
-import pkg from "../../../planningcenter/text/package.json";
-import { Detail } from "../../../pages_support/package";
+import { Text } from "../planningcenter/components/src/components";
+import ReadMe from "../planningcenter/components/README.md";
+import pkg from "../planningcenter/text/package.json";
+import { Detail } from "../pages_support/package";
 // import {
 //   Tab,
 //   FlexSpacer,

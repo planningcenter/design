@@ -1,6 +1,6 @@
 import React from "react";
 
-import Layout from "../../../pages_support/layout";
+import Layout from "../pages_support/layout";
 
 // TODO: change to import from local
 import {
@@ -10,10 +10,10 @@ import {
   SummaryContainer,
   TabContainer,
   Avatar
-} from "../../../planningcenter/resource-header/src/resource-header";
-import Readme from "../../../planningcenter/resource-header/README.md";
-import pkg from "../../../planningcenter/resource-header/package.json";
-import { Detail } from "../../../pages_support/package";
+} from "../planningcenter/resource-header/src/resource-header";
+import Readme from "../planningcenter/resource-header/README.md";
+import pkg from "../planningcenter/resource-header/package.json";
+import { Detail } from "../pages_support/package";
 
 function PlaceholderButton(props) {
   return <button href="#" type="button" style={{ height: 32 }} {...props} />;
@@ -48,7 +48,7 @@ export default function() {
           <div style={{ backgroundColor: "lightgreen" }}>
             <SummaryContainer>
               <div>
-                <Avatar src="https://placekitten.com/112/112" />
+                <Avatar src="/static/200x300_kitten.jpeg" />
               </div>
               <div>
                 <Title>A Kitty</Title>

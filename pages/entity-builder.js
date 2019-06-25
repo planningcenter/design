@@ -1,6 +1,6 @@
 import React from "react";
-import { getSelector } from "../../planningcenter/utilities/src/utilities";
-import Layout from "../../pages_support/layout";
+import { getSelector } from "../planningcenter/utilities/src/utilities";
+import Layout from "../pages_support/layout";
 
 function getComposedBlockName(block, composed) {
   function upperFirst(s) {

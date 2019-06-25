@@ -12,7 +12,7 @@ export default function() {
       <h1>Avatar</h1>
 
       <section>
-        <Avatar src="https://placekitten.com/200/300" />
+        <Avatar src="/static/200x300_kitten.jpeg" />
       </section>
 
       <section>
@@ -24,7 +24,7 @@ export default function() {
           }}
         >
           {[2.5, 3, 4, 5, 6, 7, 8, 9].map(size => (
-            <Avatar size={size} src="https://placekitten.com/200/300" />
+            <Avatar size={size} src="/static/200x300_kitten.jpeg" />
           ))}
         </Sheet>
       </section>
@@ -42,7 +42,7 @@ export default function() {
             let inset = size === 2.5 ? 0 : Math.round(size / 2);
 
             return (
-              <Avatar inset size={size} src="https://placekitten.com/200/300" />
+              <Avatar inset size={size} src="/static/200x300_kitten.jpeg" />
             );
           })}
         </Sheet>
@@ -51,7 +51,7 @@ export default function() {
       <section>
         <h2>Inactive</h2>
         <Sheet style={{ padding: "32px 40px", display: "flex" }}>
-          <Avatar inactive size={9} src="https://placekitten.com/200/300" />
+          <Avatar inactive size={9} src="/static/200x300_kitten.jpeg" />
         </Sheet>
       </section>
     </Layout>
@@ -62,7 +62,7 @@ export function Preview() {
   return (
     <React.Fragment>
       {[2.5, 3, 4, 5, 6, 7, 8, 9].map(size => (
-        <Avatar size={size} src="https://placekitten.com/200/300" />
+        <Avatar size={size} src="/static/200x300_kitten.jpeg" />
       ))}
     </React.Fragment>
   );

@@ -3,21 +3,21 @@ import { renderToStaticMarkup } from "react-dom/server";
 import prettier from "prettier/standalone";
 import htmlParser from "prettier/parser-html";
 
-import Layout from "../../../pages_support/layout";
+import Layout from "../pages_support/layout";
 
 /* HERE */
-import "../../../planningcenter/components/css/components.css";
+import "../planningcenter/components/css/components.css";
 import {
   Avatar,
   Text,
   ResourceHeader
-} from "../../../planningcenter/components/src/components";
+} from "../planningcenter/components/src/components";
 /* HERE */
 
-import { SIZES } from "../../../planningcenter/avatar/src/avatar";
-import Readme from "../../../planningcenter/avatar/README.md";
-import pkg from "../../../planningcenter/avatar/package.json";
-import { Detail } from "../../../pages_support/package";
+import { SIZES } from "../planningcenter/avatar/src/avatar";
+import Readme from "../planningcenter/avatar/README.md";
+import pkg from "../planningcenter/avatar/package.json";
+import { Detail } from "../pages_support/package";
 
 function AvatarBuilder() {
   let [alt, updateAlt] = React.useState("A kitty");

@@ -1,7 +1,14 @@
 import React from "react";
 import Link from "next/link";
 
-let planningcenter = ["avatar", "text", "text-input", "resource-header", "system"];
+let planningcenter = [
+  "avatar",
+  "button",
+  "resource-header",
+  "system",
+  "text",
+  "text-input"
+];
 let planningcenter_experimental = ["button"];
 
 function OrganizationProjectList({
@@ -10,7 +17,7 @@ function OrganizationProjectList({
   renderItem = p => (
     <li>
       <Link>
-        <a href={`/planningcenter/${p}`}>{p}</a>
+        <a href={`/${p}`}>{p}</a>
       </Link>
     </li>
   ),
@@ -25,45 +32,9 @@ export default function() {
       <strong>@planningcenter</strong>
       <OrganizationProjectList items={planningcenter} />
 
-      <strong>@planningcenter-experimental</strong>
-      <OrganizationProjectList
-        items={planningcenter_experimental}
-        renderItem={p => (
-          <li>
-            <Link>
-              <a href={`/planningcenter-experimental/${p}`}>{p}</a>
-            </Link>
-          </li>
-        )}
-      />
-
       <strong>guides</strong>
       <OrganizationProjectList
-        items={["extension"]}
-        renderItem={p => (
-          <li>
-            <Link>
-              <a href={`/guides/${p}`}>{p}</a>
-            </Link>
-          </li>
-        )}
-      />
-
-      <strong>tools</strong>
-      <OrganizationProjectList
-        items={["entity-builder"]}
-        renderItem={p => (
-          <li>
-            <Link>
-              <a href={`/tools/${p}`}>{p}</a>
-            </Link>
-          </li>
-        )}
-      />
-
-      <strong>other</strong>
-      <OrganizationProjectList
-        items={["philosophy"]}
+        items={["extension", "philosophy", "entity-builder", "strategy"]}
         renderItem={p => (
           <li>
             <Link>

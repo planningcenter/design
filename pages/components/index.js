@@ -6,6 +6,12 @@ import { Sheet as SheetBase } from "../../pages_support/sheet";
 import { Preview as AvatarPreview } from "./avatar";
 import { Preview as TextPreview } from "./text";
 
+import { Text } from "../../planningcenter/components/src/components";
+
+function SectionHeader(props) {
+  return <Text as="h2" {...props} />;
+}
+
 function Sheet({ style, ...props }) {
   return (
     <SheetBase
@@ -23,24 +29,24 @@ export default function() {
   return (
     <Layout>
       <h1>Components</h1>
-      <section>
-        <h2>
+      <section style={{ marginTop: 40 }}>
+        <SectionHeader>
           <Link>
             <a href="/components/avatar">Avatar</a>
           </Link>
-        </h2>
+        </SectionHeader>
 
         <Sheet>
           <AvatarPreview />
         </Sheet>
       </section>
 
-      <section>
-        <h2>
+      <section style={{ marginTop: 40 }}>
+        <SectionHeader>
           <Link>
             <a href="/components/text">Text</a>
           </Link>
-        </h2>
+        </SectionHeader>
         <Sheet
           style={{
             flexDirection: "column"
