@@ -34,7 +34,7 @@
     "test": "jest",
     "dev": "next",
     "build": "next build",
-    "now-build": "next build",
+    "now-build": "next build && next export -o dist",
     "cypress": "cypress open",
     "spec": "start-server-and-test dev http://localhost:3000 cypress"
   },
