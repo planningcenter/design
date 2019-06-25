@@ -16,7 +16,7 @@ export function Content() {
       <h1>Text</h1>
 
       <section>
-        <Text data-spec="default">Here's some text.</Text>
+        <Text>Here's some text.</Text>
       </section>
 
       <section>
@@ -42,6 +42,25 @@ export function Content() {
           ))}
         </Sheet>
       </section>
+    </React.Fragment>
+  );
+}
+
+export function Preview() {
+  return (
+    <React.Fragment>
+      {["x-small", "small", "medium", "large", "x-large"].map(size => (
+        <React.Fragment>
+          <Text fontSize={size}>
+            Here's some{" "}
+            <strong>
+              <code>{size}</code>
+            </strong>{" "}
+            text.
+          </Text>
+          <br />
+        </React.Fragment>
+      ))}
     </React.Fragment>
   );
 }
