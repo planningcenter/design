@@ -7,6 +7,7 @@ import { Preview as AvatarPreview } from "./avatar";
 import { Preview as TextPreview } from "./text";
 import { Preview as TextInputPreview } from "./text-input";
 import { Preview as ResourceHeaderPreview } from "./resource-header";
+import { Preview as CheckboxPreview } from "./checkbox";
 
 import { Text } from "../../planningcenter/components/src/components";
 
@@ -85,6 +86,21 @@ export default function() {
           }}
         >
           <TextInputPreview />
+        </Sheet>
+      </section>
+
+      <section style={{ marginTop: 40 }}>
+        <SectionHeader>
+          <Link>
+            <a href="/components/checkbox">Checkbox</a>
+          </Link>
+        </SectionHeader>
+        <Sheet
+          style={{
+            flexDirection: "column"
+          }}
+        >
+          <CheckboxPreview />
         </Sheet>
       </section>
     </Layout>

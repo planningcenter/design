@@ -3,6 +3,9 @@
 @import "../../avatar/extension/styled";
 @import "../../avatar/extension/inactive";
 
+@import "../../checkbox";
+/* @import "../../checkbox/extension/pont-grid"; */
+
 @import "../../text";
 @import "../../text/extension/font-scale";
 
