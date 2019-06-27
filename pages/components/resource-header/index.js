@@ -6,6 +6,8 @@ import { ResourceHeader } from "../../../planningcenter/components/src/component
 import Layout from "../../../pages_support/components-layout";
 import { Sheet } from "../../../pages_support/sheet";
 
+import pkg from "../../../planningcenter/resource-header/package.json";
+
 // TODO: change to import from local
 const {
   Tab,
@@ -23,9 +25,31 @@ export default function() {
   return (
     <Layout>
       <h1>ResourceHeader</h1>
+      <p>{pkg.description}</p>
 
       <section>
         <Preview />
+      </section>
+
+      <section>
+        <h2>Avatar</h2>
+        <Sheet>
+          <Avatar src="/static/200x300_kitten.jpeg" />
+        </Sheet>
+      </section>
+
+      <section>
+        <h2>Avatar</h2>
+        <Sheet>
+          <Avatar src="/static/200x300_kitten.jpeg" />
+        </Sheet>
+      </section>
+
+      <section>
+        <h2>Title</h2>
+        <Sheet>
+          <Avatar src="/static/200x300_kitten.jpeg" />
+        </Sheet>
       </section>
     </Layout>
   );

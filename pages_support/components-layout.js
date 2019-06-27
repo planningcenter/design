@@ -47,6 +47,7 @@ export default function(props) {
               {[
                 ["all", ""],
                 "avatar",
+                "checkbox",
                 "resource-header",
                 "text",
                 "text-input"

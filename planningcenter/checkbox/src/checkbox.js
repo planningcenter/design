@@ -9,7 +9,7 @@ export function Checkbox({ className, children, ...props }) {
   //   </div>
   // );
   return (
-    <label style={{ display: "flex" }}>
+    <label>
       <input
         type="checkbox"
         className={[className, "Checkbox"].join(" ")}

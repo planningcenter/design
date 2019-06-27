@@ -9,17 +9,28 @@ import {
 import Layout from "../../../pages_support/components-layout";
 import { Sheet } from "../../../pages_support/sheet";
 
+import pkg from "../../../planningcenter/avatar/package.json";
+
 export default function() {
   return (
     <Layout>
       <h1>Avatar</h1>
+      <p>{pkg.description}</p>
 
       <section>
-        <Avatar src="/static/200x300_kitten.jpeg" />
+        <h2>Default</h2>
+        <Sheet
+          style={{
+            padding: "32px 40px",
+            display: "flex"
+          }}
+        >
+          <Avatar src="/static/200x300_kitten.jpeg" />
+        </Sheet>
       </section>
 
       <section>
-        <h2>Sizes</h2>
+        <h2>Size</h2>
         <Sheet
           style={{
             padding: "32px 40px",

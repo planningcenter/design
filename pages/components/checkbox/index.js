@@ -27,7 +27,11 @@ export default function() {
             flexDirection: "column"
           }}
         >
-          <Preview />
+          <Checkbox className="PointGridCheckbox--size_1.5">size: 1.5</Checkbox>
+          <br />
+          <Checkbox className="PointGridCheckbox--size_2">size: 2</Checkbox>
+          <br />
+          <Checkbox className="PointGridCheckbox--size_2.5">size: 2.5</Checkbox>
         </Sheet>
       </section>
     </Layout>

@@ -381,6 +381,113 @@
   opacity: 0.5;
 }
 
+/* modified from: https://www.w3.org/TR/wai-aria-practices/examples/checkbox/css/checkbox.css */
+
+.Checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 1.4em;
+  cursor: default;
+}
+
+.Checkbox::before,
+.Checkbox::after {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translate(-50%, -50%);
+  content: "";
+}
+
+.Checkbox::before {
+  width: 16px;
+  height: 16px;
+  border: 1px solid hsl(0, 0%, 66%);
+  border-radius: 0.2em;
+  background-color: white;
+  /* background-image: linear-gradient(to bottom, hsl(300, 3%, 93%), #fff 30%); */
+}
+
+.Checkbox:active::before {
+  /* background-color: white; */
+  /* background-image: linear-gradient(
+    to bottom,
+    hsl(300, 3%, 73%),
+    hsl(300, 3%, 93%) 30%
+  ); */
+}
+
+.Checkbox:checked::before {
+  border-color: hsl(216, 80%, 50%);
+  /* background-color: hsl(216, 80%, 57%); */
+  background: hsl(217, 95%, 68%);
+  /* background-image: linear-gradient(
+    to bottom,
+    hsl(217, 95%, 68%),
+    hsl(216, 80%, 57%)
+  ); */
+}
+
+.Checkbox:checked::after {
+  display: block;
+  width: 4px;
+  height: 7px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: translateY(-62.5%) translateX(-45%) rotate(45deg);
+}
+
+.Checkbox:checked:active::before {
+  /* background-image: linear-gradient(
+    to bottom,
+    hsl(216, 80%, 57%),
+    hsl(217, 95%, 68%)
+  ); */
+}
+
+.Checkbox:focus {
+  outline: none;
+}
+
+.Checkbox:focus::before {
+  /* width: 16px;
+  height: 16px; */
+  box-sizing: content-box;
+  border-color: hsl(216, 94%, 73%);
+  border-width: 3px;
+  border-radius: calc(0.2em + 3px);
+  box-shadow: inset 0 0 0 1px hsl(216, 80%, 50%);
+}
+
+.PointGridCheckbox--size_1\.5::before {
+  width: 12px;
+  height: 12px;
+}
+
+.PointGridCheckbox--size_1\.5:checked::after {
+  width: 3px;
+  height: 6px;
+  border-width: 0 1.75px 1.75px 0;
+  /* transform: translateY(-67.5%) translateX(-45%) rotate(45deg); */
+}
+
+.PointGridCheckbox--size_2::before {
+  width: 16px;
+  height: 16px;
+}
+
+.PointGridCheckbox--size_2\.5::before {
+  width: 20px;
+  height: 20px;
+}
+
+.PointGridCheckbox--size_2\.5:checked::after {
+  width: 6px;
+  height: 9px;
+  border-width: 0 2.5px 2.5px 0;
+  transform: translateY(-67.5%) translateX(-45%) rotate(45deg);
+}
+
 .Text {
 }
 
@@ -505,6 +612,7 @@
   border-top-right-radius: 4px;
   font-size: 14px;
   line-height: 40px;
+  text-decoration: none;
 }
 
 .ResourceHeader__Avatar {
@@ -517,85 +625,4 @@
   padding: 5px;
   background-color: white;
   background-color: var(--planningcenter-avatar-inset-color, white);
-}
-
-/* modified from: https://www.w3.org/TR/wai-aria-practices/examples/checkbox/css/checkbox.css */
-
-/* ul.checkboxes {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 1em;
-} */
-
-.Checkbox {
-  display: inline-block;
-  position: relative;
-  padding-left: 1.4em;
-  cursor: default;
-}
-
-.Checkbox::before,
-.Checkbox::after {
-  position: absolute;
-  top: 50%;
-  left: 7px;
-  transform: translate(-50%, -50%);
-  content: "";
-}
-
-.Checkbox::before {
-  width: 16px;
-  height: 16px;
-  border: 1px solid hsl(0, 0%, 66%);
-  border-radius: 0.2em;
-  background-image: linear-gradient(to bottom, hsl(300, 3%, 93%), #fff 30%);
-}
-
-.Checkbox:active::before {
-  background-image: linear-gradient(
-    to bottom,
-    hsl(300, 3%, 73%),
-    hsl(300, 3%, 93%) 30%
-  );
-}
-
-.Checkbox:checked::before {
-  border-color: hsl(216, 80%, 50%);
-  background: hsl(217, 95%, 68%);
-  background-image: linear-gradient(
-    to bottom,
-    hsl(217, 95%, 68%),
-    hsl(216, 80%, 57%)
-  );
-}
-
-.Checkbox:checked::after {
-  display: block;
-  width: 4px;
-  height: 7px;
-  border: solid #fff;
-  border-width: 0 2px 2px 0;
-  transform: translateY(-62.5%) translateX(-45%) rotate(45deg);
-}
-
-.Checkbox:checked:active::before {
-  background-image: linear-gradient(
-    to bottom,
-    hsl(216, 80%, 57%),
-    hsl(217, 95%, 68%)
-  );
-}
-
-.Checkbox:focus {
-  outline: none;
-}
-
-.Checkbox:focus::before {
-  width: 16px;
-  height: 16px;
-  box-sizing: content-box;
-  border-color: hsl(216, 94%, 73%);
-  border-width: 3px;
-  border-radius: calc(0.2em + 3px);
-  box-shadow: inset 0 0 0 1px hsl(216, 80%, 50%);
 }

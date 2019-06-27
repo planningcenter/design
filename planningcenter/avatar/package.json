@@ -1,7 +1,7 @@
 {
   "name": "@planningcenter/avatar",
   "version": "0.0.13",
-  "description": "A circular image representing one person",
+  "description": "A circular image representing one person.",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design#readme",
   "license": "MIT",

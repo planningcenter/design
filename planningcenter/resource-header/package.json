@@ -1,7 +1,7 @@
 {
   "name": "@planningcenter/resource-header",
   "version": "0.0.10",
-  "description": "Components for resource headers with actions and tabs for property navigation",
+  "description": "Components for summarizing, navigating, and acting on a resource.",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design/",
   "license": "MIT",

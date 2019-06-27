@@ -13,6 +13,7 @@
   "files": [
     "lib"
   ],
+  "style": "css/checkbox.css",
   "publishConfig": {
     "access": "public"
   },

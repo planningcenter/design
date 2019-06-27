@@ -4,7 +4,7 @@
 @import "../../avatar/extension/inactive";
 
 @import "../../checkbox";
-/* @import "../../checkbox/extension/pont-grid"; */
+@import "../../checkbox/extension/point-grid";
 
 @import "../../text";
 @import "../../text/extension/font-scale";
