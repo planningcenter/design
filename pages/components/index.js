@@ -47,21 +47,6 @@ export default function() {
       <section style={{ marginTop: 40 }}>
         <SectionHeader>
           <Link>
-            <a href="/components/resource-header">ResourceHeader</a>
-          </Link>
-        </SectionHeader>
-        <Sheet
-          style={{
-            flexDirection: "column"
-          }}
-        >
-          <ResourceHeaderPreview />
-        </Sheet>
-      </section>
-
-      <section style={{ marginTop: 40 }}>
-        <SectionHeader>
-          <Link>
             <a href="/components/text">Text</a>
           </Link>
         </SectionHeader>
@@ -71,6 +56,21 @@ export default function() {
           }}
         >
           <TextPreview />
+        </Sheet>
+      </section>
+
+      <section style={{ marginTop: 40 }}>
+        <SectionHeader>
+          <Link>
+            <a href="/components/resource-header">ResourceHeader</a>
+          </Link>
+        </SectionHeader>
+        <Sheet
+          style={{
+            flexDirection: "column"
+          }}
+        >
+          <ResourceHeaderPreview />
         </Sheet>
       </section>
 
