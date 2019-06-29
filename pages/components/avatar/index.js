@@ -11,6 +11,7 @@ import {
 
 import Layout from "../../../pages_support/components-layout";
 import { Sheet as SheetBase } from "../../../pages_support/sheet";
+import { Table } from "../../../pages_support/table";
 
 import pkg from "../../../planningcenter/avatar/package.json";
 
@@ -24,25 +25,6 @@ function Sheet({ style, ...props }) {
       }}
       {...props}
     />
-  );
-}
-
-function Table(props) {
-  return (
-    <React.Fragment>
-      <style>
-        {`
-          .table {
-            border-collapse: collapse;
-            border-spacing: 0;
-          }
-          .table td {
-            border: 1px solid #dfe2e5;
-            padding: 7px 15px;
-          }`}
-      </style>
-      <table className="table" {...props} />
-    </React.Fragment>
   );
 }
 
@@ -209,7 +191,7 @@ function Builder() {
           }
         `}</style>
         <form className="form">
-          <label htmlFor="avatar-builder_src">Source</label>
+          <label htmlFor="avatar-builder_src">source</label>
           <input
             id="avatar-builder_src"
             type="text"
@@ -217,7 +199,7 @@ function Builder() {
             onChange={e => updateSrc(e.target.value)}
           />
 
-          <label htmlFor="avatar-builder_alt">Alt</label>
+          <label htmlFor="avatar-builder_alt">alt</label>
           <input
             id="avatar-builder_alt"
             type="text"
@@ -225,7 +207,7 @@ function Builder() {
             onChange={e => updateAlt(e.target.value)}
           />
 
-          <label htmlFor="avatar-builder_inset">Inset</label>
+          <label htmlFor="avatar-builder_inset">inset</label>
           <input
             id="avatar-builder_inset"
             type="checkbox"
@@ -233,7 +215,7 @@ function Builder() {
             onChange={e => updateInset(e.target.checked)}
           />
 
-          <label htmlFor="avatar-builder_inactive">Inactive</label>
+          <label htmlFor="avatar-builder_inactive">inactive</label>
           <input
             id="avatar-builder_inactive"
             type="checkbox"
@@ -241,7 +223,7 @@ function Builder() {
             onChange={e => updateInactive(e.target.checked)}
           />
 
-          <label htmlFor="avatar-builder_size">Size</label>
+          <label htmlFor="avatar-builder_size">size</label>
           <select
             value={size}
             onChange={e => {
@@ -260,7 +242,7 @@ function Builder() {
 
           {size === "responsive" && (
             <React.Fragment>
-              <label>Responsive Sizes:</label>
+              <label>responsive sizes:</label>
               <fieldset>
                 {["mn", "xs", "sm", "md", "lg", "xl"].map(breakpoint => (
                   <React.Fragment>
@@ -295,7 +277,7 @@ function Builder() {
             </React.Fragment>
           )}
 
-          <label htmlFor="avatar-builder_output">Output</label>
+          <label htmlFor="avatar-builder_output">output</label>
 
           <select
             id={`avatar-builder_output`}
