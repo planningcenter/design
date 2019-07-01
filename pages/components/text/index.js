@@ -181,25 +181,29 @@ function Builder() {
         </form>
       </div>
 
-      <div>{component}</div>
+      <fieldset>
+        <legend>example</legend>
+        {component}
+      </fieldset>
 
-      <pre
-        style={{ overflow: "auto", backgroundColor: "#fafafa", padding: 16 }}
-      >
-        {output === "html" && (
-          <code>{`${prettier.format(renderToStaticMarkup(component), {
-            parser: "html",
-            plugins: [htmlParser],
-            printWidth: 34
-          })}`}</code>
-        )}
+      <fieldset>
+        <legend>{output}</legend>
+        <pre style={{ overflow: "auto" }}>
+          {output === "html" && (
+            <code>{`${prettier.format(renderToStaticMarkup(component), {
+              parser: "html",
+              plugins: [htmlParser],
+              printWidth: 34
+            })}`}</code>
+          )}
 
-        {output === "react" && (
-          <code>{`<Text${
-            fontSize ? ` fontSize="${fontSize}" ` : ""
-          }>${children}</Text>`}</code>
-        )}
-      </pre>
+          {output === "react" && (
+            <code>{`<Text${
+              fontSize ? ` fontSize="${fontSize}" ` : ""
+            }>${children}</Text>`}</code>
+          )}
+        </pre>
+      </fieldset>
     </React.Fragment>
   );
 }

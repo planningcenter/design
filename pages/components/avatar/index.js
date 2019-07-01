@@ -292,21 +292,23 @@ function Builder() {
         </form>
       </div>
 
-      <div>{component}</div>
+      <fieldset>
+        <legend>example</legend>
+        <div>{component}</div>
+      </fieldset>
+      <fieldset>
+        <legend>{output}</legend>
+        <pre style={{ overflow: "auto" }}>
+          {output === "html" && (
+            <code>{`${prettier.format(renderToStaticMarkup(component), {
+              parser: "html",
+              plugins: [htmlParser],
+              printWidth: 34
+            })}`}</code>
+          )}
 
-      <pre
-        style={{ overflow: "auto", backgroundColor: "#fafafa", padding: 16 }}
-      >
-        {output === "html" && (
-          <code>{`${prettier.format(renderToStaticMarkup(component), {
-            parser: "html",
-            plugins: [htmlParser],
-            printWidth: 34
-          })}`}</code>
-        )}
-
-        {output === "react" && (
-          <code>{`<Avatar
+          {output === "react" && (
+            <code>{`<Avatar
   src="${src}"
   alt="${alt}"
   size={${
@@ -316,11 +318,12 @@ function Builder() {
           .replace(":", ": ")
       : parseInt(size * 10, 10) / 10
   }}${inset ? `\n  inset={${inset}}` : ""}${
-            inactive ? `\n  inactive={${inactive}}` : ""
-          }
+              inactive ? `\n  inactive={${inactive}}` : ""
+            }
 />`}</code>
-        )}
-      </pre>
+          )}
+        </pre>
+      </fieldset>
     </React.Fragment>
   );
 }
