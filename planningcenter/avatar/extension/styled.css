@@ -1,7 +1,5 @@
 /* StyledAvatar */
 
 .StyledAvatar--inset {
-  background-color: white;
-  background-color: var(--planningcenter-avatar-inset-color, white);
   padding: var(--styled-avatar--inset_padding);
 }

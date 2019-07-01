@@ -11,7 +11,7 @@ import {
 
 import Layout from "../../../pages_support/components-layout";
 import { Sheet as SheetBase } from "../../../pages_support/sheet";
-import { Table } from "../../../pages_support/table";
+import { ComponentDetailsTable } from "../../../pages_support/component-details-table";
 
 import pkg from "../../../planningcenter/avatar/package.json";
 
@@ -77,51 +77,7 @@ export default function() {
       <section>
         <h2>Details </h2>
 
-        <Table>
-          <tbody>
-            <tr>
-              <td>
-                <a
-                  target="_blank"
-                  href="https://github.com/planningcenter/design/blob/master/cypress/integration/avatar_spec.js"
-                >
-                  Specification
-                </a>
-              </td>
-              <td>
-                <a
-                  target="_blank"
-                  href="https://github.com/planningcenter/design/tree/master/planningcenter/avatar/extension"
-                >
-                  Extension
-                </a>
-              </td>
-              <td>
-                <a
-                  target="_blank"
-                  href="https://github.com/planningcenter/design/blob/master/planningcenter/components/src/composed-avatar.js"
-                >
-                  Composition
-                </a>
-              </td>
-              <td>
-                Implementation{" "}
-                <a
-                  target="_blank"
-                  href="https://github.com/planningcenter/design/blob/master/planningcenter/avatar/css/avatar.css"
-                >
-                  CSS
-                </a>{" "}
-                <a
-                  target="_blank"
-                  href="https://github.com/planningcenter/design/blob/master/planningcenter/avatar/src/avatar.js"
-                >
-                  React
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </Table>
+        <ComponentDetailsTable name="avatar" />
       </section>
 
       <section>

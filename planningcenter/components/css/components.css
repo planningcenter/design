@@ -5,6 +5,7 @@
   border-radius: 50%;
   width: 1.5em;
   height: 1.5em;
+  background-color: var(--Avatar--background-color, white);
 }
 
 .Avatar > img {
@@ -370,8 +371,6 @@
 /* StyledAvatar */
 
 .StyledAvatar--inset {
-  background-color: white;
-  background-color: var(--planningcenter-avatar-inset-color, white);
   padding: var(--styled-avatar--inset_padding);
 }
 
@@ -523,6 +522,8 @@
   border-radius: 4px;
   padding: 7px 9px;
   margin: 0;
+  color: var(--TextInput--color, inherit);
+  box-shadow: var(--TextInput--box-shadow, none);
 
   /* Safari requires two consessions for proper rendering */
   /* 1. don't use line-height to set absolute height. it makes a strange cursor */
@@ -531,15 +532,18 @@
 }
 
 .TextInput::placeholder {
-  color: var(--TextInput--color_placeholder, #767676);
+  color: var(--TextInput--color, #767676);
 }
 
 .TextInput:focus {
   outline: none;
-  box-shadow: var(
-    --TextInput--box-shadow_focus,
-    0 0 1.5px 3px hsla(0, 0%, 50%, 0.5)
-  );
+  --TextInput--box-shadow: 0 0 1.5px 3px hsla(0, 0%, 50%, 0.5);
+}
+
+.TextInput:invalid {
+  --TextInput--border-color: hsl(0, 79%, 63%);
+  --TextInput--color: hsl(0, 79%, 63%);
+  --TextInput--box-shadow: 0 0 1.5px 3px hsla(0, 79%, 63%, 0.5);
 }
 
 .PointGridTextInput {
@@ -571,6 +575,15 @@
   font-size: 16px;
   max-height: 18px;
   padding: 10px 11px;
+}
+
+.InvalidTextInput {
+  --TextInput--border-color: hsl(0, 79%, 63%);
+  --TextInput--color: hsl(0, 79%, 63%);
+}
+
+.InvalidTextInput:focus {
+  --TextInput--box-shadow: 0 0 1.5px 3px hsla(0, 79%, 63%, 0.5);
 }
 
 .ResourceHeader__TabContainer {

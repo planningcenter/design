@@ -11,5 +11,6 @@
 
 @import "../../text-input";
 @import "../../text-input/extension/point-grid";
+@import "../../text-input/extension/invalid";
 
 @import "../../resource-header";

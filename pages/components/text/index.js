@@ -11,7 +11,7 @@ import {
 
 import Layout from "../../../pages_support/components-layout";
 import { Sheet as SheetBase } from "../../../pages_support/sheet";
-import { Table } from "../../../pages_support/table";
+import { ComponentDetailsTable } from "../../../pages_support/component-details-table";
 
 function Sheet({ style, ...props }) {
   return (
@@ -32,8 +32,13 @@ export default function() {
   return (
     <Layout>
       <h1>Text</h1>
-      <Text>{pkg.description}</Text>
+      <p>{pkg.description}</p>
 
+      <section>
+        <h2>Default</h2>
+
+        <Text>{pkg.description}</Text>
+      </section>
       <section>
         <h2>Scale</h2>
         <Sheet
@@ -50,51 +55,7 @@ export default function() {
       <section>
         <h2>Details </h2>
 
-        <Table>
-          <tbody>
-            <tr>
-              <td>
-                <a
-                  target="_blank"
-                  href="https://github.com/planningcenter/design/blob/master/cypress/integration/text_spec.js"
-                >
-                  Specification
-                </a>
-              </td>
-              <td>
-                <a
-                  target="_blank"
-                  href="https://github.com/planningcenter/design/tree/master/planningcenter/text/extension"
-                >
-                  Extension
-                </a>
-              </td>
-              <td>
-                <a
-                  target="_blank"
-                  href="https://github.com/planningcenter/design/blob/master/planningcenter/components/src/composed-text.js"
-                >
-                  Composition
-                </a>
-              </td>
-              <td>
-                Implementation{" "}
-                <a
-                  target="_blank"
-                  href="https://github.com/planningcenter/design/blob/master/planningcenter/text/css/text.css"
-                >
-                  CSS
-                </a>{" "}
-                <a
-                  target="_blank"
-                  href="https://github.com/planningcenter/design/blob/master/planningcenter/text/src/text.js"
-                >
-                  React
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </Table>
+        <ComponentDetailsTable name="text" />
       </section>
 
       <section>
