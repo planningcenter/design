@@ -14,7 +14,7 @@ import Layout from "../../../pages_support/components-layout";
 import { Sheet } from "../../../pages_support/sheet";
 import { ComponentDetailsTable } from "../../../pages_support/component-details-table";
 
-import pkg from "../../../planningcenter/text/package.json";
+import pkg from "../../../planningcenter/text-input/package.json";
 
 export default function() {
   return (
