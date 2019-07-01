@@ -30,27 +30,6 @@ export default function() {
       <section>
         <Preview />
       </section>
-
-      <section>
-        <h2>Avatar</h2>
-        <Sheet>
-          <Avatar src="/static/200x300_kitten.jpeg" />
-        </Sheet>
-      </section>
-
-      <section>
-        <h2>Avatar</h2>
-        <Sheet>
-          <Avatar src="/static/200x300_kitten.jpeg" />
-        </Sheet>
-      </section>
-
-      <section>
-        <h2>Title</h2>
-        <Sheet>
-          <Avatar src="/static/200x300_kitten.jpeg" />
-        </Sheet>
-      </section>
     </Layout>
   );
 }
