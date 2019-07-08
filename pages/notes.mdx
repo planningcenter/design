@@ -1,0 +1,115 @@
+# Notes
+
+## Principles
+
+- styled by CSS Custom Properties
+  - `--component--color`
+  - `--component--backgroun-color`
+  - `--component--border-color`
+  - ...everything else requires class
+
+## Branding
+
+PC⚡️DC
+planningcenter/design/components
+BYOF: Bring Your Own Framework
+Styling primitives for building your own system.
+
+## Dark Mode support
+
+Use `foreground` / `background` language over color literals.
+Two grayscale sets, like minions.
+
+```css
+:root {
+  --foreground0: hsl(0, 0%, 100%);
+  --foreground1: hsl(0, 0%, 93.125%);
+  --foreground2: hsl(0, 0%, 86.25%);
+  --foreground3: hsl(0, 0%, 79.375%);
+  --foreground4: hsl(0, 0%, 72.5%);
+  --foreground5: hsl(0, 0%, 65.625%);
+  --foreground6: hsl(0, 0%, 58.75%);
+  --foreground7: hsl(0, 0%, 51.875%);
+  --foreground8: hsl(0, 0%, 45%);
+
+  --background0: hsl(0, 0%, 0%);
+  --background1: hsl(0, 0%, 6.875);
+  --background2: hsl(0, 0%, 13.75);
+  --background3: hsl(0, 0%, 20.625);
+  --background4: hsl(0, 0%, 27.5%);
+  --background5: hsl(0, 0%, 34.375%);
+  --background6: hsl(0, 0%, 41.25%);
+  --background7: hsl(0, 0%, 48.125%);
+  --background8: hsl(0, 0%, 55%);
+}
+```
+
+## Questions
+
+### system variables
+
+Should system values have cascading effects.
+Seems like a naming nightmare.
+
+```css
+/* app-system.css */
+:root {
+  --system-form-element--border-color: hsl(0, 0%, 80%);
+}
+```
+
+```css
+/* text-input.css */
+.TextInput {
+  --text-input-border-color: var(--system-form-element-border-color);
+  border-color: var(--text-input-border-color);
+}
+```
+
+```css
+/* select.css */
+.Select {
+  --select-border-color: var(--system-form-element-border-color);
+  border-color: var(--select-border-color);
+}
+```
+
+Seems like teams should create their own systems for this:
+
+```css
+/* app-system.css */
+:root {
+  --app-system-form-element--border-color: hsl(0, 0%, 80%);
+
+  --text-input--border-color: var(--app-system-form-element--border-color);
+  --select-input--border-color: var(--app-select-element--border-color);
+}
+```
+
+```css
+/* text-input.css */
+.TextInput {
+  border-color: var(--text-input--border-color);
+}
+```
+
+Another area the first option sucks is in local modifications.
+To do a local override, you'd **have** to change the system value.
+That would be nice for changing full forms at once but shit for isolating a single component.
+But, when you just want to target one component, it would require a new class to hit the right specificity.
+
+## Structure
+
+- **Design Language**
+
+  - description lives in package.json
+  - system.js
+  - package names
+
+- **Component Library**
+
+  - `@planningcenter/components`
+
+- **Style Guide**
+
+  - [https://planningcenter.style/components]
