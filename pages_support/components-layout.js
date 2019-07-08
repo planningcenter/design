@@ -49,6 +49,7 @@ export default function(props) {
                 "avatar",
                 "checkbox",
                 "resource-header",
+                "select",
                 "text",
                 "text-input"
               ].map(component => (

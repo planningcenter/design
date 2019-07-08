@@ -7,6 +7,9 @@ export { SIZES as CHECKBOX_SIZES } from "../../checkbox/src/checkbox";
 import * as ResourceHeader from "../../resource-header/src/resource-header";
 export { ResourceHeader };
 
+export { Select } from "./composed-select";
+export { SIZES as SELECT_SIZES } from "../../select/select";
+
 export { Text } from "./composed-text";
 export { SIZES as TEXT_SIZES } from "../../text/src/text";
 

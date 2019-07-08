@@ -6,6 +6,9 @@
 @import "../../checkbox";
 @import "../../checkbox/extension/point-grid";
 
+@import "../../select";
+@import "../../select/extension/point-grid";
+
 @import "../../text";
 @import "../../text/extension/font-scale";
 

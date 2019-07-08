@@ -487,6 +487,87 @@
   transform: translateY(-67.5%) translateX(-45%) rotate(45deg);
 }
 
+/*! select.css (modified) */
+
+.Select {
+  position: relative;
+
+  display: inline-block;
+
+  cursor: pointer;
+  vertical-align: middle;
+
+  background-color: var(--Select--background-color, #fff);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 32px auto;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Theme */
+
+.Select {
+  font-size: 14px;
+
+  height: 32px;
+  width: 100%;
+  padding: 0 33px 0 10px;
+
+  color: var(--TextInput--color, inherit);
+  border-style: 1px;
+  border-width: solid;
+  border-color: var(--TextInput--border-color, hsl(0, 0%, 70%));
+  border-radius: 3px;
+  border-radius: 3px;
+}
+
+.Select:disabled {
+  color: #ccc;
+  border-color: #eee;
+  cursor: default;
+}
+
+/* FF(all): remove dotted inner focus ring */
+
+.Select:focus:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+/* under the influence of wtfforms, Mailchimp, and Foundation */
+
+.PointGridSelect--height_2\.5 {
+  padding-left: 4px;
+  border-radius: 2.5px;
+  font-size: 12px;
+  height: 20px;
+}
+
+.PointGridSelect--height_3 {
+  padding-left: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  height: 24px;
+}
+
+.PointGridSelect--height_4 {
+  padding-left: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 32px;
+}
+
+.PointGridSelect--height_5 {
+  padding-left: 11px;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 40px;
+}
+
 .Text {
 }
 

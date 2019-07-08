@@ -34,17 +34,7 @@ function Box({
   ...props
 }) {
   return (
-    <As
-      className={[
-        className,
-        display && `Box--display_${display}`,
-        space && `PointGridBox--space_${space}`,
-        padding && `PointGridBox--padding_${padding}`,
-        margin && `PointGridBox--margin_${margin}`,
-        "Box"
-      ].join(" ")}
-      {...props}
-    >
+    <React.Fragment>
       <style>
         {`
 .Box--display_block { display: block }
@@ -53,6 +43,7 @@ function Box({
 
 .PointGridBox--space_1 > * + * { margin-left: 8px }
 .PointGridBox--space_2 > * + * { margin-left: 16px }
+.PointGridBox--space_3 > * + * { margin-left: 24px }
 
 .PointGridBox--padding_1 { padding: 8px }
 .PointGridBox--padding_2 { padding: 16px }
@@ -73,7 +64,19 @@ function Box({
 .PointGridBox--margin_8 { padding: 64px }
       `}
       </style>
-      {children}
-    </As>
+      <As
+        className={[
+          className,
+          display && `Box--display_${display}`,
+          space && `PointGridBox--space_${space}`,
+          padding && `PointGridBox--padding_${padding}`,
+          margin && `PointGridBox--margin_${margin}`,
+          "Box"
+        ].join(" ")}
+        {...props}
+      >
+        {children}
+      </As>
+    </React.Fragment>
   );
 }

@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "../../pages_support/components-layout";
 import { Sheet } from "../../pages_support/sheet";
+import "../../planningcenter/components/css/components.css";
 import { Text, TextInput } from "../../planningcenter/components/";
 
 /* draft */
-import "../../planningcenter/select/select.css";
+// import "../../planningcenter/select/select.css";
 import { Select } from "../../planningcenter/select/select";
 import "../../planningcenter/button/button.css";
 import { PutButton } from "../../planningcenter/button/button";
@@ -66,7 +67,7 @@ export default function() {
         </label>
       </Sheet>
 
-      <Sheet display="flex" space={2} padding={3}>
+      <Sheet display="flex" space={3} padding={3}>
         <label>
           <Text as="p" fontSize="small" style={{ fontWeight: "bold" }}>
             The Select

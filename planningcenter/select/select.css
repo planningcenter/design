@@ -7,7 +7,7 @@
   cursor: pointer;
   vertical-align: middle;
 
-  background-color: transparent;
+  background-color: var(--Select--background-color, #fff);
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
   background-repeat: no-repeat;
   background-position: right center;
@@ -27,9 +27,10 @@
   width: 100%;
   padding: 0 33px 0 10px;
 
-  color: #444;
-  color: #3f3f3f;
-  border: 1px solid #d7d7d7;
+  color: var(--TextInput--color, inherit);
+  border-style: 1px;
+  border-width: solid;
+  border-color: var(--TextInput--border-color, hsl(0, 0%, 70%));
   border-radius: 3px;
   border-radius: 3px;
 }
@@ -47,32 +48,3 @@
 }
 
 /* under the influence of wtfforms, Mailchimp, and Foundation */
-
-/* PointGridSelect */
-.PointGridSelect--height_2\.5 {
-  padding-left: 4px;
-  border-radius: 2.5px;
-  font-size: 12px;
-  height: 20px;
-}
-
-.PointGridSelect--height_3 {
-  padding-left: 5px;
-  border-radius: 3px;
-  font-size: 12px;
-  height: 24px;
-}
-
-.PointGridSelect--height_4 {
-  padding-left: 8px;
-  border-radius: 4px;
-  font-size: 14px;
-  height: 32px;
-}
-
-.PointGridSelect--height_5 {
-  padding-left: 11px;
-  border-radius: 5px;
-  font-size: 16px;
-  height: 40px;
-}
