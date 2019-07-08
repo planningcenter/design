@@ -43,10 +43,9 @@ export default function() {
           <Preview />
         </Sheet>
       </section>
-      {/*      
 
       <section>
-        <h2>invalid</h2>
+        <h2>disabled</h2>
         <Sheet
           style={{
             padding: "32px 40px",
@@ -56,32 +55,24 @@ export default function() {
         >
           <label htmlFor="client-validation">
             <Text fontSize="small" style={{ lineHeight: "24px" }}>
-              :invalid psuedo-class
+              :disabled psuedo-class
             </Text>
           </label>
-          <TextInput
-            type="email"
-            placeholder="type valid address"
-            id="client-validation"
-          />
-          <br />
 
-          <label htmlFor="classname-validation">
-            <Text fontSize="small" style={{ lineHeight: "24px" }}>
-              <code>invalid</code> prop/class
-            </Text>
-          </label>
-          <TextInput invalid value="test@nope." id="classname-validation" />
+          <Select disabled id="classname-validation">
+            <option>one</option>
+            <option>two</option>
+            <option>three</option>
+          </Select>
         </Sheet>
       </section>
 
       <section>
         <h2>Details </h2>
 
-        <ComponentDetailsTable name="text-input" />
+        <ComponentDetailsTable name="select" paths={{ js: "", css: "" }} />
       </section>
 
-*/}
       <section>
         <h2>Builder</h2>
 

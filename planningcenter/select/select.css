@@ -25,20 +25,25 @@
 
   height: 32px;
   width: 100%;
-  padding: 0 33px 0 10px;
+  padding-top: 0;
+  padding-right: 0;
+  padding-right: 33px;
+  padding-bottom: 0;
+  padding-left: 8px;
 
-  color: var(--TextInput--color, inherit);
+  color: var(--Select--color, inherit);
   border-style: 1px;
   border-width: solid;
-  border-color: var(--TextInput--border-color, hsl(0, 0%, 70%));
+  border-color: var(--Select--border-color, hsl(0, 0%, 80%));
   border-radius: 3px;
   border-radius: 3px;
 }
 
 .Select:disabled {
   color: #ccc;
-  border-color: #eee;
-  cursor: default;
+  --Select--background-color: hsl(0, 0%, 97.5%);
+  --Select--color: hsl(0, 0%, 35%);
+  cursor: not-allowed;
 }
 
 /* FF(all): remove dotted inner focus ring */
