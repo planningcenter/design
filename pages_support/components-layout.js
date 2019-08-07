@@ -77,7 +77,6 @@ export default function(props) {
               {["extension", "philosophy", "entity-builder", "strategy"].map(
                 (page, i) => (
                   <li key={i}>
-                    {console.log(page)}
                     <Link href={`/${page}`}>
                       <a>{page}</a>
                     </Link>

@@ -1,9 +1,5 @@
-// TODO: inlined temporarily
-import { mapPropsToClassNames } from "../../utilities/src/utilities";
-
-export function getInactiveClassNames({ inactive }) {
-  console.log(inactive);
-  if (inactive) return "InactiveAvatar";
+export function getInactiveClassNames(inactive) {
+  if (inactive === true) return "InactiveAvatar";
 
   return "";
 }

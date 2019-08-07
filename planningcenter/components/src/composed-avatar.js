@@ -24,7 +24,7 @@ export function Avatar({
         getResponsivePointGridClassNames({ size }, strict),
         getPointGridClassNames({ size }, strict),
         getStyledClassNames({ inset }),
-        getInactiveClassNames({ inactive })
+        getInactiveClassNames(inactive)
       ].join(" ")}
       {...props}
     />
