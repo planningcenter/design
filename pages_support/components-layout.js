@@ -52,15 +52,17 @@ export default function(props) {
                 "select",
                 "text",
                 "text-input"
-              ].map(component => (
-                <li>
-                  <Link>
-                    {typeof component === "string" ? (
-                      <a href={`/components/${component}`}>{component}</a>
-                    ) : (
-                      <a href={`/components${component[1]}`}>{component[0]}</a>
-                    )}
-                  </Link>
+              ].map((component, i) => (
+                <li key={i}>
+                  {typeof component === "string" ? (
+                    <Link href={`/components/${component}`}>
+                      <a>{component}</a>
+                    </Link>
+                  ) : (
+                    <Link href={`/components${component[1]}`}>
+                      <a>{component[0]}</a>
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -73,10 +75,11 @@ export default function(props) {
 
             <ul style={{ paddingLeft: "1.2em", listStyleType: "circle" }}>
               {["extension", "philosophy", "entity-builder", "strategy"].map(
-                page => (
-                  <li>
-                    <Link>
-                      <a href={`/${page}`}>{page}</a>
+                (page, i) => (
+                  <li key={i}>
+                    {console.log(page)}
+                    <Link href={`/${page}`}>
+                      <a>{page}</a>
                     </Link>
                   </li>
                 )

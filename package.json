@@ -13,7 +13,7 @@
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-mdx": "^1.2.0",
     "babel-jest": "^24.8.0",
-    "cypress": "^3.3.2",
+    "cypress": "^3.4.1",
     "github-markdown-css": "^3.0.1",
     "jest": "^24.8.0",
     "lerna": "^3.14.1",

@@ -11,7 +11,7 @@ describe("TextInput Spec", () => {
       .should(s => {
         expect(s).to.have.css(
           "box-shadow",
-          "rgba(127, 127, 127, 0.498) 0px 0px 1.5px 3px"
+          "rgba(128, 128, 128, 0.5) 0px 0px 1.5px 3px"
         );
       });
   });
@@ -55,8 +55,8 @@ describe("TextInput Spec", () => {
 
   it("is red when invalid", () => {
     return cy.get(".InvalidTextInput").should(s => {
-      expect(s).to.have.css("border-color", "rgb(236, 86, 86)");
-      expect(s).to.have.css("color", "rgb(236, 86, 86)");
+      expect(s).to.have.css("border-color", "rgb(235, 86, 86)");
+      expect(s).to.have.css("color", "rgb(235, 86, 86)");
     });
   });
 
@@ -68,7 +68,7 @@ describe("TextInput Spec", () => {
       .should(s => {
         expect(s).to.have.css(
           "box-shadow",
-          "rgba(236, 86, 86, 0.498) 0px 0px 1.5px 3px"
+          "rgba(235, 86, 86, 0.5) 0px 0px 1.5px 3px"
         );
       });
   });

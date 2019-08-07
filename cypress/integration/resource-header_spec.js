@@ -50,7 +50,7 @@ describe("ResourceHeader", () => {
 
     it("is bold when 'target'", () => {
       assertStyle(s => {
-        expect(s).to.have.css("font-weight", "bold");
+        expect(s).to.have.css("font-weight", "700");
       }, ".ResourceHeader__Tab");
     });
   });
@@ -84,7 +84,7 @@ describe("ResourceHeader", () => {
   describe("Title", () => {
     it("is bold", () => {
       assertStyle(s => {
-        expect(s).to.have.css("font-weight", "bold");
+        expect(s).to.have.css("font-weight", "700");
       }, ".ResourceHeader__Title");
     });
 
