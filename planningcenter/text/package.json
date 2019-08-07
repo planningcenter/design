@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/text",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "An inline text element on a linear scale.",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design#readme",
