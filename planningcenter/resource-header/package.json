@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/resource-header",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Components for summarizing, navigating, and acting on a resource.",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design/",
