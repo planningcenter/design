@@ -1,7 +1,6 @@
 import React from "react";
 
-// TODO: lock to version && remove direct link
-import { Avatar as AvatarElement } from "../../avatar/src/avatar";
+import { Avatar as AvatarElement } from "@planningcenter/avatar";
 
 export function TabContainer({ as: As = "div", className, ...props }) {
   return (
