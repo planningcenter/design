@@ -1,0 +1,30 @@
+{
+  "name": "@planningcenter/experimental",
+  "version": "0.0.0",
+  "description": "Component drafts, tinkerigs, and musings.",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "homepage": "https://github.com/planningcenter/design#readme",
+  "license": "MIT",
+  "main": "dist/experimental.js",
+  "source": "index.js",
+  "style": "css/experimental.css",
+  "files": [
+    "dist",
+    "css"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/planningcenter/design/issues"
+  },
+  "scripts": {
+    "build": "microbundle build --jsx React.createElement --format cjs",
+    "dev": "microbundle watch --jsx React.createElement",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
+}
