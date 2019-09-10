@@ -7,7 +7,7 @@ import "../../../planningcenter/components/css/components.css";
 import {
   Avatar,
   AVATAR_SIZES as SIZES
-} from "../../../planningcenter/components/dist/components";
+} from "../../../planningcenter/components";
 
 import Layout from "../../../pages_support/components-layout";
 import { Sheet as SheetBase } from "../../../pages_support/sheet";
