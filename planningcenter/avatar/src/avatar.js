@@ -9,11 +9,12 @@ export function Avatar({
   as: As = "span",
   className,
   src,
+  srcSet,
   alt,
   children,
   ...props
 }) {
-  let imgProps = { src, alt };
+  let imgProps = { src, srcSet, alt };
   let img = <img {...imgProps} />;
 
   return (
