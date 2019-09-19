@@ -20,7 +20,7 @@
     "url": "git+https://github.com/planningcenter/design.git"
   },
   "scripts": {
-    "build": "npm run build:dev & npm run build:css",
+    "build": "npm run build:dev && npm run build:css",
     "build:dev": "microbundle build --jsx React.createElement --format cjs",
     "build:css": "postcss -o css/components.css src/*.css",
     "dev": "microbundle watch --jsx React.createElement --format cjs",

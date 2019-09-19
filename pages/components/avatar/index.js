@@ -75,6 +75,19 @@ export default function() {
       </section>
 
       <section>
+        <h2>srcset</h2>
+        <Sheet>
+          <Avatar
+            srcSet="/static/320x_kitten.jpeg,
+                    /static/480x_kitten.jpeg 1.5x,
+                    /static/640x_kitten.jpeg 2x"
+            src="/static/200x300_kitten.jpeg"
+            size={9}
+          />
+        </Sheet>
+      </section>
+
+      <section>
         <h2>Details </h2>
 
         <ComponentDetailsTable name="avatar" />
