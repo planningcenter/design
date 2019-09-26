@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/surface",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Visual Hierarchy for Themed, Layer-able UI Surfaces",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design",
