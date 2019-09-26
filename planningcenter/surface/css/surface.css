@@ -1,0 +1,24 @@
+.Surface {
+  background-color: var(--surface-1of1_background-color);
+  transition: all 200ms ease;
+}
+
+.Surface--depth_2 {
+  background-color: var(--surface-2of2_background-color);
+}
+
+.Surface--depth_2 .Surface {
+  background-color: var(--surface-1of2_background-color);
+}
+
+.Surface--depth_3 {
+  background-color: var(--surface-3of3_background-color);
+}
+
+.Surface--depth_3 .Surface {
+  background-color: var(--surface-2of3_background-color);
+}
+
+.Surface--depth_3 .Surface .Surface {
+  background-color: var(--surface-1of3_background-color);
+}
