@@ -8,11 +8,16 @@
     "@babel/preset-react": "^7.0.0",
     "@mapbox/rehype-prism": "^0.3.1",
     "@planningcenter/utilities": "0.0.3",
+    "@storybook/addon-actions": "^5.2.3",
+    "@storybook/addon-links": "^5.2.3",
+    "@storybook/addons": "^5.2.3",
+    "@storybook/react": "^5.2.3",
     "@types/jest": "^24.0.13",
     "@types/react": "^16.8.23",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-mdx": "^1.2.0",
     "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
     "cypress": "^3.4.1",
     "github-markdown-css": "^3.0.1",
     "jest": "^24.8.0",
@@ -37,7 +42,9 @@
     "build": "next build",
     "now-build": "next build && next export -o dist",
     "cypress": "cypress open",
-    "spec": "start-server-and-test dev http://localhost:3000 cypress"
+    "spec": "start-server-and-test dev http://localhost:3000 cypress",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {}
 }
