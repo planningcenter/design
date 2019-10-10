@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { Avatar as AvatarElement } from "../../avatar/src/avatar";
 
@@ -30,3 +31,16 @@ export function Avatar({
     />
   );
 }
+
+Avatar.propTypes = {
+  as: PropTypes.element,
+  className: PropTypes.string,
+  inactive: PropTypes.bool,
+  inset: PropTypes.bool,
+  size: PropTypes.oneOf([2.5, 3, 4, 5, 6, 7, 8, 9]),
+  src: PropTypes.string,
+  srcSet: PropTypes.string,
+  strict: PropTypes.bool,
+  alt: PropTypes.string,
+  chidren: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
+};
