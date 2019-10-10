@@ -9,6 +9,7 @@
     "@mapbox/rehype-prism": "^0.3.1",
     "@planningcenter/utilities": "0.0.3",
     "@storybook/addon-actions": "^5.2.3",
+    "@storybook/addon-docs": "^5.2.3",
     "@storybook/addon-links": "^5.2.3",
     "@storybook/addons": "^5.2.3",
     "@storybook/react": "^5.2.3",
