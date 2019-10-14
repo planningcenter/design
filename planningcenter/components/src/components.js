@@ -4,7 +4,7 @@ export { SIZES as AVATAR_SIZES } from "../../avatar/src/avatar";
 export { Checkbox } from "./composed-checkbox";
 export { SIZES as CHECKBOX_SIZES } from "../../checkbox/src/checkbox";
 
-import * as ResourceHeader from "../../resource-header/src/resource-header";
+import * as ResourceHeader from "./composed-resource-header";
 export { ResourceHeader };
 
 export { Select } from "./composed-select";

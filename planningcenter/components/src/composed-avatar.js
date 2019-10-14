@@ -26,7 +26,9 @@ export function Avatar({
         getPointGridClassNames({ size }, strict),
         getStyledClassNames({ inset }),
         getInactiveClassNames(inactive)
-      ].join(" ")}
+      ]
+        .join(" ")
+        .trim()}
       {...props}
     />
   );

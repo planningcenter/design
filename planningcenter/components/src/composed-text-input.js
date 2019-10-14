@@ -17,7 +17,9 @@ export function TextInput({
         className,
         getPointGridClassNames({ height }, strict),
         getInvalidClassNames({ invalid })
-      ].join(" ")}
+      ]
+        .join(" ")
+        .trim()}
       {...props}
     />
   );
