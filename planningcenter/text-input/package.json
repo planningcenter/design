@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/text-input",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A text input element on a linear scale.",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design#readme",
