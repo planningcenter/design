@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "microbundle": "^0.11.0",
-    "rollup": "^1.15.6"
+    "rollup": "^1.25.2"
   },
   "gitHead": "c8480d0688c8aa26ede8a1d3b30edfe81a105a78"
 }
