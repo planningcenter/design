@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/finder",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Components for building a resource Finder in React",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/finder",

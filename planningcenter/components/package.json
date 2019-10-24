@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/components",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "The entire collection of @planningcenter/components",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/components",
@@ -40,8 +40,8 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@planningcenter/avatar": "^0.0.16",
-    "@planningcenter/resource-header": "^0.0.17",
+    "@planningcenter/avatar": "^0.0.17",
+    "@planningcenter/resource-header": "^0.0.18",
     "@planningcenter/text": "^0.0.5"
   }
 }

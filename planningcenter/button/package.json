@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/button",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An experimental planning center button",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/button",
@@ -37,6 +37,6 @@
     "rollup": "^1.25.2"
   },
   "dependencies": {
-    "@planningcenter/utilities": "^0.0.12"
+    "@planningcenter/utilities": "^0.0.13"
   }
 }
