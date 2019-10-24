@@ -24,18 +24,18 @@
     "react": "^16.8.6"
   },
   "devDependencies": {
-    "@types/react": "^16.8.19",
-    "@types/react-dom": "^16.8.4",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
     "html-webpack-plugin": "^3.0.6",
     "microbundle": "^0.11.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "rollup": "^1.12.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "rollup": "^1.25.2",
     "ts-loader": "^5.4.5",
-    "typescript": "^3.5.1",
-    "webpack": "^4.32.2",
-    "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.4.1"
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
   },
   "gitHead": "c8480d0688c8aa26ede8a1d3b30edfe81a105a78"
 }
