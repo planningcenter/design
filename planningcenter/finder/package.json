@@ -26,7 +26,9 @@
     "url": "https://github.com/planningcenter/design/issues"
   },
   "devDependencies": {
-    "microbundle": "^0.11.0"
+    "microbundle": "^0.11.0",
+    "react": "^16.11.0",
+    "rollup": "^1.25.2"
   },
   "peerDependencies": {
     "react": "^16.8.6"
