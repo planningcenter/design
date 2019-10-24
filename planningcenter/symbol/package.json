@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "microbundle": "^0.11.0",
-    "react": "^16.8.6",
-    "rollup": "^1.15.6"
+    "react": "^16.11.0",
+    "rollup": "^1.25.2"
   }
 }
