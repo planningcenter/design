@@ -1,6 +1,6 @@
 import React from "react";
 
-import TextInputElement from "../../text-input/src/text-input";
+import { TextInput as TextInputElement } from "../../text-input/src/text-input";
 import { getPointGridClassNames } from "../../text-input/extension/point-grid";
 import { getInvalidClassNames } from "../../text-input/extension/invalid";
 
