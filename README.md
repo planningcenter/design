@@ -68,6 +68,10 @@ Projects like `system`, `typography`, and `url` (that only export one type of re
 
 ## Setup
 
+Requirement: Node 10+
+
+## Setup
+
 ```bash
 npm i -g lerna
 git clone git@github.com:planningcenter/design.git ~/Code/design
