@@ -39,5 +39,8 @@
   "peerDependencies": {
     "react": "^16.7.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@planningcenter/system": "0.0.8",
+    "@planningcenter/utilities": "0.0.13"
+  }
 }

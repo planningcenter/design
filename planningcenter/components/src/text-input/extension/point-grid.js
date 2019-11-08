@@ -1,4 +1,4 @@
-import { mapPropsToClassNames } from "../../../../utilities/src/utilities";
+import { mapPropsToClassNames } from "@planningcenter/utilities";
 import { SIZES } from "../../composed-text-input"; // TODO: shouldn't have to reach out for this. compose `strict` mode
 
 export function getPointGridClassNames(

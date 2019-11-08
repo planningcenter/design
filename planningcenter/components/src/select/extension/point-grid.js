@@ -1,4 +1,4 @@
-import { mapPropsToClassNames } from "../../../../utilities/src/utilities";
+import { mapPropsToClassNames } from "@planningcenter/utilities";
 import { SIZES } from "../../composed-select";
 
 export function getPointGridClassNames(

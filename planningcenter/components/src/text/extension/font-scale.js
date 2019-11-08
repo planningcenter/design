@@ -1,5 +1,5 @@
 // TODO: inlined temporarily
-import { mapPropsToClassNames } from "../../../../utilities/src/utilities";
+import { mapPropsToClassNames } from "@planningcenter/utilities";
 
 export function getFontScaleClassNames(
   { fontSize: incomingFontSize },
