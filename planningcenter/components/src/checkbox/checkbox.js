@@ -1,7 +1,5 @@
 import React from "react";
 
-export const SIZES = [];
-
 export function Checkbox({ className, children, ...props }) {
   // return (
   //   <div role="checkbox" aria-checked="false" tabindex="0" class="">

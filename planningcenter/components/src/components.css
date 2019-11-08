@@ -3,8 +3,8 @@
 @import "./avatar/extension/styled.css";
 @import "./avatar/extension/inactive.css";
 
-@import "../../checkbox";
-@import "../../checkbox/extension/point-grid";
+@import "./checkbox/css/checkbox.css";
+@import "./checkbox/extension/point-grid.css";
 
 @import "../../select";
 @import "../../select/extension/point-grid";
