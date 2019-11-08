@@ -27,7 +27,7 @@ export function Avatar({
     <AvatarElement
       className={[
         className,
-        getResponsivePointGridClassNames({ size }, strict),
+        getResponsivePointGridClassNames({ size }, strict && SIZES),
         getPointGridClassNames({ size }, strict),
         getStyledClassNames({ inset }),
         getInactiveClassNames(inactive)

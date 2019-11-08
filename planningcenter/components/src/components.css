@@ -9,6 +9,8 @@
 @import "./select/select.css";
 @import "./select/extension/point-grid.css";
 
+@import "./surface/surface.css";
+
 @import "./text/text.css";
 @import "./text/extension/font-scale.css";
 
