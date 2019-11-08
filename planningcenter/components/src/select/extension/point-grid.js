@@ -1,5 +1,5 @@
-import { mapPropsToClassNames } from "../../utilities/src/utilities";
-import { SIZES } from "../select";
+import { mapPropsToClassNames } from "../../../../utilities/src/utilities";
+import { SIZES } from "../../composed-select";
 
 export function getPointGridClassNames(
   { height: incomingHeight },

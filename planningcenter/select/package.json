@@ -1,9 +1,0 @@
-{
-  "description": "",
-  "name": "@planningcenter/select",
-  "version": "0.0.1",
-  "publishConfig": {
-    "access": "public"
-  },
-  "style": "select.css"
-}

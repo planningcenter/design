@@ -6,8 +6,8 @@
 @import "./checkbox/css/checkbox.css";
 @import "./checkbox/extension/point-grid.css";
 
-@import "../../select";
-@import "../../select/extension/point-grid";
+@import "./select/select.css";
+@import "./select/extension/point-grid.css";
 
 @import "./text/css/text.css";
 @import "./text/extension/font-scale.css";
