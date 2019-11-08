@@ -1,5 +1,5 @@
-import { mapPropsToClassNames } from "../../utilities/src/utilities";
-import { SIZES } from "../src/text-input";
+import { mapPropsToClassNames } from "../../../../utilities/src/utilities";
+import { SIZES } from "../../composed-text-input"; // TODO: shouldn't have to reach out for this. compose `strict` mode
 
 export function getPointGridClassNames(
   { height: incomingHeight },

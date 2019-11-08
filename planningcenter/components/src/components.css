@@ -9,11 +9,11 @@
 @import "./select/select.css";
 @import "./select/extension/point-grid.css";
 
-@import "./text/css/text.css";
+@import "./text/text.css";
 @import "./text/extension/font-scale.css";
 
-@import "../../text-input";
-@import "../../text-input/extension/point-grid";
-@import "../../text-input/extension/invalid";
+@import "./text-input/text-input.css";
+@import "./text-input/extension/point-grid.css";
+@import "./text-input/extension/invalid.css";
 
 @import "./resource-header/css/resource-header.css";
