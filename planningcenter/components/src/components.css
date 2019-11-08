@@ -1,7 +1,7 @@
-@import "../../avatar";
-@import "../../avatar/extension/point-grid";
-@import "../../avatar/extension/styled";
-@import "../../avatar/extension/inactive";
+@import "./avatar/css/avatar.css";
+@import "./avatar/extension/point-grid.css";
+@import "./avatar/extension/styled.css";
+@import "./avatar/extension/inactive.css";
 
 @import "../../checkbox";
 @import "../../checkbox/extension/point-grid";

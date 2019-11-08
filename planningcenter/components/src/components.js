@@ -1,5 +1,5 @@
 export { Avatar } from "./composed-avatar";
-export { SIZES as AVATAR_SIZES } from "../../avatar/src/avatar";
+export { SIZES as AVATAR_SIZES } from "./avatar/avatar";
 
 export { Checkbox } from "./composed-checkbox";
 export { SIZES as CHECKBOX_SIZES } from "../../checkbox/src/checkbox";

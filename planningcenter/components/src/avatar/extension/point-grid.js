@@ -1,7 +1,7 @@
 // TODO: inlined temporarily
-import { mapPropsToClassNames } from "../../utilities/src/utilities";
-import { SIZES } from "../../avatar/src/avatar";
-import { BREAKPOINTS } from "../../system/src/system";
+import { mapPropsToClassNames } from "../../../../utilities/src/utilities";
+import { SIZES } from "../avatar";
+import { BREAKPOINTS } from "../../../../system/src/system";
 
 export function getPointGridClassNames({ size: incomingSize }, strict = true) {
   let size = getConstrainedSize(incomingSize, strict);

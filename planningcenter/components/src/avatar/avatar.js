@@ -1,5 +1,5 @@
 import React from "react";
-import { SIZES as SYSTEM_SIZES } from "../../system/src/system";
+import { SIZES as SYSTEM_SIZES } from "../../../system/src/system";
 import PropTypes from "prop-types";
 
 export const SIZES = Array.from(

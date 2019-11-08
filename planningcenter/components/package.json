@@ -40,7 +40,6 @@
     "react": "^16.7.0"
   },
   "dependencies": {
-    "@planningcenter/avatar": "^0.0.17",
     "@planningcenter/resource-header": "^0.0.18",
     "@planningcenter/text": "^0.0.5"
   }

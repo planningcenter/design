@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Avatar as AvatarElement } from "../../avatar/src/avatar";
+import { Avatar as AvatarElement } from "./avatar/avatar";
 
 import {
   getResponsivePointGridClassNames,
   getPointGridClassNames
-} from "../../avatar/extension/point-grid";
-import { getStyledClassNames } from "../../avatar/extension/styled";
-import { getInactiveClassNames } from "../../avatar/extension/inactive";
+} from "./avatar/extension/point-grid";
+import { getStyledClassNames } from "./avatar/extension/styled";
+import { getInactiveClassNames } from "./avatar/extension/inactive";
 
 export function Avatar({
   size,
