@@ -1,11 +1,9 @@
 import { mapPropsToClassNames } from "@planningcenter/utilities";
-import { SIZES } from "../../composed-select";
 
-export function getPointGridClassNames(
-  { height: incomingHeight },
-  strict = true
-) {
-  let height = getConstrainedSize(incomingHeight, strict);
+export function getPointGridClassNames({ height }, availableSizes) {
+  if (availableSizes && !availableSizes.includes(height)) {
+    return "";
+  }
 
   return (
     typeof height !== "object" &&
@@ -13,11 +11,4 @@ export function getPointGridClassNames(
       height
     })
   );
-}
-
-// private
-function getConstrainedSize(height, strict) {
-  if (strict && !SIZES.includes(height)) return;
-
-  return height;
 }

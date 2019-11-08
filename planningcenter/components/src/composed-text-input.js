@@ -21,7 +21,7 @@ export function TextInput({
     <TextInputElement
       className={[
         className,
-        getPointGridClassNames({ height }, strict),
+        getPointGridClassNames({ height }, strict && SIZES),
         getInvalidClassNames({ invalid })
       ]
         .join(" ")

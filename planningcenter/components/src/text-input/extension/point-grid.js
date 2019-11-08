@@ -1,11 +1,9 @@
 import { mapPropsToClassNames } from "@planningcenter/utilities";
-import { SIZES } from "../../composed-text-input"; // TODO: shouldn't have to reach out for this. compose `strict` mode
 
-export function getPointGridClassNames(
-  { height: incomingHeight },
-  strict = true
-) {
-  let height = getConstrainedSize(incomingHeight, strict);
+export function getPointGridClassNames({ height }, availableHeights) {
+  if (availableHeights && !availableHeights.includes(height)) {
+    return "";
+  }
 
   return (
     typeof height !== "object" &&
@@ -13,11 +11,4 @@ export function getPointGridClassNames(
       height
     })
   );
-}
-
-// private
-function getConstrainedSize(height, strict) {
-  if (strict && !SIZES.includes(height)) return;
-
-  return height;
 }
