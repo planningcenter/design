@@ -51,7 +51,6 @@ Common scripts:
 | `cypress.json`                 | Cypress config. Cypress is the browser-controlled spec test-runner                                                                                                         |
 | `jest.config.js`               | Config for Jest. Just runs unit tests for non-UI libraries like `system` and `utilities`                                                                                   |
 | `next.config.js`               | Config for Next.js-generated documentation                                                                                                                                 |
-| `.circleci/config.yml`         | CircleCI config for continuous integration                                                                                                                                 |
 
 ## Component navigation
 
