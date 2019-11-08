@@ -1,9 +1,9 @@
-@import "./avatar/css/avatar.css";
+@import "./avatar/avatar.css";
 @import "./avatar/extension/point-grid.css";
 @import "./avatar/extension/styled.css";
 @import "./avatar/extension/inactive.css";
 
-@import "./checkbox/css/checkbox.css";
+@import "./checkbox/checkbox.css";
 @import "./checkbox/extension/point-grid.css";
 
 @import "./select/select.css";
@@ -16,4 +16,4 @@
 @import "./text-input/extension/point-grid.css";
 @import "./text-input/extension/invalid.css";
 
-@import "./resource-header/css/resource-header.css";
+@import "./resource-header/resource-header.css";
