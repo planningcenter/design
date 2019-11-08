@@ -6,7 +6,7 @@ export {
   FlexSpacer,
   Title,
   Tab
-} from "../../resource-header/src/resource-header";
+} from "./resource-header/resource-header";
 import { Avatar as ComponentsAvatar } from "./composed-avatar";
 
 export function Avatar({ className, ...props }) {

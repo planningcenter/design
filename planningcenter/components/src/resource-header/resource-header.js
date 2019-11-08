@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Avatar as AvatarElement } from "@planningcenter/avatar";
-
 export function TabContainer({ as: As = "div", className, ...props }) {
   return (
     <As
@@ -59,14 +57,5 @@ export function Tab({ target, className, children, style, ...props }) {
     >
       {children}
     </a>
-  );
-}
-
-export function Avatar({ className, ...props }) {
-  return (
-    <AvatarElement
-      className={[className, "ResourceHeader__Avatar"].join(" ")}
-      {...props}
-    />
   );
 }
