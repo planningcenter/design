@@ -1,10 +1,5 @@
 import React from "react";
-import { SIZES as SYSTEM_SIZES } from "@planningcenter/system";
 import PropTypes from "prop-types";
-
-export const SIZES = Array.from(
-  new Set([2.5, ...SYSTEM_SIZES.filter(s => s >= 3), 9])
-).sort();
 
 export function Avatar({
   as: As = "span",

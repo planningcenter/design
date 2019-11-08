@@ -2,6 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { Avatar as AvatarElement } from "./avatar/avatar";
+import { SIZES as SYSTEM_SIZES } from "@planningcenter/system";
+
+export const SIZES = Array.from(
+  new Set([2.5, ...SYSTEM_SIZES.filter(s => s >= 3), 9])
+).sort();
 
 import {
   getResponsivePointGridClassNames,

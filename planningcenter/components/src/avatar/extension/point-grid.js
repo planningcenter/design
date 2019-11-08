@@ -1,6 +1,6 @@
 // TODO: inlined temporarily
 import { mapPropsToClassNames } from "@planningcenter/utilities";
-import { SIZES } from "../avatar";
+import { SIZES } from "../../composed-avatar";
 import { BREAKPOINTS } from "@planningcenter/system";
 
 export function getPointGridClassNames({ size: incomingSize }, strict = true) {
