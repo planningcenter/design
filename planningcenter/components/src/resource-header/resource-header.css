@@ -43,12 +43,12 @@
 .ResourceHeader__Avatar {
   padding: 5px;
   background-color: white;
-  --Avatar--size: 112px;
+  --Avatar--size: 72px;
 }
 
 .ResourceHeader__ActionGroup {
   display: flex;
 }
 .ResourceHeader__ActionGroup > * + * {
-  margin-left: 8px;
+  margin-left: 16px;
 }
