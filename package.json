@@ -39,13 +39,9 @@
     "react": "^16.6.3"
   },
   "scripts": {
-    "test": "jest",
-    "dev": "next",
     "build": "build-storybook",
-    "now-build": "next build && next export -o dist",
-    "cypress": "cypress open",
-    "spec": "start-server-and-test dev http://localhost:3000 cypress",
-    "storybook": "start-storybook -p 6006"
+    "build-storybook": "npm run build",
+    "dev": "start-storybook -p 6006"
   },
   "dependencies": {
     "prop-types": "^15.7.2"
