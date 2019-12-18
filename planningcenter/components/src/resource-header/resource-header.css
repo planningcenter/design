@@ -41,13 +41,14 @@
 }
 
 .ResourceHeader__Avatar {
-  box-sizing: border-box;
-  display: inline-block;
-  overflow: hidden;
-  border-radius: 50%;
-  width: 112px;
-  height: 112px;
   padding: 5px;
   background-color: white;
-  background-color: var(--planningcenter-avatar-inset-color, white);
+  --Avatar--size: 112px;
+}
+
+.ResourceHeader__ActionGroup {
+  display: flex;
+}
+.ResourceHeader__ActionGroup > * + * {
+  margin-left: 8px;
 }
