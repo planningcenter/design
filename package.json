@@ -32,7 +32,8 @@
     "react-dom": "^16.11.0",
     "react-testing-library": "^8.0.1",
     "rollup": "^1.26.3",
-    "start-server-and-test": "^1.10.6"
+    "start-server-and-test": "^1.10.6",
+    "storybook-chromatic": "^3.4.1"
   },
   "peerDependencies": {
     "react": "^16.6.3"
