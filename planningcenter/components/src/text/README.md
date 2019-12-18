@@ -1,11 +1,25 @@
-# `@planningcenter/text`
+> An inline text element on a linear scale
 
-> TODO: description
+## Complementary
 
-## Usage
+## Treatment
 
+- inline
+
+## Sizes
+
+- `10px`
+- `12px`
+- `14px`
+- `16px`
+- `18px`
+
+## Custom Properties
+
+```css
+--Text--font-size
 ```
-const text = require('@planningcenter/text');
 
-// TODO: DEMONSTRATE API
-```
+## TODO
+
+- Corosponding line-heights

@@ -17,3 +17,9 @@
 
 Absolute height/width must be a multiple of 8px, with a single exception for _20px_.
 Applications may implement as sizes as modular scale and/or incremental.
+
+## Custom Properties
+
+```css
+--Avatar--size
+```

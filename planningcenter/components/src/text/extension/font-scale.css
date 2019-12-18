@@ -1,17 +1,17 @@
 .FontScaleText {
 }
 .FontScaleText--font-size_x-small {
-  font-size: 10px;
+  --Text--font-size: 10px;
 }
 .FontScaleText--font-size_small {
-  font-size: 12px;
+  --Text--font-size: 12px;
 }
 .FontScaleText--font-size_medium {
-  font-size: 14px;
+  --Text--font-size: 14px;
 }
 .FontScaleText--font-size_large {
-  font-size: 16px;
+  --Text--font-size: 16px;
 }
 .FontScaleText--font-size_x-large {
-  font-size: 18px;
+  --Text--font-size: 18px;
 }

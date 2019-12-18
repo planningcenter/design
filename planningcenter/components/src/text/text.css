@@ -1,2 +1,3 @@
 .Text {
+  font-size: var(--Text--font-size, 1em);
 }
