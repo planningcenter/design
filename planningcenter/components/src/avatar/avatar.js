@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 export function Avatar({
   as: As = "span",
@@ -19,12 +18,3 @@ export function Avatar({
     </As>
   );
 }
-
-Avatar.propTypes = {
-  as: PropTypes.element,
-  className: PropTypes.string,
-  src: PropTypes.string,
-  srcSet: PropTypes.string,
-  alt: PropTypes.string,
-  chidren: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
-};
