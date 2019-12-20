@@ -23,7 +23,7 @@ export const withPlaceholder = () => (
   <>
     <label htmlFor="placeholder-example">With Placeholder:</label>
     <br />
-    <TextInput placeholder="Placeholder text" id="placeholder-example" />
+    <TextInput placeholder="Better placeholder" id="placeholder-example" />
   </>
 );
 
