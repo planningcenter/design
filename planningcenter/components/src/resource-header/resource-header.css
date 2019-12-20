@@ -43,7 +43,7 @@
 .ResourceHeader__Avatar {
   padding: 5px;
   background-color: white;
-  --Avatar--size: 112px;
+  --Avatar--size: 96px;
 }
 
 .ResourceHeader__ActionGroup {
