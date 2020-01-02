@@ -1,16 +1,13 @@
 // TODO: inlined temporarily
 import { mapPropsToClassNames } from "@planningcenter/utilities";
 
-export function getFontScaleClassNames(
-  { fontSize: incomingFontSize },
-  strict = true
-) {
+export default function({ fontSize: incomingFontSize }, strict = true) {
   if (!incomingFontSize) return;
 
   let fontSize = getConstrainedSize(incomingFontSize, strict);
 
   return mapPropsToClassNames("FontScaleText")(["fontSize"])({
-    fontSize
+    fontSize,
   });
 }
 

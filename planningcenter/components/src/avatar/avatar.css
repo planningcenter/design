@@ -3,9 +3,8 @@
   display: inline-block;
   overflow: hidden;
   border-radius: 50%;
-  width: 1.5em;
-  height: 1.5em;
-  background-color: var(--Avatar--background-color, white);
+  width: var(--Avatar--size, 1.5em);
+  height: var(--Avatar--size, 1.5em);
 }
 
 .Avatar > img {

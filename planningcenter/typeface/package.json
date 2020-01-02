@@ -1,13 +1,14 @@
 {
   "name": "@planningcenter/typeface",
-  "version": "0.1.0-alpha.12",
+  "version": "1.0.0-alpha.1",
   "description": "Planning Center Typefaces",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design#readme",
   "license": "MIT",
   "files": [
     "sans-serif.css",
-    "monospace.css"
+    "monospace.css",
+    "extension"
   ],
   "publishConfig": {
     "access": "public"
