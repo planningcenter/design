@@ -10,6 +10,16 @@ export const Accounts = ({ color = "#000", ...props }) => (
   </g>
 );
 
+export const Calendar = ({ color = "#000", ...props }) => (
+  <g {...props}>
+    <path
+      d="M14.18,6.5h-.91V5.8a.55.55,0,0,0-.55-.55h-.26a.55.55,0,0,0-.55.55v.7H8.09V5.8a.55.55,0,0,0-.55-.55H7.28a.55.55,0,0,0-.55.55v.7H5.82a.58.58,0,0,0-.58.59v7.08a.58.58,0,0,0,.58.58h8.36a.58.58,0,0,0,.58-.58V7.09A.58.58,0,0,0,14.18,6.5Zm-.91,6.71H6.73V9.09h6.54Z"
+      fill={color}
+      role="presentation"
+    />
+  </g>
+);
+
 export const CheckIns = ({ color = "#000", ...props }) => (
   <g {...props}>
     <path

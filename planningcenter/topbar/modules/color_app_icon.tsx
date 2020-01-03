@@ -17,9 +17,13 @@ export function ColorAppIcon({
       viewBox="0 0 20 20"
       style={{ display: "block" }}
     >
-      {ColorAppSquircles[appName] ? ColorAppSquircles[appName]() : <span key="key1" />}
+      {ColorAppSquircles[appName] ? (
+        React.createElement(ColorAppSquircles[appName], { key: "key1" })
+      ) : (
+        <span key="key1" />
+      )}
       {AppSymbols[appName] ? (
-        React.createElement(AppSymbols[appName], { color: "#fff", key: "key2"})
+        React.createElement(AppSymbols[appName], { color: "#fff", key: "key2" })
       ) : (
         <div key="key3">appName not supported</div>
       )}
