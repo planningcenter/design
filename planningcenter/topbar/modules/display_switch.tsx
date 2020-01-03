@@ -51,7 +51,7 @@ export class PointBreak extends React.Component<
     );
   }
 
-  componentDidUnMount() {
+  componentWillUnmount() {
     window.removeEventListener(
       "resize",
       debounce(this.setWindowWidth, 100),
