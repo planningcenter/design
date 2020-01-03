@@ -74,22 +74,28 @@ const apps = [
     attributes: { name: "Services", url: "http://services.pco.test" },
     links: { self: "http://api.pco.test/people/v2/apps/9" },
   },
+  {
+    type: "App",
+    id: "10",
+    attributes: { name: "Calendar", url: "http://calendar.pco.test" },
+    links: { self: "http://api.pco.test/people/v2/apps/9" },
+  },
   // {
   //   type: "App",
-  //   id: "10",
+  //   id: "11",
   //   attributes: { name: "Church Center", url: "http://church-center.pco.test" },
   //   links: { self: "http://api.pco.test/people/v2/apps/10" }
   // },
   // {
   //   type: "App",
-  //   id: "11",
+  //   id: "12",
   //   attributes: { name: "API", url: "http://api.pco.test" },
   //   links: { self: "http://api.pco.test/people/v2/apps/11" }
   // }
 ];
 
 const shared = {
-  appName: apps[1].attributes.name,
+  appName: apps[9].attributes.name,
   env: "development",
   style: {
     zIndex: 1,
@@ -135,7 +141,11 @@ const staticPlatformAnnouncements = {
 };
 
 const staticData = {
-  routes: [["people", "#"], ["some", "#"], ["other", "#"]],
+  routes: [
+    ["people", "#"],
+    ["some", "#"],
+    ["other", "#"],
+  ],
   activeRoute: "people",
 };
 

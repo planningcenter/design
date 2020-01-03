@@ -49,6 +49,30 @@ export function API(): JSX.Element[] {
   ];
 }
 
+export function Calendar(): JSX.Element[] {
+  return [
+    <defs key="defs">
+      <linearGradient
+        id="calendar-gradient"
+        x1="2.05"
+        y1="2.04"
+        x2="17.97"
+        y2="17.96"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0" stopColor="#f25437" />
+        <stop offset="1" stopColor="#cd4e39" />
+      </linearGradient>
+    </defs>,
+    <title key="title">calendar-squircle</title>,
+    <path
+      key="path"
+      d="M20,10c0,8-2,10-10,10S.06,18,.06,10,2.05.05,10,.05,20,2,20,10Z"
+      fill="url(#calendar-gradient)"
+    />,
+  ];
+}
+
 export function CheckIns(): JSX.Element[] {
   return [
     <defs key="def">
@@ -173,7 +197,7 @@ export function Publishing(): JSX.Element[] {
   return [
     <defs key="def">
       <linearGradient
-        id="linear-gradient"
+        id="publishing-gradient"
         x1="2.047"
         y1="2.036"
         x2="17.969"
@@ -184,26 +208,28 @@ export function Publishing(): JSX.Element[] {
         <stop offset="1" stopColor="#5f5f69" />
       </linearGradient>
       <linearGradient
-        id="linear-gradient-2"
+        id="publishing-gradient-2"
         x1="2.03"
         y1="2.03"
         x2="17.952"
         y2="17.952"
         gradientTransform="translate(2.563 -2.028) rotate(13.283)"
-        xlinkHref="#linear-gradient"
+        xlinkHref="#publishing-gradient"
       />
     </defs>,
-    <title>publishing-squircle</title>,
+    <title key="title">publishing-squircle</title>,
     <path
       d="M19.96,10c0,7.962-1.991,9.952-9.952,9.952S.056,17.959.056,10,2.047.045,10.008.045,19.96,2.036,19.96,10Z"
-      fill="url(#linear-gradient)"
+      fill="url(#publishing-gradient)"
+      key="path"
     />,
     <circle
       cx="9.991"
       cy="9.991"
       r="9.951"
       transform="translate(-2.028 2.563) rotate(-13.283)"
-      fill="url(#linear-gradient-2)"
+      fill="url(#publishing-gradient-2)"
+      key="circle"
     />,
   ];
 }
