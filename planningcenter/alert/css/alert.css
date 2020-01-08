@@ -1,0 +1,168 @@
+:root {
+  --alert-foreground: hsl(0, 0%, 45%);
+
+  --alert-button-foreground: hsl(0, 0%, 100%);
+  --alert-button-background: hsl(220, 74%, 61%);
+  --alert-button-focus-border: hsl(220, 74%, 79%);
+  --alert-button-hover-background: hsl(221, 73%, 65%);
+  --alert-button-active-background: hsl(220, 74%, 72%);
+
+  --alert-button-success-background: hsl(138, 57%, 58%);
+  --alert-button-success-hover-background: hsl(138, 60%, 52%);
+  --alert-button-success-focus-border: hsl(138, 50%, 80%);
+  --alert-button-success-active-background: hsl(138, 68%, 48%);
+
+  --alert-button-danger-background: hsl(0, 86%, 67%);
+  --alert-button-danger-hover-background: hsl(0, 88%, 65%);
+  --alert-button-danger-focus-border: hsl(0, 80%, 86%);
+  --alert-button-danger-active-background: hsl(0, 90%, 62%);
+
+  --alert-button-disabled-background: hsl(0, 0%, 82%);
+}
+
+.swal2-top .swal2-popup {
+  margin-top: var(--scale_5);
+}
+
+.swal2-popup.swal2-popup {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  width: 528px;
+  padding: 0;
+}
+
+.swal2-popup .swal2-title {
+  font-size: var(--type-scale_7);
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.swal2-popup .swal2-header {
+  padding: var(--scale_2);
+  padding-bottom: 0;
+}
+
+.swal2-popup .swal2-content {
+  font-size: var(--type-scale_4);
+  line-height: 1.5;
+  padding: var(--scale_3);
+  padding-top: 0;
+  margin-top: var(--scale_1);
+}
+
+.swal2-popup .swal2-actions {
+  box-sizing: border-box;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(96px, max-content);
+  grid-gap: var(--scale_1);
+  padding: var(--scale_2);
+  margin: 0;
+  border-top: 1px solid #d0d0d0;
+}
+
+/*----- icons -----*/
+.swal2-popup .swal2-icon {
+  font-size: 0.5rem !important;
+}
+
+.swal2-popup .swal2-icon:before {
+  justify-content: center;
+}
+
+.swal2-popup .swal2-icon.swal2-info {
+  border-color: #d0ddf8;
+  color: #a1bbf1;
+}
+
+/*----- custom buttons -----*/
+.swal2-popup .swal-btn {
+  white-space: nowrap;
+  font-size: var(--type-scale_5);
+  padding: var(--scale_1) var(--scale_2);
+  border: 0;
+  border-radius: 3px;
+  background: var(--alert-button-background);
+  color: var(--alert-button-foreground);
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.swal2-popup .swal-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.18em var(--alert-button-focus-border);
+}
+
+.swal2-popup .swal-btn::-moz-focus-inner {
+  border: 0;
+}
+
+.swal2-popup .swal-btn:hover {
+  background: var(--alert-button-hover-background);
+}
+
+.swal2-popup .swal-btn:active {
+  background-color: var(--alert-button-active-background);
+}
+
+.swal2-popup .swal-btn.swal-btn--link {
+  background: transparent;
+  border: none;
+  color: var(--alert-foreground);
+}
+
+.swal2-popup .swal-btn.swal-btn--link:focus {
+  outline: none;
+  box-shadow: none;
+  text-decoration: underline;
+}
+
+.swal2-popup .swal-btn.swal-btn--link:hover {
+  text-decoration: underline;
+}
+
+.swal2-popup .swal-btn.swal-btn--link:active {
+  color: var(--alert-foreground);
+}
+
+.swal2-popup .swal-btn.swal-btn--create {
+  background: var(--alert-button-success-background);
+}
+
+.swal2-popup .swal-btn.swal-btn--create:focus {
+  box-shadow: 0 0 0 0.18em var(--alert-button-success-focus-border);
+}
+
+.swal2-popup .swal-btn.swal-btn--create:hover {
+  background: var(--alert-button-success-hover-background);
+}
+
+.swal2-popup .swal-btn.swal-btn--create:active {
+  background: var(--alert-button-success-active-background);
+}
+
+.swal2-popup .swal-btn.swal-btn--destroy {
+  background: var(--alert-button-danger-background);
+}
+
+.swal2-popup .swal-btn.swal-btn--destroy:focus {
+  box-shadow: 0 0 0 0.18em var(--alert-button-danger-focus-border);
+}
+
+.swal2-popup .swal-btn.swal-btn--destroy:hover {
+  background: var(--alert-button-danger-hover-background);
+}
+
+.swal2-popup .swal-btn.swal-btn--destroy:active {
+  background-color: var(--alert-button-danger-active-background);
+}
+
+.swal2-popup .swal-btn.swal-btn--disabled {
+  background: var(--alert-button-disabled-background);
+  cursor: not-allowed;
+}
+
+.swal2-popup .swal-btn.swal-btn--disabled:hover {
+  background: var(--alert-button-disabled-background);
+}

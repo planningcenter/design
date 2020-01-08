@@ -1,0 +1,33 @@
+{
+  "name": "@planningcenter/alert",
+  "version": "0.0.0",
+  "description": "Planning Center Opinions for SweetAlert2",
+  "author": "Travis Arnold <travis@pco.bz>",
+  "homepage": "https://github.com/planningcenter/design#readme",
+  "license": "MIT",
+  "main": "dist/alert.js",
+  "files": [
+    "dist",
+    "css"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planningcenter/design.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "microbundle src/index.js -f cjs"
+  },
+  "peerDependencies": {
+    "sweetalert2": "^9.4.3"
+  },
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  },
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
+}
