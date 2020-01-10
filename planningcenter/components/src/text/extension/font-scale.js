@@ -1,5 +1,5 @@
 // TODO: inlined temporarily
-import { mapPropsToClassNames } from "@planningcenter/utilities";
+import { mapPropsToClassNames } from "../../../../utilities/src/utilities";
 
 export default function({ fontSize: incomingFontSize }, strict = true) {
   if (!incomingFontSize) return;
