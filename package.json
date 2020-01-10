@@ -27,5 +27,10 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": false,
+    "trailingComma": "es5"
   }
 }
