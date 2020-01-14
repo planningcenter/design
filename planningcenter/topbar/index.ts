@@ -1,4 +1,8 @@
-export { AppsProvider } from "./modules/apps_provider";
+export {
+  AppsProvider,
+  mapApps,
+  mapResourcesToCalendar,
+} from "./modules/apps_provider";
 export { ConnectedPeopleProvider } from "./modules/connected_people_provider";
 
 export { DisplaySwitch } from "./modules/display_switch";

@@ -17,6 +17,8 @@ import {
   // StyledPlatformAnnouncement,
   // AppsProvider,
   // ConnectedPeopleProvider
+  mapApps,
+  mapResourcesToCalendar,
 } from "../index";
 
 const apps = [
@@ -74,12 +76,12 @@ const apps = [
     attributes: { name: "Services", url: "http://services.pco.test" },
     links: { self: "http://api.pco.test/people/v2/apps/9" },
   },
-  {
-    type: "App",
-    id: "10",
-    attributes: { name: "Calendar", url: "http://calendar.pco.test" },
-    links: { self: "http://api.pco.test/people/v2/apps/9" },
-  },
+  // {
+  //   type: "App",
+  //   id: "10",
+  //   attributes: { name: "Calendar", url: "http://calendar.pco.test" },
+  //   links: { self: "http://api.pco.test/people/v2/apps/9" },
+  // },
   // {
   //   type: "App",
   //   id: "11",
@@ -95,7 +97,7 @@ const apps = [
 ];
 
 const shared = {
-  appName: apps[9].attributes.name,
+  appName: apps[7].attributes.name,
   env: "development",
   style: {
     zIndex: 1,
@@ -245,7 +247,7 @@ class StaticConnectedPeopleProvider extends React.Component<
     setTimeout(() => {
       window.localStorage.setItem(
         "Topbar:ConnectedPeople",
-        JSON.stringify(asyncData.connectedPeople),
+        JSON.stringify(asyncData.connectedPeople)
       );
       return this.forceUpdate();
     }, 1000);
@@ -267,7 +269,7 @@ class StaticConnectedPeopleProvider extends React.Component<
       {
         fetch: this.fetch.bind(this),
         remove: this.remove.bind(this),
-      },
+      }
     );
   }
 }
@@ -280,7 +282,10 @@ class StaticAppsProvider extends React.Component<
 > {
   fetch() {
     setTimeout(() => {
-      window.localStorage.setItem("Topbar:Apps", JSON.stringify(apps));
+      window.localStorage.setItem(
+        "Topbar:Apps",
+        JSON.stringify(mapResourcesToCalendar(mapApps(apps)))
+      );
       return this.forceUpdate();
     }, 1000);
   }
@@ -301,7 +306,7 @@ class StaticAppsProvider extends React.Component<
       {
         fetch: this.fetch.bind(this),
         remove: this.remove.bind(this),
-      },
+      }
     );
   }
 }
@@ -570,5 +575,5 @@ ReactDOM.render(
       convallis iaculis eleifend.
     </div>
   </div>,
-  document.getElementById("app"),
+  document.getElementById("app")
 );
