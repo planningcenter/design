@@ -1,3 +1,7 @@
+# Next
+
+- Add `ExpiredRegistrations` and `mapRegistrationsToExpiredRegistrations` to control them
+
 # 4.11.0
 
 - Add `AppsProvider#formatter` and `mapApps`/`mapResourcesToCalendar` formatters to provide a AppsMenu control mechanism to product teams
