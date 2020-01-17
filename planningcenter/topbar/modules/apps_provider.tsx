@@ -75,7 +75,6 @@ export function mapResourcesToCalendar(apps: App[]) {
 }
 
 export function mapRegistrationsToExpiredRegistrations(apps: App[]) {
-  console.log("reached");
   return apps.map((app: App) => {
     if (app.attributes.name === "Registrations") {
       return {

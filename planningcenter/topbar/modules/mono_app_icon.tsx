@@ -22,7 +22,6 @@ export function MonoAppIcon({
   style?: any;
   size?: number;
 }): JSX.Element {
-  console.log(appName);
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
