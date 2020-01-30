@@ -19,7 +19,6 @@ import {
   // ConnectedPeopleProvider
   mapApps,
   mapResourcesToCalendar,
-  mapRegistrationsToExpiredRegistrations,
 } from "../index";
 
 const apps = [
@@ -99,7 +98,7 @@ const apps = [
 
 const shared = {
   // appName: apps[6].attributes.name,
-  appName: "Expired-Registrations",
+  appName: "Registrations",
   env: "development",
   style: {
     zIndex: 1,
@@ -286,11 +285,7 @@ class StaticAppsProvider extends React.Component<
     setTimeout(() => {
       window.localStorage.setItem(
         "Topbar:Apps",
-        JSON.stringify(
-          mapRegistrationsToExpiredRegistrations(
-            mapResourcesToCalendar(mapApps(apps))
-          )
-        )
+        JSON.stringify(mapResourcesToCalendar(mapApps(apps)))
       );
       return this.forceUpdate();
     }, 1000);

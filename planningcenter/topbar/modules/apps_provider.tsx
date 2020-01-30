@@ -74,19 +74,6 @@ export function mapResourcesToCalendar(apps: App[]) {
   }, []);
 }
 
-export function mapRegistrationsToExpiredRegistrations(apps: App[]) {
-  return apps.map((app: App) => {
-    if (app.attributes.name === "Registrations") {
-      return {
-        ...app,
-        attributes: { ...app.attributes, name: "Expired-Registrations" },
-      };
-    }
-
-    return app;
-  }, []);
-}
-
 export function mapApps(apps: App[]) {
   return apps;
 }

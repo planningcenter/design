@@ -2,7 +2,6 @@ export {
   AppsProvider,
   mapApps,
   mapResourcesToCalendar,
-  mapRegistrationsToExpiredRegistrations,
 } from "./modules/apps_provider";
 export { ConnectedPeopleProvider } from "./modules/connected_people_provider";
 

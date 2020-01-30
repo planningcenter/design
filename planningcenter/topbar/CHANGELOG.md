@@ -1,6 +1,6 @@
 # Next
 
-- Add `ExpiredRegistrations` and `mapRegistrationsToExpiredRegistrations` to control them
+- Add `mapRegistrationsToExpiredRegistrations` to control them
 
 # 4.11.0
 

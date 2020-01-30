@@ -234,30 +234,6 @@ export function Publishing(): JSX.Element[] {
   ];
 }
 
-export function ExpiredRegistrations(): JSX.Element[] {
-  return [
-    <defs key="def">
-      <linearGradient
-        id="bd67604d-f11c-4431-bd82-159c57241115"
-        x1="2.047"
-        y1="2.036"
-        x2="17.969"
-        y2="17.958"
-        gradientUnits="userSpaceOnUse"
-      >
-        <stop offset="0" stopColor="#41b99e" />
-        <stop offset="1" stopColor="#46948d" />
-      </linearGradient>
-    </defs>,
-    <title key="title">registrations-squircle</title>,
-    <path
-      key="path"
-      d="M19.96,10c0,7.962-1.991,9.952-9.952,9.952S.056,17.959.056,10,2.047.045,10.008.045,19.96,2.036,19.96,10Z"
-      fill="url(#bd67604d-f11c-4431-bd82-159c57241115)"
-    />,
-  ];
-}
-
 export function Registrations(): JSX.Element[] {
   return [
     <defs key="def">

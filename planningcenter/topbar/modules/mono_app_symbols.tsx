@@ -99,15 +99,6 @@ export function Registrations({ color, ...platformProps }): JSX.Element {
   );
 }
 
-export function ExpiredRegistrations({ color, ...platformProps }): JSX.Element {
-  return (
-    <path
-      fill={color}
-      d="M10.813,5.838A.985.985,0,0,1,12.2,5.774l.789.714a.985.985,0,0,1,.067,1.395l-.847.93L9.979,6.749Zm-3.68,8.234-2.012.444a.137.137,0,0,1-.164-.151l.277-2.046a1.566,1.566,0,0,1,.337-.722L9.434,7.336,11.668,9.4l-3.845,4.27A1.529,1.529,0,0,1,7.133,14.072Zm7.437.433H8.986l1.96-2.191H14.57a.491.491,0,0,1,.49.49v1.211A.49.49,0,0,1,14.57,14.505Z"
-    />
-  );
-}
-
 export function Resources({ color, ...platformProps }): JSX.Element {
   return (
     <path
