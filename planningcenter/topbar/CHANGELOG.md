@@ -1,5 +1,6 @@
-# Next
+# 5.0.0
 
+- [BREAKING] replace Registrations icon
 - Add `mapRegistrationsToExpiredRegistrations` to control them
 
 # 4.11.0
