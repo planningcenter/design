@@ -8,6 +8,10 @@ This package builds SweetAlert2 CSS using the provided Sass Variables in (`varia
 
 It specifies planning center opinions and exposes a few CSS Custom Properties for further — albeit limited — customization.
 
+## Demo
+
+https://codesandbox.io/s/planningcentersweetalert2-demo-vkcpl
+
 ## Usage
 
 ### Installation
