@@ -10,6 +10,7 @@
     "dist",
     "css"
   ],
+  "style": "css/sweetalert2.css",
   "publishConfig": {
     "access": "public"
   },
