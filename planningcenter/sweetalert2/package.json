@@ -19,7 +19,10 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "microbundle src/sweetalert2.js -f cjs"
+    "build:css": "node-sass src/sweetalert2.scss --output-style compressed -o css --importer=node_modules/node-sass-tilde-importer",
+    "build:js": "microbundle src/sweetalert2.js -f cjs",
+    "prepublish": "npm run build",
+    "build": "npm run build:css && npm run build:js"
   },
   "peerDependencies": {
     "sweetalert2": "^9.4.3"
@@ -28,6 +31,11 @@
     "url": "https://github.com/planningcenter/design/issues"
   },
   "devDependencies": {
-    "microbundle": "^0.11.0"
+    "microbundle": "^0.11.0",
+    "node-sass": "^4.13.1",
+    "sweetalert2": "^9.7.1"
+  },
+  "dependencies": {
+    "node-sass-tilde-importer": "^1.0.2"
   }
 }

@@ -1,3 +1,4 @@
-export default function sweetalert2() {
-    // TODO
-}
+export const defaultPromptOptions = {
+  reverseButtons: true,
+  showCancelButton: true,
+};
