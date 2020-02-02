@@ -49,8 +49,9 @@ function handleDeleteRequest(user) {
   return Swal.fire({
     ...defaultPromptOptions,
     title: `Delete ${user.name}?`,
-    text: `This will remove ${user.name} will all Planning Center apps. Their activity will be lost. You cannot un-delete ${user.name}.`,
+    text: `This will remove ${user.name} from all Planning Center apps. Their activity will be lost. You cannot un-delete ${user.name}.`,
     confirmButtonText: `Yes, delete ${user.name}!`,
   });
 }
 ```
+
