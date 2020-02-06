@@ -43,5 +43,6 @@
   "dependencies": {
     "@planningcenter/system": "^0.0.9",
     "@planningcenter/utilities": "^0.0.14"
-  }
+  },
+  "gitHead": "bcda115d93eed66f57feef4229199ce27664f069"
 }

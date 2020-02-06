@@ -3,9 +3,8 @@
   display: inline-block;
   overflow: hidden;
   border-radius: 50%;
-  width: 1.5em;
-  height: 1.5em;
-  background-color: var(--Avatar--background-color, white);
+  width: var(--Avatar--size, 1.5em);
+  height: var(--Avatar--size, 1.5em);
 }
 
 .Avatar > img {
@@ -372,6 +371,7 @@
 
 .StyledAvatar--inset {
   padding: var(--styled-avatar--inset_padding);
+  background-color: var(--Avatar--background-color, white);
 }
 
 /* StyledAvatar */
@@ -600,47 +600,49 @@
 }
 
 .Text {
+  font-size: var(--Text--font-size, 1em);
 }
 
 .FontScaleText {
 }
 
 .FontScaleText--font-size_x-small {
-  font-size: 10px;
+  --Text--font-size: 10px;
 }
 
 .FontScaleText--font-size_small {
-  font-size: 12px;
+  --Text--font-size: 12px;
 }
 
 .FontScaleText--font-size_medium {
-  font-size: 14px;
+  --Text--font-size: 14px;
 }
 
 .FontScaleText--font-size_large {
-  font-size: 16px;
+  --Text--font-size: 16px;
 }
 
 .FontScaleText--font-size_x-large {
-  font-size: 18px;
+  --Text--font-size: 18px;
 }
 
 .TextInput {
-  font-size: 14px;
+  font-size: var(--TextInput--font-size, 1rem);
   border-color: var(--TextInput--border-color, #767676);
   border-width: 1px;
   border-style: solid;
   background-color: var(--TextInput--background-color, white);
-  border-radius: 4px;
-  padding: 7px 9px;
-  margin: 0;
+  border-radius: var(--TextInput--border-radius, 0.25rem);
+  padding: var(--TextInput--padding, 0.5em 0.625em);
+  margin: var(--TextInput--margin, 0);
   color: var(--TextInput--color, inherit);
   box-shadow: var(--TextInput--box-shadow, none);
+  width: var(--TextInput--width, auto);
 
   /* Safari requires two consessions for proper rendering */
   /* 1. don't use line-height to set absolute height. it makes a strange cursor */
   /* 2. use max-height to constrain absolute height to 32px */
-  max-height: 16px;
+  max-height: var(--TextInput--max-height, 18px);
 }
 
 .TextInput::placeholder {
@@ -656,37 +658,6 @@
   --TextInput--border-color: hsl(0, 79%, 63%);
   --TextInput--color: hsl(0, 79%, 63%);
   --TextInput--box-shadow: 0 0 1.5px 3px hsla(0, 79%, 63%, 0.5);
-}
-
-.PointGridTextInput {
-}
-
-.PointGridTextInput--height_2\.5 {
-  border-radius: 2.5px;
-  font-size: 12px;
-  max-height: 14px;
-  padding: 2px 4px;
-}
-
-.PointGridTextInput--height_3 {
-  border-radius: 3px;
-  font-size: 12px;
-  max-height: 14px;
-  padding: 4px 5px;
-}
-
-.PointGridTextInput--height_4 {
-  border-radius: 4px;
-  font-size: 14px;
-  max-height: 16px;
-  padding: 7px 8px;
-}
-
-.PointGridTextInput--height_5 {
-  border-radius: 5px;
-  font-size: 16px;
-  max-height: 18px;
-  padding: 10px 11px;
 }
 
 .InvalidTextInput {
@@ -741,13 +712,15 @@
 }
 
 .ResourceHeader__Avatar {
-  box-sizing: border-box;
-  display: inline-block;
-  overflow: hidden;
-  border-radius: 50%;
-  width: 112px;
-  height: 112px;
   padding: 5px;
   background-color: white;
-  background-color: var(--planningcenter-avatar-inset-color, white);
+  --Avatar--size: 112px;
+}
+
+.ResourceHeader__ActionGroup {
+  display: flex;
+}
+
+.ResourceHeader__ActionGroup > * + * {
+  margin-left: 8px;
 }

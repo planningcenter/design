@@ -15,7 +15,6 @@
 @import "./text/extension/font-scale.css";
 
 @import "./text-input/text-input.css";
-@import "./text-input/extension/point-grid.css";
 @import "./text-input/extension/invalid.css";
 
 @import "./resource-header/resource-header.css";
