@@ -1,8 +1,9 @@
 .TextInput {
+  box-sizing: var(--TextInput--box-sizing, border-box);
   font-size: var(--TextInput--font-size, 1rem);
   border-color: var(--TextInput--border-color, #767676);
-  border-width: 1px;
-  border-style: solid;
+  border-width: var(--TextInput--border-width, 1px);
+  border-style: var(--TextInput--border-style, solid);
   background-color: var(--TextInput--background-color, white);
   border-radius: var(--TextInput--border-radius, 0.25rem);
   padding: var(--TextInput--padding, 0.5em 0.625em);
@@ -10,11 +11,7 @@
   color: var(--TextInput--color, inherit);
   box-shadow: var(--TextInput--box-shadow, none);
   width: var(--TextInput--width, auto);
-
-  /* Safari requires two consessions for proper rendering */
-  /* 1. don't use line-height to set absolute height. it makes a strange cursor */
-  /* 2. use max-height to constrain absolute height to 32px */
-  max-height: var(--TextInput--max-height, 18px);
+  line-height: var(--TextInput--line-height, 1.125rem);
 }
 
 .TextInput::placeholder {
@@ -22,7 +19,7 @@
 }
 
 .TextInput:focus {
-  outline: none;
+  outline: var(--TextInput--outline, none);
   --TextInput--box-shadow: 0 0 1.5px 3px hsla(0, 0%, 50%, 0.5);
 }
 
