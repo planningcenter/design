@@ -466,7 +466,7 @@ export class Topbar extends React.Component<
 
             <HoverableListItem
               component="a"
-              href={`${pcoUrl(this.props.env)("accounts")}/logout`}
+              href={`${pcoUrl(this.props.env)("login")}/logout`}
               onClick={() => {
                 this.props.requestClearAppsCache();
                 this.props.requestClearConnectedPeopleCache();

@@ -446,7 +446,7 @@ export class Topbar extends React.Component<
 
                   <div style={{ ...IEFlex1 }}>
                     <a
-                      href={`${pcoUrl(this.props.env)("accounts")}/logout`}
+                      href={`${pcoUrl(this.props.env)("login")}/logout`}
                       onClick={() => {
                         this.props.requestClearAppsCache();
                         this.props.requestClearConnectedPeopleCache();
