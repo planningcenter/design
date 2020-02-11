@@ -1,0 +1,58 @@
+.Table {
+  --Table--border-color: hsl(0, 0%, 90%);
+  --Table__Row--height: 4rem;
+}
+
+.Table {
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--Table--border-color);
+  border-spacing: 0;
+  font-size: var(--Table--font-size, 1rem);
+}
+
+.Table__Head {
+  --Table__Row--height: 3rem;
+  background-color: var(--Table__Head--background-color, hsl(0, 0%, 97.5%));
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.875em;
+  font-weight: 700;
+  color: var(--Table__Head--color, hsla(0, 0%, 40%));
+}
+
+.Table__Row {
+  box-sizing: border-box;
+  height: var(--Table__Row--height);
+}
+
+/* yes, there's a more clever way to right this with :last-child *if* there is only ever one header row but that isn't guaranteed */
+.Table__Head .Table__Row:first-child,
+.Table__Body .Table__Row:last-child {
+  box-sizing: border-box;
+  height: calc(var(--Table__Row--height) - 1px);
+}
+
+.Table__Data {
+  box-sizing: border-box;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(
+    --Table__Data--border-color,
+    var(--Table--border-color)
+  );
+  padding: var(--Table__Data--padding, 0 0.5rem);
+}
+
+.Table__Data:first-child {
+  padding-left: 1rem;
+}
+
+.Table__Data:last-child {
+  padding-right: 1rem;
+}
+
+.Table__Head .Table__Data {
+  border-top-width: 0;
+}
