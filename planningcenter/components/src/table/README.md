@@ -10,26 +10,22 @@
 - Border spacing: `0`
 - Absolute height: contained in 8pt grid — including borders
 
-### Head
+### Head Row
 
 - Background color: light gray, tintable
 - Minimum text contrast: `4.5:1` minimum, tintable
 - Text transform: `uppercase`
 - Tracking: `.15em`
-- Font size: `.875em`
+- Font size: `.75em`
 - Font weight: `700`
-- Absolute height: `3rem` min.
-- Horizontal cell gap: `1rem` min.
+- Absolute height: `48px` min.
+- Horizontal cell gap: `16px` min.
 - Vertical separators: none
 
 ### Row
 
-- Absolute height: `4rem`, configurable
+- Absolute height: `64px`, configurable
 - Vertical separators: none
-
-#### Head Row
-
-- Absolute height: `3rem`, configurable
 
 ### Data
 
@@ -40,9 +36,14 @@
 | Property                          | Default                      | Notes                                                              |
 | --------------------------------- | ---------------------------- | ------------------------------------------------------------------ |
 | `--Table--border-color`           | `hsl(0, 0%, 90%)`            | Color of both outside border and horizontal row dividers           |
-| `--Table--font-size`              | `1rem`                       | Root font-siz. Controls relative scale of Header and Data elements |
+| `--Table--font-size`              | `0.875rem`                   | Root font-siz. Controls relative scale of Header and Data elements |
+| `--Table--border-radius`          | `0`                          |                                                                    |
+|                                   |                              |                                                                    |
+| `--Table__Row--height`            | `4rem`                       |                                                                    |
+|                                   |                              |                                                                    |
 | `--Table__Head--background-color` | `hsl(0, 0%, 97.5%)`          |                                                                    |
 | `--Table__Head--color`            | `hsla(0, 0%, 40%)`           |                                                                    |
-| `--Table__Row--height`            | `4rem`                       |                                                                    |
+| `--Table__Head--font-size`        | `0.75rem`                    |                                                                    |
+|                                   |                              |                                                                    |
 | `--Table__Data--border-color`     | `var(--Table--border-color)` |                                                                    |
-| `--Table__Data--padding`          | `1rem`                       |                                                                    |
+| `--Table__Data--padding`          | `0 0.5rem`                   |                                                                    |

@@ -11,9 +11,9 @@ export default {
   parameters: { notes: readme },
 };
 
-export const Spec = () => (
-  <div className="sans-serif">
-    <Table>
+function Subject(props) {
+  return (
+    <Table {...props}>
       <Head>
         <Row>
           <Data>One</Data>
@@ -40,5 +40,30 @@ export const Spec = () => (
         </Row>
       </Body>
     </Table>
+  );
+}
+export const Spec = () => (
+  <div className="sans-serif">
+    <Subject />
   </div>
 );
+
+export const TableBorderRadius = () => (
+  <div className="sans-serif">
+    <Subject style={{ "--Table--border-radius": "4px" }} />
+  </div>
+);
+TableBorderRadius.story = {
+  name: "--Table--border-radius",
+};
+
+export const TableFontSize = () => (
+  <div className="sans-serif">
+    <Subject style={{ "--Table--font-size": "1rem" }} />
+    <br />
+    <Subject style={{ "--Table--font-size": "1.5rem" }} />
+  </div>
+);
+TableFontSize.story = {
+  name: "--Table--font-size",
+};
