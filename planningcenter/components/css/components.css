@@ -601,7 +601,17 @@
 
 .Table {
   --Table--border-color: hsl(0, 0%, 90%);
+  --Table--border-radius: 0;
+  --Table--font-size: 0.875rem;
+
   --Table__Row--height: 4rem;
+
+  --Table__Head--background-color: hsl(0, 0%, 97.5%);
+  --Table__Head--color: hsla(0, 0%, 40%);
+  --Table__Head--font-size: 0.75rem;
+
+  --Table__Data--border-color: var(--Table--border-color);
+  --Table__Data--padding: 0 0.5rem;
 }
 
 .Table {
@@ -610,17 +620,19 @@
   border-style: solid;
   border-color: var(--Table--border-color);
   border-spacing: 0;
-  font-size: var(--Table--font-size, 1rem);
+  font-size: var(--Table--font-size);
+  border-radius: var(--Table--border-radius);
+  overflow: hidden;
 }
 
 .Table__Head {
   --Table__Row--height: 3rem;
-  background-color: var(--Table__Head--background-color, hsl(0, 0%, 97.5%));
+  background-color: var(--Table__Head--background-color);
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  font-size: 0.875em;
+  font-size: var(--Table__Head--font-size);
   font-weight: 700;
-  color: var(--Table__Head--color, hsla(0, 0%, 40%));
+  color: var(--Table__Head--color);
 }
 
 .Table__Row {
@@ -640,11 +652,8 @@
   box-sizing: border-box;
   border-top-width: 1px;
   border-top-style: solid;
-  border-top-color: var(
-    --Table__Data--border-color,
-    var(--Table--border-color)
-  );
-  padding: var(--Table__Data--padding, 0 0.5rem);
+  border-top-color: var(--Table--border-color);
+  padding: var(--Table__Data--padding);
 }
 
 .Table__Data:first-child {
