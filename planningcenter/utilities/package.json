@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/utilities",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Support function for components",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/utilities",

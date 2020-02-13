@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/components",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "The entire collection of @planningcenter/components",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design/tree/master/planningcenter/components",
@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@planningcenter/system": "^0.0.9",
-    "@planningcenter/utilities": "^0.0.14"
+    "@planningcenter/utilities": "^0.0.15"
   },
   "gitHead": "b484270fdce42ff85440ed0a63705dadebbc93ef"
 }
