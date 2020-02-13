@@ -1,10 +1,19 @@
+export function delegateDefaultClassName(
+  className = "",
+  defaultClassName = ""
+) {
+  return typeof className === "function"
+    ? className(defaultClassName)
+    : [className, defaultClassName].join(" ").trim();
+}
+
 export function mapPropsToClassNames(block = "") {
   return (options = []) => {
     return (props = {}) => {
       return (options.length
         ? [
-            options.filter(k => props[k]).length ? `${block}` : "", // if there are any hits, add the base class
-            ...options.map(modifierName => {
+            options.filter((k) => props[k]).length ? `${block}` : "", // if there are any hits, add the base class
+            ...options.map((modifierName) => {
               let modifierValue = props[modifierName];
 
               if (modifierValue === null) {
@@ -25,7 +34,7 @@ export function mapPropsToClassNames(block = "") {
                         block: `@${at}`,
                         element: block,
                         modifierName,
-                        modifierValue
+                        modifierValue,
                       })
                     )
                   )
@@ -37,9 +46,9 @@ export function mapPropsToClassNames(block = "") {
               return getSelector({
                 block,
                 modifierName,
-                modifierValue
+                modifierValue,
               });
-            })
+            }),
           ]
         : []
       )
@@ -50,7 +59,7 @@ export function mapPropsToClassNames(block = "") {
 }
 
 function dasherize(str) {
-  return str.replace(/([A-Z])/g, g => `-${g[0].toLowerCase()}`);
+  return str.replace(/([A-Z])/g, (g) => `-${g[0].toLowerCase()}`);
 }
 
 // TODO: test directly now that exposed
@@ -58,7 +67,7 @@ export function getSelector({
   block = "",
   element = "",
   modifierName = "",
-  modifierValue = ""
+  modifierValue = "",
 } = {}) {
   function getModifier(name, value) {
     if (!name || !value) {
@@ -75,6 +84,6 @@ export function getSelector({
   return [
     block && `${block}`,
     element && `__${element}`,
-    getModifier(modifierName, modifierValue)
+    getModifier(modifierName, modifierValue),
   ].join("");
 }
