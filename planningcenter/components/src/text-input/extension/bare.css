@@ -1,0 +1,10 @@
+.BareTextInput {
+  --TextInput--border-color: transparent;
+  --TextInput--border-width: 1px;
+  --TextInput--border-radius: 0;
+}
+
+/* this affordance will need to be provided at a higher level */
+.TextInput:focus {
+  --TextInput--box-shadow: none;
+}

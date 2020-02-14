@@ -16,6 +16,7 @@
 
 .TextInput::placeholder {
   color: var(--TextInput--color, #767676);
+  color: #767676;
 }
 
 .TextInput:focus {

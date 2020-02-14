@@ -2,6 +2,7 @@ import React from "react";
 import { TextInput } from "./text-input";
 import readme from "./README.md";
 import "./text-input.css";
+import "./extension/bare.css";
 
 export default {
   title: "Components|TextInput",
@@ -37,5 +38,28 @@ export const Invalid = () => (
       placeholder="type 'banana'"
       id="validation-example"
     />
+  </>
+);
+
+function getBareClassNames(bare = "") {
+  return bare || "BareTextInput";
+}
+
+function BareTextInput({ bare, className, ...props }) {
+  return (
+    <TextInput
+      className={[className, getBareClassNames(bare)].join(" ")}
+      {...props}
+    />
+  );
+}
+
+export const Bare = () => (
+  <>
+    <div style={{ border: "1px solid red" }}>
+      <BareTextInput placeholder="bare input" />
+    </div>
+    The above input is "bare", the border style is being provided by a
+    surrounding element.
   </>
 );
