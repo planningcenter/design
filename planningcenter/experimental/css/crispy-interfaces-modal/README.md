@@ -1,23 +1,38 @@
 ## Install
 
-```bash
+An alternate, crispyer styling for Interfaces#Modal — by Registrations
+
+```
 yarn add @planningcenter/experimental;
 ```
 
+## Use
+
+#### Rails/Sprockets
+
 ```css
-/* application.css — Rails/Sprockets */
 /*= require "@planningcenter/experimental/css/crispy-interfaces-modal/modal.css" */
 ```
 
-```scss
-/* application.scss */
+#### SCSS, JS/Webpack
+
+```
 import "@planningcenter/experimental/css/crispy-interfaces-modal/modal.css"
 ```
 
-```js
-/* application.js */
-import "@planningcenter/experimental/css/crispy-interfaces-modal/modal.css";
-```
+## CSS Selectors
+
+| Selector               |
+| ---------------------- |
+| `.modal-layer`         |
+| `.modal--open`         |
+| `.modal.sm-modal`      |
+| `.modal.lg-modal`      |
+| `.modal__header`       |
+| `.modal__close-button` |
+| `.modal__body`         |
+| `.modal__footer`       |
+| `.modal__title`        |
 
 ## CSS Custom Properties
 

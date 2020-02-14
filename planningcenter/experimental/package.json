@@ -26,5 +26,6 @@
   },
   "devDependencies": {
     "microbundle": "^0.11.0"
-  }
+  },
+  "gitHead": "a6f5ef43bd6ea0746f56cee67c56c9c7bbea5385"
 }

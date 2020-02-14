@@ -1,8 +1,10 @@
 import React from "react";
+import readme from "./README.md";
 import "./modal.css";
 
 export default {
   title: "Experimental|Crispy Interfaces Modal",
+  parameters: { notes: readme },
 };
 
 export const Modal = () => (
