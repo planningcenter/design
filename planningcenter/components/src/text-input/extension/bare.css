@@ -1,6 +1,6 @@
 .BareTextInput {
   --TextInput--border-color: transparent;
-  --TextInput--border-width: 1px;
+  --TextInput--border-width: 0;
   --TextInput--border-radius: 0;
 }
 
