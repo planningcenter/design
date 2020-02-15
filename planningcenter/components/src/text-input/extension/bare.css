@@ -5,6 +5,6 @@
 }
 
 /* this affordance will need to be provided at a higher level */
-.TextInput:focus {
+.BareTextInput:focus {
   --TextInput--box-shadow: none;
 }
