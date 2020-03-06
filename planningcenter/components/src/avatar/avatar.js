@@ -14,7 +14,7 @@ export function Avatar({
 
   return (
     <As className={[className, "Avatar"].join(" ")} {...props}>
-      {typeof children === "function" ? children(img, imgProps) : img}
+      {typeof children === "function" ? children(imgProps) : img}
     </As>
   );
 }
