@@ -1,0 +1,67 @@
+[data-table] {
+  --table--border-color: hsl(0, 0%, 90%);
+  --table--border-radius: 0;
+  --table--font-size: 0.875rem;
+
+  --table-row--height: 4rem;
+
+  --table-head--background-color: hsl(0, 0%, 97.5%);
+  --table-head--color: hsla(0, 0%, 40%);
+  --table-head--font-size: 0.75rem;
+
+  --table-data--border-color: var(--table--border-color);
+  --table-data--padding: 0 0.5rem;
+}
+
+[data-table] {
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--table--border-color);
+  border-spacing: 0;
+  font-size: var(--table--font-size);
+  border-radius: var(--table--border-radius);
+  overflow: hidden;
+}
+
+[data-table-head] {
+  --table-row--height: 3rem;
+  background-color: var(--table-head--background-color);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: var(--table-head--font-size);
+  font-weight: 700;
+  color: var(--table-head--color);
+}
+
+[data-table-row] {
+  box-sizing: border-box;
+  height: var(--table-row--height);
+}
+
+/* yes, there's a more clever way to right this with :last-child *if* there is only ever one header row but that isn't guaranteed */
+[data-table-head] [data-table-row]:first-child,
+[data-table-body] [data-table-row]:last-child {
+  box-sizing: border-box;
+  height: calc(var(--table-row--height) - 1px);
+}
+
+[data-table-data] {
+  box-sizing: border-box;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--table--border-color);
+  padding: var(--table-data--padding);
+}
+
+[data-table-data]:first-child {
+  padding-left: 1rem;
+}
+
+[data-table--data]:last-child {
+  padding-right: 1rem;
+}
+
+[data-table-head] [data-table-data] {
+  border-top-width: 0;
+}

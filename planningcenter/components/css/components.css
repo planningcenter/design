@@ -3,8 +3,10 @@
   display: inline-block;
   overflow: hidden;
   border-radius: 50%;
-  width: var(--Avatar--size, 1.5em);
-  height: var(--Avatar--size, 1.5em);
+  padding: var(--Avatar--padding, 0);
+  padding: var(--Avatar--background-color, white);
+  width: var(--Avatar--size, 2rem);
+  height: var(--Avatar--size, 2rem);
 }
 
 .Avatar > img {
@@ -704,6 +706,7 @@
 
 .TextInput::placeholder {
   color: var(--TextInput--color, #767676);
+  color: #767676;
 }
 
 .TextInput:focus {
@@ -725,6 +728,29 @@
 .InvalidTextInput:focus {
   --TextInput--box-shadow: 0 0 1.5px 3px hsla(0, 79%, 63%, 0.5);
 }
+
+/* start grid rewrite */
+
+.ResourceHeader {
+  display: grid;
+  background-color: red;
+  grid-template-areas: "avatar";
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
+
+  grid-template-rows: auto;
+  grid-template-columns: 7rem auto;
+
+  --Avatar--size: 7rem;
+  --Avatar--padding: 5px;
+  /* TODO: implement this on Avatar */
+}
+
+/* end grid rewrite */
 
 .ResourceHeader__TabContainer {
   display: flex;

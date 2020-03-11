@@ -1,6 +1,0 @@
-/* StyledAvatar */
-
-.StyledAvatar--inset {
-  padding: var(--styled-avatar--inset_padding);
-  background-color: var(--Avatar--background-color, white);
-}

@@ -1,0 +1,4 @@
+[data-heading] {
+  margin: var(--heading--margin, 0);
+  font-size: var(--heading--font-size, inherit);
+}

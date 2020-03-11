@@ -1,0 +1,116 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import readme from "./README.md";
+import { Text } from "./text";
+import "./text.css";
+import image from "../../../static/200x300_kitten.jpeg";
+
+<Meta title="Elements|text" component={Text} parameters={{ notes: readme }} />
+
+# Text
+
+> An inline text element
+
+## Basic
+
+<Preview>
+  <span data-text>
+    The quick brown fox...
+  </span>
+</Preview>
+
+## color
+
+Text's color can be changed using the CSS Custom Property `--text--color`.  
+
+<Preview>
+  <Story name="color">
+    <div style={{ display: "grid" }}>
+      <span data-text style={{ "--text--color": "fuchsia" }}>
+        This is <code>fuchsia</code>
+      </span>
+      <span data-text style={{ "--text--color": "tomato" }}>
+        This is <code>tomato</code>
+      </span>
+    </div>
+  </Story>
+</Preview>
+
+## font-size
+
+Text's font-size can be changed using the CSS Custom Property `--text--font-size`.  
+Here is an example of the available scale using that property:
+
+<Preview>
+  <Story name="font-size">
+    <div style={{ display: "grid" }}>
+      <span data-text style={{ "--text--font-size": ".625rem" }}>
+        This is .625rem/10px
+      </span>
+      <span data-text style={{ "--text--font-size": ".75rem" }}>
+        This is .75rem/12px
+      </span>
+      <span data-text style={{ "--text--font-size": ".875rem" }}>
+        This is .875rem/14px
+      </span>
+      <span data-text style={{ "--text--font-size": "1rem" }}>
+        This is 1rem/16px
+      </span>
+      <span data-text style={{ "--text--font-size": "1.125rem" }}>
+        This is 1.125rem/18px
+      </span>
+    </div>
+  </Story>
+</Preview>
+
+## font-style
+
+Text's font-style can be changed using the CSS Custom Property `--text--font-style`.  
+
+<Preview>
+  <Story name="font-style">
+    <div style={{ display: "grid" }}>
+      <span data-text style={{ "--text--font-style": "italic" }}>
+        This is <code>italic</code>
+      </span>
+    </div>
+  </Story>
+</Preview>
+
+## font-weight
+
+Text's font-weifth can be changed using the CSS Custom Property `--text--font-weight`.  
+
+<Preview>
+  <Story name="font-weight">
+    <div style={{ display: "grid" }}>
+      <span data-text style={{ "--text--font-weight": "100" }}>
+        This is <code>100</code>
+      </span>
+      <span data-text style={{ "--text--font-weight": "200" }}>
+        This is <code>200</code>
+      </span>
+      <span data-text style={{ "--text--font-weight": "300" }}>
+        This is <code>300</code>
+      </span>
+      <span data-text style={{ "--text--font-weight": "400" }}>
+        This is <code>400</code>
+      </span>
+      <span data-text style={{ "--text--font-weight": "500" }}>
+        This is <code>500</code>
+      </span>
+      <span data-text style={{ "--text--font-weight": "600" }}>
+        This is <code>600</code>
+      </span>
+      <span data-text style={{ "--text--font-weight": "700" }}>
+        This is <code>700</code>
+      </span>
+      <span data-text style={{ "--text--font-weight": "800" }}>
+        This is <code>800</code>
+      </span>
+      <span data-text style={{ "--text--font-weight": "900" }}>
+        This is <code>900</code>
+      </span>
+    </div>
+  </Story>
+</Preview>

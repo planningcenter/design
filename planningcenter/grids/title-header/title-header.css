@@ -1,0 +1,11 @@
+[data-title-header--container] {
+  display: flex;
+
+  padding: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+[data-title-header--heading] {
+  --heading--font-size: 1.875rem;
+}

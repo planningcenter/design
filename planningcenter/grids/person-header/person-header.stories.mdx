@@ -1,0 +1,91 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import readme from "./README.md";
+import * as PersonHeader from "./person-header";
+import "../../elements/text/text.css";
+import "./person-header.css";
+import image from "../../../static/200x300_kitten.jpeg";
+import envelope from "@planningcenter/icons/svg/general/envelope.svg"
+
+
+<Meta
+  title="Grids|person-header"
+  component={PersonHeader}
+  parameters={{ notes: readme }}
+/>
+
+# Person Header
+
+> A header element for detailing, and acting on a person
+
+## Basics
+
+`person-header` is a CSS Grid with two grid areas: `avatar` and `detail`.
+
+<Preview>
+  <Story name="Basic">
+    <div style={{ backgroundColor: "tomato" }}>
+      <div data-person-header--container>
+        <span data-person-header--avatar data-avatar>
+          <img src={image} alt="kitten" />
+        </span>
+        <div data-person-header--detail>
+          <div data-person-header--name data-text>Kitty das Robot</div>
+          <div><span data-text>kittydasrobot@email.com</span></div>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+| data-attribute                   | usage |
+|----------------------------------|---------------|
+| `data-person-header--container` | grid template |
+| `data-person-header--avatar`    | treatment for `avatar` area and `data-avatar` element |
+| `data-person-header--detail`    | treatement for `details` area |
+| `data-person-header--name`      | treatment for `name` and `text` element |
+
+
+## Inactive
+
+When a person is inactive, the `avatar` is reduced to half opacity.
+
+| data-attribute  | usage |
+|-----------------|---------------|
+| `data-person-header="inactive"` | treatment for `avatar` element for `inactive` people |
+
+<Preview>
+  <Story name="Inactive">
+    <div style={{ backgroundColor: "tomato" }}>
+      <div data-person-header--container data-person-header="inactive">
+        <span data-person-header--avatar data-avatar>
+          <img src={image} alt="kitten" />
+        </span>
+        <div data-person-header--detail>
+          <div data-person-header--name data-text>Kitty das Robot</div>
+          <div><span data-text>kittydasrobot@email.com</span></div>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+
+# Components
+
+React components are supplied for reference and demonstration.  
+[View source](https://github.com/planningcenter/design/tree/master/planningcenter/elements/person-header/person-header.js)
+
+<Preview>
+  <Story name="Components">
+    <div style={{ backgroundColor: "tomato" }}>
+      <PersonHeader.Container>
+        <PersonHeader.Avatar src={image} alt="kitten" />
+        <PersonHeader.Detail>
+          <PersonHeader.Name>Kitty das Robot</PersonHeader.Name>
+          <Text>kittydasrobot@email.com</Text>
+        </PersonHeader.Detail>
+      </PersonHeader.Container>
+    </div>
+  </Story>
+</Preview>

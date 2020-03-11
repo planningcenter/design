@@ -1,0 +1,102 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import readme from "./README.md";
+import { Avatar } from "./avatar";
+import "./avatar.css";
+import image from "../../../static/200x300_kitten.jpeg";
+
+<Meta
+  title="Elements|avatar"
+  component={Avatar}
+  parameters={{ notes: readme }}
+/>
+
+# Avatar
+
+> A circular image representing one person
+
+## Basic
+
+<Preview>
+  <span data-avatar>
+    <img src={image} alt="kitten" />
+  </span>
+</Preview>
+
+## Size
+
+Avatar's size can be changed using the CSS Custom Property `--avatar--size`.  
+Here is an example scale using that property:
+
+<Preview>
+  <Story name="Size">
+    <React.Fragment>
+      <span data-avatar style={{ "--avatar--size": "1.25rem" }}>
+        <img src={image} alt="kitten" />
+      </span>
+      <span data-avatar style={{ "--avatar--size": "1.5rem" }}>
+        <img src={image} alt="kitten" />
+      </span>
+      <span data-avatar style={{ "--avatar--size": "2.5rem" }}>
+        <img src={image} alt="kitten" />
+      </span>
+      <span data-avatar style={{ "--avatar--size": "4rem" }}>
+        <img src={image} alt="kitten" />
+      </span>
+    </React.Fragment>
+  </Story>
+</Preview>
+
+## Border
+
+Avatar doesn't have a border or padding by default but it knows how to handle them.  
+Here is an example of avatar being extended with a `status` indicating border, like Services:
+
+<Preview>
+  <Story name="Border">
+    <span data-avatar style={{ border: "2px solid hsl(7, 80%, 52%)", padding: "1px" }}>
+      <img src={image} alt="kitten" />
+    </span>
+  </Story>
+</Preview>
+
+_Note that absolute height is retained, using `box-sizing: border-box`_
+
+# Component
+
+A React component is supplied for reference and demonstration.  
+[View source](https://github.com/planningcenter/design/tree/master/planningcenter/elements/avatar/avatar.js)
+
+## As
+
+An Avatar component should be extensible via an `as` component prop.  
+This can be used to extend Avatar with functionality that might exist in a host application's `Box` component.
+
+<Preview>
+  <Story name="Component">
+    <Avatar
+      as={({ gc, p, ...props }) => <div {...props} style={{ backgroundColor: gc, padding: p }} />}
+      gc="fuchsia"
+      p="2px"
+      src={image}
+      alt="kitten"
+    />
+  </Story>
+</Preview>
+
+## Children
+
+Avatar is a multi-element element.  
+It includes a wrapper around an `img`.
+
+To tailor the `img` element, components should provide function as children that returns internal attributes:
+
+<Preview>
+  <Story name="Children">
+    <Avatar src={image} alt="kitten">
+      {(defaultProps) => (
+        <img data-spice="some-extra-flavor" {...defaultProps} />
+      )}
+    </Avatar>
+  </Story>
+</Preview>

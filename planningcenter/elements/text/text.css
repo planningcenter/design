@@ -1,0 +1,6 @@
+[data-text] {
+  color: var(--text--color, inherit);
+  font-size: var(--text--font-size, inherit);
+  font-weight: var(--text--font-weight, inherit);
+  font-style: var(--text--font-style, inherit);
+}

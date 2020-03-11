@@ -1,0 +1,77 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import readme from "./README.md";
+import { Select } from "./select";
+import "./select.css";
+
+<Meta
+  title="Elements|select"
+  component={Select}
+  parameters={{ notes: readme }}
+/>
+
+# Select
+
+> A OS-native form control, providing a menu of options
+
+## Basic
+
+<Preview className="sans-serif">
+  <select data-select>
+    <option>Taylor Swift</option>
+    <option>Fearless</option>
+    <option>Speak Now</option>
+    <option>Red</option>
+    <option>1989</option>
+    <option>Reputation</option>
+    <option>Lover</option>
+  </select>
+</Preview>
+
+## disabled
+
+<Preview>
+  <Story name="disabled">
+    <select data-select disabled>
+      <option>Taylor Swift</option>
+      <option>Fearless</option>
+      <option>Speak Now</option>
+      <option>Red</option>
+      <option>1989</option>
+      <option>Reputation</option>
+      <option>Lover</option>
+    </select>
+  </Story>
+</Preview>
+
+## font-size (smaller)
+
+<Preview>
+  <Story name="font-size (smaller)">
+    <select data-select style={{ "--select--font-size": ".875rem", "--select--height": "2rem" }}>
+      <option>Taylor Swift</option>
+      <option>Fearless</option>
+      <option>Speak Now</option>
+      <option>Red</option>
+      <option>1989</option>
+      <option>Reputation</option>
+      <option>Lover</option>
+    </select>
+  </Story>
+</Preview>
+
+## font-size (larger)
+
+<Preview>
+  <Story name="font-size">
+    <select data-select style={{ "--select--font-size": "1.125rem", "--select--height": "2.5rem" }}>
+      <option>Taylor Swift</option>
+      <option>Fearless</option>
+      <option>Speak Now</option>
+      <option>Red</option>
+      <option>1989</option>
+      <option>Reputation</option>
+      <option>Lover</option>
+    </select>
+  </Story>
+</Preview>

@@ -1,0 +1,52 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import readme from "./README.md";
+import {
+  Menu,
+  MenuList,
+  MenuButton,
+  MenuItem,
+  MenuLink,
+} from "@reach/menu-button";
+import "@reach/menu-button/styles.css";
+import "./menu-button.css";
+import "../elements/select/select.css";
+
+<Meta title="Reach|Menu Button" parameters={{ notes: readme }} />
+
+# MenuButton
+
+<Preview>
+  <Story name="Basic">
+    <Menu>
+      <MenuButton data-select>Basic, non-ruled</MenuButton>
+      <MenuList>
+        <MenuItem onSelect={() => alert("called function")}>
+          Calls function
+        </MenuItem>
+        <MenuLink to="#one">Navigates to URL</MenuLink>
+        <MenuLink to="#two">Navigates to URL</MenuLink>
+      </MenuList>
+    </Menu>
+  </Story>
+</Preview>
+
+# Basic with Group Rules
+
+<Preview>
+  <Story name="Group Rules">
+    <Menu>
+      <MenuButton data-select>Basic, group ruled</MenuButton>
+      <MenuList>
+        <MenuItem onSelect={() => alert("called function")}>
+          Calls function
+        </MenuItem>
+        <hr data-reach-menu-rule />
+        <MenuLink to="#one">Navigates to URL</MenuLink>
+        <MenuLink to="#two">Navigates to URL</MenuLink>
+        <div data-reach-menu-rule />
+        <MenuLink to="#two">Navigates to URL</MenuLink>
+      </MenuList>
+    </Menu>
+  </Story>
+</Preview>

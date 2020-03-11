@@ -1,0 +1,50 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import readme from "./README.md";
+import { TabHeader } from "./tab-header";
+import "./tab-header.css";
+import image from "../../../static/200x300_kitten.jpeg";
+
+<Meta
+  title="Grids|tab-header"
+  component={TabHeader}
+  parameters={{ notes: readme }}
+/>
+
+# Tab Header
+
+> Header grid navigating a resource and its relationships
+
+
+## Basics
+
+`tab-header` is a CSS Grid with two grid areas: `avatar` and `detail`.
+
+There are
+
+| data-attribute               | usage |
+|------------------------------|---------------|
+| `data-tab-header--container` | flex template |
+| `data-tab-header--tab` |  |
+| `data-tab-header--tab="target"` |  |
+| `data-tab-header--tab-group` |  |
+| `data-tab-header--action` |  |
+| `data-tab-header--action-group` |  |
+
+<Preview>
+  <Story name="Basic">
+    <div style={{ backgroundColor: "tomato" }}>
+      <div data-tab-header--container>
+        <div data-tab-header--tab-group>
+          <a data-tab-header--tab="target" href="#">One</a>
+          <a data-tab-header--tab href="#">Two</a>
+          <a data-tab-header--tab href="#">Three</a>
+        </div>
+        <div data-tab-header--action-group>
+          <button data-tab-header--action type="button">Action</button>
+          <button data-tab-header--action type="button">Action</button>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Preview>

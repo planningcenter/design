@@ -1,0 +1,32 @@
+[data-person-header--container] {
+  display: grid;
+  gap: 1rem;
+  grid:
+    "avatar detail" auto
+    / 7rem auto;
+  padding: 1.5rem;
+}
+
+[data-person-header--detail] {
+  grid-area: detail;
+
+  display: grid;
+  color: white;
+  align-self: center;
+}
+
+[data-person-header--avatar] {
+  grid-area: avatar;
+
+  --avatar--size: 7rem;
+  --avatar--padding: 5px;
+}
+
+[data-person-header="inactive"] [data-person-header--avatar] {
+  --avatar--opacity: 0.5;
+}
+
+[data-person-header--heading] {
+  --heading--font-size: 1.5625rem;
+  --heading--font-weight: 700;
+}

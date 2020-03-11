@@ -1,0 +1,112 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import readme from "./README.md";
+import { Table, Head, Body, Row, Data } from "./table";
+import "./table.css";
+import image from "../../../static/200x300_kitten.jpeg";
+
+<Meta title="Elements|table" component={Table} parameters={{ notes: readme }} />
+
+# Text
+
+> An inline text element
+
+## Basic
+
+<Preview>
+  <Story name="Basic">
+    <table data-table>
+      <thead data-table-head>
+        <tr data-table-row>
+          <td data-table-data>One</td>
+          <td data-table-data>Two</td>
+          <td data-table-data>Third</td>
+        </tr>
+      </thead>
+      <tbody data-table-body>
+        <tr data-table-row>
+          <td data-table-data>First</td>
+          <td data-table-data>Second</td>
+          <td data-table-data>Third</td>
+        </tr>
+        <tr data-table-row>
+          <td data-table-data>First</td>
+          <td data-table-data>Second</td>
+          <td data-table-data>Third</td>
+        </tr>
+      </tbody>
+    </table>
+  </Story>
+</Preview>
+
+## border-radius
+
+<Preview>
+  <Story name="border-radius">
+    <table data-table style={{"--table--border-radius":"4px"}}>
+      <thead data-table-head>
+        <tr data-table-row>
+          <td data-table-data>One</td>
+          <td data-table-data>Two</td>
+          <td data-table-data>Third</td>
+        </tr>
+      </thead>
+      <tbody data-table-body>
+        <tr data-table-row>
+          <td data-table-data>First</td>
+          <td data-table-data>Second</td>
+          <td data-table-data>Third</td>
+        </tr>
+      </tbody>
+    </table>
+  </Story>
+</Preview>
+
+## font-size
+
+<Preview>
+  <Story name="font-size (larger)">
+    <table data-table style={{"--table--font-size":"1rem", "--table-head--font-size": ".875rem"}}>
+      <thead data-table-head>
+        <tr data-table-row>
+          <td data-table-data>One</td>
+          <td data-table-data>Two</td>
+          <td data-table-data>Third</td>
+        </tr>
+      </thead>
+      <tbody data-table-body>
+        <tr data-table-row>
+          <td data-table-data>First</td>
+          <td data-table-data>Second</td>
+          <td data-table-data>Third</td>
+        </tr>
+      </tbody>
+    </table>
+  </Story>
+</Preview>
+
+# Components
+
+<Preview>
+  <Table>
+    <Head>
+      <Row>
+        <Data>One</Data>
+        <Data>Two</Data>
+        <Data>Three</Data>
+      </Row>
+    </Head>
+    <Body>
+      <Row>
+        <Data>First</Data>
+        <Data>Second</Data>
+        <Data>Third</Data>
+      </Row>
+      <Row>
+        <Data>First</Data>
+        <Data>Second</Data>
+        <Data>Third</Data>
+      </Row>
+    </Body>
+  </Table>
+</Preview>
