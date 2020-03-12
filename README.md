@@ -10,8 +10,11 @@ Global Design supported packages
 
 - [@planningcenter/browserslist-config](planningcenter/browserslist-config)
 - [@planningcenter/components](planningcenter/components)
+- [@planningcenter/elements](planningcenter/elements)
 - [@planningcenter/experimetal](planningcenter/experimental)
 - [@planningcenter/finder](planningcenter/finder)
+- [@planningcenter/grids](planningcenter/grids)
+- [@planningcenter/reach](planningcenter/reach)
 - [@planningcenter/sweetalert2](planningcenter/sweetalert2)
 - [@planningcenter/system](planningcenter/system)
 - [@planningcenter/topbar](planningcenter/topbar)
@@ -37,40 +40,17 @@ Common scripts:
 
 ## Configuration
 
-| File/Dir                                     | Why it's there                                                                          |
-| :------------------------------------------- | :-------------------------------------------------------------------------------------- |
-| [.circleci/config.yml](.circleci/config.yml) | [circleci](https://circleci.com)                                                        |
-| [.storybook/](.storybook/)                   | [Storybook](https://storybook.js.org)                                                   |
-| [lerna.json/](lerna.json)                    | [Storybook](https://lerna.js.org)                                                       |
-| [.nvmrc](.nvmrc)                             | [nvm](github.com/nvm-sh/nvm). Support for those that work in multiple node environments |
-
-## Deprecated directories
-
-| File/Dir                         | Why it's there                                                   |
-| :------------------------------- | :--------------------------------------------------------------- |
-| [cypress/](cypress/)             | Old tests. Some need to be migrated to the new platform          |
-| [pages/](pages/)                 | Old Next.js documentation. Some need to be migrated to Storybook |
-| [pages_support/](pages_support/) | Old Next.js documentation. Some need to be migrated to Storybook |
-
-## Component navigation
-
-There are several types of projects included here.  
-This legend applies primarily to component packages like `Avatar`, `Text`, `ResourceHeader` etc.  
-Projects like `system`, `typography`, and `url` (that only export one type of resource) may follow different practices.
-
-| File/Dir       | Why it's there                                                              |
-| :------------- | :-------------------------------------------------------------------------- |
-| `css/`         | Built CSS files. **Published to NPM**                                       |
-| `dist/`        | Built JS modules **Published to NPM** (not committed)                       |
-| `src/`         | Source JS modules                                                           |
-| `package.json` | npm publishing details and the source of truth for generative documentation |
-| `README.md`    | Resources for commiting to the package. Documentation lives in `pages/`     |
+| File/Dir                                     | Why it's there                                                                                     |
+| :------------------------------------------- | :------------------------------------------------------------------------------------------------- |
+| [.circleci/config.yml](.circleci/config.yml) | [circleci](https://circleci.com)                                                                   |
+| [.storybook/](.storybook/)                   | [Storybook](https://storybook.js.org)                                                              |
+| [lerna.json/](lerna.json)                    | [Storybook](https://lerna.js.org)                                                                  |
+| [.nvmrc](.nvmrc)                             | [nvm](github.com/nvm-sh/nvm). Support for those that work in multiple node environments            |
+| [notes](./notes)                             | Transitional documentation and notes. Retairned as a part of — yet unformalized — decision matrix. |
 
 ## Setup
 
 Requirement: Node 10+
-
-## Setup
 
 ```bash
 npm i -g lerna

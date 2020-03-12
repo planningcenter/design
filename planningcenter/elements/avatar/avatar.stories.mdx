@@ -1,13 +1,11 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
 import readme from "./README.md";
-import { Avatar } from "./avatar";
 import "./avatar.css";
 import image from "../../../static/200x300_kitten.jpeg";
 
 <Meta
   title="Elements|avatar"
-  component={Avatar}
   parameters={{ notes: readme }}
 />
 
@@ -61,42 +59,3 @@ Here is an example of avatar being extended with a `status` indicating border, l
 </Preview>
 
 _Note that absolute height is retained, using `box-sizing: border-box`_
-
-# Component
-
-A React component is supplied for reference and demonstration.  
-[View source](https://github.com/planningcenter/design/tree/master/planningcenter/elements/avatar/avatar.js)
-
-## As
-
-An Avatar component should be extensible via an `as` component prop.  
-This can be used to extend Avatar with functionality that might exist in a host application's `Box` component.
-
-<Preview>
-  <Story name="Component">
-    <Avatar
-      as={({ gc, p, ...props }) => <div {...props} style={{ backgroundColor: gc, padding: p }} />}
-      gc="fuchsia"
-      p="2px"
-      src={image}
-      alt="kitten"
-    />
-  </Story>
-</Preview>
-
-## Children
-
-Avatar is a multi-element element.  
-It includes a wrapper around an `img`.
-
-To tailor the `img` element, components should provide function as children that returns internal attributes:
-
-<Preview>
-  <Story name="Children">
-    <Avatar src={image} alt="kitten">
-      {(defaultProps) => (
-        <img data-spice="some-extra-flavor" {...defaultProps} />
-      )}
-    </Avatar>
-  </Story>
-</Preview>

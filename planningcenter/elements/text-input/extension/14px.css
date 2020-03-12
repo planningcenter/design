@@ -1,4 +1,4 @@
-.TextInput {
+[data-text-input] {
   --TextInput--font-size: 0.875rem;
   --TextInput--max-height: 1rem;
 }

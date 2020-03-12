@@ -1,7 +1,6 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
 import readme from "./README.md";
-import * as PersonHeader from "./person-header";
 import "../../elements/text/text.css";
 import "./person-header.css";
 import image from "../../../static/200x300_kitten.jpeg";
@@ -10,7 +9,6 @@ import envelope from "@planningcenter/icons/svg/general/envelope.svg"
 
 <Meta
   title="Grids|person-header"
-  component={PersonHeader}
   parameters={{ notes: readme }}
 />
 
@@ -66,26 +64,6 @@ When a person is inactive, the `avatar` is reduced to half opacity.
           <div><span data-text>kittydasrobot@email.com</span></div>
         </div>
       </div>
-    </div>
-  </Story>
-</Preview>
-
-
-# Components
-
-React components are supplied for reference and demonstration.  
-[View source](https://github.com/planningcenter/design/tree/master/planningcenter/elements/person-header/person-header.js)
-
-<Preview>
-  <Story name="Components">
-    <div style={{ backgroundColor: "tomato" }}>
-      <PersonHeader.Container>
-        <PersonHeader.Avatar src={image} alt="kitten" />
-        <PersonHeader.Detail>
-          <PersonHeader.Name>Kitty das Robot</PersonHeader.Name>
-          <Text>kittydasrobot@email.com</Text>
-        </PersonHeader.Detail>
-      </PersonHeader.Container>
     </div>
   </Story>
 </Preview>

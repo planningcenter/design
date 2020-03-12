@@ -1,10 +1,10 @@
-.BareTextInput {
+[data-text-input="bare"] {
   --TextInput--border-color: transparent;
   --TextInput--border-width: 0;
   --TextInput--border-radius: 0;
 }
 
 /* this affordance will need to be provided at a higher level */
-.BareTextInput:focus {
+[data-text-input="bare"]:focus {
   --TextInput--box-shadow: none;
 }

@@ -2,8 +2,3 @@
 @import "./checkbox/extension/point-grid.css";
 
 @import "./surface/surface.css";
-
-@import "./table/table.css";
-
-@import "./text-input/text-input.css";
-@import "./text-input/extension/invalid.css";

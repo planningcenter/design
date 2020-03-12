@@ -1,11 +1,10 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
 import readme from "./README.md";
-import { Table, Head, Body, Row, Data } from "./table";
 import "./table.css";
 import image from "../../../static/200x300_kitten.jpeg";
 
-<Meta title="Elements|table" component={Table} parameters={{ notes: readme }} />
+<Meta title="Elements|table"  parameters={{ notes: readme }} />
 
 # Text
 
@@ -83,30 +82,4 @@ import image from "../../../static/200x300_kitten.jpeg";
       </tbody>
     </table>
   </Story>
-</Preview>
-
-# Components
-
-<Preview>
-  <Table>
-    <Head>
-      <Row>
-        <Data>One</Data>
-        <Data>Two</Data>
-        <Data>Three</Data>
-      </Row>
-    </Head>
-    <Body>
-      <Row>
-        <Data>First</Data>
-        <Data>Second</Data>
-        <Data>Third</Data>
-      </Row>
-      <Row>
-        <Data>First</Data>
-        <Data>Second</Data>
-        <Data>Third</Data>
-      </Row>
-    </Body>
-  </Table>
 </Preview>

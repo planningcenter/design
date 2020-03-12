@@ -1,4 +1,4 @@
-.TextInput {
+[data-text-input] {
   box-sizing: var(--TextInput--box-sizing, border-box);
   font-size: var(--TextInput--font-size, 1rem);
   border-color: var(--TextInput--border-color, #767676);
@@ -14,17 +14,17 @@
   line-height: var(--TextInput--line-height, 1.125rem);
 }
 
-.TextInput::placeholder {
+[data-text-input]::placeholder {
   color: var(--TextInput--color, #767676);
   color: #767676;
 }
 
-.TextInput:focus {
+[data-text-input]:focus {
   outline: var(--TextInput--outline, none);
   --TextInput--box-shadow: 0 0 1.5px 3px hsla(0, 0%, 50%, 0.5);
 }
 
-.TextInput:invalid {
+[data-text-input]:invalid {
   --TextInput--border-color: hsl(0, 79%, 63%);
   --TextInput--color: hsl(0, 79%, 63%);
   --TextInput--box-shadow: 0 0 1.5px 3px hsla(0, 79%, 63%, 0.5);

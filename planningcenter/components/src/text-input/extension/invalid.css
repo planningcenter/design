@@ -1,7 +1,0 @@
-.InvalidTextInput {
-  --TextInput--border-color: hsl(0, 79%, 63%);
-  --TextInput--color: hsl(0, 79%, 63%);
-}
-.InvalidTextInput:focus {
-  --TextInput--box-shadow: 0 0 1.5px 3px hsla(0, 79%, 63%, 0.5);
-}

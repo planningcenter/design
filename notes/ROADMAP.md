@@ -62,15 +62,15 @@ TODO
 
 ## Post 2019 360 Review Goals
 
-* Clearly close Basecamp discussions
-  * Put formalized specifications — in text form — on planningcenter.design
-  * Detail anything we know we don't know... yet
-* Push DM conversation to #components to surface requests
-* Publish tribal knowledge to planningcenter.design
-* How/where am I surfacing trends?
-* How/where am I surfacig completed work? Timeline? GD changelog?
-* How/where am surfacig my successes and the successes of others?
-* Communicate to Shane what my discussion goals are and point out areas I'm looking for defense.
-* Push more on "facts and opinions" language
-  * Fact: Spec
-  * Opinions: @planningcenter/components, ui-kit, application frameworks
+- Clearly close Basecamp discussions
+  - Put formalized specifications — in text form — on planningcenter.design
+  - Detail anything we know we don't know... yet
+- Push DM conversation to #components to surface requests
+- Publish tribal knowledge to planningcenter.design
+- How/where am I surfacing trends?
+- How/where am I surfacig completed work? Timeline? GD changelog?
+- How/where am surfacig my successes and the successes of others?
+- Communicate to Shane what my discussion goals are and point out areas I'm looking for defense.
+- Push more on "facts and opinions" language
+  - Fact: Spec
+  - Opinions: @planningcenter/components, ui-kit, application frameworks

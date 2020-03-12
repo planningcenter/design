@@ -1,0 +1,107 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import readme from "./README.md";
+import "./text-input.css";
+import "./extension/bare-text-input.css";
+
+<Meta title="Elements|text-input" parameters={{ notes: readme }} />
+
+# text-input
+
+> A Text Input
+
+## Basic
+
+<Preview>
+  <Story name="basic">
+    <input type="text" data-text-input autoFocus />
+  </Story>
+</Preview>
+
+# height
+
+<Preview>
+  <Story name="height">
+    <div style={{ display: "grid", gap: "1rem" }}>
+      <input type="text" data-text-input autoFocus style={{ "--TextInput--font-size": "0.875rem", "--TextInput--max-height": "1rem" }} />
+      <input type="text" data-text-input autoFocus style={{ "--TextInput--font-size": "1.125rem", "--TextInput--max-height": "1.125rem" }} />
+    </div>
+  </Story>
+</Preview>
+
+## :focus
+
+<Preview>
+  <Story name="focus">
+    <input type="text" data-text-input autoFocus />
+  </Story>
+</Preview>
+
+## :placeholder
+
+<Preview>
+  <Story name="placeholder">
+    <input type="text" data-text-input placeholder="Big Bird" />
+  </Story>
+</Preview>
+
+## :invalid
+
+<Preview>
+  <Story name="invalid">
+    <input
+      type="text"
+      data-text-input
+      required
+      pattern="banana"
+      placeholder="type 'banana'"
+      id="validation-example"
+    />
+  </Story>
+</Preview>
+
+## with sibling label
+
+<Preview>
+  <Story name="sibling-label">
+    <React.Fragment>
+      <label htmlFor="sibling-label">Invalid input: </label>
+      <br />
+      <input type="text" data-text-input id="label-example" />
+    </React.Fragment>
+  </Story>
+</Preview>
+
+## with parent label
+
+<Preview>
+  <Story name="parent-label">
+    <React.Fragment>
+      <label htmlFor="parent-label">
+        <span data-text>Invalid input:</span>
+        <br />
+        <input type="text" data-text-input id="label-example" />
+      </label>
+    </React.Fragment>
+  </Story>
+</Preview>
+
+# Extension
+
+## bare
+
+<Preview>
+  <Story name="bare">
+    <React.Fragment>
+      <div style={{ border: "1px solid fuchsia", backgroundColor: "lightgray" }}>
+        <input type="text" data-text-input="bare" placeholder="bare input" />
+      </div>
+      <p data-text>
+        The input above has no border styles.<br />
+        It's boarder is being supplied by its parent.<br />
+        This necessary for elements the preceeding and trailing icons.
+      </p>
+    </React.Fragment>
+  </Story>
+</Preview>
+
