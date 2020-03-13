@@ -1,18 +1,11 @@
 [data-avatar] {
   box-sizing: border-box;
   display: inline-block;
-  overflow: hidden;
   border-radius: 50%;
   padding: var(--avatar--padding, 0);
   opacity: var(--avatar--opacity, auto);
   background-color: var(--avatar--background-color, white);
   width: var(--avatar--size, 2rem);
   height: var(--avatar--size, 2rem);
-}
-
-[data-avatar] > img {
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
 }

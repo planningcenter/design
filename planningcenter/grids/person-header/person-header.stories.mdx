@@ -24,9 +24,7 @@ import envelope from "@planningcenter/icons/svg/general/envelope.svg"
   <Story name="Basic">
     <div style={{ backgroundColor: "tomato" }}>
       <div data-person-header--container>
-        <span data-person-header--avatar data-avatar>
-          <img src={image} alt="kitten" />
-        </span>
+        <img src={image} alt="kitten" data-person-header--avatar data-avatar />
         <div data-person-header--detail>
           <div data-person-header--name data-text>Kitty das Robot</div>
           <div><span data-text>kittydasrobot@email.com</span></div>
@@ -56,9 +54,7 @@ When a person is inactive, the `avatar` is reduced to half opacity.
   <Story name="Inactive">
     <div style={{ backgroundColor: "tomato" }}>
       <div data-person-header--container data-person-header="inactive">
-        <span data-person-header--avatar data-avatar>
-          <img src={image} alt="kitten" />
-        </span>
+        <img src={image} alt="kitten" data-person-header--avatar data-avatar />
         <div data-person-header--detail>
           <div data-person-header--name data-text>Kitty das Robot</div>
           <div><span data-text>kittydasrobot@email.com</span></div>

@@ -4,10 +4,7 @@ import readme from "./README.md";
 import "./avatar.css";
 import image from "../../../static/200x300_kitten.jpeg";
 
-<Meta
-  title="Elements|avatar"
-  parameters={{ notes: readme }}
-/>
+<Meta title="Elements|avatar" parameters={{ notes: readme }} />
 
 # Avatar
 
@@ -16,9 +13,7 @@ import image from "../../../static/200x300_kitten.jpeg";
 ## Basic
 
 <Preview>
-  <span data-avatar>
-    <img src={image} alt="kitten" />
-  </span>
+  <img data-avatar src={image} alt="kitten" />
 </Preview>
 
 ## Size
@@ -29,18 +24,31 @@ Here is an example scale using that property:
 <Preview>
   <Story name="Size">
     <React.Fragment>
-      <span data-avatar style={{ "--avatar--size": "1.25rem" }}>
-        <img src={image} alt="kitten" />
-      </span>
-      <span data-avatar style={{ "--avatar--size": "1.5rem" }}>
-        <img src={image} alt="kitten" />
-      </span>
-      <span data-avatar style={{ "--avatar--size": "2.5rem" }}>
-        <img src={image} alt="kitten" />
-      </span>
-      <span data-avatar style={{ "--avatar--size": "4rem" }}>
-        <img src={image} alt="kitten" />
-      </span>
+      <span>test</span>
+      <img
+        data-avatar
+        style={{ "--avatar--size": "1.25rem" }}
+        src={image}
+        alt="kitten"
+      />
+      <img
+        data-avatar
+        style={{ "--avatar--size": "1.5rem" }}
+        src={image}
+        alt="kitten"
+      />
+      <img
+        data-avatar
+        style={{ "--avatar--size": "2.5rem" }}
+        src={image}
+        alt="kitten"
+      />
+      <img
+        data-avatar
+        style={{ "--avatar--size": "4rem" }}
+        src={image}
+        alt="kitten"
+      />
     </React.Fragment>
   </Story>
 </Preview>
@@ -52,10 +60,37 @@ Here is an example of avatar being extended with a `status` indicating border, l
 
 <Preview>
   <Story name="Border">
-    <span data-avatar style={{ border: "2px solid hsl(7, 80%, 52%)", padding: "1px" }}>
-      <img src={image} alt="kitten" />
-    </span>
+    <img
+      data-avatar
+      style={{ border: "2px solid hsl(7, 80%, 52%)", padding: "1px" }}
+      src={image}
+      alt="kitten"
+    />
   </Story>
 </Preview>
 
 _Note that absolute height is retained, using `box-sizing: border-box`_
+
+## Inline
+
+An inline avatar, a la mention.
+
+<Preview>
+  <Story name="inline">
+    <React.Fragment>
+      <span data-text>Hello, </span>
+      <img
+        data-avatar
+        style={{
+          width: "1.25rem",
+          height: "1.25rem",
+          marginRight: ".25em",
+          transform: "translateY(.25em)",
+        }}
+        src={image}
+        alt="kitten"
+      />
+      <span data-text>Kitten das Robot!</span>
+    </React.Fragment>
+  </Story>
+</Preview>
