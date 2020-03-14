@@ -7,13 +7,11 @@
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
     "@planningcenter/icons": "^7.0.0-beta.8",
-    "@planningcenter/utilities": "0.0.15",
-    "@storybook/addon-actions": "^5.3.14",
-    "@storybook/addon-docs": "^5.3.14",
-    "@storybook/addon-links": "^5.3.14",
-    "@storybook/addon-notes": "^5.3.14",
-    "@storybook/addons": "^5.3.14",
-    "@storybook/react": "^5.3.14",
+    "@reach/menu-button": "^0.9.0",
+    "@storybook/addon-docs": "^5.3.17",
+    "@storybook/addon-notes": "^5.3.17",
+    "@storybook/addons": "^5.3.17",
+    "@storybook/react": "^5.3.17",
     "babel-loader": "^8.0.6",
     "husky": "^4.2.3",
     "lerna": "^3.20.2",
@@ -29,10 +27,7 @@
     "dev": "start-storybook -p 8000",
     "chromatic": "CHROMATIC_APP_CODE=tp4s1pka68p chromatic build --build-script-name build"
   },
-  "dependencies": {
-    "@reach/menu-button": "^0.8.6",
-    "prop-types": "^15.7.2"
-  },
+  "dependencies": {},
   "prettier": {
     "semi": true,
     "singleQuote": false,
