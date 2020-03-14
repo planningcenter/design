@@ -1,6 +1,6 @@
 # `@planningcenter/surface`
 
-> Visual Hierarchy for Themed, Layer-able UI Surfaces
+> Visual Hierarchy for themed, Layer-able UI
 
 ## Usage
 
@@ -10,7 +10,7 @@ While documentation is being fleshed out, check out these living examples.
 
 https://codesandbox.io/embed/theme-draft-6-surface-pmycp
 
-## Exposed Class Selectors
+## Exposed Selectors
 
 ```css
 .Surface
@@ -39,6 +39,7 @@ These must be defined defined product-side.
 ```
 
 ## Exposed React Component and props
+
 ```
 <Surface />
 <Surface depth={2}/>

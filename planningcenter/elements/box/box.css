@@ -1,0 +1,5 @@
+[data-box] {
+  box-sizing: var(--box--sizing, border-box);
+  padding: var(--box--padding, initial);
+  margin: var(--box--margin, initial);
+}

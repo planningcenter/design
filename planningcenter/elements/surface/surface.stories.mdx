@@ -1,0 +1,223 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import readme from "./README.md";
+import "../box/box.css";
+import "../box/extension/point/p.css";
+import "./surface.css";
+
+<Meta title="Elements|surface" />
+
+# Surface
+
+> Visual Hierarchy for themed, layer-able UI
+
+## Basic
+
+<Preview>
+  <Story name="basic: one surface">
+    <div data-surface data-box="p:2">
+      One Surface
+    </div>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="basic: two surface">
+    <div data-surface="depth:2" data-box="p:2">
+      <div data-surface data-box="p:2">
+        Two Surfaces
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="basic: three surface">
+    <div data-surface="depth:3" data-box="p:2">
+      <div data-surface data-box="p:2">
+        <div data-surface data-box="p:2">
+          Three Surfaces
+        </div>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+# Two-surface grids
+
+<Preview>
+  <Story name="two: grid 1">
+    <div
+      data-surface="depth:2"
+      style={{
+        display: "grid",
+        gap: "1rem",
+        padding: "1rem",
+        justifyContent: "center"
+      }}
+    >
+      <main data-surface data-box="p:2">
+        <span data-text>The quick brown fox jumps over the yellow dog.</span>
+      </main>
+    </div>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="two: grid 2">
+    <div
+      data-surface="depth:2"
+      style={{
+        display: "grid",
+        gridTemplateColumns: "2fr 1fr",
+        gap: "1rem",
+        border: "1px solid #ddd"
+      }}
+    >
+      <main data-surface data-box="p:2">
+        <span data-text>The quick brown fox jumps over the yellow dog.</span>
+      </main>
+      <aside data-box="p:2">
+        <span data-text>Sidebar</span>
+      </aside>
+    </div>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="two: grid 3">
+    <div
+      data-surface="depth:2"
+      style={{
+        display: "grid",
+        gridTemplateColumns: "2fr 1fr",
+        gap: "1rem",
+        padding: "1rem",
+      }}
+    >
+      <main data-surface data-box="p:2">
+        <span data-text>The quick brown fox jumps over the yellow dog.</span>
+      </main>
+      <aside data-box="p:2">
+        <span data-text>Sidebar</span>
+      </aside>
+    </div>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="two: grid 4">
+    <div
+      data-surface="depth:2"
+      style={{
+        display: "grid",
+        gridTemplateColumns: "2fr 1fr",
+        gap: "1rem",
+        padding: "1rem",
+      }}
+    >
+      <main data-surface data-box="p:2">
+        <span data-text>The quick brown fox jumps over the yellow dog.</span>
+      </main>
+      <aside data-surface data-box="p:2">
+        <span data-text>Sidebar</span>
+      </aside>
+    </div>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="two: grid 5">
+    <div
+      data-surface="depth:2"
+      data-box="p:2"
+      style={{
+        display: "grid",
+        gap: "1rem",
+        gridAutoFlow: "row",
+        gridTemplate: "repeat(2, 1fr) / repeat(3, 1fr)"
+      }}
+    >
+        <div data-surface data-box="p:2">One</div>
+        <div data-surface data-box="p:2">Two</div>
+        <div data-surface data-box="p:2">Three</div>
+        <div data-surface data-box="p:2">Four</div>
+        <div data-surface data-box="p:2">Five</div>
+        <div data-surface data-box="p:2">Six</div>
+    </div>
+  </Story>
+</Preview>
+
+# Three-surface grids
+
+<Preview>
+  <Story name="three: grid 1">
+    <div
+      data-surface="depth:3"
+      style={{
+        display: "grid",
+        gridTemplateColumns: "2fr 1fr",
+      }}
+    >
+      <main data-surface data-box="p:2">
+        <div data-surface data-box="p:2">
+          <span data-text>The quick brown fox jumps over the yellow dog.</span>
+        </div>
+      </main>
+      <aside data-box="p:2">
+        <span data-text>Sidebar</span>
+      </aside>
+    </div>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="three: grid 2">
+    <div
+      data-surface="depth:3"
+      style={{
+        display: "grid",
+        gridTemplateColumns: "2fr 1fr",
+      }}
+    >
+      <main data-surface data-box="p:2">
+        <div data-surface data-box="p:2">
+          <span data-text>The quick brown fox jumps over the yellow dog.</span>
+        </div>
+      </main>
+      <aside data-box="p:2" style={{ display: "grid", gap: "1rem"}}>
+        <span data-text>Sidebar</span>
+        <div data-surface data-box="p:2">
+          <span data-text>Maybe instructions</span>
+        </div>
+      </aside>
+    </div>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="three: grid 3">
+    <div data-surface="depth:3" style={{ display: "grid", gridTemplateColumns: "2fr 1fr" }}>
+      <main
+        data-box="p:2"
+        data-surface
+        style={{
+          display: "grid",
+          gap: "1rem",
+          gridAutoFlow: "row",
+          gridTemplate: "repeat(2, 1fr) / repeat(3, 1fr)"
+        }}
+      >
+          <div data-surface data-box="p:2">One</div>
+          <div data-surface data-box="p:2">Two</div>
+          <div data-surface data-box="p:2">Three</div>
+          <div data-surface data-box="p:2">Four</div>
+          <div data-surface data-box="p:2">Five</div>
+          <div data-surface data-box="p:2">Six</div>
+      </main>
+      <aside data-box="p:2">
+        <span data-text>Sidebar</span>
+      </aside>
+    </div>
+  </Story>
+</Preview>
