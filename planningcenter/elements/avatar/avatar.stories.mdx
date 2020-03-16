@@ -24,7 +24,6 @@ Here is an example scale using that property:
 <Preview>
   <Story name="Size">
     <React.Fragment>
-      <span>test</span>
       <img
         data-avatar
         style={{ "--avatar--size": "1.25rem" }}
@@ -62,7 +61,7 @@ Here is an example of avatar being extended with a `status` indicating border, l
   <Story name="Border">
     <img
       data-avatar
-      style={{ border: "2px solid hsl(7, 80%, 52%)", padding: "1px" }}
+      style={{ border: "2px solid hsl(7, 80%, 52%)" }}
       src={image}
       alt="kitten"
     />
@@ -78,7 +77,7 @@ An inline avatar, a la mention.
 <Preview>
   <Story name="inline">
     <React.Fragment>
-      <span data-text>Hello, </span>
+      <span>Hello, </span>
       <img
         data-avatar
         style={{
@@ -90,7 +89,7 @@ An inline avatar, a la mention.
         src={image}
         alt="kitten"
       />
-      <span data-text>Kitten das Robot!</span>
+      <span>Kitten das Robot!</span>
     </React.Fragment>
   </Story>
 </Preview>

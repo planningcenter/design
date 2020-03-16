@@ -1,4 +1,5 @@
 [data-surface] {
+  box-sizing: border-box;
   background-color: var(--surface-1of1_background-color, #fff);
   transition: all 200ms ease;
 }
