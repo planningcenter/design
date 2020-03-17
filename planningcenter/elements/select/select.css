@@ -32,7 +32,8 @@
 }
 
 [data-select]:disabled {
-  --select--background-color: hsl(0, 0%, 95%);
+  /* --select--background-color: hsl(0, 0%, 95%); */
+  --select--background-color: var(--select--background-color_disabled);
   --select--color: hsl(0, 0%, 40%);
   --select--border-color: hsl(0, 0%, 70%);
   cursor: not-allowed;

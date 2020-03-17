@@ -1,0 +1,50 @@
+@media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
+  /* [data-theme="prefers-color-scheme"] { */
+  :root {
+    /* text */
+    --text--color: #000;
+
+    /* avatar */
+    --avatar--background-color: hsl(0, 0%, 100%);
+
+    /* surface */
+    --surface-1of1_background-color: hsl(0, 0%, 100%);
+    --surface-2of2_background-color: hsl(0, 0%, 97%);
+    --surface-1of2_background-color: hsl(0, 0%, 100%);
+    --surface-3of3_background-color: hsl(0, 0%, 94%);
+    --surface-2of3_background-color: hsl(0, 0%, 97%);
+    --surface-1of3_background-color: hsl(0, 0%, 100%);
+
+    /* product */
+    --product-sub-header--background-color: hsl(0, 0%, 76%);
+
+    --select--background-color_disabled: pink;
+  }
+
+  :root {
+    /* --product-header_background-color: hsl(0, 0%, 64%);
+    --product-header_color: hsl(0, 0%, 100%);
+
+    --product-sub-header_background-color: hsl(0, 0%, 76%);
+    --product-sub-header_border-color: hsl(0, 0%, 70%);
+    --product-sub-header_color: hsl(0, 0%, 36%); */
+  }
+  /* 
+  .os-preferred-color-scheme--high-contrast {
+    --surface-1of1_background-color: hsl(0, 0%, 100%);
+
+    --surface-2of2_background-color: hsl(0, 0%, 100%);
+    --surface-1of2_background-color: hsl(0, 0%, 100%);
+
+    --surface-3of3_background-color: hsl(0, 0%, 100%);
+    --surface-2of3_background-color: hsl(0, 0%, 100%);
+    --surface-1of3_background-color: hsl(0, 0%, 100%);
+
+    --product-header_background-color: hsl(0, 0%, 20%);
+    --product-header_color: hsl(0, 0%, 100%);
+
+    --product-sub-header_background-color: hsl(0, 0%, 76%);
+    --product-sub-header_border-color: hsl(0, 0%, 40%);
+    --product-sub-header_color: hsl(0, 0%, 0%);
+  } */
+}
