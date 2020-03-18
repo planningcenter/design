@@ -1,0 +1,20 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import "../box.css";
+import "./point/p.css";
+
+<Meta title="Extensions|box" />
+
+# Box extension
+
+## `p:{point}`
+
+Padding in 8px increments.
+
+<Preview>
+  <Story name="p">
+    <div data-box="p:8 ph:4 pb:1" style={{ backgroundColor: "fuchsia"}}>
+      <p style={{ backgroundColor: "white" }}>This box is <code>box-sizing: content-box</code>.</p>
+    </div>
+  </Story>
+</Preview>

@@ -1,0 +1,6 @@
+[data-avatar~="mention"] {
+  --avatar--size: 1.25em;
+  --avatar--font-size: 1.5em;
+  margin-right: 0.125em;
+  transform: translateY(0.25em);
+}

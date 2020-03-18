@@ -1,11 +1,14 @@
 [data-avatar] {
+  --avatar--size: 2rem;
+  --avatar--border: 0 solid white;
+  --avatar--opacity: 1;
+
   box-sizing: border-box;
   display: inline-block;
   border-radius: 50%;
-  padding: var(--avatar--padding, 0);
-  opacity: var(--avatar--opacity, auto);
-  background-color: var(--avatar--background-color, white);
-  width: var(--avatar--size, 2rem);
-  height: var(--avatar--size, 2rem);
+  border: var(--avatar--border);
+  opacity: var(--avatar--opacity);
+  width: var(--avatar--size);
+  height: var(--avatar--size);
   object-fit: cover;
 }

@@ -19,7 +19,7 @@
   grid-area: avatar;
 
   --avatar--size: 7rem;
-  --avatar--padding: 5px;
+  --avatar--border: 5px solid white;
 }
 
 [data-person-header="inactive"] [data-person-header--avatar] {

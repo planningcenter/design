@@ -1,19 +1,11 @@
-> A circular image representing one person
+# Avatar
 
-## Treatment
-
-- Shape: _circle_
-- Dimensions: _height == width_
-- Border: _optional_
-  - excluded: _1.25rem_
-  - color: _variable_ (default: white)
-  - position: _inside_
-  - size: _1px:1rem_ (rounded up for browser support)
-    - min: _2px_
-    - max: _5px_
+Part of `@planningcenter/elements`.
 
 ## Custom Properties
 
-```css
---avatar--size
-```
+| name                | default         |
+| ------------------- | --------------- |
+| `--avatar--size`    | `2rem`          |
+| `--avatar--border`  | `0 solid white` |
+| `--avatar--opacity` | `1`             |

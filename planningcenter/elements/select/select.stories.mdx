@@ -15,18 +15,77 @@ import "./select.css";
 ## Basic
 
 <Preview className="sans-serif">
-  <select data-select>
-    <option>Taylor Swift</option>
-    <option>Fearless</option>
-    <option>Speak Now</option>
-    <option>Red</option>
-    <option>1989</option>
-    <option>Reputation</option>
-    <option>Lover</option>
-  </select>
+  <Story name="Basic">
+    <select data-select>
+      <option>Taylor Swift</option>
+      <option>Fearless</option>
+      <option>Speak Now</option>
+      <option>Red</option>
+      <option>1989</option>
+      <option>Reputation</option>
+      <option>Lover</option>
+    </select>
+  </Story>
+</Preview>
+
+## Sizing
+
+### smaller
+
+<Preview>
+  <Story name="Sizing (smaller)">
+    <select data-select style={{ "--select--font-size": ".75rem", "--select--height": "1.5rem" }}>
+      <option>Taylor Swift</option>
+      <option>Fearless</option>
+      <option>Speak Now</option>
+      <option>Red</option>
+      <option>1989</option>
+      <option>Reputation</option>
+      <option>Lover</option>
+    </select>
+  </Story>
+</Preview>
+
+### Sizing: larger
+
+<Preview>
+  <Story name="Sizing (larger)">
+    <select data-select style={{ "--select--font-size": "1.125rem", "--select--height": "2.5rem" }}>
+      <option>Taylor Swift</option>
+      <option>Fearless</option>
+      <option>Speak Now</option>
+      <option>Red</option>
+      <option>1989</option>
+      <option>Reputation</option>
+      <option>Lover</option>
+    </select>
+  </Story>
+</Preview>
+
+## Width
+
+Width is controlled by the `--select--width` custom property.
+
+This demonstrates how it could be used for a full-width select.
+
+<Preview>
+  <Story name="Width">
+    <select data-select style={{ "--select--width": "100%" }}>
+      <option>Taylor Swift</option>
+      <option>Fearless</option>
+      <option>Speak Now</option>
+      <option>Red</option>
+      <option>1989</option>
+      <option>Reputation</option>
+      <option>Lover</option>
+    </select>
+  </Story>
 </Preview>
 
 ## disabled
+
+Adding the `disabled` attribute to a `select` element gives it a disabled appearance.  
+
 
 <Preview>
   <Story name="disabled">
@@ -42,34 +101,26 @@ import "./select.css";
   </Story>
 </Preview>
 
-## font-size (smaller)
+There are no custom properties for states.  
+To style `:focus` and `:disabled` states, override the entire selector:  
 
-<Preview>
-  <Story name="font-size (smaller)">
-    <select data-select style={{ "--select--font-size": ".875rem", "--select--height": "2rem" }}>
-      <option>Taylor Swift</option>
-      <option>Fearless</option>
-      <option>Speak Now</option>
-      <option>Red</option>
-      <option>1989</option>
-      <option>Reputation</option>
-      <option>Lover</option>
-    </select>
-  </Story>
-</Preview>
+```css
+[data-select]:focus { /* ... */ }
+[data-select]:disabled { /* ... */ }
+```
 
-## font-size (larger)
+They could also be written as extensions:
 
-<Preview>
-  <Story name="font-size">
-    <select data-select style={{ "--select--font-size": "1.125rem", "--select--height": "2.5rem" }}>
-      <option>Taylor Swift</option>
-      <option>Fearless</option>
-      <option>Speak Now</option>
-      <option>Red</option>
-      <option>1989</option>
-      <option>Reputation</option>
-      <option>Lover</option>
-    </select>
-  </Story>
-</Preview>
+```css
+[data-select="variant:bare"] { /* ... */ }
+[data-select="variant:bare"]:focus { /* ... */ }
+[data-select="variant:bare"]:disabled { /* ... */ }
+```
+
+These could also be provided product-specific classes or CSS-in-JS values.
+
+```css
+.alt-select { /* ... */ }
+.alt-select:focus { /* ... */ }
+.alt-select:disabled { /* ... */ }
+```

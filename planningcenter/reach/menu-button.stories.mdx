@@ -16,6 +16,12 @@ import "../elements/select/select.css";
 
 # MenuButton
 
+Included are styles that wrap the [ReachUI MenuButton CSS Selectors](https://reacttraining.com/reach-ui/menu-button#menubutton-css-selectors) and provide a custome property interface for overrides.
+
+## Basic
+
+Menu Button can be styled using the `data-select` selector for identital look and feel to OS selects.
+
 <Preview>
   <Story name="Basic">
     <Menu>
@@ -31,7 +37,9 @@ import "../elements/select/select.css";
   </Story>
 </Preview>
 
-# Basic with Group Rules
+## Basic with Group Rules
+
+`MenuItems` can be subdivided into groups using `data-reach-menu-rule`.
 
 <Preview>
   <Story name="Group Rules">
@@ -45,6 +53,22 @@ import "../elements/select/select.css";
         <MenuLink to="#one">Navigates to URL</MenuLink>
         <MenuLink to="#two">Navigates to URL</MenuLink>
         <div data-reach-menu-rule />
+        <MenuLink to="#two">Navigates to URL</MenuLink>
+      </MenuList>
+    </Menu>
+  </Story>
+</Preview>
+
+## Selected Menu Item
+
+`selected` MenuItems background color can be set with the custom property `--reach-menu-item--border-color_selected`.
+
+<Preview>
+  <Story name="Selected Menu item">
+    <Menu>
+      <MenuButton data-select>Basic, group ruled</MenuButton>
+      <MenuList style={{ "--reach-menu-item--background-color_selected": "red" }}>
+        <MenuLink to="#one">Navigates to URL</MenuLink>
         <MenuLink to="#two">Navigates to URL</MenuLink>
       </MenuList>
     </Menu>

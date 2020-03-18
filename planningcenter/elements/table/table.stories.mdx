@@ -40,9 +40,11 @@ import image from "../../../static/200x300_kitten.jpeg";
 
 ## border-radius
 
+Table border radius is controlled thru the custom property `--table--border-radius`.
+
 <Preview>
   <Story name="border-radius">
-    <table data-table style={{"--table--border-radius":"4px"}}>
+    <table data-table style={{"--table--border-radius":".25rem"}}>
       <thead data-table-head>
         <tr data-table-row>
           <td data-table-data>One</td>
@@ -62,6 +64,9 @@ import image from "../../../static/200x300_kitten.jpeg";
 </Preview>
 
 ## font-size
+
+Table font-size cascades to all table cells and is controlleb by the custom property `--table-font-size`.  
+Headings can additionally fine-tuned with the custom property `--table-head--font-size`.
 
 <Preview>
   <Story name="font-size (larger)">

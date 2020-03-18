@@ -13,7 +13,9 @@ import image from "../../../static/200x300_kitten.jpeg";
 ## Basic
 
 <Preview>
-  <img data-avatar src={image} alt="kitten" />
+  <Story name="Basic">
+    <img data-avatar src={image} alt="kitten" />
+  </Story>
 </Preview>
 
 ## Size
@@ -38,13 +40,7 @@ Here is an example scale using that property:
       />
       <img
         data-avatar
-        style={{ "--avatar--size": "2.5rem" }}
-        src={image}
-        alt="kitten"
-      />
-      <img
-        data-avatar
-        style={{ "--avatar--size": "4rem" }}
+        style={{ "--avatar--size": "3rem" }}
         src={image}
         alt="kitten"
       />
@@ -54,19 +50,23 @@ Here is an example scale using that property:
 
 ## Border
 
-Avatar doesn't have a border or padding by default but it knows how to handle them.  
-Here is an example of avatar being extended with a `status` indicating border, like Services:
+Avatar doesn't have a border or padding but it handle them.  
+Here's an example of avatar being extended with a `status` indicating border — like Services:
 
 <Preview>
   <Story name="Border">
     <img
       data-avatar
-      style={{ border: "2px solid hsl(7, 80%, 52%)" }}
+      style={{
+        border: "calc(var(--avatar--size) * .1) solid hsl(7, 80%, 52%)",
+      }}
       src={image}
       alt="kitten"
     />
   </Story>
 </Preview>
+
+`--avatar--size` is defined in the `[data-avatar]` scope. So it can be used in inline declarations for calculations.
 
 _Note that absolute height is retained, using `box-sizing: border-box`_
 
@@ -93,3 +93,5 @@ An inline avatar, a la mention.
     </React.Fragment>
   </Story>
 </Preview>
+
+See [EXTENSIONS|avatar/mention](./?path=/docs/extensions-avatar--mention).

@@ -1,0 +1,43 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import "../avatar.css";
+import "./size/point.css";
+import "./mention.css";
+import image from "../../../../static/200x300_kitten.jpeg";
+
+<Meta title="Extensions|avatar" />
+
+# Avatar extension
+
+## `mention`
+
+Inline avatar for mentions.
+
+<Preview>
+  <Story name="mention">
+    <React.Fragment>
+      <span data-text>
+        Hello, <img data-avatar="mention" src={image} alt="kitten" />
+        Kitten das Robot!
+      </span>
+    </React.Fragment>
+  </Story>
+</Preview>
+
+## `size:{point}`
+
+Size in 8px increments.
+
+<Preview>
+  <Story name="size:point">
+    <React.Fragment>
+      <img data-avatar="size:2.5" src={image} alt="kitten" />
+      <img data-avatar="size:3" src={image} alt="kitten" />
+      <img data-avatar="size:4" src={image} alt="kitten" />
+      <img data-avatar="size:5" src={image} alt="kitten" />
+      <img data-avatar="size:6" src={image} alt="kitten" />
+      <img data-avatar="size:7" src={image} alt="kitten" />
+      <img data-avatar="size:8" src={image} alt="kitten" />
+    </React.Fragment>
+  </Story>
+</Preview>

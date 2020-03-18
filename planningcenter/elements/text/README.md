@@ -1,21 +1,12 @@
-> An inline text element
+# Text
 
-## Complementary
-
-## Treatment
-
-- inline
-
-## Sizes
-
-- `10px`
-- `12px`
-- `14px`
-- `16px`
-- `18px`
+Part of `@planningcenter/elements`.
 
 ## Custom Properties
 
-```css
---text--font-size
-```
+| name                           | default   |
+| ------------------------------ | --------- |
+| `--text--color, inherit`       | `initial` |
+| `--text--font-size, inherit`   | `initial` |
+| `--text--font-weight, inherit` | `initial` |
+| `--text--font-style, inherit`  | `initial` |

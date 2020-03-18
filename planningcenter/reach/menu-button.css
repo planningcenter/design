@@ -35,7 +35,7 @@
 }
 [data-reach-menu-item][data-selected] {
   background-color: var(
-    --data-reach-menu-item--selected-background-color,
+    --reach-menu-item--background-color_selected,
     hsl(211, 64%, 45%)
   );
 }
