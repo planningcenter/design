@@ -1,21 +1,26 @@
-> A Text Input
+# Text
 
-### Text
+Part of `@planningcenter/elements`.
 
-- font-size: 14|16
-- border-color: > 3:1 contrast
-- border-width: `1`
-- border-style: `solid`
-- background-color: variable (default: `white`)
-- color: variable: > 4.5:1 contrast
-- placeholder-color
-  - without label: > 4.5:1 contrast
-  - with label: > 3:1 contrast
-- border-radius: `4`
-- state[:focus]
-  - outline: `none`
-  - box-shadow color: gray or blue
-- state[:invalid]
-  - outline: `none`
-  - border-color: variable (default: `red`)
-  - box-shadow color: variable (default: `red`)
+## Custom Properties
+
+| name                                 | default                                |
+| ------------------------------------ | -------------------------------------- |
+| `--text-input--box-sizing`           | `border-box`                           |
+| `--text-input--font-size`            | `1rem`                                 |
+| `--text-input--border-color`         | `#767676`                              |
+| `--text-input--border-width`         | `1px`                                  |
+| `--text-input--border-style`         | `solid`                                |
+| `--text-input--background-color`     | `white`                                |
+| `--text-input--border-radius`        | `0.25em`                               |
+| `--text-input--padding`              | `0.5em 0.625em`                        |
+| `--text-input--margin`               | `0`                                    |
+| `--text-input--color`                | `inherit`                              |
+| `--text-input--box-shadow`           | `none`                                 |
+| `--text-input--width`                | `auto`                                 |
+| `--text-input--line-height`          | `1.125em`                              |
+| `--text-input--color__placeholder`   | `#767676`                              |
+| `--text-input--outline_focus`        | `none`                                 |
+| `--text-input--box-shadow_focus`     | `0 0 1.5px 3px hsla(0, 0%, 50%, 0.5)`  |
+| `--text-input--border-color_invalid` | `hsl(0, 79%, 63%)`                     |
+| `--text-input--box-shadow_invalid`   | `0 0 1.5px 3px hsla(0, 79%, 63%, 0.5)` |

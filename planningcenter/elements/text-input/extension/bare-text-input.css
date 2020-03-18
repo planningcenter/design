@@ -1,7 +1,7 @@
 [data-text-input="bare"] {
-  --TextInput--border-color: transparent;
-  --TextInput--border-width: 0;
-  --TextInput--border-radius: 0;
+  --text-input--border-color: transparent;
+  --text-input--border-width: 0;
+  --text-input--border-radius: 0;
 }
 
 /* this affordance will need to be provided at a higher level */

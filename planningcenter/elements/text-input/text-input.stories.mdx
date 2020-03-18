@@ -23,8 +23,8 @@ import "./extension/bare-text-input.css";
 <Preview>
   <Story name="height">
     <div style={{ display: "grid", gap: "1rem" }}>
-      <input type="text" data-text-input autoFocus style={{ "--TextInput--font-size": "0.875rem", "--TextInput--max-height": "1rem" }} />
-      <input type="text" data-text-input autoFocus style={{ "--TextInput--font-size": "1.125rem", "--TextInput--max-height": "1.125rem" }} />
+      <input type="text" data-text-input style={{ "--text-input--font-size": "0.75rem" }} />
+      <input type="text" data-text-input style={{ "--text-input--font-size": "1.125rem" }} />
     </div>
   </Story>
 </Preview>
@@ -65,7 +65,7 @@ import "./extension/bare-text-input.css";
 <Preview>
   <Story name="sibling-label">
     <React.Fragment>
-      <label htmlFor="sibling-label">Invalid input: </label>
+      <label htmlFor="sibling-label"><span data-text>Invalid input: </span></label>
       <br />
       <input type="text" data-text-input id="label-example" />
     </React.Fragment>

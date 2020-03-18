@@ -1,4 +1,4 @@
 [data-text-input] {
-  --TextInput--font-size: 0.875rem;
-  --TextInput--max-height: 1rem;
+  --text-input--font-size: 0.875rem;
+  --text-input--max-height: 1rem;
 }
