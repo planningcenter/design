@@ -1,0 +1,41 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import xCircle from "@planningcenter/icons/svg/general/x-circle.svg"
+
+import "../../elements/text/text.css";
+import "../../elements/heading/heading.css";
+import "./alert-dialog.css";
+
+<Meta title="Grids|alert-dialog" />
+
+# Alert Dialog
+
+It's best to use this these elements thru the Reach UI or SweatAlert2 adapters.
+
+## Basic
+
+export function XCircleIcon () {
+  return <img src={xCircle} style={{ height: "3em", width: "3em", fill: "red" }} />
+}
+
+<Preview>
+  <Story name="Basic">
+    <div data-alert-dialog-overlay style={{ padding: "1rem", justifyContent: "center", display: "flex" }}>
+      <div data-alert-dialog>
+        <XCircleIcon />
+        <header data-alert-dialog-label data-heading>
+          Please Confirm!
+        </header>
+        <p data-alert-dialog-description data-text>
+          Are you sure you want to delete something? This action is permanent,
+          and we're totally not just flipping a field called "deleted" to "true"
+          in our database, we're actually deleting something.
+        </p>
+        <div data-alert-dialog-actions>
+          <button type="button">Do it</button>
+          <button type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Preview>

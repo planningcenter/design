@@ -1,0 +1,65 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import xCircle from "@planningcenter/icons/svg/general/x-circle.svg";
+
+import {
+  AlertDialog,
+  AlertDialogLabel,
+  AlertDialogDescription,
+  AlertDialogOverlay,
+  AlertDialogContent,
+} from "@reach/alert-dialog";
+import "./alert-dialog.css";
+import "../grids/alert-dialog/alert-dialog.css";
+
+<Meta title="Reach|Alert Dialog" />
+
+# Alert Dialog
+
+Included are styles that wrap the [ReachUI Alert Dialog](https://reacttraining.com/reach-ui/alert-dialog/) and provide a custom property interface for overrides.
+
+## Basic
+
+export function XCircleIcon() {
+  return (
+    <img src={xCircle} style={{ height: "3em", width: "3em", fill: "red" }} />
+  );
+}
+
+export function Example(props) {
+  const [showDialog, setShowDialog] = React.useState(false);
+  const cancelRef = React.useRef();
+  const open = () => setShowDialog(true);
+  const close = () => setShowDialog(false);
+  return (
+    <div>
+      <button onClick={open}>Delete something</button>
+      {showDialog && (
+        <AlertDialog leastDestructiveRef={cancelRef} data-alert-dialog>
+          <XCircleIcon />
+          <AlertDialogLabel data-alert-dialog-label>
+            Cancel registration?
+          </AlertDialogLabel>
+          <AlertDialogDescription data-alert-dialog-description>
+            You haven't completed your registration. If you cancel now, your
+            progress will be lost.
+          </AlertDialogDescription>
+          <div className="alert-buttons" data-alert-dialog-actions>
+            <button ref={cancelRef} onClick={close}>
+              No, keep going
+            </button>
+            <button onClick={close}>Yes, cancel registration</button>
+          </div>
+        </AlertDialog>
+      )}
+    </div>
+  );
+}
+
+## test
+
+<Preview>
+  <Story name="Basic">
+    <Example />
+  </Story>
+</Preview>
