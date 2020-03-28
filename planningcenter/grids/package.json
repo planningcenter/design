@@ -1,16 +1,13 @@
 {
-  "name": "@planningcenter/elements",
+  "name": "@planningcenter/grids",
   "version": "0.0.0",
-  "description": "Shared Planning Center element styles",
-  "style": "dist/elements.css",
+  "description": "Shared Planning Center Grids",
+  "style": "dist/grids.css",
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
-    "build": "postcss -o dist/elements.css index.css",
+    "build": "postcss -o dist/grids.css index.css",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "npm run build"
   },
@@ -18,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/planningcenter/design.git"
   },
-  "author": "Michael Chan",
+  "author": "Michael Chan <mijoch@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/planningcenter/design/issues"
