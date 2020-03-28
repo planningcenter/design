@@ -1,0 +1,27 @@
+{
+  "name": "@planningcenter/elements",
+  "version": "0.0.0",
+  "description": "Shared Planning Center element styles",
+  "style": "dist/elements.css",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "postcss -o dist/elements.css index.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planningcenter/design.git"
+  },
+  "author": "Michael Chan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  },
+  "homepage": "https://github.com/planningcenter/design#readme"
+}
