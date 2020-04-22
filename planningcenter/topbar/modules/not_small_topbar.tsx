@@ -213,34 +213,69 @@ export const AppsMenu = (props) => (
       cleanup={!props.visible}
     >
       <menu style={{ margin: 0, padding: 0, minWidth: 180 }}>
-        {props.apps.map(({ attributes: { name } }, i) => (
-          <HoverableListItem
-            component="a"
-            style={{
-              paddingLeft: "16px",
-              paddingRight: "16px",
-              lineHeight: "48px",
-              overflow: "hidden",
-              verticalAlign: "middle",
-              display: "flex",
-              height: "48px",
-              alignItems: "center",
-              ...fontFamily,
-              ...(i && { borderTop: "1px solid #ddd" }),
-            }}
-            key={name}
-            href={`${pcoUrl(props.env)("accounts")}/apps/${name.toLowerCase()}`}
-            data-turbolinks={false}
-          >
-            <ColorAppIcon appName={name.replace(/[\s-]/, "")} size={24} />
-            <span style={{ margin: 4 }} />
-            <MonoAppName
-              appName={name.replace(/[\s-]/, "")}
-              color="#444"
-              size={24}
-            />
-          </HoverableListItem>
-        ))}
+        {props.apps.map(({ attributes: { name } }, i) =>
+          props.appName !== name ? (
+            <HoverableListItem
+              component="a"
+              style={{
+                paddingLeft: "16px",
+                paddingRight: "16px",
+                lineHeight: "48px",
+                overflow: "hidden",
+                verticalAlign: "middle",
+                display: "flex",
+                height: "48px",
+                alignItems: "center",
+                ...fontFamily,
+                ...(i && { borderTop: "1px solid #ddd" }),
+              }}
+              key={name}
+              href={`${pcoUrl(props.env)(
+                "accounts"
+              )}/apps/${name.toLowerCase()}`}
+              data-turbolinks={false}
+            >
+              <ColorAppIcon appName={name.replace(/[\s-]/, "")} size={24} />
+              <span style={{ margin: 4 }} />
+              <MonoAppName
+                appName={name.replace(/[\s-]/, "")}
+                color="#444"
+                size={24}
+              />
+            </HoverableListItem>
+          ) : (
+            <div key={name} style={{ display: "block", position: "relative" }}>
+              <HoverableListItem
+                component="a"
+                style={{
+                  paddingLeft: "16px",
+                  paddingRight: "16px",
+                  lineHeight: "48px",
+                  overflow: "hidden",
+                  verticalAlign: "middle",
+                  display: "flex",
+                  height: "48px",
+                  alignItems: "center",
+                  ...fontFamily,
+                  ...(i && { borderTop: "1px solid #ddd" }),
+                }}
+                href={`${pcoUrl(props.env)(
+                  "accounts"
+                )}/apps/${name.toLowerCase()}`}
+                data-turbolinks={false}
+              >
+                <ColorAppIcon appName={name.replace(/[\s-]/, "")} size={24} />
+                <span style={{ margin: 4 }} />
+                <MonoAppName
+                  appName={name.replace(/[\s-]/, "")}
+                  color="#444"
+                  size={24}
+                />
+              </HoverableListItem>
+              <span>{true && <a href="#">Settings</a>}</span>
+            </div>
+          )
+        )}
       </menu>
     </Popup>
   </PopupRoot>
@@ -441,6 +476,7 @@ export class Topbar extends React.Component<
       >
         <AppsMenu
           env={this.props.env}
+          appName={this.props.appName}
           apps={appsMenuFormatter(this.props.apps)}
           visible={this.state.appsMenuVisible}
           toggle={() =>
@@ -458,7 +494,7 @@ export class Topbar extends React.Component<
               ({ appsMenuVisible }) => ({
                 appsMenuVisible: !appsMenuVisible,
               }),
-              this.props.requestAppsFetch(),
+              this.props.requestAppsFetch()
             )
           }
           appName={this.props.appName}
@@ -511,7 +547,7 @@ export class Topbar extends React.Component<
                 ({ userMenuVisible }) => ({
                   userMenuVisible: !userMenuVisible,
                 }),
-                this.props.requestConnectedPeopleFetch(),
+                this.props.requestConnectedPeopleFetch()
               )
             }
           >
@@ -705,7 +741,7 @@ export class Topbar extends React.Component<
                     <HoverableListItem component="li" key={id}>
                       <a
                         href={`${pcoUrl(this.props.env)(
-                          "accounts",
+                          "accounts"
                         )}/link/new?to=${id}&return=${this.props.appName}%2f`}
                         data-turbolinks={false}
                         onClick={() => {
@@ -730,7 +766,7 @@ export class Topbar extends React.Component<
                         {person.organization_name}
                       </a>
                     </HoverableListItem>
-                  ),
+                  )
                 )}
               </ul>
             </div>
