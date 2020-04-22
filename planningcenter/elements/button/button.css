@@ -1,0 +1,47 @@
+[data-button] {
+  -moz-appearance: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  appearance: none;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  position: relative;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: 100ms all ease-in-out;
+  font-size: 14px;
+  padding: 0 16px;
+  line-height: 30px;
+  margin: 0;
+}
+
+/* element Button */
+
+input[type="submit"][data-button] {
+  text-align: center;
+}
+button[data-button] {
+}
+a[data-button] {
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Button */
+[data-button] {
+  border-color: #969cab;
+  background: linear-gradient(180deg, #dde2e9 0%, #c8cfd9 100%);
+  color: #252931;
+}
+
+[data-button]:focus {
+  box-shadow: 0 0 0 0.2em rgba(3, 102, 214, 0.3);
+}
