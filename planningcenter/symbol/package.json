@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/symbol",
-  "version": "3.2.4",
+  "version": "3.2.5",
   "description": "A component for presenting external SVG symbols via file-loader",
   "main": "dist/symbol.js",
   "source": "symbol.js",
