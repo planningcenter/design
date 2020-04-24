@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/planningcenter/design/blob/master/packages/url/README.md",
   "private": false,
-  "gitHead": "c8480d0688c8aa26ede8a1d3b30edfe81a105a78",
+  "gitHead": "ebc341be61721088b5b864f66198e4d3926ef34e",
   "devDependencies": {
     "jest": "^25.4.0",
     "microbundle": "^0.11.0"

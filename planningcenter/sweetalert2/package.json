@@ -38,5 +38,6 @@
   },
   "dependencies": {
     "node-sass-tilde-importer": "^1.0.2"
-  }
+  },
+  "gitHead": "ebc341be61721088b5b864f66198e4d3926ef34e"
 }
