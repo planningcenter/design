@@ -13,6 +13,7 @@ import {
   XIcon,
   SpyglassIcon,
   PlatformAnnouncements,
+  ProductAnnouncement,
   // PlatformAnnouncementsStyleProvider,
   // StyledPlatformAnnouncement,
   // AppsProvider,
@@ -319,6 +320,7 @@ class SampleTopbar extends React.Component<
     userName: string;
     orgName: string;
     platformAnnouncements?: object;
+    productAnnouncement?: string;
   },
   {}
 > {
@@ -342,6 +344,14 @@ class SampleTopbar extends React.Component<
                   data={staticPlatformAnnouncements}
                   colors={shared.colors}
                   env={shared.env}
+                />
+
+                <ProductAnnouncement
+                  colors={shared.colors}
+                  html={this.props.productAnnouncement}
+                  onClick={() =>
+                    alert("Sending fire-and-forget dismiss request to server")
+                  }
                 />
 
                 <DisplaySwitch
@@ -531,6 +541,7 @@ ReactDOM.render(
       userName="Juan Valdez one two three four five six"
       orgName="National Federation of Coffee National Federation of Coffee National Federation of Coffee"
       platformAnnouncements={staticPlatformAnnouncements}
+      productAnnouncement="<span>Product news! <strong>Harder</strong>, <u>Better</u>, <em>Faster</em> 🥳</span>"
     />
     <div style={{ padding: 16 }}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pharetra

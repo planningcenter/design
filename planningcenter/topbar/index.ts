@@ -28,6 +28,8 @@ export {
   StyledAnnouncement as StyledPlatformAnnouncement,
 } from "./modules/platform_announcements";
 
+export { ProductAnnouncement } from "./modules/product_announcement";
+
 export {
   Bell as BellIcon,
   X as XIcon,
