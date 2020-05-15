@@ -1,3 +1,7 @@
+# 6.1.0 (prerelease)
+
+- Add `ProductAnnouncement` component
+
 # 6.0.0
 
 - [BREAKING] modify `/logout` urls to target Login, a2ec71d
