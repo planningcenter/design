@@ -7,7 +7,7 @@
   "source": "index.ts",
   "amdName": "PLANNINGCENTER.Topbar",
   "scripts": {
-    "build": "microbundle --format cjs",
+    "build": "microbundle --format cjs --jsx React.createElement",
     "dev": "webpack-dev-server",
     "prepublish": "npm run build"
   },

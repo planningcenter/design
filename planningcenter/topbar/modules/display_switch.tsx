@@ -3,7 +3,7 @@ import * as React from "react";
 const debounce = (func, wait) => {
   let timeout;
 
-  return function() {
+  return function () {
     const context = this,
       args = arguments;
 
@@ -47,7 +47,7 @@ export class PointBreak extends React.Component<
     window.addEventListener(
       "resize",
       debounce(this.setWindowWidth, 100),
-      false,
+      false
     );
   }
 
@@ -55,7 +55,7 @@ export class PointBreak extends React.Component<
     window.removeEventListener(
       "resize",
       debounce(this.setWindowWidth, 100),
-      false,
+      false
     );
   }
 
