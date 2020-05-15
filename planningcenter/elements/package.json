@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/elements",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "Shared Planning Center element styles",
   "style": "dist/elements.css",
   "files": [
