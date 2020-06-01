@@ -59,22 +59,22 @@ class StyleProvider extends React.Component<
 
     return (
       <div
-        className={["__Topbar_ProductAnnouncement_link", className]
+        className={["Topbar_ProductAnnouncement", className]
           .filter(Boolean)
           .join(" ")
           .trim()}
         style={{
-          color: "white" /* TODO: need to update to support more apps */,
           backgroundColor: colors.base1,
           ...style,
         }}
         {...platformProps}
       >
         <style>{`
-            .__Topbar_ProductAnnouncement_link { color: white }
-            .__Topbar_ProductAnnouncement_link a { color: ${colors.base0} }
-            .__Topbar_ProductAnnouncement_link a:hover { color: ${colors.base1} }
-            .__Topbar_ProductAnnouncement_link a:active { color: ${colors.base2} }
+            .Topbar_ProductAnnouncement {
+              color: white;
+              font-size: 14px;
+            }
+            .Topbar_ProductAnnouncement a { color: white; font-weight: bold; }
           `}</style>
         {children}
       </div>
@@ -94,11 +94,11 @@ class StyledAnnouncement extends React.Component<{ style?: object }, {}> {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              paddingTop: 16,
+              boxSizing: "border-box",
+              paddingTop: 14,
               paddingLeft: ["xs", "sm"].indexOf(breakpoint) !== -1 ? 16 : 24,
-              paddingBottom: 16,
+              paddingBottom: 14,
               paddingRight: 18,
-              borderTop: "1px solid rgba(0,0,0,.35)",
               ...style,
             }}
             {...platformProps}

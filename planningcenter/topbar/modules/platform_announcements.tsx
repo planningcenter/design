@@ -4,7 +4,7 @@ import { PointBreak } from "./display_switch";
 import pcURL from "./pco_url";
 import { X as XSymbol } from "./symbols";
 
-const entries = function(obj) {
+const entries = function (obj) {
   var ownProps = Object.keys(obj),
     i = ownProps.length,
     resArray = new Array(i); // preallocate the Array
@@ -58,8 +58,8 @@ class Provider extends React.Component<
     return request
       .post(
         `${pcURL(this.props.env)(
-          "api",
-        )}/people/v2/me/platform_notifications/${id}/dismiss`,
+          "api"
+        )}/people/v2/me/platform_notifications/${id}/dismiss`
       )
       .set("X-CSRF-Token", csrfToken)
       .withCredentials()
@@ -71,7 +71,7 @@ class Provider extends React.Component<
   render() {
     return this.props.children(
       { announcements: this.props.formatter(this.state.announcements) },
-      { dismissAnnouncements: this.dismissAnnouncements.bind(this) },
+      { dismissAnnouncements: this.dismissAnnouncements.bind(this) }
     );
   }
 }
@@ -91,11 +91,10 @@ export class StyledAnnouncement extends React.Component<
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              paddingTop: 16,
+              paddingTop: 14,
               paddingLeft: ["xs", "sm"].indexOf(breakpoint) !== -1 ? 16 : 24,
-              paddingBottom: 16,
+              paddingBottom: 14,
               paddingRight: 18,
-              borderTop: "1px solid rgba(0,0,0,.35)",
               ...style,
             }}
             {...platformProps}
@@ -123,6 +122,7 @@ export class StyleProvider extends React.Component<
         style={{
           color: "white",
           backgroundColor: "#282828",
+          fontSize: "14px",
           ...style,
         }}
         {...platformProps}
@@ -130,12 +130,8 @@ export class StyleProvider extends React.Component<
         <style>{`
             .__Topbar_PlatformAnnouncements_link { color: white }
             .__Topbar_PlatformAnnouncements_link a { color: ${colors.base0} }
-            .__Topbar_PlatformAnnouncements_link a:hover { color: ${
-              colors.base1
-            } }
-            .__Topbar_PlatformAnnouncements_link a:active { color: ${
-              colors.base2
-            } }
+            .__Topbar_PlatformAnnouncements_link a:hover { color: ${colors.base1} }
+            .__Topbar_PlatformAnnouncements_link a:active { color: ${colors.base2} }
           `}</style>
         {children}
       </div>
@@ -170,7 +166,7 @@ export default class PlatformAnnouncements extends React.Component<
             Boolean(data.announcements.length > 0) ? (
               <div>
                 {data.announcements.map((announcement) =>
-                  this.props.renderItem({ announcement, actions }),
+                  this.props.renderItem({ announcement, actions })
                 )}
               </div>
             ) : null

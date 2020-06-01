@@ -339,6 +339,11 @@ class SampleTopbar extends React.Component<
                   </StyledPlatformAnnouncement>
                 </PlatformAnnouncementsStyleProvider>
               */}
+                <style>{`
+                  /* demonstrates how to override styles by selector */
+                  .Topbar_ProductAnnouncement a:hover { color: red; }
+                  .Topbar_ProductAnnouncement svg:hover path { fill: red; }
+                `}</style>
 
                 <PlatformAnnouncements
                   data={staticPlatformAnnouncements}
@@ -541,7 +546,7 @@ ReactDOM.render(
       userName="Juan Valdez one two three four five six"
       orgName="National Federation of Coffee National Federation of Coffee National Federation of Coffee"
       platformAnnouncements={staticPlatformAnnouncements}
-      productAnnouncement="<span>Product news! <strong>Harder</strong>, <u>Better</u>, <em>Faster</em> 🥳</span>"
+      productAnnouncement="<span>Product news! <strong>Harder</strong>, <u>Better</u>, <em>Faster</em> 🥳</span> <a href='#'>Read more...</a></SampleTopbar>"
     />
     <div style={{ padding: 16 }}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pharetra
