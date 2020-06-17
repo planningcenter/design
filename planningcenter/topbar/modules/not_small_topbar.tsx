@@ -272,7 +272,6 @@ export const AppsMenu = (props) => (
                   size={24}
                 />
               </HoverableListItem>
-              <span>{true && <a href="#">Settings</a>}</span>
             </div>
           )
         )}
