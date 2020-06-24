@@ -1,6 +1,6 @@
 {
   "name": "@churchcenter/publishing-status",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Shared React and Reach components for building accessible Publishing Status dropdowns",
   "main": "dist/publishing-status.js",
   "source": "publishing-status.js",
@@ -21,8 +21,8 @@
   "homepage": "https://github.com/planningcenter/design/blob/master/packages/url/README.md",
   "private": false,
   "peerDependencies": {
-    "react": "^16.13.1",
-    "@planningcenter/icons": "^7.16.2"
+    "@planningcenter/icons": "^7.16.2",
+    "react": "^16.13.1"
   },
   "devDependencies": {
     "microbundle": "^0.12.2",
