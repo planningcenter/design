@@ -1,17 +1,240 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
-import PublishingStatus from "./publishing-status"
+import * as PublishingStatus from "./publishing-status";
 
 <Meta title="Church Center|Publishing Status" />
 
-# PublishingStatus
+# PublishingStatus.
 
 > Shared React and Reach components for building accessible Publishing Status dropdowns
 
-## Basic
-
 <Preview>
-  <Story name="Basic">
-    <PublishingStatus />
+  <Story name="*DRAFT TEST: 1">
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled={true}
+      churchCenterAppIsActive={true}
+      churchCenterWebIsActive={true}
+      userIsOrgAdmin={true}
+      churchCenterProductURL="#"
+      settingsURL="#"
+    >
+      <>
+        <PublishingStatus.ErrorBoundary>
+          <PublishingStatus.ViewSwitch />
+        </PublishingStatus.ErrorBoundary>
+        <PublishingStatus.ViewContext.Consumer>
+          {({ view }) =>
+            view === "Status" && (
+              <>
+                <PublishingStatus.SettingsLink />
+                <PublishingStatus.ProductLink />
+              </>
+            )
+          }
+        </PublishingStatus.ViewContext.Consumer>
+      </>
+    </PublishingStatus.ViewController>
   </Story>
 </Preview>
 
+<Preview>
+  <Story name="*DRAFT TEST: 2">
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled={true}
+      churchCenterAppIsActive={true}
+      churchCenterWebIsActive={true}
+      userIsOrgAdmin={false}
+      churchCenterProductURL="#"
+      settingsURL="#"
+    >
+      <>
+        <PublishingStatus.ErrorBoundary>
+          <PublishingStatus.ViewSwitch />
+        </PublishingStatus.ErrorBoundary>
+        <PublishingStatus.ViewContext.Consumer>
+          {({ view }) =>
+            view === "Status" && (
+              <>
+                <PublishingStatus.SettingsLink />
+                <PublishingStatus.ProductLink />
+              </>
+            )
+          }
+        </PublishingStatus.ViewContext.Consumer>
+      </>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="*DRAFT TEST: 3">
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled={true}
+      churchCenterAppIsActive={false}
+      churchCenterWebIsActive={true}
+      userIsOrgAdmin={false}
+      churchCenterProductURL="#"
+      settingsURL="#"
+    >
+      <>
+        <PublishingStatus.ErrorBoundary>
+          <PublishingStatus.ViewSwitch />
+        </PublishingStatus.ErrorBoundary>
+        <PublishingStatus.ViewContext.Consumer>
+          {({ view }) =>
+            view === "Status" && (
+              <>
+                <PublishingStatus.SettingsLink />
+                <PublishingStatus.ProductLink />
+              </>
+            )
+          }
+        </PublishingStatus.ViewContext.Consumer>
+      </>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="*DRAFT TEST: 4">
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled={true}
+      churchCenterAppIsActive={true}
+      churchCenterWebIsActive={false}
+      userIsOrgAdmin={true}
+      churchCenterProductURL="#"
+      settingsURL="#"
+    >
+      <>
+        <PublishingStatus.ErrorBoundary>
+          <PublishingStatus.ViewSwitch />
+        </PublishingStatus.ErrorBoundary>
+        <PublishingStatus.ViewContext.Consumer>
+          {({ view }) =>
+            view === "Status" && (
+              <>
+                <PublishingStatus.SettingsLink />
+                <PublishingStatus.ProductLink />
+              </>
+            )
+          }
+        </PublishingStatus.ViewContext.Consumer>
+      </>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="*DRAFT TEST: 5">
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled={true}
+      churchCenterAppIsActive={false}
+      churchCenterWebIsActive={false}
+      userIsOrgAdmin={true}
+      churchCenterProductURL="#"
+      settingsURL="#"
+    >
+      <>
+        <PublishingStatus.ErrorBoundary>
+          <PublishingStatus.ViewSwitch />
+        </PublishingStatus.ErrorBoundary>
+        <PublishingStatus.ViewContext.Consumer>
+          {({ view }) =>
+            view === "Status" && (
+              <>
+                <PublishingStatus.SettingsLink />
+                <PublishingStatus.ProductLink />
+              </>
+            )
+          }
+        </PublishingStatus.ViewContext.Consumer>
+      </>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="*DRAFT TEST: 6">
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled={true}
+      churchCenterAppIsActive={false}
+      churchCenterWebIsActive={false}
+      userIsOrgAdmin={false}
+      churchCenterProductURL="#"
+      settingsURL="#"
+    >
+      <>
+        <PublishingStatus.ErrorBoundary>
+          <PublishingStatus.ViewSwitch />
+        </PublishingStatus.ErrorBoundary>
+        <PublishingStatus.ViewContext.Consumer>
+          {({ view }) =>
+            view === "Status" && (
+              <>
+                <PublishingStatus.SettingsLink />
+                <PublishingStatus.ProductLink />
+              </>
+            )
+          }
+        </PublishingStatus.ViewContext.Consumer>
+      </>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="*DRAFT TEST: 7">
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled={false}
+      churchCenterAppIsActive={false}
+      churchCenterWebIsActive={false}
+      userIsOrgAdmin={true}
+      churchCenterProductURL="#"
+      settingsURL="#"
+    >
+      <>
+        <PublishingStatus.ErrorBoundary>
+          <PublishingStatus.ViewSwitch />
+        </PublishingStatus.ErrorBoundary>
+        <PublishingStatus.ViewContext.Consumer>
+          {({ view }) =>
+            view === "Status" && (
+              <>
+                <PublishingStatus.SettingsLink />
+                <PublishingStatus.ProductLink />
+              </>
+            )
+          }
+        </PublishingStatus.ViewContext.Consumer>
+      </>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="*DRAFT TEST: 8">
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled={false}
+      churchCenterAppIsActive={false}
+      churchCenterWebIsActive={false}
+      userIsOrgAdmin={false}
+      churchCenterProductURL="#"
+      settingsURL="#"
+    >
+      <>
+        <PublishingStatus.ErrorBoundary>
+          <PublishingStatus.ViewSwitch />
+        </PublishingStatus.ErrorBoundary>
+        <PublishingStatus.ViewContext.Consumer>
+          {({ view }) =>
+            view === "Status" && (
+              <>
+                <PublishingStatus.SettingsLink />
+                <PublishingStatus.ProductLink />
+              </>
+            )
+          }
+        </PublishingStatus.ViewContext.Consumer>
+      </>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
