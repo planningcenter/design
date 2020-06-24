@@ -1,6 +1,8 @@
 # 6.1.0 (prerelease)
 
 - Add `ProductAnnouncement` component
+- `Topbar_ProductAnnouncement` parent selector for styling content
+- Fix Announcement topbars to be 14px font-size and 48px absolute height
 
 # 6.0.0
 
