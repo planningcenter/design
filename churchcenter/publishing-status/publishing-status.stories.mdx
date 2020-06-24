@@ -8,9 +8,10 @@ import * as PublishingStatus from "./publishing-status";
 > Shared React and Reach components for building accessible Publishing Status dropdowns
 
 <Preview>
-  <Story name="*DRAFT TEST: 1">
+  <Story name="*DRAFT TEST: Full">
     <PublishingStatus.ViewController
       churchCenterIsEnabled={true}
+      productIsPublished={true}
       churchCenterAppIsActive={true}
       churchCenterWebIsActive={true}
       userIsOrgAdmin={true}
@@ -37,9 +38,10 @@ import * as PublishingStatus from "./publishing-status";
 </Preview>
 
 <Preview>
-  <Story name="*DRAFT TEST: 2">
+  <Story name="*DRAFT TEST: Full, not org admin">
     <PublishingStatus.ViewController
       churchCenterIsEnabled={true}
+      productIsPublished={true}
       churchCenterAppIsActive={true}
       churchCenterWebIsActive={true}
       userIsOrgAdmin={false}
@@ -66,9 +68,10 @@ import * as PublishingStatus from "./publishing-status";
 </Preview>
 
 <Preview>
-  <Story name="*DRAFT TEST: 3">
+  <Story name="*DRAFT TEST: enabled, published, app-only">
     <PublishingStatus.ViewController
       churchCenterIsEnabled={true}
+      productIsPublished={true}
       churchCenterAppIsActive={false}
       churchCenterWebIsActive={true}
       userIsOrgAdmin={false}
@@ -95,9 +98,10 @@ import * as PublishingStatus from "./publishing-status";
 </Preview>
 
 <Preview>
-  <Story name="*DRAFT TEST: 4">
+  <Story name="*DRAFT TEST: enabled, published, app-only, org-admin">
     <PublishingStatus.ViewController
       churchCenterIsEnabled={true}
+      productIsPublished={true}
       churchCenterAppIsActive={true}
       churchCenterWebIsActive={false}
       userIsOrgAdmin={true}
@@ -124,11 +128,10 @@ import * as PublishingStatus from "./publishing-status";
 </Preview>
 
 <Preview>
-  <Story name="*DRAFT TEST: 5">
+  <Story name="*DRAFT TEST: Enabled but nothing published (org admin)">
     <PublishingStatus.ViewController
       churchCenterIsEnabled={true}
-      churchCenterAppIsActive={false}
-      churchCenterWebIsActive={false}
+      productIsPublished={false}
       userIsOrgAdmin={true}
       churchCenterProductURL="#"
       settingsURL="#"
@@ -153,11 +156,10 @@ import * as PublishingStatus from "./publishing-status";
 </Preview>
 
 <Preview>
-  <Story name="*DRAFT TEST: 6">
+  <Story name="*DRAFT TEST: Enabled but nothing published">
     <PublishingStatus.ViewController
       churchCenterIsEnabled={true}
-      churchCenterAppIsActive={false}
-      churchCenterWebIsActive={false}
+      productIsPublished={false}
       userIsOrgAdmin={false}
       churchCenterProductURL="#"
       settingsURL="#"
@@ -182,11 +184,8 @@ import * as PublishingStatus from "./publishing-status";
 </Preview>
 
 <Preview>
-  <Story name="*DRAFT TEST: 7">
+  <Story name="*DRAFT TEST: All systems fail (org admin)">
     <PublishingStatus.ViewController
-      churchCenterIsEnabled={false}
-      churchCenterAppIsActive={false}
-      churchCenterWebIsActive={false}
       userIsOrgAdmin={true}
       churchCenterProductURL="#"
       settingsURL="#"
@@ -211,12 +210,8 @@ import * as PublishingStatus from "./publishing-status";
 </Preview>
 
 <Preview>
-  <Story name="*DRAFT TEST: 8">
+  <Story name="*DRAFT TEST: All systems fail">
     <PublishingStatus.ViewController
-      churchCenterIsEnabled={false}
-      churchCenterAppIsActive={false}
-      churchCenterWebIsActive={false}
-      userIsOrgAdmin={false}
       churchCenterProductURL="#"
       settingsURL="#"
     >

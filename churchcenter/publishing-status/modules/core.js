@@ -2,6 +2,7 @@ export function produceViewState({
   churchCenterAppIsActive = false,
   userIsOrgAdmin = false,
   productName,
+  productIsPublished = false,
   churchCenterWebIsActive = false,
   settingsURL: _settingsURL = "",
   churchCenterProductURL: _churchCenterProductURL = "",
@@ -11,6 +12,7 @@ export function produceViewState({
     churchCenterAppIsActive,
     userIsOrgAdmin,
     productName,
+    productIsPublished,
     churchCenterWebIsActive,
     _churchCenterProductURL,
     _settingsURL,
@@ -21,11 +23,6 @@ export function produceViewState({
     get churchCenterProductURL() {
       if (this.churchCenterWebIsActive) return this._churchCenterProductURL;
       return "";
-    },
-    get productIsPublished() {
-      return Boolean(
-        this.churchCenterAppIsActive || this.churchCenterWebIsActive
-      );
     },
     ...restIncomingState,
   };
