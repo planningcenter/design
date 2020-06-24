@@ -1,4 +1,4 @@
 {
-  "packages": ["planningcenter/*"],
+  "packages": ["planningcenter/*", "churchcenter/*"],
   "version": "independent"
 }
