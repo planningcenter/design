@@ -317,10 +317,10 @@ export function MenuButton({
       {...props}
     >
       {context.view !== "Status" && (
-        <>
+        <React.Fragment>
           <ExclamationTriangleIcon />
           <LegacyGap />
-        </>
+        </React.Fragment>
       )}
       {children}
       <LegacyGap />
@@ -353,7 +353,7 @@ export function MenuLinks(props) {
     context.view === "Status" &&
     Boolean(context.settingsURL || context.churchCenterProductURL)
   ) {
-    return <>{props}</>;
+    return <React.Fragment>{props.children}</React.Fragment>;
   }
 
   return null;
