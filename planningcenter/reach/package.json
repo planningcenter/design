@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/reach",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Reach UI stylesheets with custom property controls",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design#readme",
