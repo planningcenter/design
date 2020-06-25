@@ -8,6 +8,14 @@ import * as PublishingStatus from "./publishing-status";
 > Shared React and Reach components for building accessible Publishing Status dropdowns
 
 <Preview>
+  <Story name="*DRAFT TEST: MenuButton">
+    <PublishingStatus.MenuButton>
+      Even more than Church Center
+    </PublishingStatus.MenuButton>
+  </Story>
+</Preview>
+
+<Preview>
   <Story name="*DRAFT TEST: Full">
     <PublishingStatus.ViewController
       churchCenterIsEnabled={true}
@@ -18,9 +26,37 @@ import * as PublishingStatus from "./publishing-status";
       churchCenterProductURL="#"
       settingsURL="#"
     >
+      <MenuItems>
+        <PublishingStatus.ErrorBoundary>
+          <PublishingStatus.ViewSwitch
+            productName="SuperduperApp"
+            positiveMessage="A good thing"
+            negativeMessage="A not so good thing"
+          />
+          <hr />
+          <MenuLinks>
+            <PublishingStatus.SettingsLink />
+            <PublishingStatus.ProductLink />
+          </MenuLinks>
+        </PublishingStatus.ErrorBoundary>
+      </MenuItems>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="*DRAFT TEST: Church Center not enabled--">
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled={false}
+      productIsPublished={true}
+    >
       <>
         <PublishingStatus.ErrorBoundary>
-          <PublishingStatus.ViewSwitch />
+          <PublishingStatus.ViewSwitch
+            productName="SuperduperApp"
+            positiveMessage="A good thing"
+            negativeMessage="A not so good thing"
+          />
         </PublishingStatus.ErrorBoundary>
         <PublishingStatus.ViewContext.Consumer>
           {({ view }) =>
@@ -211,7 +247,31 @@ import * as PublishingStatus from "./publishing-status";
 
 <Preview>
   <Story name="*DRAFT TEST: All systems fail">
+    <PublishingStatus.ViewController churchCenterProductURL="#" settingsURL="#">
+      <>
+        <PublishingStatus.ErrorBoundary>
+          <PublishingStatus.ViewSwitch />
+        </PublishingStatus.ErrorBoundary>
+        <PublishingStatus.ViewContext.Consumer>
+          {({ view }) =>
+            view === "Status" && (
+              <>
+                <PublishingStatus.SettingsLink />
+                <PublishingStatus.ProductLink />
+              </>
+            )
+          }
+        </PublishingStatus.ViewContext.Consumer>
+      </>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="*DRAFT TEST: Church center not enabled with custom message">
     <PublishingStatus.ViewController
+      churchCenterIsEnabled={false}
+      productIsPublished={true}
       churchCenterProductURL="#"
       settingsURL="#"
     >
