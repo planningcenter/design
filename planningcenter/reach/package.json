@@ -1,0 +1,22 @@
+{
+  "name": "@planningcenter/reach",
+  "version": "0.0.0",
+  "description": "Reach UI stylesheets with custom property controls",
+  "author": "Michael Chan <mijoch@gmail.com>",
+  "homepage": "https://github.com/planningcenter/design#readme",
+  "license": "MIT",
+  "files": [
+    "css"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planningcenter/design.git"
+  },
+  "scripts": {},
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  }
+}
