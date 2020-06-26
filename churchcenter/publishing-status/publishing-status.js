@@ -303,6 +303,7 @@ MenuButton.displayName = "publishing-status:MenuButton";
 export function MenuButton({
   as: As = "button",
   children = "Church Center",
+  style,
   ...props
 }) {
   let context = React.useContext(ViewContext);
@@ -313,6 +314,7 @@ export function MenuButton({
       style={{
         display: "flex",
         alignItems: "center",
+        ...style,
       }}
       {...props}
     >
