@@ -1,11 +1,143 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import * as PublishingStatus from "./publishing-status";
+import "../../planningcenter/reach/css/menu-button.css";
+// import * as Reach "@reach/menu-button";
 
 <Meta title="Church Center|Publishing Status" />
 
 # PublishingStatus.
 
 > Shared React and Reach components for building accessible Publishing Status dropdowns
+
+## Primary views
+
+<Preview>
+  <Story name="All systems go">
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled={true}
+      productIsPublished={true}
+      churchCenterAppIsActive={true}
+      churchCenterWebIsActive={true}
+      userIsOrgAdmin={true}
+      churchCenterProductURL="#"
+      settingsURL="#"
+    >
+      <PublishingStatus.MenuButton />
+      <PublishingStatus.MenuItems>
+        <PublishingStatus.ErrorBoundary>
+          <PublishingStatus.ViewSwitch />
+          <hr />
+          <MenuLinks>
+            <PublishingStatus.SettingsLink />
+            <PublishingStatus.ProductLink />
+          </MenuLinks>
+        </PublishingStatus.ErrorBoundary>
+      </PublishingStatus.MenuItems>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Web only">
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled={true}
+      productIsPublished={true}
+      churchCenterAppIsActive={false}
+      churchCenterWebIsActive={true}
+      userIsOrgAdmin={true}
+      churchCenterProductURL="#"
+      settingsURL="#"
+    >
+      <PublishingStatus.MenuButton />
+      <PublishingStatus.MenuItems>
+        <PublishingStatus.ErrorBoundary>
+          <PublishingStatus.ViewSwitch />
+          <PublishingStatus.MenuLinks>
+            <hr />
+            <PublishingStatus.SettingsLink />
+            <PublishingStatus.ProductLink />
+          </PublishingStatus.MenuLinks>
+        </PublishingStatus.ErrorBoundary>
+      </PublishingStatus.MenuItems>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="App only">
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled={true}
+      productIsPublished={true}
+      churchCenterAppIsActive={true}
+      churchCenterWebIsActive={false}
+      userIsOrgAdmin={true}
+      churchCenterProductURL="#"
+      settingsURL="#"
+    >
+      <PublishingStatus.MenuButton />
+      <PublishingStatus.MenuItems>
+        <PublishingStatus.ErrorBoundary>
+          <PublishingStatus.ViewSwitch />
+          <PublishingStatus.MenuLinks>
+            <hr />
+            <PublishingStatus.SettingsLink />
+            <PublishingStatus.ProductLink />
+          </PublishingStatus.MenuLinks>
+        </PublishingStatus.ErrorBoundary>
+      </PublishingStatus.MenuItems>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Church Center not enabled">
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled={false}
+      productIsPublished={true}
+      churchCenterAppIsActive={true}
+      churchCenterWebIsActive={false}
+      userIsOrgAdmin={true}
+      churchCenterProductURL="#"
+      settingsURL="#"
+    >
+      <PublishingStatus.MenuButton />
+      <PublishingStatus.ErrorBoundary>
+        <PublishingStatus.ViewSwitch />
+        <PublishingStatus.MenuLinks>
+          <hr />
+          <PublishingStatus.SettingsLink />
+          <PublishingStatus.ProductLink />
+        </PublishingStatus.MenuLinks>
+      </PublishingStatus.ErrorBoundary>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Product not published">
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled={false}
+      productIsPublished={false}
+      churchCenterAppIsActive={true}
+      churchCenterWebIsActive={false}
+      userIsOrgAdmin={true}
+      churchCenterProductURL="#"
+      settingsURL="#"
+    >
+      <PublishingStatus.MenuButton />
+      <PublishingStatus.ErrorBoundary>
+        <PublishingStatus.ViewSwitch />
+        <PublishingStatus.MenuLinks>
+          <hr />
+          <PublishingStatus.SettingsLink />
+          <PublishingStatus.ProductLink />
+        </PublishingStatus.MenuLinks>
+      </PublishingStatus.ErrorBoundary>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+## Other test cases
 
 <Preview>
   <Story name="*DRAFT TEST: MenuButton">
