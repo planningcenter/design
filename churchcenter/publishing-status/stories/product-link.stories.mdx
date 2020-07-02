@@ -1,0 +1,61 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import * as PublishingStatus from "../publishing-status";
+import * as Reach from "@reach/menu-button";
+import "../../../planningcenter/reach/css/menu-button.css";
+
+<Meta title="Church Center|Publishing Status/ProductLink" />
+
+# ProductLink
+
+TODO: description of defaults
+
+## Defaults
+
+<Preview>
+  <Story name="defaults">
+    <PublishingStatus.ViewController
+      churchCenterWebIsActive
+      churchCenterProductURL="#"
+    >
+      <PublishingStatus.ProductLink>
+        Mostly a normal anchor
+      </PublishingStatus.ProductLink>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+## `children`
+
+TODO: description of children
+
+<Preview>
+  <Story name="children">
+    <PublishingStatus.ViewController
+      churchCenterWebIsActive
+      churchCenterProductURL="#"
+    >
+      <PublishingStatus.ProductLink>
+        Visit events list
+      </PublishingStatus.ProductLink>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+## `as`
+
+TODO: description of as with Reach.MenuItem
+
+<Preview>
+  <Story name="as">
+    <Reach.Menu>
+      <PublishingStatus.ViewController
+        churchCenterWebIsActive
+        churchCenterProductURL="#"
+      >
+        <PublishingStatus.ProductLink as={Reach.MenuItem}>
+          Visit events list
+        </PublishingStatus.ProductLink>
+      </PublishingStatus.ViewController>
+    </Reach.Menu>
+  </Story>
+</Preview>

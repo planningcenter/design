@@ -1,0 +1,48 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import * as PublishingStatus from "../publishing-status";
+
+<Meta title="Church Center|Publishing Status/ErrorBoundary" />
+
+# ErrorBoundary and ErrorView
+
+TODO:
+
+#### (defaults)
+
+<Preview>
+  <Story name="defaults">
+    <PublishingStatus.ErrorBoundary>
+      <PublishingStatus.ViewSwitch />
+    </PublishingStatus.ErrorBoundary>
+  </Story>
+</Preview>
+
+#### `fallback`
+
+TODO: this is what default does but explicitly so
+
+<Preview>
+  <Story name="fallback">
+    <PublishingStatus.ErrorBoundary
+      fallback={
+        <span>
+          A <strong>custom</strong> error message
+        </span>
+      }
+    >
+      <PublishingStatus.ViewSwitch />
+    </PublishingStatus.ErrorBoundary>
+  </Story>
+</Preview>
+
+#### ErrorView
+
+TODO: this is what default does but explicitly so — should you want the standard message with your own ErrorBoundary handler
+
+<Preview>
+  <Story name="ErrorView">
+    <PublishingStatus.ErrorBoundary fallback={<PublishingStatus.ErrorView />}>
+      <PublishingStatus.ViewSwitch />
+    </PublishingStatus.ErrorBoundary>
+  </Story>
+</Preview>

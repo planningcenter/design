@@ -1,0 +1,81 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import * as PublishingStatus from "../publishing-status";
+import "../../../planningcenter/reach/css/menu-button.css";
+
+<Meta title="Church Center|Publishing Status/ViewSwitch" />
+
+# ViewSwitch
+
+### ViewSwitch with ErrorBoundary
+
+<Preview>
+  <Story name="ViewSwitch with ErrorBoundary">
+    <PublishingStatus.ErrorBoundary>
+      <PublishingStatus.ViewSwitch />
+    </PublishingStatus.ErrorBoundary>
+  </Story>
+</Preview>
+
+### ViewSwitch with ErrorBoundary and fallback
+
+<Preview>
+  <Story name="ViewSwitch with ErrorBoundary and fallback">
+    <PublishingStatus.ErrorBoundary fallback={<span>Some <em>other</em> fallback message</span>}>
+      <PublishingStatus.ViewSwitch />
+    </PublishingStatus.ErrorBoundary>
+  </Story>
+</Preview>
+
+### ViewSwitch with ViewController
+
+#### (defaults)
+
+<Preview>
+  <Story name="ViewSwitch with ViewController">
+    <PublishingStatus.ViewController>
+      <PublishingStatus.ViewSwitch />
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+#### Show settings url
+
+<Preview>
+  <Story name="ViewSwitch with ViewController (settingsURL)">
+    <PublishingStatus.ViewController settingsURL="#" userIsOrgAdmin>
+      <PublishingStatus.ViewSwitch />
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+#### Show church center not enabled view
+
+<Preview>
+  <Story name="ViewSwitch with ViewController (productIsPublished)">
+    <PublishingStatus.ViewController productIsPublished>
+      <PublishingStatus.ViewSwitch />
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+#### Show complete view
+
+<Preview>
+  <Story name="ViewSwitch with ViewController (productIsPublished, churchCenterIsEnabled)">
+    <PublishingStatus.ViewController churchCenterIsEnabled productIsPublished>
+      <PublishingStatus.ViewSwitch />
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+#### Show apps as active
+
+<Preview>
+  <Story name="ViewSwitch with ViewController (productIsPublished, churchCenterIsEnabled, churchCenterWebIsActive, churchCenterAppIsActive)">
+    <PublishingStatus.ViewController churchCenterIsEnabled productIsPublished churchCenterWebIsActive churchCenterAppIsActive>
+      <PublishingStatus.ViewSwitch />
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+TODO: show that links are handled differently for StatusView

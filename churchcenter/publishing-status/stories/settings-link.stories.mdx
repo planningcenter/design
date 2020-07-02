@@ -1,0 +1,49 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import * as PublishingStatus from "../publishing-status";
+import * as Reach from "@reach/menu-button";
+import "../../../planningcenter/reach/css/menu-button.css";
+// import * as Reach "@reach/menu-button";
+
+<Meta title="Church Center|Publishing Status/SettingsLink" />
+
+# SettingsLink
+
+TODO: description of defaults
+
+## Defaults
+
+<Preview>
+  <Story name="defaults">
+    <PublishingStatus.ViewController userIsOrgAdmin settingsURL="#">
+      <PublishingStatus.SettingsLink />
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+## `children`
+
+TODO: description of children
+
+<Preview>
+  <Story name="children">
+    <PublishingStatus.ViewController userIsOrgAdmin settingsURL="#">
+      <PublishingStatus.SettingsLink>
+        Seriously. Update the settings.
+      </PublishingStatus.SettingsLink>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+## `as`
+
+TODO: description of as with Reach.MenuItem
+
+<Preview>
+  <Story name="as">
+    <Reach.Menu>
+      <PublishingStatus.ViewController userIsOrgAdmin settingsURL="#">
+        <PublishingStatus.SettingsLink as={Reach.MenuItem} />
+      </PublishingStatus.ViewController>
+    </Reach.Menu>
+  </Story>
+</Preview>

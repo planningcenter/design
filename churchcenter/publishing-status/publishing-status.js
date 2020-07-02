@@ -348,14 +348,14 @@ export function MenuItems({ as: As = "div", style, ...props }) {
 }
 
 MenuLinks.displayName = "publishing-status:MenuLink";
-export function MenuLinks(props) {
+export function MenuLinks({ as: As = React.Fragment, ...props }) {
   let context = React.useContext(ViewContext);
 
   if (
     context.view === "Status" &&
     Boolean(context.settingsURL || context.churchCenterProductURL)
   ) {
-    return <React.Fragment>{props.children}</React.Fragment>;
+    return <As>{props.children}</As>;
   }
 
   return null;
