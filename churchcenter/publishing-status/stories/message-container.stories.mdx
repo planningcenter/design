@@ -1,0 +1,34 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import * as PublishingStatus from "../publishing-status";
+
+<Meta title="Church Center|Publishing Status/MessageContainer" />
+
+# MessageContainer
+
+`MessageContainer` applies just a little bit of formatting.  
+It's used as the wrapping component for all `*View` components.
+
+<Preview>
+  <Story name="default">
+    <PublishingStatus.MessageContainer>
+      <PublishingStatus.StatusView />
+    </PublishingStatus.MessageContainer>
+  </Story>
+</Preview>
+
+## Styling
+
+At the moment, the wrapper exposes a CSS Custom Property for padding: `--publishing-status--message-container--padding`  
+It defaults to `16px`.
+
+<Preview>
+  <Story name="styling">
+    <PublishingStatus.MessageContainer
+      style={{ "--publishing-status--message-container--padding": "40px" }}
+    >
+      <PublishingStatus.StatusView />
+    </PublishingStatus.MessageContainer>
+  </Story>
+</Preview>
+
+If needed, create your own container and provide it to the `*View` componenst via the `as` prop.

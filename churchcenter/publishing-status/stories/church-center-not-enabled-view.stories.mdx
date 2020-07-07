@@ -1,0 +1,26 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import * as PublishingStatus from "../publishing-status";
+
+<Meta title="Church Center|Publishing Status/ChurchCenterNotEnabledView" />
+
+# ChurchCenterNotEnabledView
+
+Like other views, this component defers to `as` and `children` props.
+
+<Preview>
+  <Story name="default">
+    <PublishingStatus.ChurchCenterNotEnabledView />
+  </Story>
+</Preview>
+
+`children` can be customized but "Church Center is disabled." sentance is static.
+
+## settingsURL
+
+`settingsURL` reveals an "Update settings" link after the `children` message.
+
+<Preview>
+  <Story name="settingsURL">
+    <PublishingStatus.ChurchCenterNotEnabledView settingsURL="#" />
+  </Story>
+</Preview>

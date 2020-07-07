@@ -1,0 +1,34 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import * as PublishingStatus from "../publishing-status";
+
+<Meta title="Church Center|Publishing Status/ProductNotPublishedView" />
+
+# ProductNotPublishedView
+
+Like other views, this component defers to `as` and `children` props.
+
+<Preview>
+  <Story name="default">
+    <PublishingStatus.ProductNotPublishedView />
+  </Story>
+</Preview>
+
+## settingsURL
+
+`settingsURL` reveals an "Update settings" link after the `children` message.
+
+<Preview>
+  <Story name="settingsURL">
+    <PublishingStatus.ProductNotPublishedView settingsURL="#" />
+  </Story>
+</Preview>
+
+## productName
+
+`productName` controls the "This product" default messaging.
+
+<Preview>
+  <Story name="productName">
+    <PublishingStatus.ProductNotPublishedView productName="The product Jesus loved" />
+  </Story>
+</Preview>

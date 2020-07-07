@@ -204,11 +204,34 @@ export function StatusView({
   children = "On Church Center, people can browse and register for events.",
   churchCenterAppIsActive,
   churchCenterWebIsActive,
+  style,
+  ...props
 }) {
   function PlatformStatus({ enabled = false, children, ...props }) {
     return (
       <div style={{ display: "flex", alignItems: "center" }} {...props}>
-        {enabled ? <CheckIcon /> : <XIcon />}
+        {enabled ? (
+          <Icon
+            title="checkmark"
+            desc="indicates enabled"
+            path={check}
+            style={{
+              color: "var(--publishing-status--product-enabled--color, green)",
+              fontSize: ".8572em",
+            }}
+          />
+        ) : (
+          <Icon
+            title="x"
+            desc="indicates not enabled"
+            path={x}
+            style={{
+              color:
+                "var(--publishing-status--product-not-enabled--color, red)",
+              fontSize: ".8572em",
+            }}
+          />
+        )}
         <span style={{ marginRight: "4px" }} />
         <strong>{children}</strong>
       </div>
@@ -216,7 +239,7 @@ export function StatusView({
   }
 
   return (
-    <As style={{ display: "grid", gap: "16px" }}>
+    <As style={{ display: "grid", gap: "16px", ...style }} {...props}>
       <div>
         <span>{children}</span>
       </div>
@@ -254,7 +277,7 @@ ProductLink.displayName = "publishing-status:ProductLink";
 export function ProductLink({
   as: As = "a",
   children = "Visit published page",
-  href,
+  href: _href,
   ...props
 }) {
   let { churchCenterProductURL } = React.useContext(ViewContext);
@@ -264,13 +287,21 @@ export function ProductLink({
       <As
         target="_blank"
         rel="noopener noreferrer"
-        href={href || churchCenterProductURL}
+        href={churchCenterProductURL}
         {...props}
       >
         <span style={{ display: "flex", alignItems: "center" }}>
           <span>{children}</span>
           <span style={{ marginRight: "8px" }} />
-          <NewWindowIcon />
+          <Icon
+            title="New window"
+            desc="will open in new window"
+            path={newWindow}
+            style={{
+              color: "var(--publishing-status--product-link--color, inherit)",
+              fontSize: ".8572em",
+            }}
+          />
         </span>
       </As>
     );
@@ -283,7 +314,7 @@ SettingsLink.displayName = "publishing-status:SettingsLink";
 export function SettingsLink({
   as: As = "a",
   children = "Update settings",
-  href, // disgarded, controller removed url if !userIsOrgAdmin (REWORK:)
+  href: _href, // disgard
   ...props
 }) {
   let { settingsURL } = React.useContext(ViewContext);
@@ -320,14 +351,28 @@ export function MenuButton({
     >
       {context.view !== "Status" && (
         <React.Fragment>
-          <ExclamationTriangleIcon />
+          <Icon
+            title="Exclamation triangle"
+            desc="This product is not published on Church Center"
+            path={exclamationTriangle}
+            style={{
+              color: "var(--publishing-status--product-link--color, inherit)",
+            }}
+          />
           <LegacyGap />
         </React.Fragment>
       )}
       {children}
       <LegacyGap />
       <span data-reach-menu-button-toggle-icon>
-        <DownCaretIcon />
+        <Icon
+          title="Down caret"
+          desc="Open Church Center Publishing status menu"
+          path={downCaret}
+          style={{
+            color: "var(--publishing-status--product-link--color, inherit)",
+          }}
+        />
       </span>
     </As>
   );
@@ -359,80 +404,6 @@ export function MenuLinks({ as: As = React.Fragment, ...props }) {
   }
 
   return null;
-}
-
-NewWindowIcon.displayName = "publishing-status:NewWindowIcon";
-export function NewWindowIcon() {
-  return (
-    <Icon
-      title="New window"
-      desc="will open in new window"
-      path={newWindow}
-      style={{
-        color: "var(--publishing-status--product-link--color, inherit)",
-        fontSize: ".8572em",
-      }}
-    />
-  );
-}
-
-CheckIcon.displayName = "publishing-status:CheckIcon";
-export function CheckIcon() {
-  return (
-    <Icon
-      title="checkmark"
-      desc="indicates enabled"
-      path={check}
-      style={{
-        color: "var(--publishing-status--product-enabled--color, green)",
-        fontSize: ".8572em",
-      }}
-    />
-  );
-}
-
-XIcon.displayName = "publishing-status:XIcon";
-export function XIcon() {
-  return (
-    <Icon
-      title="x"
-      desc="indicates not enabled"
-      path={x}
-      style={{
-        color: "var(--publishing-status--product-not-enabled--color, red)",
-        fontSize: ".8572em",
-      }}
-    />
-  );
-}
-
-ExclamationTriangleIcon.displayName =
-  "publishing-status:ExclamationTriangleIcon";
-export function ExclamationTriangleIcon() {
-  return (
-    <Icon
-      title="Exclamation triangle"
-      desc="This product is not published on Church Center"
-      path={exclamationTriangle}
-      style={{
-        color: "var(--publishing-status--product-link--color, inherit)",
-      }}
-    />
-  );
-}
-
-DownCaretIcon.displayName = "publishing-status:DownCaretIcon";
-export function DownCaretIcon() {
-  return (
-    <Icon
-      title="Down caret"
-      desc="Open Church Center Publishing status menu"
-      path={downCaret}
-      style={{
-        color: "var(--publishing-status--product-link--color, inherit)",
-      }}
-    />
-  );
 }
 
 Icon.displayName = "publishing-status:Icon";

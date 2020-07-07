@@ -5,21 +5,21 @@ import * as PublishingStatus from "../publishing-status";
 
 # ErrorBoundary and ErrorView
 
-TODO:
+An error boundary is included for app-side composition.
 
-#### (defaults)
+It behaves like any error boundary but this one comes bundled with standard error messaging.
 
 <Preview>
-  <Story name="defaults">
+  <Story name="default">
     <PublishingStatus.ErrorBoundary>
       <PublishingStatus.ViewSwitch />
     </PublishingStatus.ErrorBoundary>
   </Story>
 </Preview>
 
-#### `fallback`
+## `fallback`
 
-TODO: this is what default does but explicitly so
+`fallback` can be used to customize this messaging:
 
 <Preview>
   <Story name="fallback">
@@ -35,14 +35,16 @@ TODO: this is what default does but explicitly so
   </Story>
 </Preview>
 
-#### ErrorView
+## ErrorView
 
-TODO: this is what default does but explicitly so — should you want the standard message with your own ErrorBoundary handler
+`ErrorView` is provides a default message for apps an error boundary with error-reporting integration:
+
+export const MyErrorBoundary = PublishingStatus.ErrorBoundary;
 
 <Preview>
   <Story name="ErrorView">
-    <PublishingStatus.ErrorBoundary fallback={<PublishingStatus.ErrorView />}>
+    <MyErrorBoundary fallback={<PublishingStatus.ErrorView />}>
       <PublishingStatus.ViewSwitch />
-    </PublishingStatus.ErrorBoundary>
+    </MyErrorBoundary>
   </Story>
 </Preview>

@@ -1,0 +1,16 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import * as PublishingStatus from "../publishing-status";
+
+<Meta title="Church Center|Publishing Status/ErrorView" />
+
+# ErrorView
+
+`ErrorView` can be used to display a normalized error text.
+
+<Preview>
+  <Story name="default">
+    <PublishingStatus.ErrorView />
+  </Story>
+</Preview>
+
+It defers to `as` and `children` props but there's no practical reason to use it over your own component with custom error messaging.

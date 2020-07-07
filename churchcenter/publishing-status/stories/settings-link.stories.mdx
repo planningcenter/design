@@ -8,12 +8,19 @@ import "../../../planningcenter/reach/css/menu-button.css";
 
 # SettingsLink
 
-TODO: description of defaults
+`SettingsLink` is a an anchor that gets `href` from `ViewController` context.
+
+href value is on context for two reasons:
+
+- The URL is shared between views and menu button items
+- The value is nulified if `churchCenterWebIsActive` is **falsy**
 
 ## Defaults
 
+`SettingsLink` with `ViewController`
+
 <Preview>
-  <Story name="defaults">
+  <Story name="default">
     <PublishingStatus.ViewController userIsOrgAdmin settingsURL="#">
       <PublishingStatus.SettingsLink />
     </PublishingStatus.ViewController>
@@ -22,13 +29,17 @@ TODO: description of defaults
 
 ## `children`
 
-TODO: description of children
+`children` are used to customize messaging.
 
 <Preview>
   <Story name="children">
     <PublishingStatus.ViewController userIsOrgAdmin settingsURL="#">
       <PublishingStatus.SettingsLink>
-        Seriously. Update the settings.
+        Seriously.{" "}
+        <strong>
+          Update <em>your</em> settings
+        </strong>
+        .
       </PublishingStatus.SettingsLink>
     </PublishingStatus.ViewController>
   </Story>
@@ -36,7 +47,9 @@ TODO: description of children
 
 ## `as`
 
-TODO: description of as with Reach.MenuItem
+`as` is used to integrate `SettingsLink` into any dropdown library.
+
+This example uses [Reach UI](https://reach.tech/menu-button) — [recommended by Global Design](https://planningcenter.design/react-recommended).
 
 <Preview>
   <Story name="as">

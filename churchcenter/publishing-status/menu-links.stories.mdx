@@ -2,36 +2,70 @@ import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import * as PublishingStatus from "./publishing-status";
 import * as Reach from "@reach/menu-button";
 import "../../planningcenter/reach/css/menu-button.css";
-// import * as Reach "@reach/menu-button";
 
 <Meta title="Church Center|Publishing Status/MenuLinks" />
 
 # MenuLinks
 
-TODO: description of defaults
-Controls when list items should be seen.
-This view === "Status"
+`MenuLinks` hides and shows available links based on `ViewController` context.
+
+`children` are displayed where these conditions are met:
+
+- `view === "Status"`
+- `churchCenterProductURL` or `settingsURL` are **truthy**.
 
 ## Defaults
 
+When conditions aren't met:
+
 <Preview>
-  <Story name="defaults">
-    <PublishingStatus.ViewController userIsOrgAdmin settingsURL="#">
-      <PublishingStatus.SettingsLink />
+  <Story name="hidden">
+    <PublishingStatus.ViewController>
+      <PublishingStatus.MenuLinks>
+        <PublishingStatus.SettingsLink />
+      </PublishingStatus.MenuLinks>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+When conditions aren met:
+
+<Preview>
+  <Story name="shown">
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled
+      productIsPublished
+      userIsOrgAdmin
+      settingsURL="#"
+    >
+      <PublishingStatus.MenuLinks>
+        <PublishingStatus.SettingsLink />
+      </PublishingStatus.MenuLinks>
     </PublishingStatus.ViewController>
   </Story>
 </Preview>
 
 ## `children`
 
-TODO: description of children
+`children` can be anything.  
+This is handy for showing a horizontal rule only when
 
 <Preview>
   <Story name="children">
-    <PublishingStatus.ViewController userIsOrgAdmin settingsURL="#">
-      <PublishingStatus.SettingsLink>
-        Seriously. Update the settings.
-      </PublishingStatus.SettingsLink>
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled
+      productIsPublished
+      userIsOrgAdmin
+      settingsURL="#"
+    >
+      View content
+      <PublishingStatus.MenuLinks>
+        <hr />
+        <ul>
+          <li>list</li>
+          <li>items</li>
+        </ul>
+      </PublishingStatus.MenuLinks>
     </PublishingStatus.ViewController>
   </Story>
 </Preview>
@@ -44,8 +78,18 @@ defaults to `React.Fragment` (elements returned directly)
 <Preview>
   <Story name="as">
     <Reach.Menu>
-      <PublishingStatus.ViewController userIsOrgAdmin settingsURL="#">
-        <PublishingStatus.SettingsLink as={Reach.MenuItem} />
+      <PublishingStatus.ViewController
+        churchCenterIsEnabled
+        productIsPublished
+        userIsOrgAdmin
+        settingsURL="#"
+      >
+        View content
+        <PublishingStatus.MenuLinks>
+          <hr />
+          <PublishingStatus.SettingsLink as={Reach.MenuItem} />
+          <PublishingStatus.SettingsLink as={Reach.MenuItem} />
+        </PublishingStatus.MenuLinks>
       </PublishingStatus.ViewController>
     </Reach.Menu>
   </Story>
