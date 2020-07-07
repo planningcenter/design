@@ -29,7 +29,6 @@
     "react": "^16.13.1"
   },
   "dependencies": {
-    "@churchcenter/publishing-status": "^0.0.6",
     "@reach/menu-button": "^0.10.4"
   },
   "gitHead": "8db0fa77136a0426af3411f348feb02a86f0e028"
