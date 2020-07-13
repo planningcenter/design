@@ -3,4 +3,36 @@ import * as PublishingStatus from "../publishing-status";
 
 <Meta title="Church Center|Publishing Status/MenuItems" />
 
-TODO:
+# MenuItems
+
+`MenuItems` applies just a little bit of formatting to a menu list.
+
+<Preview>
+  <Story name="default">
+    <PublishingStatus.MenuItems>
+      <PublishingStatus.MessageContainer>
+        <PublishingStatus.StatusView />
+      </PublishingStatus.MessageContainer>
+    </PublishingStatus.MenuItems>
+  </Story>
+</Preview>
+
+## Styling
+
+At the moment, the wrapper exposes a CSS Custom Property for width: `--publishing-status--menu-items-container--width`  
+It defaults to `280px`.
+
+<Preview>
+  <Story name="styling">
+    <PublishingStatus.MenuItems
+      style={{ "--publishing-status--menu-items-container--width": "560px" }}
+    >
+      <PublishingStatus.MessageContainer>
+        <PublishingStatus.StatusView />
+      </PublishingStatus.MessageContainer>
+    </PublishingStatus.MenuItems>
+  </Story>
+</Preview>
+
+Create your own container and provide it to the `*View` componenst via the `as` prop.  
+You can also just not use this component

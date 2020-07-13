@@ -5,7 +5,8 @@ import * as PublishingStatus from "../publishing-status";
 
 # ErrorView
 
-`ErrorView` can be used to display a normalized error text.
+A view component with standard messaging for an error.  
+Customizable via `as` and `children`<super>\*</super> props.
 
 <Preview>
   <Story name="default">
@@ -13,4 +14,17 @@ import * as PublishingStatus from "../publishing-status";
   </Story>
 </Preview>
 
-It defers to `as` and `children` props but there's no practical reason to use it over your own component with custom error messaging.
+## Don't have an error boundary?
+
+If you don't already have an error boundary:
+
+1. You use this as an excuse to make on that integrates with your error repotoring
+1. You can use the included `ErrorBoundary` component, which shows this error by default
+
+<Preview>
+  <Story name="ErrorBoundary">
+    <PublishingStatus.ErrorBoundary>
+      <PublishingStatus.ViewSwitch />
+    </PublishingStatus.ErrorBoundary>
+  </Story>
+</Preview>

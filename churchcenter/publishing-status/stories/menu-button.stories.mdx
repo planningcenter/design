@@ -1,6 +1,58 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import * as PublishingStatus from "../publishing-status";
 
-<Meta title="Church Center|Publishing Status/Menu Button" />
+<Meta title="Church Center|Publishing Status/MenuButton" />
 
-TODO:
+# MenuButton
+
+`MenuButton` is a button for use as the disclosure button for the publishing status dropdown.
+
+It includes a down chevron and warning icon to indicate when nothing is published.
+
+### No status available
+
+<Preview>
+  <Story name="default">
+    <PublishingStatus.ViewController>
+      <PublishingStatus.MenuButton />
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+### Status available
+
+<Preview>
+  <Story name="status page shown">
+    <PublishingStatus.ViewController churchCenterIsEnabled productIsPublished>
+      <PublishingStatus.MenuButton />
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+## `children`
+
+`children` are used to customize messaging.
+
+<Preview>
+  <Story name="children">
+    <PublishingStatus.ViewController>
+      <PublishingStatus.MenuButton>
+        Church Center not available
+      </PublishingStatus.MenuButton>
+    </PublishingStatus.ViewController>
+  </Story>
+</Preview>
+
+## `as`
+
+`as` is used to integrate `MenuButton` into any dropdown library.
+
+This example uses [Reach UI](https://reach.tech/menu-button) — [recommended by Global Design](https://planningcenter.design/react-recommended).
+
+```jsx
+<Reach.Menu>
+  <PublishingStatus.ViewController>
+    <PublishingStatus.MenuButton as={Reach.MenuButton} />
+  </PublishingStatus.ViewController>
+</Reach.Menu>
+```

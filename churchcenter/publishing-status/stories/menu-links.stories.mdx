@@ -1,9 +1,8 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import * as PublishingStatus from "../publishing-status";
-// import * as Reach from "@reach/menu-button";
-import "../../../planningcenter/reach/css/menu-button.css";
+// import "../../../planningcenter/reach/css/menu-button.css";
 
-<Meta title="Church Center|Publishing Status|MenuLinks" />
+<Meta title="Church Center|Publishing Status/MenuLinks" />
 
 # MenuLinks
 
@@ -72,24 +71,26 @@ This is handy for showing a horizontal rule only when
 
 ## `as`
 
-<!-- defaults to `React.Fragment` (elements returned directly)
+`as` is used to integrate `MenuButton` into any dropdown library.
 
-<Preview>
-  <Story name="as">
-    <Reach.Menu>
-      <PublishingStatus.ViewController
-        churchCenterIsEnabled
-        productIsPublished
-        userIsOrgAdmin
-        settingsURL="#"
-      >
-        View content
-        <PublishingStatus.MenuLinks>
-          <hr />
-          <PublishingStatus.SettingsLink as={Reach.MenuItem} />
-          <PublishingStatus.SettingsLink as={Reach.MenuItem} />
-        </PublishingStatus.MenuLinks>
-      </PublishingStatus.ViewController>
-    </Reach.Menu>
-  </Story>
-</Preview> -->
+This example uses [Reach UI](https://reach.tech/menu-button) — [recommended by Global Design](https://planningcenter.design/react-recommended).
+
+```jsx
+<Reach.Menu>
+  <Reach.Menu>
+    <PublishingStatus.ViewController
+      churchCenterIsEnabled
+      productIsPublished
+      userIsOrgAdmin
+      settingsURL="#"
+    >
+      View content
+      <PublishingStatus.MenuLinks>
+        <hr />
+        <PublishingStatus.SettingsLink as={Reach.MenuItem} />
+        <PublishingStatus.SettingsLink as={Reach.MenuItem} />
+      </PublishingStatus.MenuLinks>
+    </PublishingStatus.ViewController>
+  </Reach.Menu>
+</Reach.Menu>
+```

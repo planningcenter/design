@@ -3,11 +3,11 @@ import * as PublishingStatus from "../publishing-status";
 
 <Meta title="Church Center|Publishing Status/ErrorBoundary" />
 
-# ErrorBoundary and ErrorView
+# ErrorBoundary
 
-An error boundary is included for app-side composition.
+An error boundary component is included for app-side composition.
 
-It behaves like any error boundary but this one comes bundled with standard error messaging.
+It behaves like any error boundary but comes bundled with standard error messaging.
 
 <Preview>
   <Story name="default">
@@ -19,7 +19,7 @@ It behaves like any error boundary but this one comes bundled with standard erro
 
 ## `fallback`
 
-`fallback` can be used to customize this messaging:
+Use `fallback` to customize this messaging:
 
 <Preview>
   <Story name="fallback">
@@ -35,15 +35,25 @@ It behaves like any error boundary but this one comes bundled with standard erro
   </Story>
 </Preview>
 
-## ErrorView
+## Use your own
 
-`ErrorView` is provides a default message for apps an error boundary with error-reporting integration:
+If you have an error boundary that is already integrated into an error reporting service,  
+You can use `ErrorView` for messaging and your error boundary for handling
+
+`ErrorView` provides a default message for apps an error boundary with error-reporting integration:
 
 export const MyErrorBoundary = PublishingStatus.ErrorBoundary;
 
 <Preview>
-  <Story name="ErrorView">
-    <MyErrorBoundary fallback={<PublishingStatus.ErrorView />}>
+  <Story name="Use your own">
+    <MyErrorBoundary
+      fallback={
+        <div>
+          <h4 style={{ margin: "0 1rem" }}>My handler, shared message:</h4>
+          <PublishingStatus.ErrorView />
+        </div>
+      }
+    >
       <PublishingStatus.ViewSwitch />
     </MyErrorBoundary>
   </Story>

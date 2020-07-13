@@ -8,6 +8,7 @@ import {
 } from "@planningcenter/icons/paths/general";
 
 export function produceViewState({
+  churchCenterIsEnabled = false,
   churchCenterAppIsActive = false,
   churchCenterProductURL: _churchCenterProductURL = "",
   churchCenterWebIsActive = false,
@@ -17,6 +18,7 @@ export function produceViewState({
   ...restIncomingState
 }) {
   let state = {
+    churchCenterIsEnabled,
     churchCenterAppIsActive,
     churchCenterWebIsActive,
     userIsOrgAdmin,

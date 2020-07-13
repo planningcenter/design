@@ -53,21 +53,19 @@ A `NewWindowIcon` is always present, regardless of `children`.
 `as` is used to integrate `ProductLink` into any dropdown library.
 
 This example uses [Reach UI](https://reach.tech/menu-button) — [recommended by Global Design](https://planningcenter.design/react-recommended).
-<!-- 
-<Preview>
-  <Story name="as">
-    <Reach.Menu>
-      <PublishingStatus.ViewController
-        churchCenterWebIsActive
-        churchCenterProductURL="#"
-      >
-        <PublishingStatus.ProductLink as={Reach.MenuItem}>
-          Visit events list
-        </PublishingStatus.ProductLink>
-      </PublishingStatus.ViewController>
-    </Reach.Menu>
-  </Story>
-</Preview> -->
+
+```jsx
+<Reach.Menu>
+  <PublishingStatus.ViewController
+    churchCenterWebIsActive
+    churchCenterProductURL="#"
+  >
+    <PublishingStatus.ProductLink as={Reach.MenuItem}>
+      Visit events list
+    </PublishingStatus.ProductLink>
+  </PublishingStatus.ViewController>
+</Reach.Menu>
+```
 
 ## Custom Properties
 
