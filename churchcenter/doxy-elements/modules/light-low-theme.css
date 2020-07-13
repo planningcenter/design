@@ -1,0 +1,33 @@
+:root {
+  /* done to existing specifications. not an example of future, shared color systems */
+  --color-topaz: #42a5f5;
+  --color-turquoise: #4db6ac;
+  --color-emerald: #66bb6a;
+  --color-ruby: #ef5350;
+  --color-gray900: #212121;
+  --color-gray800: #424242;
+  --color-gray700: #757575;
+  --color-gray600: #9e9e9e;
+  --color-gray500: #bdbdbd;
+  --color-gray400: #cecece;
+  --color-gray300: #e0e0e0;
+  --color-gray200: #eeeeee;
+  --color-gray100: #f3f3f3;
+  --color-gray50: #f7f7f7;
+  --color-gray25: #fafafa;
+
+  --definition-term--color: var(---color-gray900);
+
+  --heading--color: var(--color-gray900);
+
+  --surface-1of1--background-color: #fff;
+
+  --surface-2of2--background-color: #fff;
+  --surface-1of2--background-color: var(--color-gray200);
+
+  --text--color: var(--color-gray800);
+}
+
+[data-heading~="level:4"] {
+  color: var(--color-gray600);
+}

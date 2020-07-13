@@ -1,0 +1,34 @@
+:root {
+  --text--font-size: 1rem;
+  --text--line-height: 1.5rem;
+}
+
+[data-text~="size:x-large"] {
+  --heading--font-size: 1.5625rem;
+  --heading--line-height: 2rem;
+}
+
+[data-text~="size:large"] {
+  --text--font-size: 1.3125rem;
+  --text--line-height: 1.75rem;
+}
+
+[data-text~="size:medium"] {
+  --text--font-size: 1rem;
+  --text--line-height: 1.5rem;
+}
+
+[data-text~="size:small"] {
+  --text--font-size: 0.875rem;
+  --text--line-height: 1.125rem;
+}
+
+[data-text~="size:x-small"] {
+  --text--font-size: 0.75rem;
+  --text--line-height: 1rem;
+}
+
+[data-text~="size:xx-small"] {
+  --text--font-size: 0.625rem;
+  --text--line-height: 0.875rem;
+}

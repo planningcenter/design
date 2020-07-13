@@ -1,0 +1,31 @@
+{
+  "name": "@churchcenter/doxy-elements",
+  "version": "0.0.0",
+  "description": "Doxy system applied to @planningcenter/elements",
+  "style": "dist/doxy-elements.css",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "postcss -o dist/doxy-elements.css index.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/planningcenter/design.git"
+  },
+  "author": "Michael Chan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/planningcenter/design/issues"
+  },
+  "homepage": "https://github.com/planningcenter/design#readme",
+  "devDependencies": {
+    "postcss-cli": "^7.1.0",
+    "postcss-import": "^12.0.1"
+  }
+}

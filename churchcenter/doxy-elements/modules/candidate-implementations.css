@@ -1,0 +1,78 @@
+/* badge */
+[data-badge] {
+  background-color: var(--badge--background-color, hsl(0 0% 90%));
+  color: var(--badge--color, hsl(0 0% 30%));
+  border-radius: var(--badge--border-radius, 4px);
+  display: var(--badge--display, inline-block);
+  font-size: var(--badge--font-size, 0.75rem);
+  line-height: var(--badge--line-height, 1.25rem);
+  padding: var(--badge--padding, 0 8px);
+  white-space: var(--badge--white-space, nowrap);
+}
+
+/* button */
+
+[data-button] {
+  -moz-appearance: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  appearance: none;
+  box-sizing: border-box;
+  border-width: var(--button--border-width, 1px);
+  border-style: solid;
+  border-color: var(--button--border-color, fuchsia);
+  background-image: var(--button--background-image);
+  background-color: var(--button--background-color, fuchsia);
+  border-radius: var(--button--border-radius, 4px);
+  color: var(--button--color, blue);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: var(--button--font-weight, 600);
+  position: relative;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: 100ms all ease-in-out;
+  font-size: var(--button--font-size, 14px);
+  padding: var(--button--padding, 0 16px);
+  line-height: calc(
+    var(--button--height, 32px) - calc(var(--button--border-width, 1px) * 2)
+  );
+  box-shadow: var(--button--box-shadow);
+  background-image: var(--button--background-image);
+}
+input[type="submit"][data-button] {
+  text-align: center;
+}
+button[data-button] {
+}
+a[data-button] {
+  text-align: center;
+  text-decoration: none;
+}
+
+/* definition-list */
+
+[data-definition-list] {
+}
+
+[data-definition-term] {
+  color: var(--definition-term--color, inherit);
+  text-transform: var(--definition-term--text-transform);
+  font-weight: var(--definition-term--font-weight, 400);
+  font-size: var(--definition-term--font-size, 0.875rem);
+}
+
+[data-definition] {
+  padding: 0;
+  margin: 0;
+  color: var(--definition-term--color);
+  font-size: var(--definition--font-size, 1rem);
+  line-height: 1.4;
+}
+
+[data-definition-list] > [data-definition] + [data-definition-term] {
+  padding-top: var(--definition-list--gap, 1.5rem);
+}

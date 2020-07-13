@@ -1,0 +1,22 @@
+[data-heading~="level:1"] {
+  --heading--font-size: 1.5625rem;
+  --heading--line-height: 2rem;
+}
+
+[data-heading~="level:2"] {
+  --heading--font-size: 1.3125rem;
+  --heading--font-weight: 500;
+  --heading--line-height: 1.75rem;
+}
+
+[data-heading~="level:3"] {
+  --heading--font-size: 1rem;
+  --heading--font-weight: 600;
+  --heading--line-height: 1.5rem;
+}
+
+[data-heading~="level:4"] {
+  --heading--font-size: 0.875rem;
+  --heading--line-height: 1.25rem;
+  --heading--text-transform: uppercase;
+}

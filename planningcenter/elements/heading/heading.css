@@ -1,4 +1,9 @@
 [data-heading] {
-  margin: var(--heading--margin, 0);
-  font-size: var(--heading--font-size, inherit);
+  color: var(--heading--color, inherit);
+  font-size: var(--heading--font-size);
+  font-weight: var(--heading--font-weight);
+  font-style: var(--heading--font-style);
+  text-transform: var(--heading--text-transform);
+  margin: var(--heading--margin);
+  line-height: var(--heading--line-height, inherit);
 }

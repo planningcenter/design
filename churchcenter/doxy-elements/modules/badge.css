@@ -1,0 +1,18 @@
+:root {
+  --badge--background-color: var(--color-gray200);
+  --badge--color: var(--color-gray700);
+  --badge--padding: var(--badge--padding, 0 8px);
+}
+
+[data-badge~="alt:negative"] {
+  --badge--background-color: var(--color-ruby);
+  --badge--color: white;
+}
+[data-badge~="alt:positive"] {
+  --badge--background-color: #ecf2eb;
+  --badge--color: var(--color-emerald);
+}
+[data-badge~="alt:quiet-positive"] {
+  --badge--background-color: transparent;
+  --badge--color: var(--color-emerald);
+}
