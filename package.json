@@ -10,10 +10,10 @@
     "@reach/alert-dialog": "^0.10.1",
     "@reach/checkbox": "^0.10.1",
     "@reach/menu-button": "^0.10.1",
-    "@storybook/addon-docs": "^5.3.18",
-    "@storybook/addon-notes": "^5.3.18",
-    "@storybook/addons": "^5.3.18",
-    "@storybook/react": "^5.3.18",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-notes": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
     "husky": "^4.2.5",
     "lerna": "^3.20.2",
@@ -21,7 +21,7 @@
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "storybook-chromatic": "^3.5.3"
+    "storybook-chromatic": "^3.5.5"
   },
   "scripts": {
     "build": "build-storybook",
