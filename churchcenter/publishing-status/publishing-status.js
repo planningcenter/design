@@ -177,7 +177,16 @@ export function ChurchCenterNotEnabledView({
     <As {...props}>
       <strong>Church Center is disabled. </strong>
       <span>{children} </span>
-      {settingsURL && <a href={settingsURL}>Update settings</a>}
+      {settingsURL && (
+        <a
+          href={settingsURL}
+          style={{
+            color: "var(--publishing-status--product-link--color)",
+          }}
+        >
+          Update settings
+        </a>
+      )}
     </As>
   );
 }
@@ -195,7 +204,16 @@ export function ProductNotPublishedView({
     <As {...props}>
       <strong>{productName} is not published on Church Center. </strong>
       <span>{children} </span>
-      {settingsURL && <a href={settingsURL}>Update settings</a>}
+      {settingsURL && (
+        <a
+          href={settingsURL}
+          style={{
+            color: "var(--publishing-status--product-link--color)",
+          }}
+        >
+          Update settings
+        </a>
+      )}
     </As>
   );
 }
