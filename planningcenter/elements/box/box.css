@@ -1,3 +1,8 @@
+/* even tho the properties are low fidelity, it's great declaring these on a shared ancestor */
 [data-box] {
   box-sizing: var(--box--box-sizing, border-box);
+  border: var(--box--border, 0);
+  border-radius: var(--box--border-radius, 0);
+  margin: var(--box--margin, 0);
+  padding: var(--box--padding, 0);
 }
