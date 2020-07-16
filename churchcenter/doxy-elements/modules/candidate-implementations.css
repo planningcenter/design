@@ -1,7 +1,7 @@
 /* badge */
 [data-badge] {
-  background-color: var(--badge--background-color, hsl(0 0% 90%));
-  color: var(--badge--color, hsl(0 0% 30%));
+  background-color: var(--badge--background-color, hsl(0, 0%, 90%));
+  color: var(--badge--color, hsl(0, 0%, 30%));
   border-radius: var(--badge--border-radius, 4px);
   display: var(--badge--display, inline-block);
   font-size: var(--badge--font-size, 0.75rem);
