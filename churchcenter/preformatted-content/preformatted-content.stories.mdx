@@ -1,0 +1,31 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import "./index.css";
+import image from "../../static/joshua-coleman-ya-SNqL9Q-g-unsplash.jpg";
+
+<Meta title="Church Center|preformatted-content" />
+
+<Preview>
+  <Story name="All elements">
+    <section data-preformatted-content>
+      <h1>Title</h1>
+      <p>
+        This is a paragraph with <em>emphasis</em>, <strong>strength</strong>,{" "}
+        <del>deletions</del>, and <a href="#">anchors</a>.
+      </p>
+      <ol>
+        <li>One</li>
+        <li>Two</li>
+        <ul>
+          <li>Two: one</li>
+          <li>Two: two</li>
+          <ul>
+            <li>Two: two: one</li>
+          </ul>
+        </ul>
+      </ol>
+      <blockquote>Would you rather be underpaid or overrated?</blockquote>
+      <img src={image} alt="one shoe, two carpets" />
+    </section>
+  </Story>
+</Preview>
