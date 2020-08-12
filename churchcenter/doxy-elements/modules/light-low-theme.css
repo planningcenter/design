@@ -4,30 +4,33 @@
   --color-turquoise: #4db6ac;
   --color-emerald: #66bb6a;
   --color-ruby: #ef5350;
-  --color-gray900: #212121;
-  --color-gray800: #424242;
-  --color-gray700: #757575;
-  --color-gray600: #9e9e9e;
-  --color-gray500: #bdbdbd;
-  --color-gray400: #cecece;
-  --color-gray300: #e0e0e0;
-  --color-gray200: #eeeeee;
-  --color-gray100: #f3f3f3;
-  --color-gray50: #f7f7f7;
-  --color-gray25: #fafafa;
 
-  --definition-term--color: var(---color-gray900);
+  --color-gray-0: var(--color-gray-100); /* --color-gray25  */
+  --color-gray-1: var(--color-gray-98); /* --color-gray50  */
+  --color-gray-2: var(--color-gray-97); /* --color-gray100 */
+  --color-gray-3: var(--color-gray-95); /* --color-gray200 */
+  --color-gray-4: var(--color-gray-93); /* --color-gray300 */
+  --color-gray-5: var(--color-gray-88); /* --color-gray400 */
+  --color-gray-6: var(--color-gray-81); /* --color-gray500 */
+  --color-gray-7: var(--color-gray-62); /* --color-gray600 */
+  --color-gray-8: var(--color-gray-45); /* --color-gray700 */
+  --color-gray-9: var(--color-gray-26); /* --color-gray800 */
+  --color-gray-10: var(--color-gray-12); /* --color-gray900 */
 
-  --heading--color: var(--color-gray900);
+  --definition-term--color: var(--color-gray-12);
+
+  --heading--color: var(--color-gray-12);
 
   --surface-1of1--background-color: #fff;
 
   --surface-2of2--background-color: #fff;
-  --surface-1of2--background-color: var(--color-gray200);
+  --surface-1of2--background-color: var(--color-gray-3);
 
-  --text--color: var(--color-gray800);
+  --badge--background-color: var(--color-gray-5);
+
+  --text--color: var(--color-gray-9);
 }
 
 [data-heading~="level:4"] {
-  color: var(--color-gray600);
+  color: var(--color-gray-7);
 }
