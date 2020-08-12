@@ -1,0 +1,26 @@
+/* TODO: line-height, margin, both? */
+
+[data-preformatted-content~="heading-scale:standard"] {
+  --heading--font-weight: 500;
+}
+[data-preformatted-content~="heading-scale:standard"] h1 {
+  --heading--font-size: 1.5625rem;
+}
+
+[data-preformatted-content~="heading-scale:standard"] h2 {
+  --heading--font-size: 1.3125rem;
+}
+
+[data-preformatted-content~="heading-scale:standard"] h3 {
+  --heading--font-size: 1.125rem;
+}
+
+[data-preformatted-content~="heading-scale:standard"] h4 {
+  --heading--font-weight: 600;
+  --heading--font-size: 1rem;
+}
+
+[data-preformatted-content~="heading-scale:standard"] h5 {
+  --heading--font-weight: 600;
+  --heading--font-size: 0.875rem;
+}
