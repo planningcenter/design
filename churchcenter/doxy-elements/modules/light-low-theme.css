@@ -29,26 +29,27 @@
 
 /* elements mapping */
 :root {
-  --definition-term--color: var(
-    --color-gray-7
-  ); /* ally red flag because not "foreground" color */
+  --definition-term--color: var(--color-gray-7); 
+  /* ally red flag because not "foreground" color */
 
   --surface-1of1--background-color: #fff;
 
   --surface-2of2--background-color: #fff;
   --surface-1of2--background-color: var(--color-background-2);
 
-  --badge--background-color: var(--color-gray-5);
+  --badge--background-color: var(--color-gray-3);
+  --badge--color: var(--color-gray-8);
 
   --text--color: var(--color-foreground-1);
 
   --heading--color: var(--color-foreground-1);
   /* --heading-1--color: red; */
-  --heading-5--color: var(
-    --color-gray-7
-  ); /* ally red flag because not "foreground" color */
+  --heading-5--color: var(--color-gray-7); 
+  /* ally red flag because not "foreground" color */
 }
 
 body {
   color: var(--color-gray-9);
+  /* we need this for the docs, cause I can't with this heavy font weight */
+  -webkit-font-smoothing: antialiased;
 }

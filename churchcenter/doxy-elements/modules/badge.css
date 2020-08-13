@@ -5,14 +5,20 @@
 }
 
 [data-badge~="alt:negative"] {
-  --badge--background-color: var(--color-ruby);
-  --badge--color: white;
+  --badge--background-color: hsl(0, 79%, 96%);
+  --badge--color: #d51713;
 }
 [data-badge~="alt:positive"] {
-  --badge--background-color: #ecf2eb;
-  --badge--color: var(--color-emerald);
+  --badge--background-color: hsl(120, 36%, 96%);
+  --badge--color: #3a813d;
 }
-[data-badge~="alt:quiet-positive"] {
-  --badge--background-color: transparent;
-  --badge--color: var(--color-emerald);
+[data-badge~="alt:warning"] {
+  --badge--background-color: hsl(39, 89%, 96%);
+  --badge--color: #916607;
+}
+
+[data-badge~="size:small"] {
+  --badge--border-radius: 3px;
+  --badge--font-size: 0.6875rem;
+  --badge--line-height: 1rem;
 }

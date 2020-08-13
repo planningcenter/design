@@ -2,10 +2,11 @@
   --button--height: 40px;
   --button--border-radius: 128px;
   --button--border-width: 0px;
+  --button--font-size: 1rem;
   --button--padding: 0 32px;
 }
 
-[data-button~="style:primary"] {
+[data-button~="action:default"] {
   --button--color: white;
   --button--background-image: linear-gradient(
     135deg,
@@ -14,17 +15,63 @@
   );
 }
 
-[data-button~="style:secondary"] {
-  /* TODO */
+[data-button~="action:destroy"] {
+  --button--background-color: var(--color-ruby);
+  --button--background-image: transparent;
+  --button--color: white;
+}
+
+[data-button~="action:default"][data-button~="variant:outline"] {
+  --button--background-image: linear-gradient(white, white), linear-gradient(135deg, var(--color-turquoise) 0%, var(--color-emerald) 100%);
+  --button--border-color: transparent;
+  --button--border-width: 2px;
+  --button--color: var(--color-turquoise);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-style: double;
+}
+
+[data-button~="action:destroy"][data-button~="variant:outline"] {
+  --button--background-color: transparent;
+  --button--background-image: transparent;
+  --button--color: var(--color-ruby);
+  --button--border-width: 2px;
+  --button--border-color: var(--color-ruby);
 }
 
 [data-button~="size:compact"] {
   --button--height: 32px;
   --button--padding: 0 14px;
+  --button--font-size: 0.875rem;
 }
 
 [data-button~="size:minor"] {
   --button--height: 24px;
   --button--padding: 0 12px;
-  font-size: 12px;
+  --button--font-size: 0.75rem;
+}
+
+[data-button~="size:minor-compact"] {
+  --button--background-color: transparent;
+  --button--background-image: transparent;
+  --button--color: var(--color-gray-8);
+  --button--height: 24px;
+  --button--padding: 0 12px;
+  --button--font-size: 0.75rem;
+}
+
+[data-button~="size:minor"][data-button~="action:secondary"] {
+  --button--border-width: 1px;
+}
+
+
+[data-button~="size:minor-compact"][data-button~="action:destroy"] {
+  --button--color: var(--color-ruby);
+}
+
+[data-button~="action:secondary-destroy"] {
+  --button--background-color: transparent;
+  --button--background-image: transparent;
+  --button--border-color: var(--color-ruby);
+  --button--color: var(--color-ruby);
 }

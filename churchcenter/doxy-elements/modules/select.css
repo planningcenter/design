@@ -1,0 +1,10 @@
+[data-select] {
+  --select--border-color: #e0e0e0;
+  --select--color: #424242;
+  --select--height: 40px;
+}
+
+[data-select]:focus {
+  --select--border-color: #d3eafd;
+  box-shadow: 0px 0px 3px 0 #a3d3fa; /* TODO: add CP to source */
+}

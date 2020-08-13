@@ -5,6 +5,8 @@
 @import "./modules/badge.css";
 @import "./modules/button.css";
 @import "./modules/heading.css";
+@import "./modules/input.css";
+@import "./modules/select.css";
 @import "./modules/text.css";
 
 /* themes */

@@ -4,6 +4,68 @@ import "./index.css";
 
 <Meta title="Church Center|Doxy:Elements" />
 
+### Badge
+
+export function SampleBadgeLayout(props) {
+  return (
+    <div
+      style={{ display: "flex", "--box--margin": "0 0.5rem 0.5rem 0" }}
+      {...props}
+    />
+  );
+}
+
+<Preview>
+  <Story name="badge">
+    <>
+      <SampleBadgeLayout>
+        <span data-badge data-box>
+          Badge
+        </span>
+        <span data-badge="alt:negative" data-box>
+          Negative
+        </span>
+        <span data-badge="alt:positive" data-box>
+          Positive
+        </span>
+        <span data-badge="alt:warning" data-box>
+          Warning
+        </span>
+      </SampleBadgeLayout>
+      <SampleBadgeLayout>
+        <span data-badge="size:small" data-box>
+          Size: small
+        </span>
+      </SampleBadgeLayout>
+    </>
+  </Story>
+</Preview>
+
+### Button
+
+<Preview>
+  <Story name="button">
+    <>
+      <h4>action</h4>
+      <button data-button="action:default">Primary</button>
+      <button data-button="action:default variant:secondary">Secondary</button>
+      <button data-button="action:destroy">Primary destroy</button>
+      <button data-button="action:destroy variant:outline">Delete me</button>
+      <h4>size</h4>
+      <button data-button="action:primary size:compact">Compact</button>
+      <button data-button="action:secondary size:compact">Compact</button>
+      <button data-button="action:destroy size:compact">Compact</button>
+      <button data-button="action:primary size:minor">Minor</button>
+      <button data-button="action:secondary size:minor">Minor</button>
+      <button data-button="action:destroy size:minor">Minor</button>
+      <button data-button="size:minor-compact">Minor compact</button>
+      <button data-button="action:destroy size:minor-compact">
+        Minor compact
+      </button>
+    </>
+  </Story>
+</Preview>
+
 ### Definition List
 
 <Preview>
@@ -21,6 +83,42 @@ import "./index.css";
   </Story>
 </Preview>
 
+### Forms
+
+export function SampleFormLayout({ style, ...props }) {
+  return (
+    <div
+      style={{
+        display: "grid",
+        gap: "1rem",
+        gridTemplateColumns: "repeat(auto-fill, 15rem)",
+        ...style,
+      }}
+      {...props}
+    />
+  );
+}
+
+<Preview>
+  <Story name="forms">
+    <>
+      <SampleFormLayout>
+        <input
+          data-text-input
+          placeholder="enter your name"
+          name="name"
+          type="text"
+        />
+        <select data-select id="something">
+          <option name="one">One</option>
+          <option name="two">Two</option>
+          <option name="three">Three</option>
+        </select>
+      </SampleFormLayout>
+    </>
+  </Story>
+</Preview>
+
 ### Heading
 
 <Preview>
@@ -32,54 +130,6 @@ import "./index.css";
       <h4 data-heading="level:4">Hello CodeSandbox</h4>
       <h5 data-heading="level:5">Hello CodeSandbox</h5>
       <p data-text>Hello CodeSandbox</p>
-    </>
-  </Story>
-</Preview>
-
-### Badge
-
-export function SampleBadgeLayout(props) {
-  return (
-    <div
-      style={{ display: "flex", "--box--margin": "0 .5rem 0 0" }}
-      {...props}
-    />
-  );
-}
-
-<Preview>
-  <Story name="badge">
-    <SampleBadgeLayout>
-      <span data-badge data-box>
-        40 Available
-      </span>
-      <span data-badge data-box>
-        Campus: West Hills
-      </span>
-      <span data-badge="alt:negative" data-box>
-        Sold out
-      </span>
-      <span data-badge="alt:positive" data-box>
-        Open
-      </span>
-      <span data-badge="alt:quiet-positive" data-box>
-        Complete
-      </span>
-    </SampleBadgeLayout>
-  </Story>
-</Preview>
-
-### Button
-
-<Preview>
-  <Story name="button">
-    <>
-      <h4>style</h4>
-      <button data-button="style:primary">Give $20 now</button>
-      {/* <button data-button="style:secondary">Give $20 now</button> */}
-      <h4>size</h4>
-      <button data-button="style:primary size:compact">Compact</button>
-      <button data-button="style:primary size:minor">Minor</button>
     </>
   </Story>
 </Preview>
