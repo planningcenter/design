@@ -1,9 +1,14 @@
 [data-heading] {
-  color: var(--heading--color, inherit);
+  color: var(--heading--color);
   font-size: var(--heading--font-size);
   font-weight: var(--heading--font-weight);
   font-style: var(--heading--font-style);
   text-transform: var(--heading--text-transform);
   margin: var(--heading--margin);
   line-height: var(--heading--line-height, inherit);
+}
+
+[data-heading-1] {
+  --heading--font-size: var(--heading-1--font-size, 1.5625rem);
+  --heading--color: var(--heading-1--color);
 }

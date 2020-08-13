@@ -1,0 +1,214 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import "./index.css";
+
+<Meta title="Church Center|Doxy:Elements" />
+
+### Definition List
+
+<Preview>
+  <Story name="definition-list">
+    <dl data-definition-list>
+      <dt data-definition-term>Schedule</dt>
+      <dd data-definition>Every weekend at 7pm</dd>
+      <dt data-definition-term>Contact</dt>
+      <dd data-definition>numbercrunchin@gmail.com</dd>
+      <dd data-definition>555.555.1337</dd>
+      <dt data-definition-term>Contact</dt>
+      <dd data-definition>Bob's Janky Apartment</dd>
+      <dd data-definition>Carlsbad, CA, 92009</dd>
+    </dl>
+  </Story>
+</Preview>
+
+### Heading
+
+<Preview>
+  <Story name="heading">
+    <>
+      <h1 data-heading="level:1">Hello CodeSandbox</h1>
+      <h2 data-heading="level:2">Hello CodeSandbox</h2>
+      <h3 data-heading="level:3">Hello CodeSandbox</h3>
+      <h4 data-heading="level:4">Hello CodeSandbox</h4>
+      <h5 data-heading="level:5">Hello CodeSandbox</h5>
+      <p data-text>Hello CodeSandbox</p>
+    </>
+  </Story>
+</Preview>
+
+### Badge
+
+export function SampleBadgeLayout(props) {
+  return (
+    <div
+      style={{ display: "flex", "--box--margin": "0 .5rem 0 0" }}
+      {...props}
+    />
+  );
+}
+
+<Preview>
+  <Story name="badge">
+    <SampleBadgeLayout>
+      <span data-badge data-box>
+        40 Available
+      </span>
+      <span data-badge data-box>
+        Campus: West Hills
+      </span>
+      <span data-badge="alt:negative" data-box>
+        Sold out
+      </span>
+      <span data-badge="alt:positive" data-box>
+        Open
+      </span>
+      <span data-badge="alt:quiet-positive" data-box>
+        Complete
+      </span>
+    </SampleBadgeLayout>
+  </Story>
+</Preview>
+
+### Button
+
+<Preview>
+  <Story name="button">
+    <>
+      <h4>style</h4>
+      <button data-button="style:primary">Give $20 now</button>
+      {/* <button data-button="style:secondary">Give $20 now</button> */}
+      <h4>size</h4>
+      <button data-button="style:primary size:compact">Compact</button>
+      <button data-button="style:primary size:minor">Minor</button>
+    </>
+  </Story>
+</Preview>
+
+### Media card
+
+<Preview>
+  <Story name="media-card">
+    <>
+      <div
+        style={{
+          display: "grid",
+          gap: "1rem",
+          gridTemplateColumns: "repeat(auto-fill, 15rem)",
+        }}
+      >
+        <div data-media-card>
+          <img
+            data-media-card--media
+            src="https://placekitten.com/300/200"
+            alt="kitten"
+          />
+          <div data-media-card--description>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <h3 data-heading="level:3">Eleven Disiples</h3>
+              <span data-badge="alt:positive">Open</span>
+            </div>
+            <span data-text>Judas, remember that guy?</span>
+          </div>
+        </div>
+        {/* <div data-media-card>
+          <img
+            data-media-card--media
+            src="https://placekitten.com/450/300"
+            alt="kitten"
+          />
+          <div data-media-card--description>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <h3 data-heading="level:3">30 Pieces</h3>
+              <span data-badge="alt:negative">Closed</span>
+            </div>
+            <span data-text>
+              I have a lot of time down here to determine if it was worth it or
+              not…
+            </span>
+          </div>
+        </div>
+        <div data-media-card>
+          <img
+            data-media-card--media
+            src="https://placekitten.com/300/200"
+            alt="kitten"
+          />
+          <div data-media-card--description>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <h3 data-heading="level:3">James</h3>
+              <span data-badge>Limit 1</span>
+            </div>
+            <span data-text>I'm gonna live forever!</span>
+          </div>
+        </div> */}
+      </div>
+    </>
+  </Story>
+</Preview>
+
+### Surface
+
+export function SampleSurfaceLayout({ style, ...props }) {
+  return (
+    <div
+      style={{
+        display: "grid",
+        gap: "1rem",
+        gridTemplateColumns: "repeat(auto-fill, 15rem)",
+        "--box--padding": "2rem",
+        "--box--border-radius": ".25rem",
+        ...style,
+      }}
+      {...props}
+    />
+  );
+}
+
+<Preview>
+  <Story name="surface">
+    <>
+      <h4>depth 2</h4>
+      <SampleSurfaceLayout data-surface="depth:2">
+        <div data-surface data-box>
+          one
+        </div>
+        <div data-surface data-box>
+          two
+        </div>
+        <div data-surface data-box>
+          three
+        </div>
+      </SampleSurfaceLayout>
+      <h4>depth 3</h4>
+      <SampleSurfaceLayout data-surface="depth:3" style={{ padding: "1rem" }}>
+        <div data-surface data-box>
+          one
+          <div data-surface data-box>
+            one:one
+          </div>
+        </div>
+        <div data-surface data-box>
+          two
+        </div>
+      </SampleSurfaceLayout>
+    </>
+  </Story>
+</Preview>

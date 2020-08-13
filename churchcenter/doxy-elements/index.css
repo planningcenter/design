@@ -3,11 +3,9 @@
 
 /* elements */
 @import "./modules/badge.css";
+@import "./modules/button.css";
 @import "./modules/heading.css";
 @import "./modules/text.css";
-
-/* systems */
-@import "./modules/colors.css";
 
 /* themes */
 /* proveded online for momentary convenince */
