@@ -118,6 +118,250 @@ export function SampleBadgeLayout(props) {
   </Story>
 </Preview>
 
+### Color
+
+export function SampleColorLayout(props) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        padding: "1rem",
+      }}
+      {...props}
+    />
+  );
+}
+
+export function Color({ bgColor, color, ...props }) {
+  return (
+    <div
+      style={{
+        backgroundColor: bgColor,
+        alignItems: "center",
+        borderRadius: 8,
+        color: color,
+        display: "flex",
+        fontSize: 14,
+        fontWeight: 500,
+        height: 40,
+        justifyContent: "center",
+        margin: "0.5rem",
+        padding: "1rem",
+        flex: 1,
+      }}
+      {...props}
+    />
+  );
+}
+
+<Preview>
+  <Story name="color">
+    <>
+      <div
+        data-color-scheme="dark"
+        data-contrast="low"
+        style={{ padding: "1rem" }}
+      >
+        <SampleColorLayout>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-0)"
+            color="var(--unstable-monochrome-shade-10)"
+          >
+            0
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-1)"
+            color="var(--unstable-monochrome-shade-10)"
+          >
+            1
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-2)"
+            color="var(--unstable-monochrome-shade-10)"
+          >
+            2
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-3)"
+            color="var(--unstable-monochrome-shade-10)"
+          >
+            3
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-4)"
+            color="var(--unstable-monochrome-shade-0)"
+          >
+            4
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-5)"
+            color="var(--unstable-monochrome-shade-0)"
+          >
+            5
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-6)"
+            color="var(--unstable-monochrome-shade-0)"
+          >
+            6
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-7)"
+            color="var(--unstable-monochrome-shade-0)"
+          >
+            7
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-8)"
+            color="var(--unstable-monochrome-shade-0)"
+          >
+            8
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-9)"
+            color="var(--unstable-monochrome-shade-0)"
+          >
+            9
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-10)"
+            color="var(--unstable-monochrome-shade-0)"
+          >
+            10
+          </Color>
+          <div style={{ display: "flex", width: "100%" }}>
+            <Color
+              bgColor="var(--color-topaz)"
+              color="var(--unstable-monochrome-shade-0)"
+            >
+              Topaz
+            </Color>
+            <Color
+              bgColor="var(--color-turquoise)"
+              color="var(--unstable-monochrome-shade-0)"
+            >
+              Turquoise
+            </Color>
+            <Color
+              bgColor="var(--color-emerald)"
+              color="var(--unstable-monochrome-shade-0)"
+            >
+              Emerald
+            </Color>
+            <Color
+              bgColor="var(--color-ruby)"
+              color="var(--unstable-monochrome-shade-0)"
+            >
+              Ruby
+            </Color>
+          </div>
+        </SampleColorLayout>
+      </div>
+      <div
+        data-color-scheme="light"
+        data-contrast="low"
+        style={{ padding: "1rem" }}
+      >
+        <SampleColorLayout>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-0)"
+            color="var(--unstable-monochrome-shade-10)"
+          >
+            0
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-1)"
+            color="var(--unstable-monochrome-shade-10)"
+          >
+            1
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-2)"
+            color="var(--unstable-monochrome-shade-10)"
+          >
+            2
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-3)"
+            color="var(--unstable-monochrome-shade-10)"
+          >
+            3
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-4)"
+            color="var(--unstable-monochrome-shade-0)"
+          >
+            4
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-5)"
+            color="var(--unstable-monochrome-shade-0)"
+          >
+            5
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-6)"
+            color="var(--unstable-monochrome-shade-0)"
+          >
+            6
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-7)"
+            color="var(--unstable-monochrome-shade-0)"
+          >
+            7
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-8)"
+            color="var(--unstable-monochrome-shade-0)"
+          >
+            8
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-9)"
+            color="var(--unstable-monochrome-shade-0)"
+          >
+            9
+          </Color>
+          <Color
+            bgColor="var(--unstable-monochrome-shade-10)"
+            color="var(--unstable-monochrome-shade-0)"
+          >
+            10
+          </Color>
+          <div style={{ display: "flex", width: "100%" }}>
+            <Color
+              bgColor="var(--color-topaz)"
+              color="var(--unstable-monochrome-shade-10)"
+            >
+              Topaz
+            </Color>
+            <Color
+              bgColor="var(--color-turquoise)"
+              color="var(--unstable-monochrome-shade-10)"
+            >
+              Turquoise
+            </Color>
+            <Color
+              bgColor="var(--color-emerald)"
+              color="var(--unstable-monochrome-shade-10)"
+            >
+              Emerald
+            </Color>
+            <Color
+              bgColor="var(--color-ruby)"
+              color="var(--unstable-monochrome-shade-10)"
+            >
+              Ruby
+            </Color>
+          </div>
+        </SampleColorLayout>
+      </div>
+    </>
+  </Story>
+</Preview>
+
 ### Definition List
 
 <Preview>
