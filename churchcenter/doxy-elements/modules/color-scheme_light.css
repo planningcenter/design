@@ -1,5 +1,5 @@
 /* color system */
-[data-color-scheme="light"] {
+[data-color-scheme="light"][data-contrast="low"] {
   --color-topaz: #42a5f5;
   --color-turquoise: #4db6ac;
   --color-emerald: #66bb6a;
@@ -19,7 +19,7 @@
 }
 
 /* theme-specific elements */
-[data-color-scheme="light"] {
+[data-color-scheme="light"][data-contrast="low"] {
   background-color: hsl(0, 0%, 100%);
   color: hsl(0, 0%, 26%);
 

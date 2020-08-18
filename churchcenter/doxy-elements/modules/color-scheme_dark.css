@@ -1,5 +1,5 @@
 /* color system */
-[data-color-scheme="dark"] {
+[data-color-scheme="dark"][data-contrast="low"] {
   --color-topaz: #128ef3;
   --color-turquoise: #329f95;
   --color-emerald: #5dc660;
@@ -19,7 +19,7 @@
 }
 
 /* theme-specific elements */
-[data-color-scheme="dark"] {
+[data-color-scheme="dark"][data-contrast="low"] {
   background-color: hsl(0, 0%, 7%);
   color: hsl(0, 0%, 98%);
 

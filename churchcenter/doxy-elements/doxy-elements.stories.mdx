@@ -22,7 +22,7 @@ export function SampleBadgeLayout(props) {
 <Preview>
   <Story name="badge">
     <>
-      <SampleBadgeLayout data-color-scheme="dark">
+      <SampleBadgeLayout data-color-scheme="dark" data-contrast="low">
         <span data-badge data-box>
           Badge
         </span>
@@ -36,7 +36,7 @@ export function SampleBadgeLayout(props) {
           Warning
         </span>
       </SampleBadgeLayout>
-      <SampleBadgeLayout data-color-scheme="light">
+      <SampleBadgeLayout data-color-scheme="light" data-contrast="low">
         <span data-badge data-box>
           Badge
         </span>
@@ -70,7 +70,7 @@ export function SampleBadgeLayout(props) {
 
 <Preview>
   <Story name="button">
-    <div data-color-scheme="light">
+    <div data-color-scheme="light" data-contrast="low">
       <h4>action</h4>
       <button data-button="action:default">Primary</button>
       <button data-button="action:default variant:secondary">Secondary</button>
@@ -96,7 +96,11 @@ export function SampleBadgeLayout(props) {
 <Preview>
   <Story name="definition-list">
     <>
-      <div data-color-scheme="dark" style={{ padding: "1rem" }}>
+      <div
+        data-color-scheme="dark"
+        data-contrast="low"
+        style={{ padding: "1rem" }}
+      >
         <dl data-definition-list>
           <dt data-definition-term>Schedule</dt>
           <dd data-definition>Every weekend at 7pm</dd>
@@ -108,7 +112,11 @@ export function SampleBadgeLayout(props) {
           <dd data-definition>Carlsbad, CA, 92009</dd>
         </dl>
       </div>
-      <div data-color-scheme="light" style={{ padding: "1rem" }}>
+      <div
+        data-color-scheme="light"
+        data-contrast="low"
+        style={{ padding: "1rem" }}
+      >
         <dl data-definition-list>
           <dt data-definition-term>Schedule</dt>
           <dd data-definition>Every weekend at 7pm</dd>
@@ -143,7 +151,11 @@ export function SampleFormLayout({ style, ...props }) {
 <Preview>
   <Story name="forms">
     <>
-      <SampleFormLayout data-color-scheme="dark" style={{ padding: "1rem" }}>
+      <SampleFormLayout
+        data-color-scheme="dark"
+        data-contrast="low"
+        style={{ padding: "1rem" }}
+      >
         <input
           data-text-input
           placeholder="enter your name"
@@ -156,7 +168,11 @@ export function SampleFormLayout({ style, ...props }) {
           <option name="three">Three</option>
         </select>
       </SampleFormLayout>
-      <SampleFormLayout data-color-scheme="light" style={{ padding: "1rem" }}>
+      <SampleFormLayout
+        data-color-scheme="light"
+        data-contrast="low"
+        style={{ padding: "1rem" }}
+      >
         <input
           data-text-input
           placeholder="enter your name"
@@ -178,14 +194,22 @@ export function SampleFormLayout({ style, ...props }) {
 <Preview>
   <Story name="heading">
     <>
-      <div data-color-scheme="dark" style={{ padding: "1rem" }}>
+      <div
+        data-color-scheme="dark"
+        data-contrast="low"
+        style={{ padding: "1rem" }}
+      >
         <h1 data-heading="level:1">Hello CodeSandbox</h1>
         <h2 data-heading="level:2">Hello CodeSandbox</h2>
         <h3 data-heading="level:3">Hello CodeSandbox</h3>
         <h4 data-heading="level:4">Hello CodeSandbox</h4>
         <h5 data-heading="level:5">Hello CodeSandbox</h5>
       </div>
-      <div data-color-scheme="light" style={{ padding: "1rem" }}>
+      <div
+        data-color-scheme="light"
+        data-contrast="low"
+        style={{ padding: "1rem" }}
+      >
         <h1 data-heading="level:1">Hello CodeSandbox</h1>
         <h2 data-heading="level:2">Hello CodeSandbox</h2>
         <h3 data-heading="level:3">Hello CodeSandbox</h3>
@@ -201,7 +225,11 @@ export function SampleFormLayout({ style, ...props }) {
 <Preview>
   <Story name="media-card">
     <>
-      <div data-color-scheme="dark" style={{ padding: "1rem" }}>
+      <div
+        data-color-scheme="dark"
+        data-contrast="low"
+        style={{ padding: "1rem" }}
+      >
         <div
           style={{
             display: "grid",
@@ -231,7 +259,11 @@ export function SampleFormLayout({ style, ...props }) {
           </div>
         </div>
       </div>
-      <div data-color-scheme="light" style={{ padding: "1rem" }}>
+      <div
+        data-color-scheme="light"
+        data-contrast="low"
+        style={{ padding: "1rem" }}
+      >
         <div
           style={{
             display: "grid",
@@ -288,6 +320,7 @@ export function SampleSurfaceLayout({ style, ...props }) {
     <>
       <SampleSurfaceLayout
         data-color-scheme="dark"
+        data-contrast="low"
         data-surface="depth:2"
         style={{ padding: "1rem" }}
       >
@@ -303,6 +336,7 @@ export function SampleSurfaceLayout({ style, ...props }) {
       </SampleSurfaceLayout>
       <SampleSurfaceLayout
         data-color-scheme="light"
+        data-contrast="low"
         data-surface="depth:2"
         style={{ padding: "1rem" }}
       >
