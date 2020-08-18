@@ -7,15 +7,15 @@
 
   --unstable-monochrome-shade-0: hsl(0, 0%, 98%);
   --unstable-monochrome-shade-1: hsl(0, 0%, 88%);
-  --unstable-monochrome-shade-2: hsl(0, 0%, 74%);
-  --unstable-monochrome-shade-3: hsl(0, 0%, 62%);
-  --unstable-monochrome-shade-4: hsl(0, 0%, 45%);
-  --unstable-monochrome-shade-5: hsl(0, 0%, 32%);
-  --unstable-monochrome-shade-6: hsl(0, 0%, 26%);
-  --unstable-monochrome-shade-7: hsl(0, 0%, 19%);
-  --unstable-monochrome-shade-8: hsl(0, 0%, 13%);
-  --unstable-monochrome-shade-9: hsl(0, 0%, 7%);
-  --unstable-monochrome-shade-10: hsl(0, 0%, 2%);
+  --unstable-monochrome-shade-2: hsl(0, 0%, 68%);
+  --unstable-monochrome-shade-3: hsl(0, 0%, 50%);
+  --unstable-monochrome-shade-4: hsl(0, 0%, 32%);
+  --unstable-monochrome-shade-5: hsl(0, 0%, 24%);
+  --unstable-monochrome-shade-6: hsl(0, 0%, 19%);
+  --unstable-monochrome-shade-7: hsl(0, 0%, 17%);
+  --unstable-monochrome-shade-8: hsl(0, 0%, 15%);
+  --unstable-monochrome-shade-9: hsl(0, 0%, 12%);
+  --unstable-monochrome-shade-10: hsl(0, 0%, 7%);
 }
 
 /* theme-specific elements */
