@@ -9,7 +9,11 @@ import "./index.css";
 export function SampleBadgeLayout(props) {
   return (
     <div
-      style={{ display: "flex", "--box--margin": "0 0.5rem 0.5rem 0" }}
+      style={{
+        display: "flex",
+        "--box--margin": "0 0.5rem 0.5rem 0",
+        padding: "1rem",
+      }}
       {...props}
     />
   );
@@ -18,7 +22,7 @@ export function SampleBadgeLayout(props) {
 <Preview>
   <Story name="badge">
     <>
-      <SampleBadgeLayout>
+      <SampleBadgeLayout data-color-scheme="dark">
         <span data-badge data-box>
           Badge
         </span>
@@ -32,12 +36,33 @@ export function SampleBadgeLayout(props) {
           Warning
         </span>
       </SampleBadgeLayout>
-      <SampleBadgeLayout>
-        <span data-badge="size:small" data-box>
-          Size: small
+      <SampleBadgeLayout data-color-scheme="light">
+        <span data-badge data-box>
+          Badge
+        </span>
+        <span data-badge="alt:negative" data-box>
+          Negative
+        </span>
+        <span data-badge="alt:positive" data-box>
+          Positive
+        </span>
+        <span data-badge="alt:warning" data-box>
+          Warning
         </span>
       </SampleBadgeLayout>
     </>
+  </Story>
+</Preview>
+
+#### Badge: size
+
+<Preview>
+  <Story name="badge:size">
+    <SampleBadgeLayout>
+      <span data-badge="size:small" data-box>
+        Size: small
+      </span>
+    </SampleBadgeLayout>
   </Story>
 </Preview>
 
@@ -45,7 +70,7 @@ export function SampleBadgeLayout(props) {
 
 <Preview>
   <Story name="button">
-    <>
+    <div data-color-scheme="light">
       <h4>action</h4>
       <button data-button="action:default">Primary</button>
       <button data-button="action:default variant:secondary">Secondary</button>
@@ -62,7 +87,7 @@ export function SampleBadgeLayout(props) {
       <button data-button="action:destroy size:minor-compact">
         Minor compact
       </button>
-    </>
+    </div>
   </Story>
 </Preview>
 
@@ -70,16 +95,32 @@ export function SampleBadgeLayout(props) {
 
 <Preview>
   <Story name="definition-list">
-    <dl data-definition-list>
-      <dt data-definition-term>Schedule</dt>
-      <dd data-definition>Every weekend at 7pm</dd>
-      <dt data-definition-term>Contact</dt>
-      <dd data-definition>numbercrunchin@gmail.com</dd>
-      <dd data-definition>555.555.1337</dd>
-      <dt data-definition-term>Contact</dt>
-      <dd data-definition>Bob's Janky Apartment</dd>
-      <dd data-definition>Carlsbad, CA, 92009</dd>
-    </dl>
+    <>
+      <div data-color-scheme="dark" style={{ padding: "1rem" }}>
+        <dl data-definition-list>
+          <dt data-definition-term>Schedule</dt>
+          <dd data-definition>Every weekend at 7pm</dd>
+          <dt data-definition-term>Contact</dt>
+          <dd data-definition>numbercrunchin@gmail.com</dd>
+          <dd data-definition>555.555.1337</dd>
+          <dt data-definition-term>Contact</dt>
+          <dd data-definition>Bob's Janky Apartment</dd>
+          <dd data-definition>Carlsbad, CA, 92009</dd>
+        </dl>
+      </div>
+      <div data-color-scheme="light" style={{ padding: "1rem" }}>
+        <dl data-definition-list>
+          <dt data-definition-term>Schedule</dt>
+          <dd data-definition>Every weekend at 7pm</dd>
+          <dt data-definition-term>Contact</dt>
+          <dd data-definition>numbercrunchin@gmail.com</dd>
+          <dd data-definition>555.555.1337</dd>
+          <dt data-definition-term>Contact</dt>
+          <dd data-definition>Bob's Janky Apartment</dd>
+          <dd data-definition>Carlsbad, CA, 92009</dd>
+        </dl>
+      </div>
+    </>
   </Story>
 </Preview>
 
@@ -102,7 +143,20 @@ export function SampleFormLayout({ style, ...props }) {
 <Preview>
   <Story name="forms">
     <>
-      <SampleFormLayout>
+      <SampleFormLayout data-color-scheme="dark" style={{ padding: "1rem" }}>
+        <input
+          data-text-input
+          placeholder="enter your name"
+          name="name"
+          type="text"
+        />
+        <select data-select id="something">
+          <option name="one">One</option>
+          <option name="two">Two</option>
+          <option name="three">Three</option>
+        </select>
+      </SampleFormLayout>
+      <SampleFormLayout data-color-scheme="light" style={{ padding: "1rem" }}>
         <input
           data-text-input
           placeholder="enter your name"
@@ -124,12 +178,20 @@ export function SampleFormLayout({ style, ...props }) {
 <Preview>
   <Story name="heading">
     <>
-      <h1 data-heading="level:1">Hello CodeSandbox</h1>
-      <h2 data-heading="level:2">Hello CodeSandbox</h2>
-      <h3 data-heading="level:3">Hello CodeSandbox</h3>
-      <h4 data-heading="level:4">Hello CodeSandbox</h4>
-      <h5 data-heading="level:5">Hello CodeSandbox</h5>
-      <p data-text>Hello CodeSandbox</p>
+      <div data-color-scheme="dark" style={{ padding: "1rem" }}>
+        <h1 data-heading="level:1">Hello CodeSandbox</h1>
+        <h2 data-heading="level:2">Hello CodeSandbox</h2>
+        <h3 data-heading="level:3">Hello CodeSandbox</h3>
+        <h4 data-heading="level:4">Hello CodeSandbox</h4>
+        <h5 data-heading="level:5">Hello CodeSandbox</h5>
+      </div>
+      <div data-color-scheme="light" style={{ padding: "1rem" }}>
+        <h1 data-heading="level:1">Hello CodeSandbox</h1>
+        <h2 data-heading="level:2">Hello CodeSandbox</h2>
+        <h3 data-heading="level:3">Hello CodeSandbox</h3>
+        <h4 data-heading="level:4">Hello CodeSandbox</h4>
+        <h5 data-heading="level:5">Hello CodeSandbox</h5>
+      </div>
     </>
   </Story>
 </Preview>
@@ -139,76 +201,65 @@ export function SampleFormLayout({ style, ...props }) {
 <Preview>
   <Story name="media-card">
     <>
-      <div
-        style={{
-          display: "grid",
-          gap: "1rem",
-          gridTemplateColumns: "repeat(auto-fill, 15rem)",
-        }}
-      >
-        <div data-media-card>
-          <img
-            data-media-card--media
-            src="https://placekitten.com/300/200"
-            alt="kitten"
-          />
-          <div data-media-card--description>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <h3 data-heading="level:3">Eleven Disiples</h3>
-              <span data-badge="alt:positive">Open</span>
+      <div data-color-scheme="dark" style={{ padding: "1rem" }}>
+        <div
+          style={{
+            display: "grid",
+            gap: "1rem",
+            gridTemplateColumns: "repeat(auto-fill, 15rem)",
+          }}
+        >
+          <div data-media-card>
+            <img
+              data-media-card--media
+              src="https://placekitten.com/300/200"
+              alt="kitten"
+            />
+            <div data-media-card--description>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <h3 data-heading="level:3">Eleven Disiples</h3>
+                <span data-badge="alt:positive">Open</span>
+              </div>
+              <span data-text>Judas, remember that guy?</span>
             </div>
-            <span data-text>Judas, remember that guy?</span>
           </div>
         </div>
-        {/* <div data-media-card>
-          <img
-            data-media-card--media
-            src="https://placekitten.com/450/300"
-            alt="kitten"
-          />
-          <div data-media-card--description>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <h3 data-heading="level:3">30 Pieces</h3>
-              <span data-badge="alt:negative">Closed</span>
+      </div>
+      <div data-color-scheme="light" style={{ padding: "1rem" }}>
+        <div
+          style={{
+            display: "grid",
+            gap: "1rem",
+            gridTemplateColumns: "repeat(auto-fill, 15rem)",
+          }}
+        >
+          <div data-media-card>
+            <img
+              data-media-card--media
+              src="https://placekitten.com/300/200"
+              alt="kitten"
+            />
+            <div data-media-card--description>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <h3 data-heading="level:3">Eleven Disiples</h3>
+                <span data-badge="alt:positive">Open</span>
+              </div>
+              <span data-text>Judas, remember that guy?</span>
             </div>
-            <span data-text>
-              I have a lot of time down here to determine if it was worth it or
-              not…
-            </span>
           </div>
         </div>
-        <div data-media-card>
-          <img
-            data-media-card--media
-            src="https://placekitten.com/300/200"
-            alt="kitten"
-          />
-          <div data-media-card--description>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <h3 data-heading="level:3">James</h3>
-              <span data-badge>Limit 1</span>
-            </div>
-            <span data-text>I'm gonna live forever!</span>
-          </div>
-        </div> */}
       </div>
     </>
   </Story>
@@ -235,8 +286,11 @@ export function SampleSurfaceLayout({ style, ...props }) {
 <Preview>
   <Story name="surface">
     <>
-      <h4>depth 2</h4>
-      <SampleSurfaceLayout data-surface="depth:2">
+      <SampleSurfaceLayout
+        data-color-scheme="dark"
+        data-surface="depth:2"
+        style={{ padding: "1rem" }}
+      >
         <div data-surface data-box>
           one
         </div>
@@ -247,16 +301,19 @@ export function SampleSurfaceLayout({ style, ...props }) {
           three
         </div>
       </SampleSurfaceLayout>
-      <h4>depth 3</h4>
-      <SampleSurfaceLayout data-surface="depth:3" style={{ padding: "1rem" }}>
+      <SampleSurfaceLayout
+        data-color-scheme="light"
+        data-surface="depth:2"
+        style={{ padding: "1rem" }}
+      >
         <div data-surface data-box>
           one
-          <div data-surface data-box>
-            one:one
-          </div>
         </div>
         <div data-surface data-box>
           two
+        </div>
+        <div data-surface data-box>
+          three
         </div>
       </SampleSurfaceLayout>
     </>

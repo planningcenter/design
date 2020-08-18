@@ -1,3 +1,44 @@
+[data-button] {
+  -moz-appearance: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  appearance: none;
+  box-sizing: border-box;
+  border-width: var(--button--border-width, 1px);
+  border-style: solid;
+  border-color: var(--button--border-color, fuchsia);
+  background-image: var(--button--background-image);
+  background-color: var(--button--background-color, fuchsia);
+  border-radius: var(--button--border-radius, 4px);
+  color: var(--button--color, blue);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: var(--button--font-weight, 600);
+  position: relative;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: 100ms all ease-in-out;
+  font-size: var(--button--font-size, 14px);
+  padding: var(--button--padding, 0 16px);
+  line-height: calc(
+    var(--button--height, 32px) - calc(var(--button--border-width, 1px) * 2)
+  );
+  box-shadow: var(--button--box-shadow);
+  background-image: var(--button--background-image);
+}
+input[type="submit"][data-button] {
+  text-align: center;
+}
+button[data-button] {
+}
+a[data-button] {
+  text-align: center;
+  text-decoration: none;
+}
+
 :root {
   --button--height: 40px;
   --button--border-radius: 128px;
@@ -22,7 +63,12 @@
 }
 
 [data-button~="action:default"][data-button~="variant:outline"] {
-  --button--background-image: linear-gradient(white, white), linear-gradient(135deg, var(--color-turquoise) 0%, var(--color-emerald) 100%);
+  --button--background-image: linear-gradient(white, white),
+    linear-gradient(
+      135deg,
+      var(--color-turquoise) 0%,
+      var(--color-emerald) 100%
+    );
   --button--border-color: transparent;
   --button--border-width: 2px;
   --button--color: var(--color-turquoise);
@@ -63,7 +109,6 @@
 [data-button~="size:minor"][data-button~="action:secondary"] {
   --button--border-width: 1px;
 }
-
 
 [data-button~="size:minor-compact"][data-button~="action:destroy"] {
   --button--color: var(--color-ruby);

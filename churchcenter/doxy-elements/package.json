@@ -27,5 +27,8 @@
   "devDependencies": {
     "postcss-cli": "^7.1.0",
     "postcss-import": "^12.0.1"
+  },
+  "dependencies": {
+    "postcss-nested": "^4.2.3"
   }
 }

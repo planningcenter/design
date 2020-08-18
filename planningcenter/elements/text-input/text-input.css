@@ -1,10 +1,10 @@
 [data-text-input] {
   box-sizing: var(--text-input--box-sizing, border-box);
   font-size: var(--text-input--font-size, 1rem);
-  border-color: var(--text-input--border-color, #767676);
+  border-color: var(--text-input--border-color, hsl(0, 0%, 60%));
   border-width: var(--text-input--border-width, 1px);
   border-style: var(--text-input--border-style, solid);
-  background-color: var(--text-input--background-color, white);
+  background-color: var(--text-input--background-color);
   border-radius: var(--text-input--border-radius, 0.25em);
   padding: var(--text-input--padding, 0.5em 0.625em);
   margin: var(--text-input--margin, 0);
@@ -15,8 +15,8 @@
 }
 
 [data-text-input]::placeholder {
-  color: var(--text-input--color__placeholder, #767676);
-  color: #767676;
+  color: var(--text-input--color__placeholder, hsl(0, 0%, 60%));
+  color: hsl(0, 0%, 60%);
 }
 
 [data-text-input]:focus {
