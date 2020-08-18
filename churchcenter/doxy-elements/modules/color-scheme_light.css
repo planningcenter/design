@@ -26,5 +26,7 @@
   --badge--background-color: var(--unstable-monochrome-shade-7);
   --badge--color: var(--unstable-monochrome-shade-2);
 
+  --button--outline-variant--background-image: linear-gradient(white, white), linear-gradient(135deg, var(--color-turquoise) 0%, var(--color-emerald) 100%);
+
   --select--background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='-7 -7  30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.55504 10.5092C7.75343 10.7608 8.13399 10.7635 8.33592 10.5147L11.3385 6.81508C11.6037 6.48828 11.3711 6 10.9503 6H5.03091C4.61331 6 4.37972 6.48163 4.63826 6.80956L7.55504 10.5092Z' fill='%23737373'/%3E%3C/svg%3E%0A");
 }

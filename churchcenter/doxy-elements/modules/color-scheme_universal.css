@@ -23,4 +23,5 @@ html {
   --text-input--box-shadow_focus: 0px 0px 3px 0 #a3d3fa;
 
   --select--border-color: var(--unstable-monochrome-shade-4);
+  --button--outline-variant--background-image: linear-gradient(white, white), linear-gradient(black, black);
 }

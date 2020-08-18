@@ -70,23 +70,50 @@ export function SampleBadgeLayout(props) {
 
 <Preview>
   <Story name="button">
-    <div data-color-scheme="light" data-contrast="low">
-      <h4>action</h4>
-      <button data-button="action:default">Primary</button>
-      <button data-button="action:default variant:secondary">Secondary</button>
-      <button data-button="action:destroy">Primary destroy</button>
-      <button data-button="action:destroy variant:outline">Delete me</button>
-      <h4>size</h4>
-      <button data-button="action:primary size:compact">Compact</button>
-      <button data-button="action:secondary size:compact">Compact</button>
-      <button data-button="action:destroy size:compact">Compact</button>
-      <button data-button="action:primary size:minor">Minor</button>
-      <button data-button="action:secondary size:minor">Minor</button>
-      <button data-button="action:destroy size:minor">Minor</button>
-      <button data-button="size:minor-compact">Minor compact</button>
-      <button data-button="action:destroy size:minor-compact">
-        Minor compact
-      </button>
+    <>
+      <div
+        data-color-scheme="dark"
+        data-contrast="low"
+        style={{ padding: "1rem" }}
+      >
+        <h4>action</h4>
+        <button data-button="action:default">Default</button>
+        <button data-button="action:destroy">Destroy</button>
+        <h4>variant</h4>
+        <button data-button="action:default variant:outline">Outline</button>
+        <button data-button="action:default variant:text-only">
+          Text only
+        </button>
+      </div>
+      <div
+        data-color-scheme="light"
+        data-contrast="low"
+        style={{ padding: "1rem" }}
+      >
+        <h4>action</h4>
+        <button data-button="action:default">Default</button>
+        <button data-button="action:destroy">Destroy</button>
+        <h4>variant</h4>
+        <button data-button="action:default variant:outline">Outline</button>
+        <button data-button="action:default variant:text-only">
+          Text only
+        </button>
+      </div>
+    </>
+  </Story>
+</Preview>
+
+#### Button: size
+
+<Preview>
+  <Story name="button:size">
+    <div
+      data-color-scheme="light"
+      data-contrast="low"
+      style={{ padding: "1rem" }}
+    >
+      <button data-button="action:default size:compact">Compact</button>
+      <button data-button="action:default size:minor">Minor</button>
     </div>
   </Story>
 </Preview>
