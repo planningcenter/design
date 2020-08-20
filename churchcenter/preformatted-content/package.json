@@ -4,7 +4,8 @@
   "description": "Shared styles for uncontrolled, user formatted content",
   "style": "dist/preformatted-content.css",
   "files": [
-    "dist"
+    "dist",
+    "extension"
   ],
   "publishConfig": {
     "access": "public"
