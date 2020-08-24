@@ -17,7 +17,7 @@
   color: var(--text--color);
   font-size: var(--text--font-size, 1em);
   line-height: var(--text--line-height, 1.5em);
-  margin: var(0 0 --text--line-height 0, 0 0 1.5em 0);
+  margin: 0 0 var(--text--line-height, 1.5em) 0;
 }
 
 [data-preformatted-content] ol,
