@@ -12,3 +12,105 @@
   height: var(--avatar--size);
   object-fit: cover;
 }
+
+/*
+ * pre-defined variation between successive text elements
+ * render without child content
+ * can we make all elements shimmer at the same percieved speed
+ * add pulse option
+ * use it with a css grid and see how it feels
+ * create suspense fallback example
+ */
+
+[data-skeleton] [data-avatar] {
+  /* different elements */
+  background-color: lightgray;
+  position: relative;
+  overflow: hidden;
+}
+[data-skeleton] [data-media]::before,
+[data-skeleton] [data-text]::before,
+[data-skeleton] [data-heading]::before,
+[data-skeleton] [data-avatar]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -150px;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    hsl(0, 0%, 100%, 0.2) 50%,
+    transparent 100%
+  );
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-name: load;
+  animation-iteration-count: infinite;
+}
+
+@keyframes load {
+  0% {
+    opacity: 1;
+    left: -250px;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+[data-skeleton] [data-text] {
+  /* multiple lines */
+  /* maybe before and after? */
+  background-color: lightgray;
+  color: lightgray;
+  border-radius: 0.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-skeleton] [data-text]::before {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    hsl(0, 0%, 100%, 0.2) 50%,
+    transparent 100%
+  );
+}
+
+[data-skeleton] [data-heading] {
+  background-color: lightgray;
+  color: lightgray;
+  border-radius: 0.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-skeleton] [data-heading]::before {
+  background: linear-gradient(
+    92deg,
+    transparent 0%,
+    hsl(0, 0%, 100%, 0.2) 50%,
+    transparent 100%
+  );
+}
+
+/* new element */
+[data-skeleton] [data-media] {
+  display: inline-block;
+  width: 400px;
+  height: 200px;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+  position: relative;
+  overflow: hidden;
+}
+
+/* fidelity in admin ui */
+/* could surfaces solved this? */

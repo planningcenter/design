@@ -2,6 +2,7 @@ import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
 import readme from "./README.md";
 import "./avatar.css";
+import "../text/text.css";
 import image from "../../../static/200x300_kitten.jpeg";
 
 <Meta title="Elements|avatar" parameters={{ notes: readme }} />
@@ -9,6 +10,23 @@ import image from "../../../static/200x300_kitten.jpeg";
 # Avatar
 
 > A circular image representing one person
+
+## Playground
+
+<Preview>
+  <Story name="Playground">
+    <div data-skeleton style={{}}>
+      <div data-avatar style={{ "--avatar--size": "3rem" }} />
+      <h2 data-heading style={{ "--heading--line-height": "2rem", width: "30%" }} >
+        Heading
+      </h2>
+      <p data-text style={{ width: "80%" }}>.</p>
+      <p data-text style={{ width: "70%" }}>.</p>
+      <p data-text style={{ width: "90%" }}>.</p>
+      <div data-media />
+    </div>
+  </Story>
+</Preview>
 
 ## Basic
 
