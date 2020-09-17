@@ -27,9 +27,7 @@
   "homepage": "https://github.com/planningcenter/design#readme",
   "devDependencies": {
     "postcss-cli": "^7.1.0",
-    "postcss-import": "^12.0.1"
-  },
-  "dependencies": {
+    "postcss-import": "^12.0.1",
     "postcss-custom-properties": "^9.1.1"
   }
 }
