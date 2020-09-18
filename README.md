@@ -56,6 +56,7 @@ Requirement: Node 10+
 npm i -g lerna
 git clone git@github.com:planningcenter/design.git ~/Code/design
 cd ~/Code/design
+npm install
 lerna bootstrap # install and link all package-local dependencies
 npm run dev
 ```
