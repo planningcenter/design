@@ -21,7 +21,12 @@
   border-spacing: 0;
   font-size: var(--table--font-size);
   border-radius: var(--table--border-radius);
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* DISCUSS: */
+  /* the table uses `overflow: hidden` to reliably set the corners of the table. */
+  /* however `overflow: hidden` disabled sticky-ness in Safari. */
+  /* we need to work up selectors or modifiers that allow for both. */
+  /* https://css-tricks.com/position-sticky-and-table-headers/ */
 }
 
 [data-table-head] {
