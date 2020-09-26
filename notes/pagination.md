@@ -1,3 +1,117 @@
+# 9/25 Pagination Specification (rough notes)
+
+## Questions
+
+- User testing
+  _ "what do we need to validate about this?"
+  _ "how do we sell it?" / "how do we get support for this?"
+  _ who to validate concept with first
+  _ balancing the political challenges
+
+## What do we show for 1 page?
+
+- Do we show pagination for just one result?
+  _ Is there a standard?
+  _ If we don't, how do we suggest people hide it
+  _ How does that look if this is inside a foot?
+  _ ...other non-conditional elements in tfoot?
+  _ Filtered results experience (10+ pages down to 1 page)
+  _ Is there a textual element that could be displayed in place of pagination?
+  _ Tooltips over disabled results and buttons?
+  _ What would migration look like if we started with all elements on the page and _later_ adopted a more sophisticated, conditional layout?
+
+- Default: All elements on the page
+- Optional: Open to localized decision-making with conditional messaging and show/hide in apps \* this is an area of unkown unkowns
+
+### Implementation questions
+
+- Is the condition tied to an showing/hiding an ancestor element?
+- Which tables are show/hiding on one result?
+
+## Where is the place to have long-term reviews of explorations?
+
+## Treatment
+
+Notes are left for posterity.
+See Figma file for treatment: https://www.figma.com/file/nEpLkyf1RRGrgTgrDuLKSh/Pagination?node-id=40%3A499
+See CodeSandbox for quick spike: https://codesandbox.io/s/elementspagination-spike-1c2n5?file=/src/styles.css
+
+- Gaps
+  _ 4px between concrete pages
+  _ 2px between pager buttons \* 4px between pager group and pages
+- Page links
+  _ Color: min 3.5:1 contrast, gray, tintable
+  _ Hover:
+  _ background-color: light gray
+  _ color:
+- Target
+  - background-color: _recommend_ "link blue"
+  - color: white
+- Ellipsis color
+- Icon color
+- Pagination divider
+- Pager buttons
+  _ background: lightest gray
+  _ color: 3.5:1 on background min contrast
+  _ gap: 2px
+  _ states:
+  _ disabled
+  _ at rest
+  _ hover
+  _ active
+
+- ellipsis icon or ellipsis character?
+
+- How do we handle focus? Define it (spec) or defer it (adopt app)?
+
+(GRAB FROM FIGMA FILE)
+
+- Global palette
+  _ Light gray
+  _ button backgrounds, some one hover
+  _ Darker light gray
+  _ button active state
+  _ Even darker gray
+  _
+  _ Blue
+  _ target background
+  - Darker blue
+    _ target background :active
+    _ White
+    _ target text
+    _ Dark gray \* Text, calculate contrast against hover state background
+
+## Exploration
+
+- Search glass hidden behind ellipsis might have been too clever \* dedicated icon for search could be more directly accessible
+
+--- break ---
+
+---
+
+## Angela
+
+- Why would we want to ask questions
+- Reach out to real users
+- Goal for internal feedback
+  _ early exposure for design team, get buy-in, gain trust
+  _ maybe introduce them at the prototype phase
+- Sample questions:
+  _ How would you navigate to page #7
+  _ How many pages of results are there?
+  _ How easy/difficult was it to navigate?
+  _ General questions
+- Workable prototype
+- Walk them thru a line of thinking (strategically introduce them to discomfort)
+
+## Shane
+
+- Questions
+  _ Spacing around ellipsis
+  _ Color treatment
+  _ Test different hover styles (designers only, not users)
+  _ ellipses, prefer less space than more
+
 # 9/18 Pagination Specifications
 
 ## Participants
@@ -244,4 +358,4 @@ Pagination shouldn't jump around or conditionally show options as the user filte
 - Explore visual treatments
 - Define stylistic specification
 - Implement baseline CSS implementation
-- Create prototype and questionnaire for internal use research (not feedback) among other designers, support agents, and PMs
+- Create prototype and questionnaire for internal research (not feedback) among other designers, support agents, and PMs
