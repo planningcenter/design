@@ -1,0 +1,60 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+<Meta title="Components|pagination" />
+
+# Pagination
+
+> A navigation element for pagination results list and table results
+
+export function Pagination({ pages }) {
+  // TODO: rename prev/next from Page and something incnlusive of first/next
+  return (
+    <Container>
+      <Page href="#previous">Previous</Page>
+      <Page href="#next">Next</Page>
+      {[
+        ...Array(pages).map((page) => (
+          <Page href={`${rootURL}/${page}`}>page</Page>
+        )),
+      ]}
+      <TruncatedPages />
+    </Container>
+  );
+}
+
+export function Container(props) {
+  // TODO: make aria-label a customizable default
+  return (
+    <nav aria-label="Page navigation example">
+      <ul data-pagination {...props} />
+    </nav>
+  );
+}
+
+export function TruncatedPages(props) {
+  return (
+    <li data-pagination-item>
+      <span {...props} data-visually-hidden>
+        …
+      </span>
+    </li>
+  );
+}
+
+export function Page(props) {
+  return (
+    <li data-pagination-item>
+      <a data-pagination-link {...props} />
+    </li>
+  );
+}
+
+## Basic
+
+Options for external, default API:
+
+<Preview>
+  <Story name="abstracted">
+    <Pagination pages={10} page={6} rootURL="#" />
+  </Story>
+</Preview>

@@ -1,0 +1,139 @@
+/* COPIED FROM CODESANDBOX */
+
+/* theme */
+.pager-button {
+  background-color: hsl(0 0% 95%);
+  color: hsl(0 0% 30%);
+}
+.pager-button:hover {
+  background-color: hsl(0 0% 90%);
+}
+.pager-button:active {
+  background-color: hsl(0 0% 85%);
+}
+
+.pager-button.disabled {
+  background-color: hsl(0 0% 97%);
+  color: hsl(0 0% 80%);
+  cursor: not-allowed;
+}
+
+.page-link {
+  color: hsl(0 0% 30%);
+  border: 1px solid transparent;
+}
+
+.page-link:hover {
+  background-color: hsl(0 0% 95%); /* TBD */
+  color: hsl(0 0% 20%);
+}
+.page-link:active {
+  background-color: hsl(0 0% 90%); /* TBD */
+  color: hsl(0 0% 10%);
+}
+
+.target-page-link,
+.target-page-link:hover,
+.target-page-link:active {
+  background-color: hsl(214 100% 64%);
+  color: hsl(0 0% 100%);
+  cursor: default; /* specify */
+}
+
+.hidden-pages {
+  cursor: default; /* specify */
+  color: hsl(0 0% 47.5%);
+  /* padding-left: 0.25rem;
+  padding-right: 0.25rem; */
+}
+
+.page-link {
+  text-decoration: none;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 3px;
+  min-width: 2em;
+}
+
+/* structure */
+.pager-button {
+  display: inline-block;
+  text-decoration: none;
+  height: 2rem;
+  width: 2.25rem;
+}
+
+.pager-button:hover {
+  color: hsl(0 0% 20%);
+}
+
+.left-pager-button {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.right-pager-button {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.pager-button + .pager-button {
+  /* grid? */
+  margin-left: 2px;
+}
+
+[data-pagination] {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.25rem;
+  justify-content: left;
+  align-items: center;
+  line-height: var(--pagination--line-height, 2rem);
+}
+
+[data-pagination] > * {
+  display: inline-block;
+  /* line-height: var(--pagination--line-height, 2rem); */
+  box-sizing: border-box;
+}
+
+[data-link-button] {
+  color: black;
+  border-color: transparent;
+  padding: 0 0.5rem;
+}
+
+[data-link-button]:hover {
+  background-color: hsl(0 0% 90%);
+  border-color: transparent;
+  padding: 0 0.5rem;
+}
+
+[data-pagination-button] {
+  padding: 0 0.5rem; /* TODO: based on font-size (14, 16, etc) */
+}
+
+[data-pagination-target],
+[data-pagination-target]:hover {
+  /* to overrride whatever used element is */
+  color: white; /* TODO: variablize */
+  background-color: blue; /* TODO: variablize */
+}
+
+/* non-lib */
+[data-button] {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 4em;
+  display: inline-block;
+  padding: 0 1em;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
