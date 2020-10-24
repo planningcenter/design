@@ -80,12 +80,9 @@ Anything added to `description` will be read by screen readers _but_ not shown a
 Descriptions on SVGs are customarily used to describe the image itself.  
 It's rare that you'll use this.
 
-<Icon
-  symbol="general#show-eye"
-  description="An eye that's open"
-/>
-
-````
+```jsx
+<Icon symbol="general#show-eye" description="An eye that's open" />
+```
 
 ## Escape hatches
 
@@ -117,7 +114,7 @@ export function MyView() {
     </ForceTitleContext.Provider>
   }
 }
-````
+```
 
 I'll repeat that this is a _temporory_ escape hatch — where the previous behavior was preferred for an entire view, while more nuanced improvements are made.  
 It _will not_ be present in the next version.
