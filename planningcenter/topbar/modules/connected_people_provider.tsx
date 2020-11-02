@@ -1,10 +1,11 @@
 import * as React from "react";
 import pcoUrl from "./pco_url";
-import getJSON from "./get_json";
+import defaultApiRequest, { ApiRequest } from "./api_request";
 
 export class ConnectedPeopleProvider extends React.Component<
   {
     env: string;
+    apiRequest?: ApiRequest;
     render: (
       connectedPeople: object[],
       callback: any,
@@ -22,11 +23,17 @@ export class ConnectedPeopleProvider extends React.Component<
     };
   }
 
+  public static defaultProps = {
+    apiRequest: defaultApiRequest,
+  };
+
   fetch() {
-    getJSON(
-      `${pcoUrl(this.props.env)("api")}/people/v2/me/connected_people`,
-      (res) => {
-        const connectedPeople = res.data;
+    this.props
+      .apiRequest(
+        `${pcoUrl(this.props.env)("api")}/people/v2/me/connected_people`
+      )
+      .then(({ json }) => {
+        const connectedPeople = json.data;
 
         return this.setState(
           {
@@ -38,8 +45,7 @@ export class ConnectedPeopleProvider extends React.Component<
               JSON.stringify(connectedPeople),
             ),
         );
-      },
-    );
+      });
   }
 
   remove() {

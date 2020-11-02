@@ -17,9 +17,6 @@
   "repository": "https://github.com/planningcenter/javascript.git",
   "author": "Michael Chan <mijoch@gmail.com>",
   "private": false,
-  "dependencies": {
-    "superagent": "^5.2.2"
-  },
   "peerDependencies": {
     "react": "^16.8.6"
   },
