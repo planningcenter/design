@@ -52,6 +52,16 @@ export class ConnectedPeopleProvider extends React.Component<
     window.localStorage.removeItem("Topbar:ConnectedPeople");
   }
 
+  unlink() {
+    this.props
+      .apiRequest(`${pcoUrl(this.props.env)("api")}/login/v2/me/unlink`, {
+        method: "POST",
+      })
+      .then(({ json }) => {
+        window.location = json.meta.redirect_to;
+      });
+  }
+
   componentDidMount() {
     const connectedPeople = JSON.parse(
       window.localStorage.getItem("Topbar:ConnectedPeople"),
@@ -66,6 +76,7 @@ export class ConnectedPeopleProvider extends React.Component<
     return this.props.render(this.state.connectedPeople || [], {
       fetch: this.fetch.bind(this),
       remove: this.remove.bind(this),
+      unlink: this.unlink.bind(this),
     });
   }
 }

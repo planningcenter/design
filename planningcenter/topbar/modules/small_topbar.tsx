@@ -65,6 +65,7 @@ export class Topbar extends React.Component<
     currentRouteComponent?: any;
     requestAppsFetch: any;
     requestConnectedPeopleFetch: any;
+    requestUnlinkConnectedPeople: any;
     requestClearAppsCache: any;
     requestClearConnectedPeopleCache: any;
     notifications?: any;
@@ -391,13 +392,12 @@ export class Topbar extends React.Component<
                       <div>
                         {this.props.connectedPeople.length > 0 && (
                           <a
-                            href={`${pcoUrl(this.props.env)(
-                              "accounts",
-                            )}/unlink`}
-                            onClick={() => {
+                            href=""
+                            onClick={(e) => {
                               this.props.requestClearAppsCache();
                               this.props.requestClearConnectedPeopleCache();
-                              return;
+                              this.props.requestUnlinkConnectedPeople();
+                              e.preventDefault();
                             }}
                             style={{
                               display: "block",

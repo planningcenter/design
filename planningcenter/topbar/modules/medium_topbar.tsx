@@ -77,6 +77,7 @@ export class Topbar extends React.Component<
     notifications?: any;
     requestAppsFetch: any;
     requestConnectedPeopleFetch: any;
+    requestUnlinkConnectedPeople: any;
     requestClearAppsCache: any;
     requestClearConnectedPeopleCache: any;
     linkToProfile?: boolean;
@@ -400,12 +401,12 @@ export class Topbar extends React.Component<
                     }}
                   >
                     <a
-                      href={`${pcoUrl(this.props.env)("accounts")}/unlink`}
-                      data-turbolinks={false}
-                      onClick={() => {
+                      href=""
+                      onClick={(e) => {
                         this.props.requestClearAppsCache();
                         this.props.requestClearConnectedPeopleCache();
-                        return;
+                        this.props.requestUnlinkConnectedPeople();
+                        e.preventDefault();
                       }}
                       style={{
                         color: "#666",
