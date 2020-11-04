@@ -263,6 +263,10 @@ class StaticConnectedPeopleProvider extends React.Component<
     alert("Unlink people!");
   }
 
+  switch(toId, returnPath) {
+    alert(`Switch to ${toId} and then go to "${returnPath}"`);
+  }
+
   componentDidMount() {
     if (!JSON.parse(window.localStorage.getItem("Topbar:ConnectedPeople"))) {
       this.fetch();
@@ -276,6 +280,7 @@ class StaticConnectedPeopleProvider extends React.Component<
         fetch: this.fetch.bind(this),
         remove: this.remove.bind(this),
         unlink: this.unlink.bind(this),
+        switch: this.switch.bind(this),
       }
     );
   }
@@ -388,6 +393,9 @@ class SampleTopbar extends React.Component<
                         requestUnlinkConnectedPeople={
                           connectedPeopleActions.unlink
                         }
+                        requestSwitchConnectedPerson={
+                          connectedPeopleActions.switch
+                        }
                         routes={staticData.routes.map(([name, uri]) => (
                           <SmallRoute
                             key={name}
@@ -421,6 +429,9 @@ class SampleTopbar extends React.Component<
                       requestConnectedPeopleFetch={connectedPeopleActions.fetch}
                       requestUnlinkConnectedPeople={
                         connectedPeopleActions.unlink
+                      }
+                      requestSwitchConnectedPerson={
+                        connectedPeopleActions.switch
                       }
                       routes={staticData.routes.map(([name, uri], i) => (
                         <MediumRoute
@@ -465,6 +476,9 @@ class SampleTopbar extends React.Component<
                       requestConnectedPeopleFetch={connectedPeopleActions.fetch}
                       requestUnlinkConnectedPeople={
                         connectedPeopleActions.unlink
+                      }
+                      requestSwitchConnectedPerson={
+                        connectedPeopleActions.switch
                       }
                       routes={staticData.routes.map(([name, uri]) => (
                         <NotSmallRoute

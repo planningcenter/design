@@ -62,6 +62,27 @@ export class ConnectedPeopleProvider extends React.Component<
       });
   }
 
+  switch(toId: string, returnPath: string) {
+    this.props
+      .apiRequest(
+        `${pcoUrl(this.props.env)("api")}/login/v2/me/switch_connected_person`,
+        {
+          method: "POST",
+          data: {
+            data: {
+              attributes: {
+                id: toId,
+                return_path: returnPath,
+              },
+            },
+          },
+        }
+      )
+      .then(({ json }) => {
+        window.location = json.meta.redirect_to;
+      });
+  }
+
   componentDidMount() {
     const connectedPeople = JSON.parse(
       window.localStorage.getItem("Topbar:ConnectedPeople"),
@@ -77,6 +98,7 @@ export class ConnectedPeopleProvider extends React.Component<
       fetch: this.fetch.bind(this),
       remove: this.remove.bind(this),
       unlink: this.unlink.bind(this),
+      switch: this.switch.bind(this),
     });
   }
 }

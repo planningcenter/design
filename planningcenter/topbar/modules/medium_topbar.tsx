@@ -78,6 +78,7 @@ export class Topbar extends React.Component<
     requestAppsFetch: any;
     requestConnectedPeopleFetch: any;
     requestUnlinkConnectedPeople: any;
+    requestSwitchConnectedPerson: any;
     requestClearAppsCache: any;
     requestClearConnectedPeopleCache: any;
     linkToProfile?: boolean;
@@ -434,14 +435,15 @@ export class Topbar extends React.Component<
                   ({ id, attributes: person }) => (
                     <HoverableListItem component="li" key={id}>
                       <a
-                        href={`${pcoUrl(this.props.env)(
-                          "accounts",
-                        )}/link/new?to=${id}&return=${this.props.appName}%2f`}
-                        data-turbolinks={false}
-                        onClick={() => {
+                        href=""
+                        onClick={(e) => {
                           this.props.requestClearAppsCache();
                           this.props.requestClearConnectedPeopleCache();
-                          return;
+                          this.props.requestSwitchConnectedPerson(
+                            id,
+                            `${this.props.appName}/`
+                          );
+                          e.preventDefault();
                         }}
                         style={{
                           marginLeft: "16px",
