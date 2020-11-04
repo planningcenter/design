@@ -30,7 +30,7 @@ export class ConnectedPeopleProvider extends React.Component<
   fetch() {
     this.props
       .apiRequest(
-        `${pcoUrl(this.props.env)("api")}/people/v2/me/connected_people`
+        `${pcoUrl(this.props.env)("api")}/login/v2/me/connected_people`
       )
       .then(({ json }) => {
         const connectedPeople = json.data;
