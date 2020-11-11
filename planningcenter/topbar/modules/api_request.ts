@@ -1,40 +1,21 @@
-export type ApiRequest = (
+export type Fetch = typeof fetch;
+
+export const defaultFetch: Fetch = (url, options) => {
+  return fetch(url, { credentials: "include", mode: "cors", ...options });
+};
+
+export default function apiRequest(
+  fetch: Fetch,
   url: string,
-  options?: {
-    data?: object | null;
-    onError?: (error: any) => { response: null; json: null; ok: false };
-  } & RequestInit
-) => Promise<{ response: Response; json: any; ok: boolean }>;
-
-function handleError(e) {
-  console.warn(e);
-
-  return { response: null, json: null, ok: false };
-}
-
-const apiRequest: ApiRequest = (
-  url,
-  {
-    method = "GET",
-    data = null,
-    headers = {},
-    onError = handleError,
-    ...rest
-  } = {}
-) => {
-  const requestHeaders = {
-    Accept: "application/json",
-    "Content-Type": "application/json",
-    ...headers,
-  };
-
+  { method = "GET", data = null } = {}
+): Promise<{ response: Response; json: any; ok: boolean }> {
   const options: RequestInit = {
-    credentials: "include",
-    headers: requestHeaders,
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
     method,
-    mode: "cors",
     redirect: "follow",
-    ...rest,
   };
 
   if (data && method !== "GET") {
@@ -47,8 +28,10 @@ const apiRequest: ApiRequest = (
         .json()
         .then((json) => ({ response, json, ok: response.ok }))
         .catch(() => ({ response, json: null, ok: response.ok })),
-    onError
-  );
-};
+    (e) => {
+      console.warn(e);
 
-export default apiRequest;
+      return { response: null, json: null, ok: false };
+    }
+  );
+}

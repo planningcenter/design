@@ -1,14 +1,14 @@
 import * as React from "react";
 import pcoUrl from "./pco_url";
-import defaultApiRequest, { ApiRequest } from "./api_request";
+import apiRequest, { Fetch, defaultFetch } from "./api_request";
 
 export class ConnectedPeopleProvider extends React.Component<
   {
     env: string;
-    apiRequest?: ApiRequest;
+    authenticatedFetch?: Fetch;
     render: (
       connectedPeople: object[],
-      callback: any,
+      callback: any
     ) => React.ReactElement<any>;
   },
   {
@@ -24,28 +24,27 @@ export class ConnectedPeopleProvider extends React.Component<
   }
 
   public static defaultProps = {
-    apiRequest: defaultApiRequest,
+    authenticatedFetch: defaultFetch,
   };
 
   fetch() {
-    this.props
-      .apiRequest(
-        `${pcoUrl(this.props.env)("api")}/login/v2/me/connected_people`
-      )
-      .then(({ json }) => {
-        const connectedPeople = json.data;
+    apiRequest(
+      this.props.authenticatedFetch,
+      `${pcoUrl(this.props.env)("api")}/login/v2/me/connected_people`
+    ).then(({ json }) => {
+      const connectedPeople = json.data;
 
-        return this.setState(
-          {
-            connectedPeople,
-          },
-          () =>
-            window.localStorage.setItem(
-              "Topbar:ConnectedPeople",
-              JSON.stringify(connectedPeople),
-            ),
-        );
-      });
+      return this.setState(
+        {
+          connectedPeople,
+        },
+        () =>
+          window.localStorage.setItem(
+            "Topbar:ConnectedPeople",
+            JSON.stringify(connectedPeople)
+          )
+      );
+    });
   }
 
   remove() {
@@ -53,34 +52,35 @@ export class ConnectedPeopleProvider extends React.Component<
   }
 
   unlink() {
-    this.props
-      .apiRequest(`${pcoUrl(this.props.env)("api")}/login/v2/me/unlink`, {
+    apiRequest(
+      this.props.authenticatedFetch,
+      `${pcoUrl(this.props.env)("api")}/login/v2/me/unlink`,
+      {
         method: "POST",
-      })
-      .then(({ json }) => {
-        window.location = json.meta.redirect_to;
-      });
+      }
+    ).then(({ json }) => {
+      window.location = json.meta.redirect_to;
+    });
   }
 
   switch(toId: string, returnPath: string) {
-    this.props
-      .apiRequest(
-        `${pcoUrl(this.props.env)("api")}/login/v2/me/switch_connected_person`,
-        {
-          method: "POST",
+    apiRequest(
+      this.props.authenticatedFetch,
+      `${pcoUrl(this.props.env)("api")}/login/v2/me/switch_connected_person`,
+      {
+        method: "POST",
+        data: {
           data: {
-            data: {
-              attributes: {
-                id: toId,
-                return_path: returnPath,
-              },
+            attributes: {
+              id: toId,
+              return_path: returnPath,
             },
           },
-        }
-      )
-      .then(({ json }) => {
-        window.location = json.meta.redirect_to;
-      });
+        },
+      }
+    ).then(({ json }) => {
+      window.location = json.meta.redirect_to;
+    });
   }
 
   componentDidMount() {

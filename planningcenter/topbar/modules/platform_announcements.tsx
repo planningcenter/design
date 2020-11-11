@@ -2,7 +2,7 @@ import * as React from "react";
 import { PointBreak } from "./display_switch";
 import pcURL from "./pco_url";
 import { X as XSymbol } from "./symbols";
-import defaultApiRequest, { ApiRequest } from "./api_request";
+import apiRequest, { Fetch, defaultFetch } from "./api_request";
 
 const entries = function (obj) {
   var ownProps = Object.keys(obj),
@@ -24,7 +24,7 @@ class Provider extends React.Component<
   {
     env: string;
     formatter?: any;
-    apiRequest: ApiRequest;
+    authenticatedFetch: Fetch;
     children: (announcements: any, callback: any) => React.ReactElement<any>;
     initialAnnouncements: object;
   },
@@ -52,7 +52,8 @@ class Provider extends React.Component<
       return { announcements: newAnnouncements };
     });
 
-    return this.props.apiRequest(
+    return apiRequest(
+      this.props.authenticatedFetch,
       `${pcURL(this.props.env)(
         "api"
       )}/people/v2/me/platform_notifications/${id}/dismiss`,
@@ -137,7 +138,7 @@ export default class PlatformAnnouncements extends React.Component<
     env: string;
     data: object;
     renderItem?: any;
-    apiRequest?: ApiRequest;
+    authenticatedFetch?: Fetch;
   },
   {}
 > {
@@ -149,7 +150,7 @@ export default class PlatformAnnouncements extends React.Component<
         onClick={() => actions.dismissAnnouncements(announcement.id)}
       />
     ),
-    apiRequest: defaultApiRequest,
+    authenticatedFetch: defaultFetch,
   };
 
   render() {
@@ -158,7 +159,7 @@ export default class PlatformAnnouncements extends React.Component<
         <Provider
           env={this.props.env}
           initialAnnouncements={this.props.data}
-          apiRequest={this.props.apiRequest}
+          authenticatedFetch={this.props.authenticatedFetch}
         >
           {(data, actions) =>
             Boolean(data.announcements.length > 0) ? (

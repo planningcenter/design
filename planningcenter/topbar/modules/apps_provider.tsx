@@ -1,12 +1,12 @@
 import * as React from "react";
 import pcoUrl from "./pco_url";
-import defaultApiRequest, { ApiRequest } from "./api_request";
+import apiRequest, { Fetch, defaultFetch } from "./api_request";
 
 export class AppsProvider extends React.Component<
   {
     env: string;
     formatter?: any;
-    apiRequest?: ApiRequest;
+    authenticatedFetch?: Fetch;
     render: (apps: object[], callback: any) => React.ReactElement<any>;
   },
   {
@@ -23,19 +23,20 @@ export class AppsProvider extends React.Component<
 
   public static defaultProps = {
     formatter: mapApps,
-    apiRequest: defaultApiRequest,
+    authenticatedFetch: defaultFetch,
   };
 
   fetch() {
-    this.props
-      .apiRequest(`${pcoUrl(this.props.env)("api")}/people/v2/me/apps`)
-      .then(({ json }) => {
-        const apps = this.props.formatter(json.data);
+    apiRequest(
+      this.props.authenticatedFetch,
+      `${pcoUrl(this.props.env)("api")}/people/v2/me/apps`
+    ).then(({ json }) => {
+      const apps = this.props.formatter(json.data);
 
-        return this.setState({ apps }, () =>
-          window.localStorage.setItem("Topbar:Apps", JSON.stringify(apps))
-        );
-      });
+      return this.setState({ apps }, () =>
+        window.localStorage.setItem("Topbar:Apps", JSON.stringify(apps))
+      );
+    });
   }
 
   remove() {
