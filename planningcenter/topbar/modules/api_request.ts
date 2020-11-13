@@ -1,8 +1,39 @@
+declare global {
+  interface Window {
+    Rails?: {
+      csrfToken: () => string;
+    };
+  }
+}
+
 export type Fetch = typeof fetch;
 
 export const defaultFetch: Fetch = (url, options) => {
-  return fetch(url, { credentials: "include", mode: "cors", ...options });
+  if (inferRailsCsrfToken()) {
+    return railsCsrfFetch(url, options);
+  } else {
+    return fetch(url, { credentials: "include", mode: "cors", ...options });
+  }
 };
+
+const railsCsrfFetch: Fetch = (url, { headers, ...rest }) => {
+  return fetch(url, {
+    headers: { ...headers, "X-CSRF-Token": inferRailsCsrfToken() },
+    ...rest,
+    credentials: "include",
+    mode: "cors",
+  });
+};
+
+function inferRailsCsrfToken(): string | null {
+  return (
+    window?.Rails?.csrfToken() ||
+    document
+      .querySelector('meta[name="csrf-token"]')
+      ?.getAttribute("content") ||
+    null
+  );
+}
 
 export default function apiRequest(
   fetch: Fetch,

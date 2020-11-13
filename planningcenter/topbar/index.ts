@@ -1,7 +1,3 @@
-import importApiRequest from "./modules/api_request";
-
-export const apiRequest = importApiRequest
-
 export {
   AppsProvider,
   mapApps,
