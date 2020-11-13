@@ -6,7 +6,7 @@ export class AppsProvider extends React.Component<
   {
     env: string;
     formatter?: any;
-    authenticatedFetch?: Fetch;
+    configuredFetch?: Fetch;
     render: (apps: object[], callback: any) => React.ReactElement<any>;
   },
   {
@@ -23,12 +23,12 @@ export class AppsProvider extends React.Component<
 
   public static defaultProps = {
     formatter: mapApps,
-    authenticatedFetch: defaultFetch,
+    configuredFetch: defaultFetch,
   };
 
   fetch() {
     apiRequest(
-      this.props.authenticatedFetch,
+      this.props.configuredFetch,
       `${pcoUrl(this.props.env)("api")}/people/v2/me/apps`
     ).then(({ json }) => {
       const apps = this.props.formatter(json.data);

@@ -24,7 +24,7 @@ class Provider extends React.Component<
   {
     env: string;
     formatter?: any;
-    authenticatedFetch: Fetch;
+    configuredFetch: Fetch;
     children: (announcements: any, callback: any) => React.ReactElement<any>;
     initialAnnouncements: object;
   },
@@ -53,7 +53,7 @@ class Provider extends React.Component<
     });
 
     return apiRequest(
-      this.props.authenticatedFetch,
+      this.props.configuredFetch,
       `${pcURL(this.props.env)(
         "api"
       )}/people/v2/me/platform_notifications/${id}/dismiss`,
@@ -138,7 +138,7 @@ export default class PlatformAnnouncements extends React.Component<
     env: string;
     data: object;
     renderItem?: any;
-    authenticatedFetch?: Fetch;
+    configuredFetch?: Fetch;
   },
   {}
 > {
@@ -150,7 +150,7 @@ export default class PlatformAnnouncements extends React.Component<
         onClick={() => actions.dismissAnnouncements(announcement.id)}
       />
     ),
-    authenticatedFetch: defaultFetch,
+    configuredFetch: defaultFetch,
   };
 
   render() {
@@ -159,7 +159,7 @@ export default class PlatformAnnouncements extends React.Component<
         <Provider
           env={this.props.env}
           initialAnnouncements={this.props.data}
-          authenticatedFetch={this.props.authenticatedFetch}
+          configuredFetch={this.props.configuredFetch}
         >
           {(data, actions) =>
             Boolean(data.announcements.length > 0) ? (

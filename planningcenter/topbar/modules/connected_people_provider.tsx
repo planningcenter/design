@@ -5,7 +5,7 @@ import apiRequest, { Fetch, defaultFetch } from "./api_request";
 export class ConnectedPeopleProvider extends React.Component<
   {
     env: string;
-    authenticatedFetch?: Fetch;
+    configuredFetch?: Fetch;
     render: (
       connectedPeople: object[],
       callback: any
@@ -24,12 +24,12 @@ export class ConnectedPeopleProvider extends React.Component<
   }
 
   public static defaultProps = {
-    authenticatedFetch: defaultFetch,
+    configuredFetch: defaultFetch,
   };
 
   fetch() {
     apiRequest(
-      this.props.authenticatedFetch,
+      this.props.configuredFetch,
       `${pcoUrl(this.props.env)("api")}/login/v2/me/connected_people`
     ).then(({ json }) => {
       const connectedPeople = json.data;
@@ -53,7 +53,7 @@ export class ConnectedPeopleProvider extends React.Component<
 
   unlink() {
     apiRequest(
-      this.props.authenticatedFetch,
+      this.props.configuredFetch,
       `${pcoUrl(this.props.env)("api")}/login/v2/me/unlink`,
       {
         method: "POST",
@@ -65,7 +65,7 @@ export class ConnectedPeopleProvider extends React.Component<
 
   switch(toId: string, returnPath: string) {
     apiRequest(
-      this.props.authenticatedFetch,
+      this.props.configuredFetch,
       `${pcoUrl(this.props.env)("api")}/login/v2/me/switch_connected_person`,
       {
         method: "POST",
