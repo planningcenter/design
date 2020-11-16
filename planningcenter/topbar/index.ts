@@ -1,3 +1,5 @@
+export { railsCsrfFetch } from "./modules/api_request";
+
 export {
   AppsProvider,
   mapApps,

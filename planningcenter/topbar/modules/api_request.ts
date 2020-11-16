@@ -9,14 +9,10 @@ declare global {
 export type Fetch = typeof fetch;
 
 export const defaultFetch: Fetch = (url, options) => {
-  if (inferRailsCsrfToken()) {
-    return railsCsrfFetch(url, options);
-  } else {
-    return fetch(url, { credentials: "include", mode: "cors", ...options });
-  }
+  return fetch(url, { credentials: "include", mode: "cors", ...options });
 };
 
-const railsCsrfFetch: Fetch = (url, { headers, ...rest }) => {
+export const railsCsrfFetch: Fetch = (url, { headers, ...rest }) => {
   return fetch(url, {
     headers: { ...headers, "X-CSRF-Token": inferRailsCsrfToken() },
     ...rest,
