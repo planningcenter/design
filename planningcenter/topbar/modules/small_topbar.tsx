@@ -65,6 +65,8 @@ export class Topbar extends React.Component<
     currentRouteComponent?: any;
     requestAppsFetch: any;
     requestConnectedPeopleFetch: any;
+    requestUnlinkConnectedPeople: any;
+    requestSwitchConnectedPerson: any;
     requestClearAppsCache: any;
     requestClearConnectedPeopleCache: any;
     notifications?: any;
@@ -358,16 +360,15 @@ export class Topbar extends React.Component<
                           ).map(({ id, attributes: person }) => (
                             <li key={id}>
                               <a
-                                href={`${pcoUrl(this.props.env)(
-                                  "accounts",
-                                )}/link/new?to=${id}&return=${
-                                  this.props.appName
-                                }%2f`}
-                                data-turbolinks={false}
-                                onClick={() => {
+                                href=""
+                                onClick={(e) => {
                                   this.props.requestClearAppsCache();
                                   this.props.requestClearConnectedPeopleCache();
-                                  return;
+                                  this.props.requestSwitchConnectedPerson(
+                                    id,
+                                    `${this.props.appName}/`
+                                  );
+                                  e.preventDefault();
                                 }}
                                 style={{
                                   maxWidth: "100%",
@@ -391,13 +392,12 @@ export class Topbar extends React.Component<
                       <div>
                         {this.props.connectedPeople.length > 0 && (
                           <a
-                            href={`${pcoUrl(this.props.env)(
-                              "accounts",
-                            )}/unlink`}
-                            onClick={() => {
+                            href=""
+                            onClick={(e) => {
                               this.props.requestClearAppsCache();
                               this.props.requestClearConnectedPeopleCache();
-                              return;
+                              this.props.requestUnlinkConnectedPeople();
+                              e.preventDefault();
                             }}
                             style={{
                               display: "block",

@@ -259,6 +259,14 @@ class StaticConnectedPeopleProvider extends React.Component<
     return window.localStorage.removeItem("Topbar:ConnectedPeople");
   }
 
+  unlink() {
+    alert("Unlink people!");
+  }
+
+  switch(toId, returnPath) {
+    alert(`Switch to ${toId} and then go to "${returnPath}"`);
+  }
+
   componentDidMount() {
     if (!JSON.parse(window.localStorage.getItem("Topbar:ConnectedPeople"))) {
       this.fetch();
@@ -271,6 +279,8 @@ class StaticConnectedPeopleProvider extends React.Component<
       {
         fetch: this.fetch.bind(this),
         remove: this.remove.bind(this),
+        unlink: this.unlink.bind(this),
+        switch: this.switch.bind(this),
       }
     );
   }
@@ -380,6 +390,12 @@ class SampleTopbar extends React.Component<
                         requestConnectedPeopleFetch={
                           connectedPeopleActions.fetch
                         }
+                        requestUnlinkConnectedPeople={
+                          connectedPeopleActions.unlink
+                        }
+                        requestSwitchConnectedPerson={
+                          connectedPeopleActions.switch
+                        }
                         routes={staticData.routes.map(([name, uri]) => (
                           <SmallRoute
                             key={name}
@@ -411,6 +427,12 @@ class SampleTopbar extends React.Component<
                         connectedPeopleActions.remove
                       }
                       requestConnectedPeopleFetch={connectedPeopleActions.fetch}
+                      requestUnlinkConnectedPeople={
+                        connectedPeopleActions.unlink
+                      }
+                      requestSwitchConnectedPerson={
+                        connectedPeopleActions.switch
+                      }
                       routes={staticData.routes.map(([name, uri], i) => (
                         <MediumRoute
                           key={name}
@@ -452,6 +474,12 @@ class SampleTopbar extends React.Component<
                       requestClearAppsCache={appsActions.remove}
                       linkToProfile={true}
                       requestConnectedPeopleFetch={connectedPeopleActions.fetch}
+                      requestUnlinkConnectedPeople={
+                        connectedPeopleActions.unlink
+                      }
+                      requestSwitchConnectedPerson={
+                        connectedPeopleActions.switch
+                      }
                       routes={staticData.routes.map(([name, uri]) => (
                         <NotSmallRoute
                           colors={shared.colors}

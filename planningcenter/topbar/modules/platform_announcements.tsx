@@ -1,8 +1,8 @@
 import * as React from "react";
-import * as request from "superagent";
 import { PointBreak } from "./display_switch";
 import pcURL from "./pco_url";
 import { X as XSymbol } from "./symbols";
+import apiRequest, { Fetch, defaultFetch } from "./api_request";
 
 const entries = function (obj) {
   var ownProps = Object.keys(obj),
@@ -24,6 +24,7 @@ class Provider extends React.Component<
   {
     env: string;
     formatter?: any;
+    configuredFetch: Fetch;
     children: (announcements: any, callback: any) => React.ReactElement<any>;
     initialAnnouncements: object;
   },
@@ -51,21 +52,13 @@ class Provider extends React.Component<
       return { announcements: newAnnouncements };
     });
 
-    const csrfToken = document
-      .querySelector("meta[name=csrf-token]")
-      .getAttribute("content");
-
-    return request
-      .post(
-        `${pcURL(this.props.env)(
-          "api"
-        )}/people/v2/me/platform_notifications/${id}/dismiss`
-      )
-      .set("X-CSRF-Token", csrfToken)
-      .withCredentials()
-      .end(() => {
-        return;
-      });
+    return apiRequest(
+      this.props.configuredFetch,
+      `${pcURL(this.props.env)(
+        "api"
+      )}/people/v2/me/platform_notifications/${id}/dismiss`,
+      { method: "POST" }
+    );
   }
 
   render() {
@@ -145,6 +138,7 @@ export default class PlatformAnnouncements extends React.Component<
     env: string;
     data: object;
     renderItem?: any;
+    configuredFetch?: Fetch;
   },
   {}
 > {
@@ -156,12 +150,17 @@ export default class PlatformAnnouncements extends React.Component<
         onClick={() => actions.dismissAnnouncements(announcement.id)}
       />
     ),
+    configuredFetch: defaultFetch,
   };
 
   render() {
     return (
       <StyleProvider colors={this.props.colors}>
-        <Provider env={this.props.env} initialAnnouncements={this.props.data}>
+        <Provider
+          env={this.props.env}
+          initialAnnouncements={this.props.data}
+          configuredFetch={this.props.configuredFetch}
+        >
           {(data, actions) =>
             Boolean(data.announcements.length > 0) ? (
               <div>
