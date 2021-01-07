@@ -10,11 +10,11 @@
 
 - height: `40`
 - line-height: `40`
-- font-size: match base (`14` or `16`)
+- font-size: `14`
 - border-radius: `4`
 - text-decoration: `none`
 - state[target]:
-  - font-weight: `700`
+  - font-weight: `600`
 
 ## Action Group
 
