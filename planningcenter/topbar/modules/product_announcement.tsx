@@ -26,7 +26,9 @@ Attributes like `className`, `id`, `data-*`, and `aria-*` are all applied to the
 export function ProductAnnouncement({
   colors,
   html = "",
-  onClick = () => {},
+  onClick = (event) => {
+    /* noop */
+  },
   ...props
 }) {
   let [dismissed, updateDismissed] = React.useState(false);
@@ -36,8 +38,8 @@ export function ProductAnnouncement({
       <StyledAnnouncement>
         <span dangerouslySetInnerHTML={{ __html: html }} />
         <StyledDismissButton
-          onClick={() => {
-            onClick();
+          onClick={(event) => {
+            onClick(event);
             updateDismissed(true);
           }}
         />
