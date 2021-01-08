@@ -30,7 +30,12 @@ export {
   StyledAnnouncement as StyledPlatformAnnouncement,
 } from "./modules/platform_announcements";
 
-export { ProductAnnouncement } from "./modules/product_announcement";
+export {
+  ProductAnnouncement,
+  StyleProvider as ProductAnnouncementStyleProvider,
+  StyledAnnouncement as StyledProductAnnouncement,
+  StyledDismissButton as StyledProductAnnouncementDimissButton,
+} from "./modules/product_announcement";
 
 export {
   Bell as BellIcon,
