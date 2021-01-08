@@ -48,7 +48,7 @@ export function ProductAnnouncement({
   );
 }
 
-class StyleProvider extends React.Component<
+export class StyleProvider extends React.Component<
   {
     style?: object;
     className?: string;
@@ -84,7 +84,10 @@ class StyleProvider extends React.Component<
   }
 }
 
-class StyledAnnouncement extends React.Component<{ style?: object }, {}> {
+export class StyledAnnouncement extends React.Component<
+  { style?: object },
+  {}
+> {
   render() {
     const { style, ...platformProps } = this.props;
 
@@ -111,7 +114,7 @@ class StyledAnnouncement extends React.Component<{ style?: object }, {}> {
   }
 }
 
-function StyledDismissButton({ ...props }: any): JSX.Element {
+export function StyledDismissButton({ ...props }: any): JSX.Element {
   return (
     <button
       type="button"

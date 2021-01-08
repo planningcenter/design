@@ -13,7 +13,10 @@ import {
   XIcon,
   SpyglassIcon,
   PlatformAnnouncements,
-  ProductAnnouncement,
+  // ProductAnnouncement,
+  ProductAnnouncementStyleProvider,
+  StyledProductAnnouncement,
+  StyledProductAnnouncementDimissButton,
   // PlatformAnnouncementsStyleProvider,
   // StyledPlatformAnnouncement,
   // AppsProvider,
@@ -351,13 +354,31 @@ class SampleTopbar extends React.Component<
                   env={shared.env}
                 />
 
-                <ProductAnnouncement
+                {/* simple, pre-composed implementation */}
+                {/* <ProductAnnouncement
                   colors={shared.colors}
                   html={this.props.productAnnouncement}
                   onClick={() =>
                     alert("Sending fire-and-forget dismiss request to server")
                   }
-                />
+                /> */}
+
+                {/* complex, user-composed implementation */}
+                <ProductAnnouncementStyleProvider colors={shared.colors}>
+                  <StyledProductAnnouncement>
+                    <span>
+                      Some <strong>React-y</strong> content
+                    </span>
+                    <form
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        alert("sending a POST via form…");
+                      }}
+                    >
+                      <StyledProductAnnouncementDimissButton type="submit" />
+                    </form>
+                  </StyledProductAnnouncement>
+                </ProductAnnouncementStyleProvider>
 
                 <DisplaySwitch
                   mediumBreakpoints={["md", "lg"]}
