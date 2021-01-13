@@ -1,6 +1,16 @@
+# 7.0.0 (prerelease)
+
+- Add CSRF support to login ([#46](https://github.com/planningcenter/design/pull/46) @danielma)
+  - [First implementation in Accounts](https://github.com/ministrycentered/accounts/pull/1877/files)
+  - [Second implementation in Giving](https://github.com/ministrycentered/giving/pull/4482/files)
+
 # 6.1.0 (prerelease)
 
 - Add `ProductAnnouncement` component
+  - Additional top-level exports:
+    - `ProductAnnouncementStyleProvider`
+    - `StyledProductAnnouncement`
+    - `StyledProductAnnouncementDimissButton`
 - `Topbar_ProductAnnouncement` parent selector for styling content
 - Fix Announcement topbars to be 14px font-size and 48px absolute height
 
