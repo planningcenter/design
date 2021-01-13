@@ -13,7 +13,7 @@ import {
   XIcon,
   SpyglassIcon,
   PlatformAnnouncements,
-  // ProductAnnouncement,
+  ProductAnnouncement,
   ProductAnnouncementStyleProvider,
   StyledProductAnnouncement,
   StyledProductAnnouncementDimissButton,
@@ -326,6 +326,59 @@ class StaticAppsProvider extends React.Component<
   }
 }
 
+function ModifiedProductAnnouncement() {
+  // 1: basic implementation
+  // return (
+  //   <ProductAnnouncement
+  //     html={`An <abbr title="Hyper Text Markup Language">HTML</abbr> message`}
+  //     colors={shared.colors}
+  //     onClick={() => alert("This will fire and dissmiss")}
+  //   />
+  // );
+
+  // 2: basic implementation plus local style overrides
+  // return (
+  //   <>
+  //     <style>{`
+  //       /* demonstrates how to override styles by selector */
+  //       .Topbar_ProductAnnouncement { text-shadow: 0 1px 0 hsla(0, 0%, 0%, .2) }
+  //       .Topbar_ProductAnnouncement a:hover { color: red; }
+  //       .Topbar_ProductAnnouncement svg:hover path { fill: red; }
+  //     `}</style>
+
+  //     <ProductAnnouncement
+  //       html={`An <abbr title="Hyper Text Markup Language">HTML</abbr> message`}
+  //       colors={shared.colors}
+  //       onClick={() => alert("This will fire and dissmiss")}
+  //     />
+  //   </>
+  // );
+
+  // 3: complex, consumer-composed case with local dismissal
+
+  // https://github.com/planningcenter/design/blob/main/planningcenter/topbar/modules/product_announcement.tsx#L34-L36
+  let [dismissed, updateDismissed] = React.useState(false);
+
+  return dismissed ? null : (
+    <ProductAnnouncementStyleProvider colors={shared.colors}>
+      <StyledProductAnnouncement>
+        <span>
+          Some <strong>React-y</strong> content
+        </span>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            alert("sending a POST via form…");
+            updateDismissed(true);
+          }}
+        >
+          <StyledProductAnnouncementDimissButton type="submit" />
+        </form>
+      </StyledProductAnnouncement>
+    </ProductAnnouncementStyleProvider>
+  );
+}
+
 class SampleTopbar extends React.Component<
   {
     userAvatarPath: string;
@@ -344,51 +397,7 @@ class SampleTopbar extends React.Component<
           <StaticAppsProvider
             render={(apps, appsActions) => (
               <div style={{ backgroundColor: shared.colors.base0 }}>
-                {/*
-                <PlatformAnnouncementsStyleProvider colors={shared.colors}>
-                  <StyledPlatformAnnouncement>
-                    <span>Static Platform Announcement</span>
-                    <a href="#">link</a>
-                  </StyledPlatformAnnouncement>
-                </PlatformAnnouncementsStyleProvider>
-              */}
-                <style>{`
-                  /* demonstrates how to override styles by selector */
-                  .Topbar_ProductAnnouncement a:hover { color: red; }
-                  .Topbar_ProductAnnouncement svg:hover path { fill: red; }
-                `}</style>
-
-                <PlatformAnnouncements
-                  data={staticPlatformAnnouncements}
-                  colors={shared.colors}
-                  env={shared.env}
-                />
-
-                {/* simple, pre-composed implementation */}
-                {/* <ProductAnnouncement
-                  colors={shared.colors}
-                  html={this.props.productAnnouncement}
-                  onClick={() =>
-                    alert("Sending fire-and-forget dismiss request to server")
-                  }
-                /> */}
-
-                {/* complex, user-composed implementation */}
-                <ProductAnnouncementStyleProvider colors={shared.colors}>
-                  <StyledProductAnnouncement>
-                    <span>
-                      Some <strong>React-y</strong> content
-                    </span>
-                    <form
-                      onSubmit={(e) => {
-                        e.preventDefault();
-                        alert("sending a POST via form…");
-                      }}
-                    >
-                      <StyledProductAnnouncementDimissButton type="submit" />
-                    </form>
-                  </StyledProductAnnouncement>
-                </ProductAnnouncementStyleProvider>
+                <ModifiedProductAnnouncement />
 
                 <DisplaySwitch
                   mediumBreakpoints={["md", "lg"]}
