@@ -150,7 +150,7 @@ export class Topbar extends React.Component<
               ({ appsMenuVisible }) => ({
                 appsMenuVisible: !appsMenuVisible,
               }),
-              this.props.requestAppsFetch(),
+              this.props.requestAppsFetch()
             )
           }
         />
@@ -219,7 +219,7 @@ export class Topbar extends React.Component<
                     }
                   : {
                       routesMenuVisible: true,
-                    },
+                    }
               )
             }
           >
@@ -263,7 +263,7 @@ export class Topbar extends React.Component<
                 ({ userMenuVisible }) => ({
                   userMenuVisible: !userMenuVisible,
                 }),
-                this.props.requestConnectedPeopleFetch(),
+                this.props.requestConnectedPeopleFetch()
               )
             }
           >
@@ -462,7 +462,7 @@ export class Topbar extends React.Component<
                         {person.organization_name}
                       </a>
                     </HoverableListItem>
-                  ),
+                  )
                 )}
               </ul>
             </div>
@@ -520,7 +520,7 @@ export class Topbar extends React.Component<
   }
 }
 
-export const Route = ({ active, style, ...props }) => (
+export const Route = ({ active, style, name = "", ...props }) => (
   <HoverableListItem
     component="a"
     style={{

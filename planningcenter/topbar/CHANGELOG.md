@@ -3,6 +3,17 @@
 - Add CSRF support to login ([#46](https://github.com/planningcenter/design/pull/46) @danielma)
   - [First implementation in Accounts](https://github.com/ministrycentered/accounts/pull/1877/files)
   - [Second implementation in Giving](https://github.com/ministrycentered/giving/pull/4482/files)
+- Update devDependencies pins
+  - `microbundle`: `^0.12.4` => `^0.13.0`
+  - `webpack`: `^4.46.0` => `^5.13.0`
+  - `webpack-cli`: `^3.3.13` => `^4.3.1`
+  - `ts-loader`: `^7.0.5` => `^8.0.14`
+  - `typescript`: `^3.9.7` => `^4.1.3`
+  - `react`: `^16.14.0` => `^17.0.1`
+  - `react-dom`: `^16.14.0` => `^17.0.1`
+  - `@types/react`: `^16.14.2` => `^17.0.0`
+  - `@types/react-dom`: `^16.9.10` => `^17.0.0`
+- Unlock modern builds by removing `--format cjs` flag for improved bundling app-side
 
 # 6.1.0 (prerelease)
 
