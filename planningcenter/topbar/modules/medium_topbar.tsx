@@ -520,9 +520,10 @@ export class Topbar extends React.Component<
   }
 }
 
-export const Route = ({ active, style, name = "", ...props }) => (
+export const Route = ({ active, href, style, name = "", ...props }) => (
   <HoverableListItem
     component="a"
+    href={`${href}?referer=${location.pathname}`}
     style={{
       paddingLeft: "16px",
       paddingRight: "16px",

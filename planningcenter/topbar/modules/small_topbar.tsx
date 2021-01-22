@@ -131,7 +131,7 @@ export class Topbar extends React.Component<
                 : {
                     routesMenuVisible: false,
                     userMenuVisible: true,
-                  },
+                  }
             );
           }}
         >
@@ -289,13 +289,13 @@ export class Topbar extends React.Component<
                             }}
                             data-turbolinks={false}
                             href={`${pcoUrl(this.props.env)(
-                              "accounts",
+                              "accounts"
                             )}/apps/${name.toLowerCase()}`}
                           >
                             <UserMenuAppLockup appName={name} />
                           </a>
                         </li>
-                      ),
+                      )
                     )}
                   </ul>
                   <div
@@ -356,7 +356,7 @@ export class Topbar extends React.Component<
                           }}
                         >
                           {connectedPeopleMenuFormatter(
-                            this.props.connectedPeople,
+                            this.props.connectedPeople
                           ).map(({ id, attributes: person }) => (
                             <li key={id}>
                               <a
@@ -487,7 +487,7 @@ export class Topbar extends React.Component<
                 : {
                     routesMenuVisible: true,
                     userMenuVisible: false,
-                  },
+                  }
             )
           }
         >
@@ -508,8 +508,9 @@ export class Topbar extends React.Component<
   }
 }
 
-export const Route = ({ active, ...props }) => (
+export const Route = ({ active, href, ...props }) => (
   <a
+    href={`${href}?referer=${location.pathname}`}
     style={{
       display: "block",
       backgroundColor: "#444",
