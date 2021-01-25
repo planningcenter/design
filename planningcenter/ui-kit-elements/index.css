@@ -1,0 +1,6 @@
+/* elements */
+@import "./src/avatar.css";
+
+/* themes */
+@import "./src/point.css";
+@import "./src/colors.css";

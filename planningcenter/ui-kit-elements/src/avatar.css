@@ -1,0 +1,36 @@
+/* size */
+[data-avatar~="size:xs"] {
+  --avatar--size: calc(2.5 * var(--point));
+}
+
+[data-avatar~="size:sm"] {
+  --avatar--size: calc(3 * var(--point));
+}
+
+[data-avatar~="size:md"] {
+  --avatar--size: calc(4 * var(--point));
+}
+
+[data-avatar~="size:lg"] {
+  --avatar--size: calc(5 * var(--point));
+}
+
+[data-avatar~="size:xl"] {
+  --avatar--size: calc(8 * var(--point));
+}
+
+/* status */
+[data-avatar*="status:"] {
+  --avatar--border: clamp(2px, calc(var(--avatar--size) * 0.1), 5px) solid
+    transparent;
+}
+
+[data-avatar~="status:default"] {
+  border-color: var(--colors-grey-5);
+}
+[data-avatar~="status:success"] {
+  border-color: var(--colors-green-5);
+}
+[data-avatar~="status:error"] {
+  border-color: var(--colors-red-5);
+}

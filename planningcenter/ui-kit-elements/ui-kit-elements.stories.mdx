@@ -1,0 +1,76 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+
+import "../elements/avatar/avatar.css";
+import "./src/point.css";
+import "./src/colors.css";
+import image from "../../static/200x300_kitten.jpeg";
+
+import "./src/avatar.css";
+
+<Meta title="Planning Center|UI Kit:Elements" />
+
+#### size
+
+<Preview>
+  <Story name="avatar:size">
+    <>
+      <img data-avatar src={image} alt="kitten" data-avatar="size:xs" />
+      <img data-avatar src={image} alt="kitten" data-avatar="size:sm" />
+      <img data-avatar src={image} alt="kitten" data-avatar="size:md" />
+      <img data-avatar src={image} alt="kitten" data-avatar="size:lg" />
+      <img data-avatar src={image} alt="kitten" data-avatar="size:xl" />
+    </>
+  </Story>
+</Preview>
+
+#### status
+
+<Preview>
+  <Story name="avatar:status">
+    <>
+      <img data-avatar src={image} alt="kitten" data-avatar="status:" />
+      <img data-avatar src={image} alt="kitten" data-avatar="status:default" />
+      <img data-avatar src={image} alt="kitten" data-avatar="status:success" />
+      <img data-avatar src={image} alt="kitten" data-avatar="status:error" />
+    </>
+  </Story>
+</Preview>
+
+#### size \* status
+
+<Preview>
+  <Story name="avatar:size by status">
+    <>
+      <img
+        data-avatar
+        src={image}
+        alt="kitten"
+        data-avatar="size:xs status:error"
+      />
+      <img
+        data-avatar
+        src={image}
+        alt="kitten"
+        data-avatar="size:sm status:error"
+      />
+      <img
+        data-avatar
+        src={image}
+        alt="kitten"
+        data-avatar="size:md status:error"
+      />
+      <img
+        data-avatar
+        src={image}
+        alt="kitten"
+        data-avatar="size:lg status:error"
+      />
+      <img
+        data-avatar
+        src={image}
+        alt="kitten"
+        data-avatar="size:xl status:error"
+      />
+    </>
+  </Story>
+</Preview>
