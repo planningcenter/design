@@ -232,7 +232,7 @@ export const AppsMenu = (props) => (
               key={name}
               href={`${pcoUrl(props.env)(
                 "accounts"
-              )}/apps/${name.toLowerCase()}`}
+              )}/apps/${name.toLowerCase()}?referer=${location.pathname}`}
               data-turbolinks={false}
             >
               <ColorAppIcon appName={name.replace(/[\s-]/, "")} size={24} />
@@ -851,7 +851,7 @@ export class Route extends React.Component<
   }
 
   render() {
-    const { active, colors, href, style = null, ...nativeProps } = this.props;
+    const { active, colors, style = null, ...nativeProps } = this.props;
 
     const getBackgroundColor = () => {
       if (this.state.entered && this.state.down) return colors.base2;
@@ -861,7 +861,6 @@ export class Route extends React.Component<
 
     return (
       <a
-        href={`${href}?referer=${location.pathname}`}
         style={{
           lineHeight: "32px",
           marginRight: "4px", // off-grid
