@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import pcoUrl from "./pco_url";
+import getAppsSwitchProductPath from "./getAppsSwitchProductPath";
 import { StyledRoot } from "./styled_root";
 import { Unbutton } from "./unbutton";
 import { Avatar } from "./avatar";
@@ -230,9 +231,9 @@ export const AppsMenu = (props) => (
                 ...(i && { borderTop: "1px solid #ddd" }),
               }}
               key={name}
-              href={`${pcoUrl(props.env)(
-                "accounts"
-              )}/apps/${name.toLowerCase()}`}
+              href={
+                pcoUrl(props.env)("accounts") + getAppsSwitchProductPath(name)
+              }
               data-turbolinks={false}
             >
               <ColorAppIcon appName={name.replace(/[\s-]/, "")} size={24} />

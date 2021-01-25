@@ -14,6 +14,7 @@
   - `@types/react`: `^16.14.2` => `^17.0.0`
   - `@types/react-dom`: `^16.9.10` => `^17.0.0`
 - Unlock modern builds by removing `--format cjs` flag for improved bundling app-side
+- Add `referer` query parameter to `AppSwitch` urls: [Accounts PR](https://github.com/ministrycentered/accounts/pull/1910)
 
 # 6.1.0 (prerelease)
 
