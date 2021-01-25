@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import pcoUrl from "./pco_url";
+import getAppsSwitchProductPath from "./getAppsSwitchProductPath";
 import { StyledRoot } from "./styled_root";
 import { Unbutton } from "./unbutton";
 import { Avatar } from "./avatar";
@@ -131,7 +132,7 @@ export class Topbar extends React.Component<
                 : {
                     routesMenuVisible: false,
                     userMenuVisible: true,
-                  },
+                  }
             );
           }}
         >
@@ -288,14 +289,15 @@ export class Topbar extends React.Component<
                               paddingRight: "16px",
                             }}
                             data-turbolinks={false}
-                            href={`${pcoUrl(this.props.env)(
-                              "accounts",
-                            )}/apps/${name.toLowerCase()}`}
+                            href={
+                              pcoUrl(this.props.env)("accounts") +
+                              getAppsSwitchProductPath(name)
+                            }
                           >
                             <UserMenuAppLockup appName={name} />
                           </a>
                         </li>
-                      ),
+                      )
                     )}
                   </ul>
                   <div
@@ -356,7 +358,7 @@ export class Topbar extends React.Component<
                           }}
                         >
                           {connectedPeopleMenuFormatter(
-                            this.props.connectedPeople,
+                            this.props.connectedPeople
                           ).map(({ id, attributes: person }) => (
                             <li key={id}>
                               <a
@@ -487,7 +489,7 @@ export class Topbar extends React.Component<
                 : {
                     routesMenuVisible: true,
                     userMenuVisible: false,
-                  },
+                  }
             )
           }
         >
