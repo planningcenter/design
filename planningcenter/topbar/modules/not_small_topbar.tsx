@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import pcoUrl from "./pco_url";
-import getAppsSwitchProductPath from "./getAppsSwitchProductPath";
+import getAppsSwitchProductPath from "./get_apps_switch_product_path";
 import { StyledRoot } from "./styled_root";
 import { Unbutton } from "./unbutton";
 import { Avatar } from "./avatar";

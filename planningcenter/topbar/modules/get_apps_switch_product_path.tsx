@@ -1,6 +1,6 @@
 export default function getAppsSwitchProductPath(productName: string): string {
   let basePath = `/apps/${productName.toLowerCase()}`;
-  let referer = window?.location.toString();
+  let referer = window?.location?.pathname?.toString();
 
   if (!referer) return basePath;
 
