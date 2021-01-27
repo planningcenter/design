@@ -2,7 +2,6 @@ import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
 import "../elements/avatar/avatar.css";
 import "./src/point.css";
-import "./src/colors.css";
 import image from "../../static/200x300_kitten.jpeg";
 
 import "./src/avatar.css";
@@ -28,6 +27,19 @@ import "./src/avatar.css";
 <Preview>
   <Story name="avatar:status">
     <>
+      <style>
+        {`
+          [data-avatar~="status:default"] {
+            border-color: hsl(200,1%,86%);
+          }
+          [data-avatar~="status:success"] {
+            border-color: hsl(96, 40%, 58%);
+          }
+          [data-avatar~="status:error"] {
+            border-color: hsl(8, 78%, 56%);
+          }
+        `}
+      </style>
       <img data-avatar src={image} alt="kitten" data-avatar="status:" />
       <img data-avatar src={image} alt="kitten" data-avatar="status:default" />
       <img data-avatar src={image} alt="kitten" data-avatar="status:success" />
