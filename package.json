@@ -6,7 +6,6 @@
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
-    "@planningcenter/icons": "^7.19.0",
     "@reach/alert-dialog": "^0.10.5",
     "@reach/checkbox": "^0.10.5",
     "@reach/menu-button": "^0.10.5",
