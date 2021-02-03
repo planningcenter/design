@@ -7,7 +7,6 @@
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
     "@reach/alert-dialog": "^0.10.5",
-    "@reach/checkbox": "^0.10.5",
     "@reach/menu-button": "^0.10.5",
     "@storybook/addon-docs": "^6.1.16",
     "@storybook/addons": "^6.1.16",
