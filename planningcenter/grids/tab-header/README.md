@@ -3,8 +3,8 @@
 ## Container
 
 - padding (vertical): `0`
-- padding (horizontal): `1.5rem`
-- gap: `.5rem`
+- padding (horizontal): `1rem`
+- gap: `?`
 
 ## Tab
 
@@ -14,7 +14,7 @@
 - border-radius: `4`
 - text-decoration: `none`
 - state[target]:
-  - font-weight: `600`
+  - font-weight: `400`
 
 ## Action Group
 

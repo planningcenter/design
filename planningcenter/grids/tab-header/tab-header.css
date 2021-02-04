@@ -39,7 +39,7 @@
     inset 0 -6px 6px -8px rgba(0, 0, 0, 0.1)
   );
   color: var(--vertical-tab--color, hsla(0, 0%, 0%, 0.7));
-  font-size: var(--vertical-tab--font-size, 1rem);
+  font-size: var(--vertical-tab--font-size, 0.875rem);
 }
 
 [data-vertical-tab][data-vertical-tab="target"] {
