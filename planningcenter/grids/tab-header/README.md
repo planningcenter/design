@@ -3,18 +3,18 @@
 ## Container
 
 - padding (vertical): `0`
-- padding (horizontal): `1.5rem`
-- gap: `.5rem`
+- padding (horizontal): `1rem`
+- gap: `?`
 
 ## Tab
 
 - height: `40`
 - line-height: `40`
-- font-size: match base (`14` or `16`)
+- font-size: `14`
 - border-radius: `4`
 - text-decoration: `none`
 - state[target]:
-  - font-weight: `700`
+  - font-weight: `400`
 
 ## Action Group
 
