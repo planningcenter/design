@@ -1,15 +1,37 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
-import readme from "./README.md";
 import "../box/box.css";
 import "../box/extension/point/p.css";
 import "./surface.css";
+import "./extension/sample.css";
 
-<Meta title="Elements|surface" parameters={{ notes: readme }} />
+<Meta title="Elements/surface" />
 
 # Surface
 
 > Visual hierarchy for themed, layered UI
+
+## Details
+
+Selectors:
+
+```
+data-surface
+data-surface="depth:3"
+data-surface="depth:2"
+data-surface="depth:1"
+```
+
+Custom properties:
+
+```
+--surface-1of1--background-color
+--surface-2of2--background-color
+--surface-1of2--background-color
+--surface-3of3--background-color
+--surface-2of3--background-color
+--surface-1of3--background-color
+```
 
 ## Basic
 
@@ -25,7 +47,7 @@ import "./surface.css";
   <Story name="basic: two surface">
     <div data-surface="depth:2" data-box="p:2">
       <div data-surface data-box="p:2">
-      <span data-text>Two Surface</span>
+        <span data-text>Two Surface</span>
       </div>
     </div>
   </Story>
@@ -55,7 +77,7 @@ Below are common two-surface grids across the Planning Center suite.
         display: "grid",
         gap: "1rem",
         padding: "1rem",
-        justifyContent: "center"
+        justifyContent: "center",
       }}
     >
       <main data-surface data-box="p:2">
@@ -73,7 +95,7 @@ Below are common two-surface grids across the Planning Center suite.
         display: "grid",
         gridTemplateColumns: "2fr 1fr",
         gap: "1rem",
-        border: "1px solid #ddd"
+        border: "1px solid #ddd",
       }}
     >
       <main data-surface data-box="p:2">
@@ -137,15 +159,27 @@ Below are common two-surface grids across the Planning Center suite.
         display: "grid",
         gap: "1rem",
         gridAutoFlow: "row",
-        gridTemplate: "repeat(2, 1fr) / repeat(3, 1fr)"
+        gridTemplate: "repeat(2, 1fr) / repeat(3, 1fr)",
       }}
     >
-      <div data-surface data-box="p:2"><span data-text>One</span></div>
-      <div data-surface data-box="p:2"><span data-text>Two</span></div>
-      <div data-surface data-box="p:2"><span data-text>Three</span></div>
-      <div data-surface data-box="p:2"><span data-text>Four</span></div>
-      <div data-surface data-box="p:2"><span data-text>Five</span></div>
-      <div data-surface data-box="p:2"><span data-text>Six</span></div>
+      <div data-surface data-box="p:2">
+        <span data-text>One</span>
+      </div>
+      <div data-surface data-box="p:2">
+        <span data-text>Two</span>
+      </div>
+      <div data-surface data-box="p:2">
+        <span data-text>Three</span>
+      </div>
+      <div data-surface data-box="p:2">
+        <span data-text>Four</span>
+      </div>
+      <div data-surface data-box="p:2">
+        <span data-text>Five</span>
+      </div>
+      <div data-surface data-box="p:2">
+        <span data-text>Six</span>
+      </div>
     </div>
   </Story>
 </Preview>
@@ -189,7 +223,7 @@ Below are common three-surface grids across the Planning Center suite.
           <span data-text>The quick brown fox jumps over the yellow dog.</span>
         </div>
       </main>
-      <aside data-box="p:2" style={{ display: "grid", gap: "1rem"}}>
+      <aside data-box="p:2" style={{ display: "grid", gap: "1rem" }}>
         <span data-text>Sidebar</span>
         <div data-surface data-box="p:2">
           <span data-text>Maybe instructions</span>
@@ -201,7 +235,10 @@ Below are common three-surface grids across the Planning Center suite.
 
 <Preview>
   <Story name="three: grid 3">
-    <div data-surface="depth:3" style={{ display: "grid", gridTemplateColumns: "2fr 1fr" }}>
+    <div
+      data-surface="depth:3"
+      style={{ display: "grid", gridTemplateColumns: "2fr 1fr" }}
+    >
       <main
         data-box="p:2"
         data-surface
@@ -209,15 +246,27 @@ Below are common three-surface grids across the Planning Center suite.
           display: "grid",
           gap: "1rem",
           gridAutoFlow: "row",
-          gridTemplate: "repeat(2, 1fr) / repeat(3, 1fr)"
+          gridTemplate: "repeat(2, 1fr) / repeat(3, 1fr)",
         }}
       >
-        <div data-surface data-box="p:2"><span data-text>One</span></div>
-        <div data-surface data-box="p:2"><span data-text>Two</span></div>
-        <div data-surface data-box="p:2"><span data-text>Three</span></div>
-        <div data-surface data-box="p:2"><span data-text>Four</span></div>
-        <div data-surface data-box="p:2"><span data-text>Five</span></div>
-        <div data-surface data-box="p:2"><span data-text>Six</span></div>
+        <div data-surface data-box="p:2">
+          <span data-text>One</span>
+        </div>
+        <div data-surface data-box="p:2">
+          <span data-text>Two</span>
+        </div>
+        <div data-surface data-box="p:2">
+          <span data-text>Three</span>
+        </div>
+        <div data-surface data-box="p:2">
+          <span data-text>Four</span>
+        </div>
+        <div data-surface data-box="p:2">
+          <span data-text>Five</span>
+        </div>
+        <div data-surface data-box="p:2">
+          <span data-text>Six</span>
+        </div>
       </main>
       <aside data-box="p:2">
         <span data-text>Sidebar</span>

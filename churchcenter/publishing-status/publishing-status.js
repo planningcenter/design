@@ -132,8 +132,6 @@ export class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 
-  static displayName = "publishing-status:ErrorBoundary";
-
   static getDerivedStateFromError() {
     return { hasError: true };
   }
