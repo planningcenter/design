@@ -1,16 +1,42 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
-import readme from "./README.md";
 import "./select.css";
 
-<Meta
-  title="Elements/select"
-  parameters={{ notes: readme }}
-/>
+<Meta title="Elements/select" />
 
 # Select
 
 > A OS-native form control, providing a menu of options
+
+## Details
+
+Selector: `data-select`
+
+Property names and defaults:
+
+```css
+--select--font-size: 1rem;
+--select--background-color: #fff;
+--select--height: 2.25rem;
+--select--width: auto;
+--select--padding: 0 1.25rem 0 0.5rem;
+--select--color: inherit;
+--select--border-color: hsl(0, 0%, 58%); /* min 3:1 contrast */
+--select--border-radius: 0.25em;
+--select--background-size: 2.25rem;
+--select--background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='-7 -7  30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.55504 10.5092C7.75343 10.7608 8.13399 10.7635 8.33592 10.5147L11.3385 6.81508C11.6037 6.48828 11.3711 6 10.9503 6H5.03091C4.61331 6 4.37972 6.48163 4.63826 6.80956L7.55504 10.5092Z' fill='%23444'/%3E%3C/svg%3E%0A");
+```
+
+## Disclosure Icon — encoded source
+
+Because this is an image and not a proper SVG,  
+It can't be configured with `currentColor`.
+
+The current method of overriding the icon with a different color is to provide the `--select--background-image` value with this source, adapted to your needs.
+
+```css
+url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='-7 -7  30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.55504 10.5092C7.75343 10.7608 8.13399 10.7635 8.33592 10.5147L11.3385 6.81508C11.6037 6.48828 11.3711 6 10.9503 6H5.03091C4.61331 6 4.37972 6.48163 4.63826 6.80956L7.55504 10.5092Z' fill='%23444'/%3E%3C/svg%3E%0A")
+```
 
 ## Basic
 
@@ -34,7 +60,10 @@ import "./select.css";
 
 <Preview>
   <Story name="Sizing (smaller)">
-    <select data-select style={{ "--select--font-size": ".75rem", "--select--height": "1.5rem" }}>
+    <select
+      data-select
+      style={{ "--select--font-size": ".75rem", "--select--height": "1.5rem" }}
+    >
       <option>Taylor Swift</option>
       <option>Fearless</option>
       <option>Speak Now</option>
@@ -50,7 +79,13 @@ import "./select.css";
 
 <Preview>
   <Story name="Sizing (larger)">
-    <select data-select style={{ "--select--font-size": "1.125rem", "--select--height": "2.5rem" }}>
+    <select
+      data-select
+      style={{
+        "--select--font-size": "1.125rem",
+        "--select--height": "2.5rem",
+      }}
+    >
       <option>Taylor Swift</option>
       <option>Fearless</option>
       <option>Speak Now</option>
@@ -84,8 +119,7 @@ This demonstrates how it could be used for a full-width select.
 
 ## disabled
 
-Adding the `disabled` attribute to a `select` element gives it a disabled appearance.  
-
+Adding the `disabled` attribute to a `select` element gives it a disabled appearance.
 
 <Preview>
   <Story name="disabled">
@@ -102,25 +136,46 @@ Adding the `disabled` attribute to a `select` element gives it a disabled appear
 </Preview>
 
 There are no custom properties for states.  
-To style `:focus` and `:disabled` states, override the entire selector:  
+To style `:focus` and `:disabled` states, override the entire selector:
 
 ```css
-[data-select]:focus { /* ... */ }
-[data-select]:disabled { /* ... */ }
+[data-select]:focus {
+  /* ... */
+}
+[data-select]:disabled {
+  /* ... */
+}
 ```
 
 They could also be written as extensions:
 
 ```css
-[data-select="variant:bare"] { /* ... */ }
-[data-select="variant:bare"]:focus { /* ... */ }
-[data-select="variant:bare"]:disabled { /* ... */ }
+[data-select="variant:bare"] {
+  /* ... */
+}
+[data-select="variant:bare"]:focus {
+  /* ... */
+}
+[data-select="variant:bare"]:disabled {
+  /* ... */
+}
 ```
 
 These could also be provided product-specific classes or CSS-in-JS values.
 
 ```css
-.alt-select { /* ... */ }
-.alt-select:focus { /* ... */ }
-.alt-select:disabled { /* ... */ }
+.alt-select {
+  /* ... */
+}
+.alt-select:focus {
+  /* ... */
+}
+.alt-select:disabled {
+  /* ... */
+}
 ```
+
+## Todo
+
+Platforms and browsers add different ammounts of padding around the text inside `select` elements.  
+While we've not accounted for that in the past, it's an area of exploration.

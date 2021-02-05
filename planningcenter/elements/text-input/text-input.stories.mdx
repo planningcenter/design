@@ -1,14 +1,38 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
-import readme from "./README.md";
 import "./text-input.css";
 import "./extension/bare-text-input.css";
 
-<Meta title="Elements/text-input" parameters={{ notes: readme }} />
+<Meta title="Elements/text-input" />
 
-# text-input
+# Text Input
 
-> A Text Input
+## Details
+
+Selector: `data-select`
+
+Custom properties:
+
+```css
+--text-input--box-sizing: border-box;
+--text-input--font-size: 1rem;
+--text-input--border-color: #767676;
+--text-input--border-width: 1px;
+--text-input--border-style: solid;
+--text-input--background-color: white;
+--text-input--border-radius: 0.25em;
+--text-input--padding: 0.5em 0.625em;
+--text-input--margin: 0;
+--text-input--color: inherit;
+--text-input--box-shadow: none;
+--text-input--width: auto;
+--text-input--line-height: 1.125em;
+--text-input--color__placeholder: #767676;
+--text-input--outline_focus: none;
+--text-input--box-shadow_focus: 0 0 1.5px 3px hsla(0, 0%, 50%, 0.5);
+--text-input--border-color_invalid: hsl(0, 79%, 63%);
+--text-input--box-shadow_invalid: 0 0 1.5px 3px hsla(0, 79%, 63%, 0.5);
+```
 
 ## Basic
 
@@ -23,8 +47,16 @@ import "./extension/bare-text-input.css";
 <Preview>
   <Story name="height">
     <div style={{ display: "grid", gap: "1rem" }}>
-      <input type="text" data-text-input style={{ "--text-input--font-size": "0.75rem" }} />
-      <input type="text" data-text-input style={{ "--text-input--font-size": "1.125rem" }} />
+      <input
+        type="text"
+        data-text-input
+        style={{ "--text-input--font-size": "0.75rem" }}
+      />
+      <input
+        type="text"
+        data-text-input
+        style={{ "--text-input--font-size": "1.125rem" }}
+      />
     </div>
   </Story>
 </Preview>
@@ -65,7 +97,9 @@ import "./extension/bare-text-input.css";
 <Preview>
   <Story name="sibling-label">
     <React.Fragment>
-      <label htmlFor="sibling-label"><span data-text>Invalid input: </span></label>
+      <label htmlFor="sibling-label">
+        <span data-text>Invalid input: </span>
+      </label>
       <br />
       <input type="text" data-text-input id="label-example" />
     </React.Fragment>
@@ -93,15 +127,18 @@ import "./extension/bare-text-input.css";
 <Preview>
   <Story name="bare">
     <React.Fragment>
-      <div style={{ border: "1px solid fuchsia", backgroundColor: "lightgray" }}>
+      <div
+        style={{ border: "1px solid fuchsia", backgroundColor: "lightgray" }}
+      >
         <input type="text" data-text-input="bare" placeholder="bare input" />
       </div>
       <p data-text>
-        The input above has no border styles.<br />
-        It's boarder is being supplied by its parent.<br />
+        The input above has no border styles.
+        <br />
+        It's boarder is being supplied by its parent.
+        <br />
         This necessary for elements the preceeding and trailing icons.
       </p>
     </React.Fragment>
   </Story>
 </Preview>
-

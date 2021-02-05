@@ -1,15 +1,28 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
-import readme from "./README.md";
 import "./box.css";
 import "./extension/point/p.css";
 import image from "../../../static/200x300_kitten.jpeg";
 
-<Meta title="Elements/box" parameters={{ notes: readme }} />
+<Meta title="Elements/box" />
 
 # Box
 
 > The box model
+
+## Details
+
+Selector: `data-box`
+
+Property names and defaults:
+
+```css
+--box--sizing: border-box;
+--box--border: 0;
+--box--border-radius: 0;
+--box--margin: 0;
+--box--padding: 0;
+```
 
 ## Basic
 
@@ -27,8 +40,10 @@ Box can be changed from `border-box` (default) to `content-box`, using the custo
 
 <Preview>
   <Story name="Sizing">
-    <div data-box style={{ "--box--box-sizing": "content-box"}}>
-      <p data-text style={{ backgroundColor: "white" }}>This box is <code>box-sizing: content-box</code>.</p>
+    <div data-box style={{ "--box--box-sizing": "content-box" }}>
+      <p data-text style={{ backgroundColor: "white" }}>
+        This box is <code>box-sizing: content-box</code>.
+      </p>
     </div>
   </Story>
 </Preview>
@@ -42,8 +57,10 @@ The example below uses utility-class style extension for padding:
 
 <Preview>
   <Story name="Extension">
-    <div data-box="p:8 ph:4 pb:1" style={{ backgroundColor: "fuchsia"}}>
-      <p style={{ backgroundColor: "white" }}>This box is <code>box-sizing: content-box</code>.</p>
+    <div data-box="p:8 ph:4 pb:1" style={{ backgroundColor: "fuchsia" }}>
+      <p style={{ backgroundColor: "white" }}>
+        This box is <code>box-sizing: content-box</code>.
+      </p>
     </div>
   </Story>
 </Preview>

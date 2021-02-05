@@ -1,6 +1,6 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
-import xCircle from "@planningcenter/icons/svg/general/x-circle.svg"
+import xCircle from "@planningcenter/icons/svg/general/x-circle.svg";
 
 import "../../elements/text/text.css";
 import "../../elements/heading/heading.css";
@@ -12,15 +12,32 @@ import "./alert-dialog.css";
 
 It's best to use this these elements thru the Reach UI or SweatAlert2 adapters.
 
+## Details
+
+Selectors:
+
+```
+data-alert-dialog-overlay
+data-alert-dialog
+data-alert-dialog-label
+data-alert-dialog-description
+data-alert-dialog-actions
+```
+
 ## Basic
 
-export function XCircleIcon () {
-  return <img src={xCircle} style={{ height: "3em", width: "3em", fill: "red" }} />
+export function XCircleIcon() {
+  return (
+    <img src={xCircle} style={{ height: "3em", width: "3em", fill: "red" }} />
+  );
 }
 
 <Preview>
   <Story name="Basic">
-    <div data-alert-dialog-overlay style={{ padding: "1rem", justifyContent: "center", display: "flex" }}>
+    <div
+      data-alert-dialog-overlay
+      style={{ padding: "1rem", justifyContent: "center", display: "flex" }}
+    >
       <div data-alert-dialog>
         <XCircleIcon />
         <header data-alert-dialog-label data-heading>

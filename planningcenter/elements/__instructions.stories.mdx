@@ -1,3 +1,7 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Elements/instructions" />
+
 # planningcenter/elements
 
 Framework-independent element definitions and specification for the Planning Center suite of applications.
@@ -8,10 +12,9 @@ Framework-independent element definitions and specification for the Planning Cen
 | :---------------------- | :-------------------------------------------------------------------------------------------------------------- |
 | `{package}.css`         | CSS implementation **Published to NPM**                                                                         |
 | `{package}.stories.mdx` | Element documentation and test sheet. `Stories` are visually tested by [Chromatic](https://www.chromaticqa.com) |
+| `extension/*.css`       | Available, exploratory extensions                                                                               |
 
-## Setup
-
-### Installation
+## Installation
 
 Add it.
 
@@ -22,3 +25,4 @@ Install it.
 - Webpack `import "@planningcenter/elements"`
 - Sprockets `/*= require @planningcenter/elements */`
 - Sass `@import "@planningcenter/elements"`
+- HTML `<link rel="stylesheet" href="path/to/@planningcenter/elements.css">`

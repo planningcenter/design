@@ -1,14 +1,39 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
-import readme from "./README.md";
 import "./table.css";
 import image from "../../../static/200x300_kitten.jpeg";
 
-<Meta title="Elements/table"  parameters={{ notes: readme }} />
+<Meta title="Elements/table" />
 
-# Text
+# Table
 
-> An inline text element
+## Details
+
+Selectors:
+
+```
+data-table
+data-table-head
+data-table-row
+data-table-data
+data-table-body
+```
+
+Custom properties and defaults:
+
+```css
+/* --tabel--border-color colors both outside border and horizontal row dividers */
+--table--border-color: hsl(0, 0%, 90%);
+/* root font-size controls relative scale of header and data elements */
+--table--font-size: 0.875rem;
+--table--border-radius: 0;
+--table-row--height: 4rem;
+--table-head--background-color: hsl(0, 0%, 97.5%);
+--table-head--color: hsla(0, 0%, 40%);
+--table-head--font-size: 0.75rem;
+--table-data--border-color: var(--table--border-color);
+--table-data--padding: 0 0.5rem;
+```
 
 ## Basic
 
@@ -44,7 +69,7 @@ Table border radius is controlled thru the custom property `--table--border-radi
 
 <Preview>
   <Story name="border-radius">
-    <table data-table style={{"--table--border-radius":".25rem"}}>
+    <table data-table style={{ "--table--border-radius": ".25rem" }}>
       <thead data-table-head>
         <tr data-table-row>
           <td data-table-data>One</td>
@@ -70,7 +95,13 @@ Headings can additionally fine-tuned with the custom property `--table-head--fon
 
 <Preview>
   <Story name="font-size (larger)">
-    <table data-table style={{"--table--font-size":"1rem", "--table-head--font-size": ".875rem"}}>
+    <table
+      data-table
+      style={{
+        "--table--font-size": "1rem",
+        "--table-head--font-size": ".875rem",
+      }}
+    >
       <thead data-table-head>
         <tr data-table-row>
           <td data-table-data>One</td>

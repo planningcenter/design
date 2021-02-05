@@ -1,14 +1,25 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
-import readme from "./README.md";
 import "./avatar.css";
 import image from "../../../static/200x300_kitten.jpeg";
 
-<Meta title="Elements/avatar" parameters={{ notes: readme }} />
+<Meta title="Elements/avatar" />
 
 # Avatar
 
 > A circular image representing one person
+
+## Custom Properties
+
+Selector: `data-avatar`
+
+Custom property names and defaults:
+
+```css
+--avatar--size: 2rem;
+--avatar--border: 0 solid white;
+--avatar--opacity: 1;
+```
 
 ## Basic
 

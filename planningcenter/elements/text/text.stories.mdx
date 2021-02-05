@@ -1,26 +1,36 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
-import readme from "./README.md";
 import "./text.css";
 import image from "../../../static/200x300_kitten.jpeg";
 
-<Meta title="Elements/text" parameters={{ notes: readme }} />
+<Meta title="Elements/text" />
 
 # Text
 
-> An text element
+> A inline text element
+
+## Details
+
+Selector: `data-text`
+
+Custom properties:
+
+```css
+--text--color: inherit;
+--text--font-size: inherit;
+--text--font-weight: inherit;
+--text--font-style: inherit;
+```
 
 ## Basic
 
 <Preview>
-  <span data-text>
-    The quick brown fox...
-  </span>
+  <span data-text>The quick brown fox...</span>
 </Preview>
 
 ## color
 
-Text's color can be changed using the CSS Custom Property `--text--color`.  
+Text's color can be changed using the CSS Custom Property `--text--color`.
 
 <Preview>
   <Story name="color">
@@ -64,7 +74,7 @@ Here is an example of the available scale using that property:
 
 ## font-style
 
-Text's font-style can be changed using the CSS Custom Property `--text--font-style`.  
+Text's font-style can be changed using the CSS Custom Property `--text--font-style`.
 
 <Preview>
   <Story name="font-style">
@@ -78,7 +88,7 @@ Text's font-style can be changed using the CSS Custom Property `--text--font-sty
 
 ## font-weight
 
-Text's font-weight can be changed using the CSS Custom Property `--text--font-weight`.  
+Text's font-weight can be changed using the CSS Custom Property `--text--font-weight`.
 
 <Preview>
   <Story name="font-weight">
