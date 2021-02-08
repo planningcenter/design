@@ -20,5 +20,6 @@ Add it.
 Install it.
 
 - Webpack `import "@planningcenter/elements"`
+- Other JavaScript Bundlers `import "@planningcenter/elements/dist/elements.css"`
 - Sprockets `/*= require @planningcenter/elements */`
 - Sass `@import "@planningcenter/elements"`
