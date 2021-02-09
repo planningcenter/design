@@ -12,7 +12,7 @@ This reference describes AVO 🥑 naming conventions in BEM terms — as define
 - [Block](#block)
 - [Element](#element)
 - [Modifier](#modifier)
-- [Entity](#entity)
+- [Composed entity](#composed-entities)
 
 ### Block
 
@@ -72,18 +72,45 @@ This reference describes AVO 🥑 naming conventions in BEM terms — as define
 
 ```css
 /* BEM */
+.avatar--mention {
+}
 .avatar--status_ok {
 }
 
 /* AVO 🥑 */
+[data-avatar~="mention"] {
+}
 [data-avatar~="status:ok"] {
 }
 ```
 
 ```html
 <!-- BEM -->
-<img class="avatar" src="…" alt="…" />
+<img class="avatar avatar--mention avatar--status_ok" src="…" alt="…" />
 
 <!-- AVO 🥑 -->
-<img data-avatar src="…" alt="…" />
+<img data-avatar="mention status:ok" src="…" alt="…" />
+```
+
+### Composed Entities
+
+```html
+<!-- BEM -->
+<div className="person-header person-header--inactive">
+  <img
+    className="avatar avatar--status_checked person-header__avatar"
+    src="…"
+    alt="…"
+  />
+</div>
+
+<!-- AVO 🥑 -->
+<div data-person-header="inactive">
+  <img
+    data-avatar="status:checked"
+    data-person-header--avatar
+    src="…"
+    alt="…"
+  />
+</div>
 ```
