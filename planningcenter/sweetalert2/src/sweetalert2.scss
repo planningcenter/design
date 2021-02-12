@@ -1,19 +1,27 @@
 @import "~sweetalert2/src/variables";
 
-$swal2-icon-size: 3em;
-$swal2-icon-margin: 0 auto 0.5em;
-$swal2-image-margin: 1.25em auto;
+$swal-color-blue: #059cee;
+$swal-color-body: #848484;
+$swal-color-border: #e0e0e0;
+$swal-color-green: #2aa92f;
+$swal-color-headline: #595959;
+$swal-color-red: #df3023;
+$swal-color-yellow: #fbc02d;
+
+$swal2-icon-size: 48px;
+$swal2-icon-margin: 22px auto 16px;
 $swal2-icon-animations: false;
 $swal2-box-shadow: none;
 $swal2-padding: 24px;
 $swal2-backdrop-transition: initial;
-$swal2-font-size: var(--swal2-font-size, 16px);
-$swal2-content-color: #767676;
-$swal2-content-font-size: 1em;
-$swal2-title-font-size: 1.5626em;
-$swal2-cancel-button-color: #767676;
+$swal2-font-size: 16px;
+$swal2-content-color: $swal-color-body;
+$swal2-content-font-size: 16px;
+$swal2-title-font-size: 25px;
+$swal2-button-font-weight: 400;
+$swal2-cancel-button-color: $swal-color-body;
 $swal2-cancel-button-background-color: transparent;
-$swal2-cancel-button-font-size: 1em;
+$swal2-cancel-button-font-size: 16px;
 $swal2-confirm-button-font-size: 1em;
 $swal2-title-margin: 0.25em 0 0.5em;
 $swal2-content-line-height: 1.4em;
@@ -21,6 +29,7 @@ $swal2-actions-margin: 1rem auto 0;
 $swal2-backdrop-transition: initial;
 $swal2-show-animation: none;
 $swal2-hide-animation: none;
+$swal2-confirm-button-border-radius: 3px;
 $swal2-confirm-button-background-color: var(
   --swal2-confirm-button-background-color,
   hsla(0, 0%, 0%, 0.6)
@@ -33,8 +42,18 @@ $swal2-button-focus-box-shadow: 0 0 0 1px white,
 
 // sweetalert2 has no existing configuration points for these
 .swal2-actions {
-  border-top: 1px solid hsla(0, 0%, 0%, 0.1);
-  padding-top: 0.625rem;
+  margin: 0 auto;
+  padding: 16px 0 0;
+  border-top: 1px solid $swal-color-border;
+
+  &.swal2-styled {
+    &.swal2-cancel {
+      &:hover {
+        background-image: unset;
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .swal2-icon .swal2-icon-content {
@@ -50,7 +69,7 @@ $swal2-button-focus-box-shadow: 0 0 0 1px white,
   &.swal2-warning,
   &.swal2-info,
   &.swal2-question {
-    --swal2-icon-color: gray;
+    --swal2-icon-color: transparent;
     --swal2-icon-border-color: var(--swal2-icon-color);
     border-color: var(--swal2-icon-border-color);
     color: var(--swal2-icon-color);
