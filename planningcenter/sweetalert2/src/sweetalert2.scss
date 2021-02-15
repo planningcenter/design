@@ -4,15 +4,6 @@
 // $swal2-black:         #000 !default;
 // $swal2-outline-color: rgba(100, 150, 200, .5) !default;
 
-// COLORS
-// $color-blue-base: #059cee;
-// $color-green-base: #2aa92f;
-// $color-red-base: #e75146;
-// $color-yellow-base: #fbc02d;
-// $swal-color-body: #848484;
-// $swal-color-border: #e0e0e0;
-// $swal-color-headline: #595959;
-
 // CONTAINER
 // $swal2-container-padding: .625em !default;
 
@@ -24,8 +15,8 @@ $swal2-padding: 24px;
 // $swal2-box-shadow: #d9d9d9 !default;
 
 // ANIMATIONS
-// $swal2-show-animation: swal2-show .3s !default;
-// $swal2-hide-animation: swal2-hide .15s forwards !default;
+$swal2-show-animation: none;
+$swal2-hide-animation: none;
 
 // BACKGROUND
 // $swal2-background: $swal2-white !default;
@@ -56,7 +47,7 @@ $swal2-success-border: rgba($swal2-success, 0.3) !default;
 // $swal2-question: #87adbd !default;
 
 // IMAGE
-// $swal2-image-margin: 1.25em auto !default;
+$swal2-image-margin: 24px auto 32px;
 
 // TITLE
 $swal2-title-margin: 0 0 24px;
@@ -177,7 +168,7 @@ $swal2-actions-padding: 16px 0 0;
 // CONFIRM BUTTON
 // $swal2-confirm-button-order: null !default;
 // $swal2-confirm-button-border: 0 !default;
-// $swal2-confirm-button-border-radius: .25em !default;
+$swal2-confirm-button-border-radius: 3px;
 $swal2-confirm-button-background-color: #1f93ff;
 // $swal2-confirm-button-color: $swal2-white !default;
 $swal2-confirm-button-font-size: 16px;
@@ -185,7 +176,7 @@ $swal2-confirm-button-font-size: 16px;
 // DENY BUTTON
 // $swal2-deny-button-order: null !default;
 // $swal2-deny-button-border: 0 !default;
-// $swal2-deny-button-border-radius: .25em !default;
+$swal2-deny-button-border-radius: 3px;
 $swal2-deny-button-background-color: #e75146;
 // $swal2-deny-button-color: $swal2-white !default;
 $swal2-deny-button-font-size: 16px;
@@ -193,7 +184,7 @@ $swal2-deny-button-font-size: 16px;
 // CANCEL BUTTON
 // $swal2-cancel-button-order: null !default;
 // $swal2-cancel-button-border: 0 !default;
-// $swal2-cancel-button-border-radius: .25em !default;
+$swal2-cancel-button-border-radius: 3px;
 $swal2-cancel-button-background-color: transparent;
 $swal2-cancel-button-color: #848484;
 $swal2-cancel-button-font-size: 16px;
@@ -248,52 +239,14 @@ $swal2-button-font-weight: 400;
 
 @import "~sweetalert2/src/sweetalert2";
 
-// $swal2-backdrop-transition: initial;
-// $swal2-box-shadow: none;
-// $swal2-font-size: 16px;
-// $swal2-padding: 24px;
-
-// $swal2-icon-size: 48px;
-// $swal2-icon-margin: 22px auto 16px;
-// $swal2-icon-animations: false;
-// $swal2-title-font-size: 25px;
-// $swal2-title-margin: 0 auto 10px;
-// $swal2-content-color: $swal-color-body;
-// $swal2-content-font-size: 16px;
-// $swal2-content-line-height: 1.4em;
-// $swal2-button-font-size: 16px;
-// $swal2-button-font-weight: 400;
-// $swal2-cancel-button-color: $swal-color-body;
-// $swal2-cancel-button-background-color: transparent;
-// $swal2-cancel-button-font-size: 16px;
-// $swal2-backdrop-transition: initial;
-// $swal2-show-animation: none;
-// $swal2-hide-animation: none;
-// $swal2-confirm-button-border-radius: 3px;
-
+// Overrides. SweatAlert2 has no configuration points for these
 .swal2-title {
   line-height: 0.75em;
 }
-
-// sweetalert2 has no existing configuration points for these
 .swal2-actions {
   border-top: 1px solid #e0e0e0;
 }
 
 .swal2-icon {
   box-sizing: border-box;
-}
-
-// sweetalert2 uses color functions, preventing css variables from being passed
-.swal2-icon {
-  // TODO
-  // border: none;
-  // &.swal2-warning,
-  // &.swal2-info,
-  // &.swal2-question {
-  //   --swal2-icon-color: transparent;
-  //   --swal2-icon-border-color: var(--swal2-icon-color);
-  //   border-color: var(--swal2-icon-border-color);
-  //   color: var(--swal2-icon-color);
-  // }
 }

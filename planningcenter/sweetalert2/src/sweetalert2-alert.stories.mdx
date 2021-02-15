@@ -1,0 +1,72 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import {
+  standardAlertOptions,
+  successAlertOptions,
+  errorAlertOptions,
+} from "./sweetalert2.js";
+import * as VisualTests from "./visual-tests.js";
+import Swal from "sweetalert2/dist/sweetalert2";
+
+import "../css/sweetalert2.css";
+
+<Meta title="Library Wrappers/SweetAlert2/alert" />
+
+<Preview>
+  <Story name="standard">
+    <>
+      <VisualTests.StandardAlert />
+      <br />
+      <button
+        onClick={() => {
+          Swal.fire({
+            ...standardAlertOptions,
+            titleText: "Informational headline",
+            text:
+              "This is the alert body copy that should clearly state the outcome of continuing, side effects, and repetability.",
+          });
+        }}
+      >
+        Trigger Info Alert
+      </button>
+    </>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="success">
+    <>
+      <VisualTests.SuccessAlert />
+      <br />
+      <button
+        onClick={() => {
+          Swal.fire({
+            ...successAlertOptions,
+            titleText: "Success!",
+            text:
+              "Your text message was successfully sent to the Worship Team Volunteer list.",
+          });
+        }}
+      >
+        Trigger success alert
+      </button>
+    </>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="error">
+    <VisualTests.ErrorAlert />
+    <br />
+    <button
+      onClick={() => {
+        Swal.fire({
+          ...errorAlertOptions,
+          titleText: "An error occured",
+          text: `A category with that name already exists. Please try a different name.`,
+        });
+      }}
+    >
+      Trigger error alert
+    </button>
+  </Story>
+</Preview>
