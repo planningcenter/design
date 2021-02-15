@@ -32,7 +32,7 @@
     "url": "https://github.com/planningcenter/design/issues"
   },
   "devDependencies": {
-    "microbundle": "^0.11.0",
+    "microbundle": "^0.13.0",
     "node-sass": "^4.13.1",
     "sweetalert2": "^9.10.12"
   },
