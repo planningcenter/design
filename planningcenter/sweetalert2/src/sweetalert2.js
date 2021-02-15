@@ -1,5 +1,5 @@
 // color
-const color = {
+export const color = {
   blue: "#059CEE",
   green: "#2AA92F",
   red: "#E75146",

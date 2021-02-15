@@ -8,3 +8,17 @@
 TODO?
 
 - add types? does that work with VS Code (even if app does using TS)
+- add wrapping example
+
+  ```js
+  // Services Alerts
+  import { destroyConfirm } from "@planningcenter/sweetalert2";
+  import Swal from "sweetalert2";
+
+  export function destroyConfirm(options) {
+    return Swal.fire({
+      ...destroyConfirmOptions,
+      ...options,
+    });
+  }
+  ```
