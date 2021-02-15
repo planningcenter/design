@@ -1,0 +1,106 @@
+import { Meta, Story } from "@storybook/addon-docs/blocks";
+
+import {
+  standardAlertOptions,
+  successAlertOptions,
+  errorAlertOptions,
+  standardConfirmOptions,
+  createConfirmOptions,
+  destroyConfirmOptions,
+} from "./sweetalert2.js";
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "../css/sweetalert2.css";
+
+<Meta title="Library Wrappers/SweetAlert2/integrations" />
+
+# Alert
+
+<button
+  type="button"
+  onClick={() => {
+    Swal.fire({
+      ...standardAlertOptions,
+      titleText: "Informational headline",
+      text:
+        "This is the alert body copy that should clearly state the outcome of continuing, side effects, and repetability.",
+    });
+  }}
+>
+  Trigger Standard Alert
+</button>
+
+<button
+  type="button"
+  onClick={() => {
+    Swal.fire({
+      ...successAlertOptions,
+      titleText: "Success!",
+      text:
+        "Your text message was successfully sent to the Worship Team Volunteer list.",
+    });
+  }}
+>
+  Trigger Success Alert
+</button>
+
+<button
+  type="button"
+  onClick={() => {
+    Swal.fire({
+      ...errorAlertOptions,
+      titleText: "An error occured",
+      text: `A category with that name already exists. Please try a different name.`,
+    });
+  }}
+>
+  Trigger Error Alert
+</button>
+
+# Confirm
+
+<button
+  type="button"
+  onClick={() => {
+    Swal.fire({
+      ...standardConfirmOptions,
+      titleText: `This site uses cookies`,
+      text: `We use cookies to store your personal preferences. Please accept use of cookies for optimal performance.`,
+      confirmButtonText: `Yes, I accept cookies`,
+      cancelButtonText: `No, don't use cookies`,
+    });
+  }}
+>
+  Trigger Success Confirm
+</button>
+
+<button
+  type="button"
+  onClick={() => {
+    let user = { fullName: "John Smith", emailAddress: "jsmith@pco.bz" };
+    Swal.fire({
+      ...createConfirmOptions,
+      titleText: `Send this Message?`,
+      text: `This message will be emailed to ${user.fullName} at ${user.emailAddress} and a copy will be saved in their profile.`,
+      confirmButtonText: `Yes, send it`,
+      cancelButtonText: `No, don't send it`,
+    });
+  }}
+>
+  Trigger Create Confirm
+</button>
+
+<button
+  type="button"
+  onClick={() => {
+    let user = { firstName: "Cathy" };
+    Swal.fire({
+      ...destroyConfirmOptions,
+      titleText: `Delete profile?`,
+      text: `Removing ${user.firstName}'s profile will delete their profile and all related activity. This cannot be undone.`,
+      confirmButtonText: `Yes, keep ${user.firstName}'s profile`,
+      cancelButtonText: `No, keep profile`,
+    });
+  }}
+>
+  Trigger Destroy Confirm
+</button>

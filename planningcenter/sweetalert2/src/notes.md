@@ -8,6 +8,7 @@
 TODO?
 
 - add types? does that work with VS Code (even if app does using TS)
+- document watching feature for future dev work `npm run build:css -- -w`
 - add wrapping example
 
   ```js
