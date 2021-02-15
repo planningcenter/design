@@ -1,10 +1,9 @@
-/* prettier-ignore */
-
 // WARNING:
 // This file contains static examples for visual regression tests.
 // Nothing in this file should be copied or used.
 // File is intentionally not-prettified to discourage copy/paste
 
+/* prettier-ignore */
 export function StandardAlert() {
   return (
     <VisualTestContainer>

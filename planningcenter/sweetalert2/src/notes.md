@@ -4,3 +4,7 @@
     - didn't like the hand-off to classes, which required a bunch of prefixes to actually override
     - JS coordination is required for this anyway because Swal2 doesn't describe these as different buttons — they're all just confirm.
 - CSS might need to be added to stored source, if we add visual regression testing for Swal. alternatively, i could start adding a pretest, build step
+
+TODO?
+
+- add types? does that work with VS Code (even if app does using TS)

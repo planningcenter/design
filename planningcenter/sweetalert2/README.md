@@ -2,11 +2,7 @@
 
 > TODO: Planning Center Opinions for SweetAlert2
 
-WIP
-
 This package builds SweetAlert2 CSS using the provided Sass Variables in [`variables.css`](https://github.com/sweetalert2/sweetalert2/blob/master/src/variables.scss).
-
-It specifies planning center opinions and exposes a few CSS Custom Properties for further — albeit limited — customization.
 
 ## Demo
 
@@ -23,8 +19,13 @@ yarn add @planningcenter/sweetalert2 sweetalert2
 ### Import the stylesheet
 
 ```css
-// use platform-specific import syntax
+/* use platform-specific import syntax */
+
+/* CSS */
 @import "@planningcenter/sweetalert2/css/sweetalert2.css";
+
+/* Sass */
+@import "@planningcenter/sweetalert2/css/sweetalert2";
 ```
 
 #### Caution
@@ -34,27 +35,12 @@ The import statement above will cause problems in Sass files.
 
 Remove the `.css` extension and everything should work as you expect. In Sass, `@import` uses the inclusion of a file extension to determine if you want a Sass import or CSS import. Removing the `.css extension ensures that you get the Sass import.
 
-#### Customize with CSS variables
-
-```css
-/* this can be :root too, if needed */
-.swal2-container {
-  /* use these variables to custimize your install */
-  /* values here are the defaults */
-  --swal2-font-size: 1rem;
-  --swal2-confirm-button-background-color: hsla(0, 0%, 0%, 0.6);
-  --swal2-confirm-button-color: white;
-  --swal2-outline-color: Highlight;
-  --swal2-icon-color: gray;
-  --swal2-icon-border-color: gray;
-}
-```
-
 ### JS
 
 ```js
 // import SweatAlert2 **see #caution section below**
 import Swal from "sweetalert2/dist/sweetalert2";
+
 // import shared defaults from this package
 import { defaultPromptOptions } from "@planningcenter/sweetalert2";
 
