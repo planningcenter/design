@@ -137,6 +137,16 @@
   right: 0.1875em;
   width: 1.375em;
 }
+.swal2-popup.swal2-toast
+  .swal2-success.swal2-icon-show
+  .swal2-success-line-tip {
+  animation: swal2-toast-animate-success-line-tip 0.75s;
+}
+.swal2-popup.swal2-toast
+  .swal2-success.swal2-icon-show
+  .swal2-success-line-long {
+  animation: swal2-toast-animate-success-line-long 0.75s;
+}
 .swal2-popup.swal2-toast.swal2-show {
   animation: swal2-toast-show 0.5s;
 }
@@ -154,7 +164,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 0.625em;
+  padding: 16px;
   overflow-x: hidden;
   transition: background-color 0.1s;
   -webkit-overflow-scrolling: touch;
@@ -273,7 +283,7 @@
   box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
-  width: 32em;
+  width: 512px;
   max-width: 100%;
   padding: 24px 24px calc(24px - 4px) 24px;
   border: none;
@@ -584,13 +594,13 @@
   position: relative;
   box-sizing: content-box;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 5em;
+  height: 5em;
   margin: 24px auto 32px;
-  border: 2.4em solid transparent;
+  border: 0.25em solid transparent;
   border-radius: 50%;
   font-family: inherit;
-  line-height: 48px;
+  line-height: 5em;
   cursor: default;
   user-select: none;
 }
@@ -606,7 +616,7 @@
 .swal2-icon.swal2-error .swal2-x-mark {
   position: relative;
   flex-grow: 1;
-  zoom: 9.6;
+  zoom: 1;
 }
 .swal2-icon.swal2-error [class^="swal2-x-mark-line"] {
   display: block;
@@ -624,6 +634,12 @@
 .swal2-icon.swal2-error [class^="swal2-x-mark-line"][class$="right"] {
   right: 1em;
   transform: rotate(-45deg);
+}
+.swal2-icon.swal2-error.swal2-icon-show {
+  animation: swal2-animate-error-icon 0.5s;
+}
+.swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark {
+  animation: swal2-animate-error-x-mark 0.5s;
 }
 .swal2-icon.swal2-warning {
   border-color: #facea8;
@@ -652,7 +668,7 @@
   [class^="swal2-success-circular-line"][class$="left"] {
   top: -0.4375em;
   left: -2.0635em;
-  zoom: 9.6;
+  zoom: 1;
   transform: rotate(-45deg);
   transform-origin: 3.75em 3.75em;
   border-radius: 7.5em 0 0 7.5em;
@@ -661,7 +677,7 @@
   [class^="swal2-success-circular-line"][class$="right"] {
   top: -0.6875em;
   left: 1.875em;
-  zoom: 9.6;
+  zoom: 1;
   transform: rotate(-45deg);
   transform-origin: 0 3.75em;
   border-radius: 0 7.5em 7.5em 0;
@@ -674,7 +690,7 @@
   box-sizing: content-box;
   width: 100%;
   height: 100%;
-  zoom: 9.6;
+  zoom: 1;
   border: 0.25em solid rgba(165, 220, 134, 0.3);
   border-radius: 50%;
 }
@@ -685,7 +701,7 @@
   left: 1.625em;
   width: 0.4375em;
   height: 5.625em;
-  zoom: 9.6;
+  zoom: 1;
   transform: rotate(-45deg);
 }
 .swal2-icon.swal2-success [class^="swal2-success-line"] {
@@ -693,7 +709,7 @@
   position: absolute;
   z-index: 2;
   height: 0.3125em;
-  zoom: 9.6;
+  zoom: 1;
   border-radius: 0.125em;
   background-color: #a5dc86;
 }
@@ -708,6 +724,15 @@
   right: 0.5em;
   width: 2.9375em;
   transform: rotate(-45deg);
+}
+.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip {
+  animation: swal2-animate-success-line-tip 0.75s;
+}
+.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long {
+  animation: swal2-animate-success-line-long 0.75s;
+}
+.swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right {
+  animation: swal2-rotate-success-circular-line 4.25s ease-in;
 }
 .swal2-progress-steps {
   flex-wrap: wrap;
@@ -1004,7 +1029,7 @@ body.swal2-no-backdrop .swal2-container {
   right: auto;
   bottom: auto;
   left: auto;
-  max-width: calc(100% - 0.625em * 2);
+  max-width: calc(100% - 16px * 2);
   background-color: transparent !important;
 }
 body.swal2-no-backdrop .swal2-container > .swal2-modal {
@@ -1161,7 +1186,4 @@ body.swal2-toast-column .swal2-toast .swal2-validation-message {
 }
 .swal2-actions {
   border-top: 1px solid #e0e0e0;
-}
-.swal2-icon {
-  box-sizing: border-box;
 }

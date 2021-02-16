@@ -104,3 +104,18 @@ import "../css/sweetalert2.css";
 >
   Trigger Destroy Confirm
 </button>
+
+# Legacy
+
+<button
+  type="button"
+  onClick={() => {
+    Swal.fire(
+      "This is an old SweetAlert",
+      "The goal here is to ensure that we didn't clobber existing alerts. We want to make sure those con work in tandem with new alerts to allow a staged migration.",
+      "warning"
+    );
+  }}
+>
+  Trigger warning likely to be seen in legacy code
+</button>
