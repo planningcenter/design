@@ -44,18 +44,23 @@ Remove the `.css` extension and everything should work as you expect. In Sass, `
 ### JS
 
 ```js
-// import SweatAlert2 **see #caution section below**
+// import SweetAlert2 **see #caution section below**
 import Swal from "sweetalert2/dist/sweetalert2";
 
-// import shared defaults from this package
-import { defaultPromptOptions } from "@planningcenter/sweetalert2";
+// import alert methods from this package
+import {
+  standardAlertOptions,
+  successAlertOptions,
+  errorAlertOptions,
+  standardConfirmOptions,
+  createConfirmOptions,
+  destroyConfirmOptions,
+} from "@planningcenter/sweetalert2";
 
 // A sample function for firing a sweet alert with provided defaults
-function handleDeleteRequest(user) {
-  return Swal.fire({
-    // spread defaults into your `.fire` call
-    ...defaultPromptOptions,
-    title: `Delete ${user.name}?`,
+function handleDestroyPersonRecordRequest(user) {
+  return confirmDestroy.fire({
+    titleText: `Delete ${user.name}?`,
     text: `This will remove ${user.name} from all Planning Center apps. Their activity will be lost. You cannot un-delete ${user.name}.`,
     confirmButtonText: `Yes, delete ${user.name}!`,
   });
@@ -64,7 +69,7 @@ function handleDeleteRequest(user) {
 
 ### Caution
 
-The default export of SweetAlert2 comes injects a stylesheet. The injected stylesheet clobbers the themed stylesheets from this library.
+The default export of SweetAlert2 injects a stylesheet. The injected stylesheet clobbers the themed stylesheets from this library.
 
 To import just the JavaScript, use the nested import path `"sweetalert2/dist/sweetalert2"`. This ensures that you get _only_ the JavaScript.
 
