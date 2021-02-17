@@ -47,14 +47,28 @@ Remove the `.css` extension and everything should work as you expect. In Sass, `
 // import SweetAlert2 **see #caution section below**
 import Swal from "sweetalert2/dist/sweetalert2";
 
-// import shared defaults from this package
-import { defaultPromptOptions } from "@planningcenter/sweetalert2";
+// import @planningcenter/sweetalert2 JS config objects
+import {
+  standardAlertOptions,
+  successAlertOptions,
+  errorAlertOptions,
+  standardConfirmOptions,
+  createConfirmOptions,
+  destroyConfirmOptions,
+} from "@planningcenter/sweetalert2";
+
+// 3. create localized functions for alerts using mixin()
+//    .mixin provides API flexibility, should someone want to use the function argument syntax
+const alert = Swal.mixin(standardAlertOptions);
+const alertSuccess = Swal.mixin(successAlertOptions);
+const alertError = Swal.mixin(errorAlertOptions);
+const confirm = Swal.mixin(standardConfirmOptions);
+const confirmDestroy = Swal.mixin(destroyConfirmOptions);
+const confirmCreate = Swal.mixin(createConfirmOptions);
 
 // A sample function for firing a sweet alert with provided defaults
 function handleDeleteRequest(user) {
-  return Swal.fire({
-    // spread defaults into your `.fire` call
-    ...defaultPromptOptions,
+  return confirmDestroy.fire({
     title: `Delete ${user.name}?`,
     text: `This will remove ${user.name} from all Planning Center apps. Their activity will be lost. You cannot un-delete ${user.name}.`,
     confirmButtonText: `Yes, delete ${user.name}!`,
