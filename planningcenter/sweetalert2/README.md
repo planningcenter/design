@@ -6,7 +6,13 @@ This package builds SweetAlert2 CSS using the provided Sass Variables in [`varia
 
 ## Demo
 
-https://codesandbox.io/s/planningcentersweetalert2-swal-v10-0qx9i
+### Basic setup
+
+https://codesandbox.io/s/planningcentersweetalert2-swal-v10-9qvwr
+
+### Create better localized ergonamics with API wrappers
+
+https://codesandbox.io/s/planningcentersweetalert2-swal-v10-0qx9i?file=/src/alerts.js
 
 ## Usage
 
