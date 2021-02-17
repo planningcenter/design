@@ -44,7 +44,7 @@ Remove the `.css` extension and everything should work as you expect. In Sass, `
 ### JS
 
 ```js
-// import SweatAlert2 **see #caution section below**
+// import SweetAlert2 **see #caution section below**
 import Swal from "sweetalert2/dist/sweetalert2";
 
 // import shared defaults from this package
@@ -64,7 +64,7 @@ function handleDeleteRequest(user) {
 
 ### Caution
 
-The default export of SweetAlert2 comes injects a stylesheet. The injected stylesheet clobbers the themed stylesheets from this library.
+The default export of SweetAlert2 injects a stylesheet. The injected stylesheet clobbers the themed stylesheets from this library.
 
 To import just the JavaScript, use the nested import path `"sweetalert2/dist/sweetalert2"`. This ensures that you get _only_ the JavaScript.
 
