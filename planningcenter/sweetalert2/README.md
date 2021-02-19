@@ -159,3 +159,49 @@ To import just the JavaScript, use the nested import path `"sweetalert2/dist/swe
 
 - [Theme SCSS Source](./src/sweetalert2.scss)
 - [Theme JS Source](./src/sweetalert2.js)
+
+---
+
+_suggessted structure for documentation_
+
+# `@planningcenter/sweetalert2`
+
+A Planning Center theme for [SweetAlert2](https://sweetalert2.github.io).
+
+This theme supports products using [SweetAlert2](https://sweetalert2.github.io) at v10 or higher.
+
+In addition to a theme stylesheet, icons and common options are provided via JS objects.
+
+## Install package
+
+## Apply CSS theme
+
+## Apply JS options objects for icons and button colors
+
+## Create convenience functions using mixin() (recommended)
+
+### Using global window.Swal
+
+### Wrapping .fire() for migration ease
+
+## Create an alert facade (not recommended)
+
+Implementing a facade is an option. It's helpful in three cases:
+
+- Switching between SweetAlert\* versions
+- Switching between SweetAlert\* and alternative alert library
+- Strategic selection/elimination of SweetAlert\* features
+
+The primary downside of a facade is that implementors take on the full burdon of documentation, testing, and implementation.
+
+People implementas [Alert](https://github.com/ministrycentered/people/blob/master/app/javascript/utils/alert/alert.js), which a trasparent facade.
+
+If you implement a facade, implement an opaque facade — not exposing access to the underlying `fire` method. This will prevent it from becoming a [leaky abstraction] where — in an effort to unexposed library features — consumers reach thru the facade to manipulate the dependency directly. This completely eliminates the value of a facade for transitioning from one library/API to another.
+
+If not actively transitioning between libraries, create convenience functions using `mixin` instead.
+
+### Why this theme doesn't expose a facade
+
+Library facades that live behind a module boundary are difficult to maintain in a multi-app ecosystem. It shifts the library dependency from `peerDependency` to `dependency`. This means that a local (app) changes can't be made without library intervention. These interventions might demand consensus from other apps — which is difficult (if not impossible) to get.
+
+Maintaining a `peerDependency` allows apps to retain full local control over local dependencies while utilizing the theme and shared options.
