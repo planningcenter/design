@@ -75,7 +75,7 @@ const sharedConfirmOptions = {
 
 export const standardConfirmOptions = {
   ...sharedConfirmOptions,
-  imageUrl: blueInfoCircle,
+  imageUrl: yellowExclamationTriangle,
   confirmButtonColor: color.blue,
 };
 export const createConfirmOptions = {
