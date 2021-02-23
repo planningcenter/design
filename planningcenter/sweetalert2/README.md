@@ -1,3 +1,11 @@
+# `@planningcenter/sweetalert2`
+
+A Planning Center theme for [SweetAlert2](https://sweetalert2.github.io).
+
+This theme supports products using [SweetAlert2](https://sweetalert2.github.io) at v10 or higher.
+
+In addition to a theme stylesheet, icons and common options are provided via JS objects.
+
 ## Install package
 
 Add this package and its dependency, `sweetalert2`, to your project.
