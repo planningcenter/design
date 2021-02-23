@@ -1,85 +1,113 @@
-# `@planningcenter/sweetalert2`
+## Install package
 
-This package builds SweetAlert2 CSS using the provided Sass Variables in [`variables.css`](https://github.com/sweetalert2/sweetalert2/blob/master/src/variables.scss) and provides optional JavaScript configuration objects that can be dropped into your current SweetAlerts or used to create a localized swal API for your app.
-
-## Demo
-
-### Basic setup
-
-https://codesandbox.io/s/planningcentersweetalert2-swal-v10-9qvwr
-
-### Create better localized ergonamics with API wrappers
-
-https://codesandbox.io/s/planningcentersweetalert2-swal-v10-0qx9i?file=/src/alerts.js
-
-## Usage
-
-### Add this package and its dependencies to your app
+Add this package and its dependency, `sweetalert2`, to your project.
 
 ```bash
 yarn add @planningcenter/sweetalert2 sweetalert2
 ```
 
-### Import the stylesheet
+## Import SweetAlert2 without the default theme
 
-This stylsheet will handle many of the basic defaults - font styles, colors, padding, margins - outlined in the [specification](https://planningcenter.design/alerts). If you've already implemented the updated icons then this may be all you need to ensure parity with the spec.
+Out of the box, SweetAlert2 injects a default theme stylesheet. To disable the default behavior, import SweetAlert2 from the nested `/dist` directory.
+
+```js
+import Swal from "sweetalert2/dist/sweetalert2";
+```
+
+The `sweetalert2/dist/sweetalert2` path [does not inject the default stylesheet](https://github.com/sweetalert2/sweetalert2/issues/410#issuecomment-385568079).
+
+## Apply CSS theme
+
+This stylesheet handles the basics - font styles, colors, padding, margins - outlined in the [specification](https://planningcenter.design/alerts). If you've already implemented the updated icons then this stylesheet may be all you need to ensure parity with the spec.
+
+### Import the Planning Center SweetAlert2 theme
+
+#### CSS
 
 ```css
-/* Use platform-specific import syntax */
-
-/* CSS */
 @import "@planningcenter/sweetalert2/css/sweetalert2.css";
-
-/* Sass */
-@import "@planningcenter/sweetalert2/css/sweetalert2";
 ```
 
-#### Caution
+#### SCSS
 
-Sass `@import` directives are tricky buggers.  
-The import statement above will cause problems in Sass files.
+```scss
+@import "@planningcenter/sweetalert2/css/sweetalert2";
+// no .css extension
+```
 
-Remove the `.css` extension and everything should work as you expect. In Sass, `@import` uses the inclusion of a file extension to determine if you want a Sass import or CSS import. Removing the `.css extension ensures that you get the Sass import.
+In Sass, be sure to omit the `.css` file extension.
 
-### JS
+Sass `@import` directives are tricky. Sass decides whether to use Sass `import` or CSS `import` based on the presence of a `.css` extension. In our environments, you want to force the Sass `import` by omitting the `.css` extension.
 
-#### Basic usage
+### Example
 
-The stylesheet mentioned above handles most of the basic styles. The following JavaScript config objects provide Planning Center specified icons and button configurations.
+https://codesandbox.io/s/planningcentersweetalert2-swal-v10-minimal-fv71h?file=/src/index.js
+
+## Apply JS options objects for icons and button colors
+
+`planningcenter/sweetalert2` exposes configuration objects for standard alerts and confirm SweetAlerts.
+
+The options are imported and spread over SweetAlert calls for consistency.
 
 ```js
-// Import SweetAlert2 **see #caution section below**
+// import SweetAlert
 import Swal from "sweetalert2/dist/sweetalert2";
 
-// Import @planningcenter/sweetalert2 JS config objects
+// import config options
+import { standardConfirmOptions } from "@planningcenter/sweetalert2";
+
+// spread default options and override as needed
+Swal.fire({
+  ...standardConfirmOptions,
+  titleText: `This site uses cookies`,
+  text: `We use cookies to store your personal preferences. Please accept use of cookies for optimal performance.`,
+  confirmButtonText: `Yes, I accept cookies`,
+  cancelButtonText: `No, don't use cookies`,
+});
+```
+
+### Live example
+
+https://codesandbox.io/s/planningcentersweetalert2-swal-v10-9qvwr
+
+### Available options
+
+These are options objects available from this library.  
+The most up-to-date resource is always [source](https://github.com/planningcenter/design/blob/main/planningcenter/sweetalert2/src/sweetalert2.js).
+
+```js
 import {
+  // blue info icon, blue confirm button, no cancel
   standardAlertOptions,
+
+  // green check icon, blue confirm button, no cancel
   successAlertOptions,
+
+  // red x icon, blue confirm button, no cancel
   errorAlertOptions,
+
+  // yellow exclamation icon, blue confirm button
   standardConfirmOptions,
+
+  // yellow exclamation icon, green confirm button
   createConfirmOptions,
+
+  // red exclamation icon, red confirm button
   destroyConfirmOptions,
 } from "@planningcenter/sweetalert2";
-
-// A sample function for firing a sweet alert with provided defaults
-function handleDeleteRequest(user) {
-  return Swal.fire({
-    ...destroyConfirmOptions,
-    titleText: `Delete ${user.name}?`,
-    text: `This will remove ${user.name} from all Planning Center apps. Their activity will be lost. You cannot un-delete ${user.name}.`,
-    confirmButtonText: `Yes, delete ${user.name}!`,
-  });
-}
 ```
 
-#### Localized swal API
+## Create convenience functions using mixin() (recommended)
 
-You may prefer the ergonomics of a localized functions over multiple imports and option spreading.
+You may prefer the ergonomics of a localized functions over multiple imports and option spreading. Here's how we suggest making those convenience functions available to your app.
+
+**`alert.js`**
 
 ```js
-/*-------- alerts.js --------*/
-
+// import SweetAlert
 import Swal from "sweetalert2/dist/sweetalert2";
+
+// import planning/sweetalert2 options
 import {
   standardAlertOptions,
   successAlertOptions,
@@ -90,99 +118,72 @@ import {
 } from "@planningcenter/sweetalert2";
 
 // Create localized functions using .mixin()
-// .mixin() provides API flexibility should someone want to use the function argument syntax
+// Customization thru mixin() allows fire() to be called with object or argument options
 export const alert = Swal.mixin(standardAlertOptions);
 export const alertSuccess = Swal.mixin(successAlertOptions);
 export const alertError = Swal.mixin(errorAlertOptions);
 export const confirm = Swal.mixin(standardConfirmOptions);
 export const confirmDestroy = Swal.mixin(destroyConfirmOptions);
 export const confirmCreate = Swal.mixin(createConfirmOptions);
+```
 
-// Bonus: you may want to alias Swal.fire() as a migration strategy
+**`some-app-module.js`**
+
+```js
+// import alerts from the alerts module
+import * as alerts from "./alerts";
+
+// use confirm() convenience function
+// confirm() applies planning center icon and confirm color from `standardConfirmOptions`
+alerts.confirm.fire({
+  titleText: `This site uses cookies`,
+  text: `We use cookies to store your personal preferences. Please accept use of cookies for optimal performance.`,
+  confirmButtonText: `Yes, I accept cookies`,
+  cancelButtonText: `No, don't use cookies`,
+});
+
+// SweetAlert2's function argument syntax is retained in tandem with the configuration options. Thanks .mixin()
+return alerts.alert.fire(
+  "This site uses cookies",
+  "We use cookies to store your personal preferences. Please accept use of cookies for optimal performance."
+);
+```
+
+### Example
+
+https://codesandbox.io/s/planningcentersweetalert2-swal-v10-0qx9i?file=/src/alerts.js
+
+### Wrapping .fire() for migration ease
+
+If you're migrating a lot of code and want to preserve an old fire method, you can wrap the call — passing arguments — like so:
+
+```js
 export const fire = (...args) =>
   Swal.mixin({
     /* old options */
   }).fire(...args);
 ```
 
+### Using global `window.Swal`
+
+Examples above use modules. If you're app uses `Swal` as a global, your implementation might look something like this:
+
 ```js
-/*-------- component.js --------*/
+import sweetalert from "sweetalert2/dist/sweetalert2";
 
-import * as swal from "./alerts";
-
-// Create a handler using the localized swal API with abstracted defaults
-const handleDestroyPersonRecordRequest = (user) => {
-  return swal.confirmDestroy.fire({
-    titleText: `Delete ${user.name}?`,
-    text: `This will remove ${user.name} from all Planning Center apps. Their activity will be lost. You cannot un-delete ${user.name}.`,
-    confirmButtonText: `Yes, delete ${user.name}!`,
-  });
+window.Swal = {
+  alert: sweetalert.mixin(standardAlertOptions),
+  alertSuccess: sweetalert.mixin(successAlertOptions),
+  alertError: sweetalert.mixin(errorAlertOptions),
+  confirm: sweetalert.mixin(standardConfirmOptions),
+  confirmDestroy: sweetalert.mixin(destroyConfirmOptions),
+  confirmCreate: sweetalert.mixin(createConfirmOptions),
+  fire: (...args) =>
+    sweetalert
+      .mixin({ reverseButtons: true, showCancelButton: true })
+      .fire(...args),
 };
-
-// Note that SweetAlert2's function argument syntax is retained in tandem with the configuration options. Thanks .mixin()
-return swal.confirm.fire(
-  "This site uses cookies",
-  "We use cookies to store your personal preferences. Please accept use of cookies for optimal performance."
-);
-
-// The aliased Swal.fire() method allows for current swals to function normally during migration while consuming the provided stylesheet
-return swal.fire({
-  icon: "warning",
-  titleText: "Hold On!",
-  text: `Are you sure you want to remove this item?`,
-  confirmButtonColor: "#e66654",
-  confirmButtonText: "Yes, remove",
-  showCancelButton: true,
-});
 ```
-
-### Caution
-
-The default export of SweetAlert2 injects a stylesheet. The injected stylesheet clobbers the themed stylesheets from this library.
-
-To import just the JavaScript, use the nested import path `"sweetalert2/dist/sweetalert2"`. This ensures that you get _only_ the JavaScript.
-
-## Further Reading
-
-### SweetAlert2
-
-- [SweetAlert2 documentation](https://sweetalert2.github.io)
-- [SweetAlert2 theming documentation](https://sweetalert2.github.io/#themes) and [examples](https://github.com/sweetalert2/sweetalert2-themes)
-
-### Planning Center
-
-- [Planning Center Alert specification on planningcenter.design](https://planningcenter.design/alerts)
-- [Planning Center Alert specification in Figma](https://www.figma.com/file/V8Ajrhr3jwzatZvkpqNKaK/Alerts?node-id=0%3A1)
-- [Publishing Installation](https://github.com/ministrycentered/publishing/pull/568)
-
-### Code
-
-- [Theme SCSS Source](./src/sweetalert2.scss)
-- [Theme JS Source](./src/sweetalert2.js)
-
----
-
-_suggessted structure for documentation_
-
-# `@planningcenter/sweetalert2`
-
-A Planning Center theme for [SweetAlert2](https://sweetalert2.github.io).
-
-This theme supports products using [SweetAlert2](https://sweetalert2.github.io) at v10 or higher.
-
-In addition to a theme stylesheet, icons and common options are provided via JS objects.
-
-## Install package
-
-## Apply CSS theme
-
-## Apply JS options objects for icons and button colors
-
-## Create convenience functions using mixin() (recommended)
-
-### Using global window.Swal
-
-### Wrapping .fire() for migration ease
 
 ## Create an alert facade (not recommended)
 
@@ -205,3 +206,21 @@ If not actively transitioning between libraries, create convenience functions us
 Library facades that live behind a module boundary are difficult to maintain in a multi-app ecosystem. It shifts the library dependency from `peerDependency` to `dependency`. This means that a local (app) changes can't be made without library intervention. These interventions might demand consensus from other apps — which is difficult (if not impossible) to get.
 
 Maintaining a `peerDependency` allows apps to retain full local control over local dependencies while utilizing the theme and shared options.
+
+## Further Reading
+
+### SweetAlert2
+
+- [SweetAlert2 documentation](https://sweetalert2.github.io)
+- [SweetAlert2 theming documentation](https://sweetalert2.github.io/#themes) and [examples](https://github.com/sweetalert2/sweetalert2-themes)
+
+### Planning Center
+
+- [Planning Center Alert specification on planningcenter.design](https://planningcenter.design/alerts)
+- [Planning Center Alert specification in Figma](https://www.figma.com/file/V8Ajrhr3jwzatZvkpqNKaK/Alerts?node-id=0%3A1)
+- [Publishing Installation](https://github.com/ministrycentered/publishing/pull/568)
+
+### Code
+
+- [Theme SCSS Source](./src/sweetalert2.scss)
+- [Theme JS Source](./src/sweetalert2.js)
