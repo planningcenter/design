@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/sweetalert2",
-  "version": "0.0.5",
+  "version": "1.0.0-alpha.5",
   "description": "Planning Center Opinions for SweetAlert2",
   "author": "Michael Chan <mijoch@gmail.com>",
   "homepage": "https://github.com/planningcenter/design#readme",
@@ -26,7 +26,7 @@
     "build": "npm run build:css && npm run build:js"
   },
   "peerDependencies": {
-    "sweetalert2": "^9.4.3"
+    "sweetalert2": ">=10"
   },
   "bugs": {
     "url": "https://github.com/planningcenter/design/issues"
@@ -34,7 +34,7 @@
   "devDependencies": {
     "microbundle": "^0.13.0",
     "node-sass": "^4.13.1",
-    "sweetalert2": "^9.10.12"
+    "sweetalert2": "^10.15.0"
   },
   "dependencies": {
     "node-sass-tilde-importer": "^1.0.2"
