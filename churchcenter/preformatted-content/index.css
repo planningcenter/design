@@ -41,6 +41,7 @@
 }
 
 [data-preformatted-content] img {
+  height: var(--image--height, auto);
   max-width: var(--image--max-width, 100%);
   border-radius: var(--image--border-radius, 3px);
 }
