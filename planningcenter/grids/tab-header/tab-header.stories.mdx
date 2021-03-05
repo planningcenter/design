@@ -1,48 +1,147 @@
-import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
 
-import readme from "./README.md";
 import "./tab-header.css";
-import image from "../../../static/200x300_kitten.jpeg";
 
-<Meta
-  title="Grids/tab-header"
-  parameters={{ notes: readme }}
-/>
+<Meta title="Grids/tab-header" />
 
 # Tab Header
 
 > Header grid navigating a resource and its relationships
 
+## Selectors
 
-## Basics
+| data-attribute                  | usage         |
+| ------------------------------- | ------------- |
+| `data-tab-header--container`    | flex template |
+| `data-tab-header--tab-group`    |               |
+| `data-tab-header--tab`          |               |
+| `data-tab-header--tab="target"` |               |
+| `data-tab-header--action-group` |               |
+| `data-tab-header--action`       |               |
 
-`tab-header` is a CSS Grid with two grid areas: `avatar` and `detail`.
+export function ExampleContainer({ style, ...props }) {
+  return (
+    <div
+      style={{ backgroundColor: "tomato", paddingTop: "1rem", ...style }}
+      {...props}
+    />
+  );
+}
 
-There are
+## Complete
 
-| data-attribute               | usage |
-|------------------------------|---------------|
-| `data-tab-header--container` | flex template |
-| `data-tab-header--tab` |  |
-| `data-tab-header--tab="target"` |  |
-| `data-tab-header--tab-group` |  |
-| `data-tab-header--action` |  |
-| `data-tab-header--action-group` |  |
+A common orientation of vertical tabs and action buttons.
 
-<Preview>
-  <Story name="Basic">
-    <div style={{ backgroundColor: "tomato" }}>
+<Canvas>
+  <Story name="Complete">
+    <ExampleContainer>
       <div data-tab-header--container>
-        <div data-tab-header--tab-group>
-          <a data-tab-header--tab data-vertical-tab="target" href="#">One</a>
-          <a data-tab-header--tab data-vertical-tab href="#">Two</a>
-          <a data-tab-header--tab data-vertical-tab href="#">Three</a>
-        </div>
-        <div data-tab-header--action-group>
-          <button data-tab-header--action type="button">Action</button>
-          <button data-tab-header--action type="button">Action</button>
-        </div>
+        <nav data-tab-header--tab-group>
+          <a data-tab-header--tab="target" data-vertical-tab href="#">
+            Target
+          </a>
+          <a data-tab-header--tab data-vertical-tab href="#">
+            Occluded
+          </a>
+          <a data-tab-header--tab data-vertical-tab>
+            Disabled
+          </a>
+          <span data-tab-header--tab data-vertical-tab>
+            Disabled (alt)
+          </span>
+        </nav>
+        <nav data-tab-header--action-group>
+          <button data-tab-header--action type="button">
+            Action
+          </button>
+          <button data-tab-header--action type="button">
+            Action
+          </button>
+        </nav>
       </div>
-    </div>
+    </ExampleContainer>
   </Story>
-</Preview>
+</Canvas>
+
+## Only tabs
+
+A common orientation of only vertical tabs.
+
+<Canvas>
+  <Story name="Only tabs">
+    <ExampleContainer>
+      <div data-tab-header--container>
+        <nav data-tab-header--tab-group>
+          <a data-tab-header--tab="target" data-vertical-tab href="#">
+            Target
+          </a>
+          <a data-tab-header--tab data-vertical-tab href="#">
+            Occluded
+          </a>
+          <a data-tab-header--tab data-vertical-tab>
+            Disabled
+          </a>
+        </nav>
+      </div>
+    </ExampleContainer>
+  </Story>
+</Canvas>
+
+## Occluded tab
+
+`tab-header--tab`s default to an occluded visual state.
+
+<Canvas>
+  <Story name="Occluded tab">
+    <ExampleContainer>
+      <div data-tab-header--container>
+        <nav data-tab-header--tab-group>
+          <a data-tab-header--tab data-vertical-tab href="#">
+            Occluded (:hover and :active)
+          </a>
+        </nav>
+      </div>
+    </ExampleContainer>
+  </Story>
+</Canvas>
+
+## Target tab
+
+`tab-header--tab="target` is used to bring exactly one enabled tab to the visual foreground.
+
+<Canvas>
+  <Story name="Target tab">
+    <ExampleContainer>
+      <div data-tab-header--container>
+        <nav data-tab-header--tab-group>
+          <a data-tab-header--tab data-vertical-tab="target" href="#">
+            Target
+          </a>
+        </nav>
+      </div>
+    </ExampleContainer>
+  </Story>
+</Canvas>
+
+## Disabled tab
+
+`data-tab-header--tab` elements without an `href` attribute get `disabled` treatment.
+
+The effect is identical between an `a` (with no `href` attr) and a `span`.
+
+<Canvas>
+  <Story name="Disabled tab">
+    <ExampleContainer>
+      <div data-tab-header--container>
+        <nav data-tab-header--tab-group>
+          <a data-tab-header--tab data-vertical-tab>
+            Disabled
+          </a>
+          <span data-tab-header--tab data-vertical-tab>
+            Disabled (alternative)
+          </span>
+        </nav>
+      </div>
+    </ExampleContainer>
+  </Story>
+</Canvas>
