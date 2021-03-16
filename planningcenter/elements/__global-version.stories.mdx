@@ -1,0 +1,151 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Global Version" />
+
+_Stage: Proposal, 2021-03-15_
+
+# Global Major Version
+
+Global Major (GM) version is a strategy for managing Utility Design artifacts (Design Spec, Interfaces, Elements, UI-Kit, etc.) with a single, shared major version.
+
+The goal of a GM is to predictably communicate specification compliance while allowing artifact evolution.
+
+## Benefits
+
+- Predictable versioned docs
+  - `package.json` versions match Spec versions
+  - Documentation is versioned for extended support on unmaintained versions
+  - If a local implementation is compliant to a specific version, that could predictably swap a local implementation for a shared one
+- Clear management of cascading changes
+  - If an `avatar` change impacts `resource-header`, those changes come together
+- Avoids cumbersome version mapping
+  - "Elements 0.3.0 is Spec 0.1.0 compliant. UI-Kit is Spec 0.1.0 compliant and Elements 0.3.0 compatible"
+  - "A breaking custom property change in Elements 0.4.0 triggered a breaking change to UI-Kit and is fixed in new major 15.0.0"
+
+## Costs
+
+- Artifacts lose major and `draft` flag version independence
+- Breaking changes are (ideally) deferred to a scheduled release
+- `draft` flag can be a cumbersome union
+
+## Specifics
+
+#### Major
+
+`GM.0.0`
+
+Major is governed by Utility Design.
+It increments on a regular schedule (6 weeks).
+When incremented, all artifacts publish a major version (indifferent to locally breaking changes).
+The first major would start at whichever artifact has the highest version (likely UI-Kit).
+
+_Artifacts can trigger emergent GM bumps, as necessary. In general, they should defer breaking changes to the next GM._
+
+#### Minor
+
+`GM.X.0`
+
+Minor version is governed by artifact needs.
+It increments as additions are made.
+When incremented, no other artifacts are impacted.
+
+#### Patch
+
+`GM.0.X`
+
+Patch version is governed by artifact needs.
+It increments as fixes are made.
+When incremented, no other artifacts are impacted.
+
+#### `draft` flag
+
+`{GM+1}.0.0-draft.x`
+`{GM+1}.0.0-draft.x-x`
+
+`draft` flag is governed Utility Design and artifact needs.
+It targets `GM + 1`.
+It has two fields: `x` and `x-x`.
+The first field increments with Spec drafts.
+The second field increments with proposed braking changes.
+All counters are reset at the next scheduled release.
+
+## Scheduled releases (release trains)
+
+In the event that one artifact changes dramatically but another doesn't empty majors can be uncanny.
+To make sense of this, Major version bumps need to stop indicating `breaking changes` and start indicating `scheduled coordination`.
+
+Say we write a specification for a new element artifacts like Elements and UI-Kit already meet the spec. Great!
+The GM will still increment for all artifacts but now with the confidence that those artifacts are compliant with the spec version they share.
+
+## Failure mode
+
+The failure mode is predictable.
+The GM is semantic versioning applied to multiple artifacts.
+If we decide isolated versioning is better, artifacts can break off from the GM and continue isolated semantic versioning.
+
+## External examples
+
+The clearest example of this strategy are in Rails and React.
+Companion and dependency libraries are versioned together, under one global version.
+
+These projects share a full version because their artifacts live together.
+Because we have deeply divergent, and pre-existing artifacts, UI libraries need to retain ownership of `minor` and `patch` releases.
+
+## Examples
+
+**Without a Global Master**  
+_using latest versions as of 2020-03-21_
+
+```
+v0.0.0                 # Spec starts
+v0.1.0-draft.0         # Spec drafts new element
+v0.1.0-draft.1         # Spec continues drafting element
+v0.2.0                 # Elements gains an un-spec'd component for Accounts dark mode
+v14.2.1                # UI-Kit component API addition
+v15.0.0-alpha.0        # UI-Kit proposes breaking component change to Box component (draft.0 compliant)
+v15.0.0-alpha.1        # UI-Kit introduces breaking component change to Box component (draft.1 compliant)
+v0.1.0-draft.2         # v16 working spec
+v0.3.0-alpha.0         # Elements introduces breaking changes to Avatar custom properties (draft.2 compliant)
+v0.3.0-alpha.1         # Elements extends breaking changes to Avatar custom properties (draft.2 compliant)
+v6.0.0-transitional.4  # Interfaces gains Rails-related feature
+v6.0.0-transitional.5  # Interfaces becomes draft.2 compliant
+v0.1.0-draft.3         # Spec drafts continue
+v15.0.0-alpha.2        # UI-Kit becomes draft.3 compliant (with breaking API changes and feature)
+v0.3.0-alpha.3         # Elements becomes draft.3 compliant (with breaking API changes)
+v6.0.0-transitional.6  # Interfaces becomes draft.3 compliant (with feature additions)
+
+v0.1.0                 # Spec release
+v15.0.0-alpha.3        # UI-kit with Spec@v0.1.0 compliance
+v0.3.0-alpha.4         # Elements with Spec@v0.1.0 compliance
+v6.0.0-transitional.7  # Interfaces with Spec@0.1.0 compliance
+```
+
+**With a Global Master**
+
+```
+v15.0.0            # GM Release train: v15 spec
+v16.0.0-draft.0    # v16 working spec
+v16.0.0-draft.1    # v16 working spec
+v15.1.0            # Elements gains an un-spec'd component for Accounts dark mode
+v15.0.1            # UI-Kit component API addition
+v15.0.1-draft.0-0  # UI-Kit proposes breaking component change to Box component (draft.0 compliant)
+v15.0.1-draft.1-0  # UI-Kit introduces breaking component change to Box component (draft.1 complient)
+v16.0.0-draft.2    # v16 working spec
+v16.1.0-draft.2-0  # Elements introduces breaking changes to Avatar custom properties (draft.2 complient)
+v16.1.0-draft.2-1  # Elements extends braeking changes to Avatar custom properties (draft.2 complient)
+v15.1.0            # Interfaces gains Rails-related fature
+v16.1.0-draft.2    # Interfaces becomes draft.2 complient
+v16.0.0-draft.3    # v16 working spec
+v16.0.1-draft.3-0  # UI-Kit becomes draft.3 complient (with breaking API changes and feature)
+v16.1.0-draft.3-1  # Elements becomes draft.3 complient (with breaking API changes)
+v16.1.0-draft.3    # Interfaces becomes draft.3 complient (with feature additions)
+
+v16.0.0            # GM Release train: v16 spec
+v16.0.0            # UI-kit (spec complient with breaking changes)
+v16.0.0            # Elements (spec complient with breaking changes)
+v16.0.0            # Interfaces (spec complient with additions)
+```
+
+## Notes
+
+Thread: https://pco.slack.com/archives/G01JU3D5YQZ/p1614874384042500
