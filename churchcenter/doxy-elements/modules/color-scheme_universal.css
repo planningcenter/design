@@ -3,25 +3,26 @@ html {
 }
 
 [data-color-scheme] {
-  --surface-1of1--background-color: var(--unstable-monochrome-shade-10);
+  --surface-1of1--background-color: var(--color-tint0);
 
-  --surface-1of2--background-color: var(--unstable-monochrome-shade-8);
-  --surface-2of2--background-color: var(--unstable-monochrome-shade-10);
+  --surface-1of2--background-color: var(--color-tint2);
+  --surface-2of2--background-color: var(--color-tint0);
 
-  --text--color: var(--unstable-monochrome-shade-1);
+  --text--color: var(--color-tint9);
 
-  --heading--color: var(--unstable-monochrome-shade-0);
-  --heading-5--color: var(--unstable-monochrome-shade-3);
+  --heading--color: var(--color-tint10);
+  --heading-5--color: var(--color-tint7);
 
-  --definition-term--color: var(--unstable-monochrome-shade-3);
-  --definition--color: var(--unstable-monochrome-shade-1);
+  --definition-term--color: var(--color-tint7);
+  --definition--color: var(--color-tint9);
 
-  --text-input--border-color: var(--unstable-monochrome-shade-4);
+  --text-input--border-color: var(--color-tint6);
 
   --text-input--outline_focus: #d3eafd;
-  --text-input--box-shadow: inset 0 1px 2px var(--unstable-monochrome-shade-8);
+  --text-input--box-shadow: inset 0 1px 2px var(--color-tint2);
   --text-input--box-shadow_focus: 0px 0px 3px 0 #a3d3fa;
 
-  --select--border-color: var(--unstable-monochrome-shade-4);
-  --button--outline-variant--background-image: linear-gradient(white, white), linear-gradient(black, black);
+  --select--border-color: var(--color-tint6);
+  --button--outline-variant--background-image: linear-gradient(white, white),
+    linear-gradient(black, black);
 }
