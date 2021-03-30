@@ -11,7 +11,9 @@ export function SampleBadgeLayout(props) {
     <div
       style={{
         display: "flex",
-        "--box--margin": "0 0.5rem 0.5rem 0",
+        "--box--margin": "0 0.5rem 0 0",
+        "--box--padding": "0 6px",
+        "--box--border-radius": "4px",
         padding: "1rem",
       }}
       {...props}
@@ -58,7 +60,13 @@ export function SampleBadgeLayout(props) {
 
 <Preview>
   <Story name="badge:size">
-    <SampleBadgeLayout>
+    <SampleBadgeLayout 
+      data-color-scheme="light" 
+      data-contrast="low" 
+      style={{ 
+        "--box--padding": "0 6px", 
+        "--box--border-radius": "3px"
+      }}>
       <span data-badge="size:small" data-box>
         Size: small
       </span>
