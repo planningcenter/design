@@ -1,3 +1,3 @@
 chrome.devtools.panels.elements.createSidebarPane("Planning Center", (pane) => {
-  pane.setObject({ yo: "whatup?" });
+  pane.setPage("elements-pane/elements-pane.html");
 });
