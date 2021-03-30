@@ -1,5 +1,6 @@
 {
   "name": "planningcenter-devtools",
   "manifest_version": 2,
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "devtools_page": "devtools.html"
 }
