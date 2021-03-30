@@ -1,5 +1,8 @@
 function onCreate(pane) {
-  pane.setPage("elements-pane/elements-pane.html");
+  browser.devtools.inspectedWindow.eval("$0.tagName").then((result) => {
+    alert(result);
+    return pane.setPage("elements-pane/elements-pane.html");
+  });
 }
 
 browser.devtools.panels.elements
