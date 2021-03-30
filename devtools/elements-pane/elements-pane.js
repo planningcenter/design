@@ -1,1 +1,3 @@
-document.getElementById("root").innerHTML = "Rendered from elements-pane.js";
+browser.storage.local.get(null).then((result) => {
+  document.getElementById("root").innerHTML = `${result.inspectedElement}`;
+});

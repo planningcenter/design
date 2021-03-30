@@ -1,9 +1,14 @@
 function onCreate(pane) {
   function updateElement() {
-    browser.devtools.inspectedWindow.eval("$0.tagName").then((result) => {
-      alert(result);
-      return pane.setPage("elements-pane/elements-pane.html");
-    });
+    browser.devtools.inspectedWindow
+      .eval("$0.tagName")
+      .then((result, isException) => {
+        if (isException) return sidebar.setObject(isException);
+
+        browser.storage.local.set({ inspectedElement: result }).then(() => {
+          return pane.setPage("elements-pane/elements-pane.html");
+        });
+      });
   }
 
   updateElement();
