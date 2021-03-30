@@ -1,5 +1,6 @@
 @media (prefers-color-scheme: dark) {
   [data-color-scheme~="system"] {
+    background-color: hsl(0 0% 0%);
     color: white;
   }
 }
