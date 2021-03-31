@@ -579,6 +579,75 @@ export function SampleFormLayout({ style, ...props }) {
   </Story>
 </Preview>
 
+### Notice
+
+<Preview>
+  <Story name="notice">
+    <>
+      <div
+        data-color-scheme="dark"
+        data-contrast="low"
+        style={{ 
+          padding: "1rem",
+          "--box--border-radius": "4px",
+          "--box--padding": "1rem",
+          "--box--margin": "0"
+          }}
+      >
+        <div data-notice="alt:warning" data-box>
+          Just letting you know, you should stir the kool-aid before you serve it.
+        </div>
+      </div>
+      <div
+        data-color-scheme="light"
+        data-contrast="low"
+        style={{ 
+          padding: "1rem 1rem 0 1rem",
+          "--box--border-radius": "4px",
+          "--box--padding": "1rem",
+          "--box--margin": "0 0 1rem 0"
+          }}
+      >
+        <div data-notice data-box>
+          You have a form to fill out.
+        </div>
+        <div data-notice="alt:info" data-box>
+          You have a form to fill out.
+        </div>
+        <div data-notice="alt:positive" data-box>
+          Preferences saved
+        </div>
+        <div data-notice="alt:negative" data-box>
+          Your form has errors and could not be submitted.
+        </div>
+        <div data-notice="alt:warning" data-box>
+          Just letting you know, you should stir the kool-aid before you serve it.
+        </div>
+      </div>
+    </>
+  </Story>
+</Preview>
+
+#### Notice: size
+
+<Preview>
+  <Story name="notice:size">
+    <div
+        data-color-scheme="light"
+        data-contrast="low"
+        style={{ 
+          padding: "1rem",
+          "--box--border-radius": "4px",
+          "--box--padding": "0.5rem",
+          }}
+      >
+      <span data-notice="size:small" data-box>
+        Size: small
+      </span>
+    </div>
+  </Story>
+</Preview>
+
 ### Surface
 
 export function SampleSurfaceLayout({ style, ...props }) {
