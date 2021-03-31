@@ -10,7 +10,7 @@
 :root {}
 
 [data-color-scheme="light"] [data-notice~="alt:info"] {
-  --notice--background-color: hsl(207deg 90% 96%);
+  --notice--background-color: hsl(207, 90%, 96%);
 }
 [data-color-scheme="light"] [data-notice~="alt:negative"] {
   --notice--background-color: hsla(1, 83%, 62%, 0.10);
