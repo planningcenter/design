@@ -1,6 +1,6 @@
 {
   "name": "@churchcenter/doxy-elements",
-  "version": "0.0.12-alpha.0",
+  "version": "0.0.12-alpha.1",
   "description": "Doxy system applied to @planningcenter/elements",
   "style": "dist/doxy-elements.css",
   "files": [
