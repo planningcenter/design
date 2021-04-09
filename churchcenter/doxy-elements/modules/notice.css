@@ -1,0 +1,28 @@
+[data-notice] {
+  background-color: var(--notice--background-color, var(--color-tint2));
+  color: var(--notice--color, var(--color-tint9));
+  border-radius: var(--notice--border-radius, 4px);
+  font-size: var(--notice--font-size, 0.875rem);
+  padding: var(--notice--padding, 0 16px);
+  line-height: var(--notice--line-height, 1.25);
+}
+
+:root {}
+
+[data-color-scheme="light"] [data-notice~="alt:info"] {
+  --notice--background-color: hsl(207, 90%, 96%);
+}
+[data-color-scheme="light"] [data-notice~="alt:negative"] {
+  --notice--background-color: hsla(1, 83%, 62%, 0.10);
+}
+[data-color-scheme="light"] [data-notice~="alt:positive"] {
+  --notice--background-color: hsl(120, 36%, 96%);
+}
+[data-color-scheme="light"] [data-notice~="alt:warning"] {
+  --notice--background-color: hsl(39, 89%, 96%);
+}
+
+[data-notice~="size:small"] {
+  --notice--font-size: 0.75rem;
+  --notice--padding: 0.5rem;
+}

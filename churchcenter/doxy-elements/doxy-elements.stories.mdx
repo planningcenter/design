@@ -11,7 +11,9 @@ export function SampleBadgeLayout(props) {
     <div
       style={{
         display: "flex",
-        "--box--margin": "0 0.5rem 0.5rem 0",
+        "--box--margin": "0 0.5rem 0 0",
+        "--box--padding": "0 6px",
+        "--box--border-radius": "4px",
         padding: "1rem",
       }}
       {...props}
@@ -58,7 +60,13 @@ export function SampleBadgeLayout(props) {
 
 <Preview>
   <Story name="badge:size">
-    <SampleBadgeLayout>
+    <SampleBadgeLayout 
+      data-color-scheme="light" 
+      data-contrast="low" 
+      style={{ 
+        "--box--padding": "0 6px", 
+        "--box--border-radius": "3px"
+      }}>
       <span data-badge="size:small" data-box>
         Size: small
       </span>
@@ -133,25 +141,30 @@ export function SampleColorLayout(props) {
   );
 }
 
-export function Color({ bgColor, color, ...props }) {
+export function Color({ bgColor, color, colorName, colorHsl, ...props }) {
   return (
     <div
       style={{
-        backgroundColor: bgColor,
-        alignItems: "center",
+        backgroundColor: `var(${bgColor})`,
         borderRadius: 8,
-        color: color,
+        color: `var(${color})`,
         display: "flex",
+        flexDirection: "column",
         fontSize: 14,
         fontWeight: 500,
-        height: 40,
-        justifyContent: "center",
+        justifyContent: "space-between",
         margin: "0.5rem",
         padding: "1rem",
-        flex: 1,
+        flexBasis: "calc(25% - 3rem)",
       }}
       {...props}
-    />
+    >
+      <div>
+        <strong>{colorName}</strong>
+        <div style={{ paddingTop: 4 }}>HSL({colorHsl})</div>
+      </div>
+      <div style={{ paddingTop: "1rem" }}>{bgColor}</div>
+    </div>
   );
 }
 
@@ -165,96 +178,96 @@ export function Color({ bgColor, color, ...props }) {
       >
         <SampleColorLayout>
           <Color
-            bgColor="var(--unstable-monochrome-shade-0)"
-            color="var(--unstable-monochrome-shade-10)"
-          >
-            0
-          </Color>
+            bgColor="--color-tint10"
+            color="--color-tint0"
+            colorName="Static Gray 98"
+            colorHsl="0, 0%, 98%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-1)"
-            color="var(--unstable-monochrome-shade-10)"
-          >
-            1
-          </Color>
+            bgColor="--color-tint9"
+            color="--color-tint0"
+            colorName="Static Gray 88"
+            colorHsl="0, 0%, 88%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-2)"
-            color="var(--unstable-monochrome-shade-10)"
-          >
-            2
-          </Color>
+            bgColor="--color-tint8"
+            color="--color-tint0"
+            colorName="Static Gray 68"
+            colorHsl="0, 0%, 68%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-3)"
-            color="var(--unstable-monochrome-shade-10)"
-          >
-            3
-          </Color>
+            bgColor="--color-tint7"
+            color="--color-tint0"
+            colorName="Static Gray 50"
+            colorHsl="0, 0%, 50%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-4)"
-            color="var(--unstable-monochrome-shade-0)"
-          >
-            4
-          </Color>
+            bgColor="--color-tint6"
+            color="--color-tint10"
+            colorName="Static Gray 32"
+            colorHsl="0, 0%, 32%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-5)"
-            color="var(--unstable-monochrome-shade-0)"
-          >
-            5
-          </Color>
+            bgColor="--color-tint5"
+            color="--color-tint10"
+            colorName="Static Gray 24"
+            colorHsl="0, 0%, 24%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-6)"
-            color="var(--unstable-monochrome-shade-0)"
-          >
-            6
-          </Color>
+            bgColor="--color-tint4"
+            color="--color-tint10"
+            colorName="Static Gray 19"
+            colorHsl="0, 0%, 19%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-7)"
-            color="var(--unstable-monochrome-shade-0)"
-          >
-            7
-          </Color>
+            bgColor="--color-tint3"
+            color="--color-tint10"
+            colorName="Static Gray 17"
+            colorHsl="0, 0%, 17%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-8)"
-            color="var(--unstable-monochrome-shade-0)"
-          >
-            8
-          </Color>
+            bgColor="--color-tint2"
+            color="--color-tint10"
+            colorName="Static Gray 15"
+            colorHsl="0, 0%, 15%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-9)"
-            color="var(--unstable-monochrome-shade-0)"
-          >
-            9
-          </Color>
+            bgColor="--color-tint1"
+            color="--color-tint10"
+            colorName="Static Gray 12"
+            colorHsl="0, 0%, 12%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-10)"
-            color="var(--unstable-monochrome-shade-0)"
-          >
-            10
-          </Color>
+            bgColor="--color-tint0"
+            color="--color-tint10"
+            colorName="Static Gray 7"
+            colorHsl="0, 0%, 7%"
+          />
           <div style={{ display: "flex", width: "100%" }}>
             <Color
-              bgColor="var(--color-topaz)"
-              color="var(--unstable-monochrome-shade-0)"
-            >
-              Topaz
-            </Color>
+              bgColor="--color-topaz"
+              color="--color-tint10"
+              colorName="Topaz Dark"
+              colorHsl="207, 90%, 51%"
+            />
             <Color
-              bgColor="var(--color-turquoise)"
-              color="var(--unstable-monochrome-shade-0)"
-            >
-              Turquoise
-            </Color>
+              bgColor="--color-turquoise"
+              color="--color-tint10"
+              colorName="Turquoise Dark"
+              colorHsl="172, 52%, 41%"
+            />
             <Color
-              bgColor="var(--color-emerald)"
-              color="var(--unstable-monochrome-shade-0)"
-            >
-              Emerald
-            </Color>
+              bgColor="--color-emerald"
+              color="--color-tint10"
+              colorName="Emerald Dark"
+              colorHsl="122, 48%, 57%"
+            />
             <Color
-              bgColor="var(--color-ruby)"
-              color="var(--unstable-monochrome-shade-0)"
-            >
-              Ruby
-            </Color>
+              bgColor="--color-ruby"
+              color="--color-tint10"
+              colorName="Ruby Dark"
+              colorHsl="1, 75%, 55%"
+            />
           </div>
         </SampleColorLayout>
       </div>
@@ -265,96 +278,102 @@ export function Color({ bgColor, color, ...props }) {
       >
         <SampleColorLayout>
           <Color
-            bgColor="var(--unstable-monochrome-shade-0)"
-            color="var(--unstable-monochrome-shade-10)"
-          >
-            0
-          </Color>
+            bgColor="--color-tint10"
+            color="--color-tint0"
+            colorName="Static Gray 12"
+            colorHsl="0, 0%, 12%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-1)"
-            color="var(--unstable-monochrome-shade-10)"
-          >
-            1
-          </Color>
+            bgColor="--color-tint9"
+            color="--color-tint0"
+            colorName="Static Gray 24"
+            colorHsl="0, 0%, 24%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-2)"
-            color="var(--unstable-monochrome-shade-10)"
-          >
-            2
-          </Color>
+            bgColor="--color-tint8"
+            color="--color-tint0"
+            colorName="Static Gray 45"
+            colorHsl="0, 0%, 45%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-3)"
-            color="var(--unstable-monochrome-shade-10)"
-          >
-            3
-          </Color>
+            bgColor="--color-tint7"
+            color="--color-tint0"
+            colorName="Static Gray 62"
+            colorHsl="0, 0%, 62%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-4)"
-            color="var(--unstable-monochrome-shade-0)"
-          >
-            4
-          </Color>
+            bgColor="--color-tint6"
+            color="--color-tint10"
+            colorName="Static Gray 81"
+            colorHsl="0, 0%, 81%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-5)"
-            color="var(--unstable-monochrome-shade-0)"
-          >
-            5
-          </Color>
+            bgColor="--color-tint5"
+            color="--color-tint10"
+            colorName="Static Gray 88"
+            colorHsl="0, 0%, 88%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-6)"
-            color="var(--unstable-monochrome-shade-0)"
-          >
-            6
-          </Color>
+            bgColor="--color-tint4"
+            color="--color-tint10"
+            colorName="Static Gray 93"
+            colorHsl="0, 0%, 93%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-7)"
-            color="var(--unstable-monochrome-shade-0)"
-          >
-            7
-          </Color>
+            bgColor="--color-tint3"
+            color="--color-tint10"
+            colorName="Static Gray 95"
+            colorHsl="0, 0%, 95%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-8)"
-            color="var(--unstable-monochrome-shade-0)"
-          >
-            8
-          </Color>
+            bgColor="--color-tint2"
+            color="--color-tint10"
+            colorName="Static Gray 97"
+            colorHsl="0, 0%, 97%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-9)"
-            color="var(--unstable-monochrome-shade-0)"
-          >
-            9
-          </Color>
+            bgColor="--color-tint1"
+            color="--color-tint10"
+            colorName="Static Gray 98"
+            colorHsl="0, 0%, 98%"
+          />
           <Color
-            bgColor="var(--unstable-monochrome-shade-10)"
-            color="var(--unstable-monochrome-shade-0)"
-          >
-            10
-          </Color>
+            bgColor="--color-tint0"
+            color="--color-tint10"
+            colorName="Static Gray 100"
+            colorHsl="0, 0%, 100%"
+          />
           <div style={{ display: "flex", width: "100%" }}>
             <Color
-              bgColor="var(--color-topaz)"
-              color="var(--unstable-monochrome-shade-10)"
-            >
-              Topaz
-            </Color>
+              bgColor="--color-topaz"
+              color="--color-tint10"
+              colorName="Topaz"
+              colorHsl="207, 90%, 61%"
+            />
             <Color
-              bgColor="var(--color-turquoise)"
-              color="var(--unstable-monochrome-shade-10)"
-            >
-              Turquoise
-            </Color>
+              bgColor="--color-turquoise"
+              color="--color-tint10"
+              colorName="Turquoise"
+              colorHsl="174, 42%, 51%"
+            />
             <Color
-              bgColor="var(--color-emerald)"
-              color="var(--unstable-monochrome-shade-10)"
-            >
-              Emerald
-            </Color>
+              bgColor="--color-emerald"
+              color="--color-tint10"
+              colorName="Emerald"
+              colorHsl="122, 38%, 57%"
+            />
             <Color
-              bgColor="var(--color-ruby)"
-              color="var(--unstable-monochrome-shade-10)"
-            >
-              Ruby
-            </Color>
+              bgColor="--color-ruby"
+              color="--color-tint10"
+              colorName="Ruby"
+              colorHsl="1, 83%, 62%"
+            />
+            <Color
+              bgColor="--color-citrine"
+              color="--color-tint10"
+              colorName="Citrine"
+              colorHsl="42, 90%, 60%"
+            />
           </div>
         </SampleColorLayout>
       </div>
@@ -565,6 +584,75 @@ export function SampleFormLayout({ style, ...props }) {
         </div>
       </div>
     </>
+  </Story>
+</Preview>
+
+### Notice
+
+<Preview>
+  <Story name="notice">
+    <>
+      <div
+        data-color-scheme="dark"
+        data-contrast="low"
+        style={{ 
+          padding: "1rem",
+          "--box--border-radius": "4px",
+          "--box--padding": "1rem",
+          "--box--margin": "0"
+          }}
+      >
+        <div data-notice="alt:warning" data-box>
+          Just letting you know, you should stir the kool-aid before you serve it.
+        </div>
+      </div>
+      <div
+        data-color-scheme="light"
+        data-contrast="low"
+        style={{ 
+          padding: "1rem 1rem 0 1rem",
+          "--box--border-radius": "4px",
+          "--box--padding": "1rem",
+          "--box--margin": "0 0 1rem 0"
+          }}
+      >
+        <div data-notice data-box>
+          You have a form to fill out.
+        </div>
+        <div data-notice="alt:info" data-box>
+          You have a form to fill out.
+        </div>
+        <div data-notice="alt:positive" data-box>
+          Preferences saved
+        </div>
+        <div data-notice="alt:negative" data-box>
+          Your form has errors and could not be submitted.
+        </div>
+        <div data-notice="alt:warning" data-box>
+          Just letting you know, you should stir the kool-aid before you serve it.
+        </div>
+      </div>
+    </>
+  </Story>
+</Preview>
+
+#### Notice: size
+
+<Preview>
+  <Story name="notice:size">
+    <div
+        data-color-scheme="light"
+        data-contrast="low"
+        style={{ 
+          padding: "1rem",
+          "--box--border-radius": "4px",
+          "--box--padding": "0.5rem",
+          }}
+      >
+      <span data-notice="size:small" data-box>
+        Size: small
+      </span>
+    </div>
   </Story>
 </Preview>
 

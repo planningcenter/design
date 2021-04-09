@@ -1,32 +1,40 @@
 /* color system */
 [data-color-scheme="light"][data-contrast="low"] {
-  --color-topaz: #42a5f5;
-  --color-turquoise: #4db6ac;
-  --color-emerald: #66bb6a;
-  --color-ruby: #ef5350;
+  --color-topaz: hsl(207, 90%, 61%);
+  --color-turquoise: hsl(174, 42%, 51%);
+  --color-tourmaline: hsl(174, 60%, 38%);
+  --color-emerald: hsl(122, 38%, 57%);
+  --color-ruby: hsl(1, 83%, 62%);
+  --color-citrine: hsl(42, 90%, 60%);
+  --color-marigold: var(--color-citrine);
 
-  --unstable-monochrome-shade-0: hsl(0, 0%, 12%);
-  --unstable-monochrome-shade-1: hsl(0, 0%, 24%);
-  --unstable-monochrome-shade-2: hsl(0, 0%, 45%);
-  --unstable-monochrome-shade-3: hsl(0, 0%, 62%);
-  --unstable-monochrome-shade-4: hsl(0, 0%, 81%);
-  --unstable-monochrome-shade-5: hsl(0, 0%, 88%);
-  --unstable-monochrome-shade-6: hsl(0, 0%, 93%);
-  --unstable-monochrome-shade-7: hsl(0, 0%, 95%);
-  --unstable-monochrome-shade-8: hsl(0, 0%, 97%);
-  --unstable-monochrome-shade-9: hsl(0, 0%, 98%);
-  --unstable-monochrome-shade-10: hsl(0, 0%, 100%);
+  --color-tint10: hsl(0, 0%, 12%);
+  --color-tint9: hsl(0, 0%, 24%);
+  --color-tint8: hsl(0, 0%, 45%);
+  --color-tint7: hsl(0, 0%, 62%);
+  --color-tint6: hsl(0, 0%, 81%);
+  --color-tint5: hsl(0, 0%, 88%);
+  --color-tint4: hsl(0, 0%, 93%);
+  --color-tint3: hsl(0, 0%, 95%);
+  --color-tint2: hsl(0, 0%, 97%);
+  --color-tint1: hsl(0, 0%, 98%);
+  --color-tint0: hsl(0, 0%, 100%);
 }
 
 /* theme-specific elements */
 [data-color-scheme="light"][data-contrast="low"] {
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(0, 0%, 26%);
+  background-color: var(--color-tint0);
+  color: var(--color-tint9);
 
-  --badge--background-color: var(--unstable-monochrome-shade-7);
-  --badge--color: var(--unstable-monochrome-shade-2);
+  --badge--background-color: var(--color-tint3);
+  --badge--color: var(--color-tint8);
 
-  --button--outline-variant--background-image: linear-gradient(white, white), linear-gradient(135deg, var(--color-turquoise) 0%, var(--color-emerald) 100%);
+  --button--outline-variant--background-image: linear-gradient(white, white),
+    linear-gradient(
+      135deg,
+      var(--color-turquoise) 0%,
+      var(--color-emerald) 100%
+    );
 
   --select--background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='-7 -7  30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.55504 10.5092C7.75343 10.7608 8.13399 10.7635 8.33592 10.5147L11.3385 6.81508C11.6037 6.48828 11.3711 6 10.9503 6H5.03091C4.61331 6 4.37972 6.48163 4.63826 6.80956L7.55504 10.5092Z' fill='%23737373'/%3E%3C/svg%3E%0A");
 }
