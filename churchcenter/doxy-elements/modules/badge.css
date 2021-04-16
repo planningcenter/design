@@ -1,6 +1,6 @@
 [data-badge] {
   background-color: var(--badge--background-color, var(--color-tint5));
-  color: var(--badge--color, var(--color-tint8));
+  color: var(--badge--color, var(--color-tint2));
   border-radius: var(--badge--border-radius, 4px);
   display: var(--badge--display, inline-block);
   font-size: var(--badge--font-size, 0.75rem);

@@ -95,7 +95,7 @@ a[data-button] {
 }
 
 [data-button~="action:default"][data-button~="variant:text-only"] {
-  --button--color: var(--color-tint8);
+  --button--color: var(--color-tint2);
 }
 
 [data-button~="action:destroy"][data-button~="variant:text-only"] {

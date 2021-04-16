@@ -8,26 +8,26 @@
   --color-citrine: hsl(42, 90%, 60%);
   --color-marigold: var(--color-citrine);
 
-  --color-tint10: hsl(0, 0%, 12%);
-  --color-tint9: hsl(0, 0%, 24%);
-  --color-tint8: hsl(0, 0%, 45%);
-  --color-tint7: hsl(0, 0%, 62%);
-  --color-tint6: hsl(0, 0%, 81%);
+  --color-tint0: hsl(0, 0%, 12%);
+  --color-tint1: hsl(0, 0%, 24%);
+  --color-tint2: hsl(0, 0%, 45%);
+  --color-tint3: hsl(0, 0%, 62%);
+  --color-tint4: hsl(0, 0%, 81%);
   --color-tint5: hsl(0, 0%, 88%);
-  --color-tint4: hsl(0, 0%, 93%);
-  --color-tint3: hsl(0, 0%, 95%);
-  --color-tint2: hsl(0, 0%, 97%);
-  --color-tint1: hsl(0, 0%, 98%);
-  --color-tint0: hsl(0, 0%, 100%);
+  --color-tint6: hsl(0, 0%, 93%);
+  --color-tint7: hsl(0, 0%, 95%);
+  --color-tint8: hsl(0, 0%, 97%);
+  --color-tint9: hsl(0, 0%, 98%);
+  --color-tint10: hsl(0, 0%, 100%);
 }
 
 /* theme-specific elements */
 [data-color-scheme="light"][data-contrast="low"] {
-  background-color: var(--color-tint0);
-  color: var(--color-tint9);
+  background-color: var(--color-tint10);
+  color: var(--color-tint1);
 
-  --badge--background-color: var(--color-tint3);
-  --badge--color: var(--color-tint8);
+  --badge--background-color: var(--color-tint7);
+  --badge--color: var(--color-tint2);
 
   --button--outline-variant--background-image: linear-gradient(white, white),
     linear-gradient(

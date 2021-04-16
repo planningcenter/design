@@ -1,6 +1,6 @@
 [data-notice] {
-  background-color: var(--notice--background-color, var(--color-tint2));
-  color: var(--notice--color, var(--color-tint9));
+  background-color: var(--notice--background-color, var(--color-tint8));
+  color: var(--notice--color, var(--color-tint1));
   border-radius: var(--notice--border-radius, 4px);
   font-size: var(--notice--font-size, 0.875rem);
   padding: var(--notice--padding, 0 16px);
