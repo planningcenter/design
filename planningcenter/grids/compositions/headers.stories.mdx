@@ -1,7 +1,7 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 
 import "../../grids/person-header/person-header.css";
-import "../../grids/tab-header/tab-header.css";
+import "../../grids/horizontal-main-nav/horizontal-main-nav.css";
 import "../../grids/title-header/title-header.css";
 import "../../elements/avatar/avatar.css";
 import "../../elements/text/text.css";
@@ -9,34 +9,50 @@ import "../../elements/heading/heading.css";
 import "../../typeface/sans-serif.css";
 import image from "../../../static/200x300_kitten.jpeg";
 
-<Meta title="Compositions/headers"  />
+<Meta title="Grids/Compositions/headers" />
 
-# Person Header w/ Tabbed Navigation
+# Person Resource Header
 
 <Preview>
-  <Story name="Person Header with Tabbed Navigation">
+  <Story name="Person Resource Header">
     <header style={{ backgroundColor: "pink" }} className="sans-serif">
       <div data-person-header--container>
-        <img data-person-header--avatar data-avatar src={image} alt="kitten das robot" />
-        <div data-person-header--detail style={{ color: "hsla(0, 0%, 0%, .7)"}}>
-          <h1 data-person-header--heading data-heading>Kitty das Robot</h1>
+        <img
+          data-person-header--avatar
+          data-avatar
+          src={image}
+          alt="kitten das robot"
+        />
+        <div
+          data-person-header--detail
+          style={{ color: "hsla(0, 0%, 0%, .7)" }}
+        >
+          <h1 data-person-header--heading data-heading>
+            Kitty das Robot
+          </h1>
           <span data-text>kittydasrobot@email.com</span>
         </div>
       </div>
-      <div data-tab-header--container>
-        <div data-tab-header--tab-group>
-          <a href="#" data-tab-header--tab data-vertical-tab="target">
-            Schedule
-          </a>
-          <a href="#" data-tab-header--tab data-vertical-tab>
-            Household
-          </a>
-        </div>
-        <div data-tab-header--action-group>
-          <button href="#" data-tab-header--action>
+      <div data-horizontal-main-nav--container>
+        <nav aria-label="Kitty das Robot, person record">
+          <ul data-horizontal-main-nav--link-group>
+            <li>
+              <a data-horizontal-main-nav--link aria-current href="#">
+                Schedule
+              </a>
+            </li>
+            <li>
+              <a data-horizontal-main-nav--link href="#">
+                Household
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div data-horizontal-main-nav--action-group>
+          <button href="#" data-horizontal-main-nav--action>
             Other
           </button>
-          <button type="button" data-tab-header--action>
+          <button type="button" data-horizontal-main-nav--action>
             Add family member
           </button>
         </div>
@@ -45,14 +61,16 @@ import image from "../../../static/200x300_kitten.jpeg";
   </Story>
 </Preview>
 
-# Title Header w/ Tabbed Navigation
+# Resource Header
 
 <Preview>
-  <Story name="Title Header with Tabbed Navigation">
+  <Story name="Resource Header">
     <header style={{ backgroundColor: "pink" }} className="sans-serif">
       <div data-title-header--container>
-        <div data-title-header--detail style={{ color: "hsla(0, 0%, 0%, .7)"}}>
-          <h1 data-title-header--heading data-heading>Calendar</h1>
+        <div data-title-header--detail style={{ color: "hsla(0, 0%, 0%, .7)" }}>
+          <h1 data-title-header--heading data-heading>
+            Calendar
+          </h1>
         </div>
         <div data-title-header--action-group>
           <button data-title-header--action type="button">
@@ -60,15 +78,21 @@ import image from "../../../static/200x300_kitten.jpeg";
           </button>
         </div>
       </div>
-      <div data-tab-header--container>
-        <div data-tab-header--tab-group style={{ "--vertical-tab--font-size": "0.875rem" }}>
-          <a href="#" data-tab-header--tab data-vertical-tab="target">
-            Events
-          </a>
-          <a hrf="#" data-tab-header--tab data-vertical-tab>
-            Tags
-          </a>
-        </div>
+      <div data-horizontal-main-nav--container>
+        <nav aria-label="Kitty das Robot, person record">
+          <ul data-horizontal-main-nav--link-group>
+            <li>
+              <a data-horizontal-main-nav--link aria-current href="#">
+                Events
+              </a>
+            </li>
+            <li>
+              <a data-horizontal-main-nav--link href="#">
+                Tags
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   </Story>

@@ -1,0 +1,85 @@
+[data-horizontal-main-nav--container] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  overflow-x: auto;
+}
+
+[data-horizontal-main-nav--link-group],
+[data-horizontal-main-nav--action-group] {
+  grid-auto-flow: column;
+  display: grid;
+  gap: 0.25rem;
+}
+
+ul[data-horizontal-main-nav--link-group],
+ul[data-horizontal-main-nav--action-group] {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+[data-horizontal-main-nav--link] {
+  background-color: var(
+    --horizontal-main-nav--link--background-color,
+    hsla(255, 100%, 100%, 0.45)
+  );
+  color: var(--horizontal-main-nav--link--color, hsla(0, 0%, 0%, 0.6));
+  font-size: 0.875rem;
+
+  transition: background-color ease-in-out 200ms;
+
+  display: block;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  line-height: 2.5rem;
+  text-decoration: none;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+[data-horizontal-main-nav--link]:not([aria-current="page"]):not([aria-disabled="true"]):hover {
+  --horizontal-main-nav--link--background-color: hsla(255, 100%, 100%, 0.65);
+}
+
+[data-horizontal-main-nav--link]:not([aria-current="page"]):not([aria-disabled="true"]):active {
+  --horizontal-main-nav--link--background-color: hsla(255, 100%, 100%, 0.85);
+  --horizontal-main-nav--link--color: hsla(0, 0%, 0%, 0.7);
+}
+
+[data-horizontal-main-nav--link]:not([aria-current="page"]):not([aria-disabled="true"]):active {
+  --horizontal-main-nav--link--background-color: hsla(255, 100%, 100%, 0.85);
+  --horizontal-main-nav--link--color: hsla(0, 0%, 0%, 0.7);
+}
+
+[aria-disabled][data-horizontal-main-nav--link] {
+  cursor: not-allowed;
+}
+
+[data-horizontal-main-nav--link][aria-current="page"] {
+  --horizontal-main-nav--link--background-color: hsl(0, 100%, 100%);
+  --horizontal-main-nav--link--color: hsla(0, 0%, 0%, 0.8);
+}
+
+[data-horizontal-main-nav--link-icon] {
+  margin-left: 0.5rem;
+  vertical-align: top;
+}
+
+[data-horizontal-main-nav--link-augmenter] {
+  margin-left: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.675rem;
+  background-color: hsla(0, 0%, 0%, 0.1);
+  vertical-align: top;
+}
+
+[data-horizontal-main-nav--action] {
+  --horizontal-main-nav--action--height: 2rem;
+  white-space: nowrap;
+}
