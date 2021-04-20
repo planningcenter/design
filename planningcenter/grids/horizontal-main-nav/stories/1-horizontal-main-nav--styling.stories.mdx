@@ -1,0 +1,35 @@
+import { Meta, Story, Canvas, Props } from "@storybook/addon-docs/blocks";
+
+import TabbedNavigation, * as HorizontalMainNav from "../horizontal-main-nav.tsx";
+import "../horizontal-main-nav.css";
+
+<Meta title="Grids/Horizontal Main Nav/Styling" />
+
+# Styling
+
+## Custom properties
+
+These CSS custom properties are made available for product integrations.  
+The defaults might not provide prefect accessibility against your product's brand color.
+
+| Custom properties                                                               |
+| :------------------------------------------------------------------------------ |
+| `--horizontal-main-nav--link--background-color: hsla( 255, 100%, 100%, 0.45 );` |
+| `--horizontal-main-nav--link--color: hsla(0, 0%, 0%, 0.6);`                     |
+| `--horizontal-main-nav--action--height: 2rem;`                                  |
+
+## Selectors
+
+This the full list of global element selectors used by Horizontal Main Nav.  
+Avoid using using these selectors in product-side code.  
+Where new features might require selection, create and use a purpose-build selector as this API might change from major version to major version.
+
+| Selector                                   |
+| :----------------------------------------- |
+| `data-horizontal-main-nav--container`      |
+| `data-horizontal-main-nav--link-group`     |
+| `data-horizontal-main-nav--link`           |
+| `data-horizontal-main-nav--link-augmenter` |
+| `data-horizontal-main-nav--action-group`   |
+| `data-horizontal-main-nav--action`         |
+| `aria-current="page"`                      |

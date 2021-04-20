@@ -1,0 +1,137 @@
+import { Meta, Story, Canvas, Props } from "@storybook/addon-docs/blocks";
+
+import HorizontalMainNav from "../horizontal-main-nav.tsx";
+import "../horizontal-main-nav.css";
+
+import { SampleContainer } from "./helpers.tsx";
+
+<Meta title="Grids/Horizontal Main Nav/Components" />
+
+# Horizontal Main Nav: Components
+
+## React
+
+There is one component exported for implementation convenince.
+
+Sample
+
+<Canvas>
+  <SampleContainer>
+    <HorizontalMainNav
+      id="a-discrete-id"
+      label="Sample resource"
+      navItems={[
+        <a key="current" href="#" aria-current={true}>
+          Current
+        </a>,
+        <a key="occluded" href="#">
+          Occluded
+        </a>,
+      ]}
+      actionItems={[<button>Action 1</button>, <button>Action 2</button>]}
+    />
+  </SampleContainer>
+</Canvas>
+
+### Interface
+
+<Props of={HorizontalMainNav} />
+
+### Implementation
+
+A default composition of Horizontal Main Nav is provided as a convenience for the majority of cases.
+
+This sample shows a complete use of the available control props.
+
+Note:
+
+- `label` is used to construct the read `aria-label` of the nested `<nav>` element
+- `id` is applied to the container and used to further specify aria-label linking of nav items
+- `navItems` and `actionItems` can render items in any mix of the following techniques:
+  - props object, e.g., `{ as: ReactRouter.Link, children: "My 'Tab'", "aria-current": true }`
+    - `data-horizontal-main-nav--link` is automatically applied
+  - React Element
+    - Be sure to provide a discrete `key`
+    - `data-horizontal-main-nav--link` is automatically applied
+  - React Fragment
+    - This is effectively opting out. Whatever you provide will be passed thru
+
+## Array
+
+Provide an Array of React Elements and/or React element props to `navItems|actionItems`. All styling selectors will be applied.
+
+<Canvas>
+  <Story name="Default — Array">
+    <SampleContainer>
+      <HorizontalMainNav
+        id="a-discrete-id"
+        label="Sample resource"
+        navItems={[
+          {
+            href: "#",
+            children: "Current",
+            "aria-current": true,
+          },
+          <a key="elements-too" href="#">
+            Occluded
+          </a>,
+        ]}
+        actionItems={[
+          { as: "button", children: "Action 1" },
+          <button data-horizontal-main-nav--action>Action 2</button>,
+        ]}
+      />
+    </SampleContainer>
+  </Story>
+</Canvas>
+
+## Fragment
+
+Provide React Fragment to `navItems|actionItems` will opt you out of any stylings. What you pass in is what you get. This is useful if you need to break from standard styling.
+
+<Canvas>
+  <Story name="Default — Fragment">
+    <SampleContainer>
+      <HorizontalMainNav
+        label="Sample resource"
+        navItems={
+          <>
+            <a aria-current="page" href="#">
+              Current
+            </a>
+            <a href="#">Occluded</a>
+          </>
+        }
+        actionItems={
+          <>
+            <button>Action 1</button>
+            <button>Action 2</button>
+          </>
+        }
+      />
+    </SampleContainer>
+  </Story>
+</Canvas>
+
+## Children
+
+Provide children to `HorizontalMainNav` to fully opt-out of any conveniences.
+
+<Canvas>
+  <Story name="Default Children">
+    <SampleContainer>
+      <HorizontalMainNav>
+        <nav aria-label="Sample resource" id="my-sample-resource">
+          <ul aria-labelledby="my-sample-resource">
+            <li>
+              <button>Buttons</button>
+            </li>
+            <li>
+              <button>Instead</button>
+            </li>
+          </ul>
+        </nav>
+      </HorizontalMainNav>
+    </SampleContainer>
+  </Story>
+</Canvas>
