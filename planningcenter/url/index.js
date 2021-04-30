@@ -3,9 +3,9 @@ export default env => appName => {
 
   switch (env) {
     case "production":
-      return `https://${appName}.planningcenteronline.com`;
+      return `https://${appName}.${domain()}`;
     case "staging":
-      return `https://${appName}-staging.planningcenteronline.com`;
+      return `https://${appName}-staging.${domain()}`;
     case "development":
       let tld = "test";
 
@@ -22,6 +22,16 @@ export default env => appName => {
     case "test":
       return `http://${appName}.pco.test`;
     default:
-      return `http://${appName}.planningcenteronline.com`;
+      return `http://${appName}.${domain()}`;
   }
 };
+
+const domain = () => {
+  const result = location.hostname.match(/planningcenter(online)?.com/)
+
+  if (result === null) {
+    return "planningcenteronline.com"
+  } else {
+    return result[0]
+  }
+}
