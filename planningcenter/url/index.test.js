@@ -59,3 +59,45 @@ test("staging url", () => {
   expect(testUrl("resources")).toBe("http://resources.pco.test");
   expect(testUrl("services")).toBe("http://services.pco.test");
 });
+
+describe("when the hostname is planningcenter.com", () => {
+  const previousLocation = window.location
+
+  beforeEach(() => {
+    delete window.location
+    window.location = new URL("https://people-staging.planningcenter.com")
+  })
+
+  test("production url", () => {
+    const productionUrl = pcoUrl("production");
+
+    expect(productionUrl("api")).toBe("https://api.planningcenter.com");
+    expect(productionUrl("accounts")).toBe("https://accounts.planningcenter.com");
+    expect(productionUrl("check-ins")).toBe("https://check-ins.planningcenter.com");
+    expect(productionUrl("giving")).toBe("https://giving.planningcenter.com");
+    expect(productionUrl("groups")).toBe("https://groups.planningcenter.com");
+    expect(productionUrl("people")).toBe("https://people.planningcenter.com");
+    expect(productionUrl("registrations")).toBe("https://registrations.planningcenter.com");
+    expect(productionUrl("resources")).toBe("https://resources.planningcenter.com");
+    expect(productionUrl("services")).toBe("https://services.planningcenter.com");
+  })
+
+  test("staging url", () => {
+    const stagingUrl = pcoUrl("staging");
+
+    expect(stagingUrl("api")).toBe("https://api-staging.planningcenter.com");
+    expect(stagingUrl("accounts")).toBe("https://accounts-staging.planningcenter.com");
+    expect(stagingUrl("check-ins")).toBe("https://check-ins-staging.planningcenter.com");
+    expect(stagingUrl("giving")).toBe("https://giving-staging.planningcenter.com");
+    expect(stagingUrl("groups")).toBe("https://groups-staging.planningcenter.com");
+    expect(stagingUrl("people")).toBe("https://people-staging.planningcenter.com");
+    expect(stagingUrl("registrations")).toBe("https://registrations-staging.planningcenter.com");
+    expect(stagingUrl("resources")).toBe("https://resources-staging.planningcenter.com");
+    expect(stagingUrl("services")).toBe("https://services-staging.planningcenter.com");
+  })
+
+  afterEach(() => {
+    delete window.location
+    window.location = previousLocation
+  })
+})
