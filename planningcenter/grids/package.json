@@ -1,6 +1,6 @@
 {
   "name": "@planningcenter/grids",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Shared Planning Center Grids",
   "style": "dist/grids.css",
   "files": [
