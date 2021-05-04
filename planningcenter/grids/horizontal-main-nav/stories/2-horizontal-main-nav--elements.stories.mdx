@@ -2,6 +2,7 @@ import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
 
 import TabbedNavigation, * as HorizontalMainNav from "../horizontal-main-nav.tsx";
 import "../horizontal-main-nav.css";
+import "../../utilities/visually-hidden.css";
 
 import { SampleContainer } from "./helpers.tsx";
 
@@ -245,18 +246,28 @@ Note that, use of an `<ul>` will include disabled links in the count.
 
 ## Link augmenter
 
-`data-horizontal-main-nav--link-augmenter` applies specified styles to link augmentations.
+`data-horizontal-main-nav--link-augmenter` is used to augment a link with temporal information.
+
+Known acceptable uses include:
+
+- Associated resource counter
+- "New" feature call-out
 
 Markup should reflect the separation of the link and augmenter — allowing for discrete labeling.
 
 **Example:**
 
-This example provides a terse screen representation with a more verbose screen-reader presentation.
+This example shows a discrete experiences for both screen and screenreader users:
+
+- Screen: `Tasks (3)`
+- Screenreader: `Link, Task, 3 new`
 
 ```html
 <a data-horizontal-main-nav--link href="#">
   <span>Tasks</span>
-  <span aria-label=", 3 new" data-horizontal-main-nav--link-augmenter> 3 </span>
+  <span data-grids-visually-hidden>, </span>
+  <span data-horizontal-main-nav--link-augmenter>3</span>
+  <span data-grids-visually-hidden>new</span>
 </a>
 ```
 
@@ -267,18 +278,15 @@ This example provides a terse screen representation with a more verbose screen-r
         <nav data-horizontal-main-nav--link-group>
           <a data-horizontal-main-nav--link href="#">
             <span>Tasks</span>
-            <span aria-label=", 3 new" data-horizontal-main-nav--link-augmenter>
-              3
-            </span>
+            <span data-grids-visually-hidden>, </span>
+            <span data-horizontal-main-nav--link-augmenter>3</span>
+            <span data-grids-visually-hidden>new</span>
           </a>
           <a data-horizontal-main-nav--link href="#">
             <span>Tasks</span>
-            <span
-              aria-label=", new feature"
-              data-horizontal-main-nav--link-augmenter
-            >
-              New
-            </span>
+            <span data-grids-visually-hidden>, </span>
+            <span data-horizontal-main-nav--link-augmenter>New</span>
+            <span data-grids-visually-hidden>feature</span>
           </a>
         </nav>
       </div>
