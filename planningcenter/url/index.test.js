@@ -1,103 +1,223 @@
 const pcoUrl = require("./");
 
-test("defaults", () => {
-  expect(pcoUrl()()).toBeUndefined();
+describe("When incomplete arguments given", () => {
+  test("returns undefined when no arguments are given", () => {
+    expect(pcoUrl()()).toBeUndefined();
+  });
+
+  test("returns undefined when only environment is given", () => {
+    expect(pcoUrl("production")()).toBeUndefined();
+    expect(pcoUrl("staging")()).toBeUndefined();
+    expect(pcoUrl("development")()).toBeUndefined();
+    expect(pcoUrl("test")()).toBeUndefined();
+  });
+
+  test("returns undefined when product name is given", () => {
+    expect(pcoUrl()("sample-app-name")).toBeUndefined();
+  });
 });
 
-test("production url", () => {
-  const productionUrl = pcoUrl("production");
+describe("When no domain inferred", () => {
+  describe("and given environment 'production'", () => {
+    test("returns product url using 'https://{product-name}.planningcenteronline.com' scheme", () => {
+      expect(pcoUrl("production")("product-name")).toBe(
+        "https://product-name.planningcenteronline.com"
+      );
+    });
+  });
 
-  expect(productionUrl("api")).toBe("https://api.planningcenteronline.com");
-  expect(productionUrl("accounts")).toBe("https://accounts.planningcenteronline.com");
-  expect(productionUrl("check-ins")).toBe("https://check-ins.planningcenteronline.com");
-  expect(productionUrl("giving")).toBe("https://giving.planningcenteronline.com");
-  expect(productionUrl("groups")).toBe("https://groups.planningcenteronline.com");
-  expect(productionUrl("people")).toBe("https://people.planningcenteronline.com");
-  expect(productionUrl("registrations")).toBe("https://registrations.planningcenteronline.com");
-  expect(productionUrl("resources")).toBe("https://resources.planningcenteronline.com");
-  expect(productionUrl("services")).toBe("https://services.planningcenteronline.com");
+  describe("and given environment 'staging'", () => {
+    test("returns product url using 'https://{product-name}-staging.planningcenteronline.com' scheme", () => {
+      expect(pcoUrl("staging")("product-name")).toBe(
+        "https://product-name-staging.planningcenteronline.com"
+      );
+    });
+  });
 });
 
-test("staging url", () => {
-  const stagingUrl = pcoUrl("staging");
-
-  expect(stagingUrl("api")).toBe("https://api-staging.planningcenteronline.com");
-  expect(stagingUrl("accounts")).toBe("https://accounts-staging.planningcenteronline.com");
-  expect(stagingUrl("check-ins")).toBe("https://check-ins-staging.planningcenteronline.com");
-  expect(stagingUrl("giving")).toBe("https://giving-staging.planningcenteronline.com");
-  expect(stagingUrl("groups")).toBe("https://groups-staging.planningcenteronline.com");
-  expect(stagingUrl("people")).toBe("https://people-staging.planningcenteronline.com");
-  expect(stagingUrl("registrations")).toBe("https://registrations-staging.planningcenteronline.com");
-  expect(stagingUrl("resources")).toBe("https://resources-staging.planningcenteronline.com");
-  expect(stagingUrl("services")).toBe("https://services-staging.planningcenteronline.com");
-});
-
-test("development url", () => {
-  const developmentUrl = pcoUrl("development");
-
-  expect(developmentUrl("api")).toBe("http://api.pco.test");
-  expect(developmentUrl("accounts")).toBe("http://accounts.pco.test");
-  expect(developmentUrl("check-ins")).toBe("http://check-ins.pco.test");
-  expect(developmentUrl("giving")).toBe("http://giving.pco.test");
-  expect(developmentUrl("groups")).toBe("http://groups.pco.test");
-  expect(developmentUrl("people")).toBe("http://people.pco.test");
-  expect(developmentUrl("registrations")).toBe("http://registrations.pco.test");
-  expect(developmentUrl("resources")).toBe("http://resources.pco.test");
-  expect(developmentUrl("services")).toBe("http://services.pco.test");
-});
-
-test("staging url", () => {
-  const testUrl = pcoUrl("test");
-
-  expect(testUrl("api")).toBe("http://api.pco.test");
-  expect(testUrl("accounts")).toBe("http://accounts.pco.test");
-  expect(testUrl("check-ins")).toBe("http://check-ins.pco.test");
-  expect(testUrl("giving")).toBe("http://giving.pco.test");
-  expect(testUrl("groups")).toBe("http://groups.pco.test");
-  expect(testUrl("people")).toBe("http://people.pco.test");
-  expect(testUrl("registrations")).toBe("http://registrations.pco.test");
-  expect(testUrl("resources")).toBe("http://resources.pco.test");
-  expect(testUrl("services")).toBe("http://services.pco.test");
-});
-
-describe("when the hostname is planningcenter.com", () => {
-  const previousLocation = window.location
+describe("When inferred domain is 'planningcenteronline.com'", () => {
+  let previousLocation = window.location;
 
   beforeEach(() => {
-    delete window.location
-    window.location = new URL("https://people-staging.planningcenter.com")
-  })
-
-  test("production url", () => {
-    const productionUrl = pcoUrl("production");
-
-    expect(productionUrl("api")).toBe("https://api.planningcenter.com");
-    expect(productionUrl("accounts")).toBe("https://accounts.planningcenter.com");
-    expect(productionUrl("check-ins")).toBe("https://check-ins.planningcenter.com");
-    expect(productionUrl("giving")).toBe("https://giving.planningcenter.com");
-    expect(productionUrl("groups")).toBe("https://groups.planningcenter.com");
-    expect(productionUrl("people")).toBe("https://people.planningcenter.com");
-    expect(productionUrl("registrations")).toBe("https://registrations.planningcenter.com");
-    expect(productionUrl("resources")).toBe("https://resources.planningcenter.com");
-    expect(productionUrl("services")).toBe("https://services.planningcenter.com");
-  })
-
-  test("staging url", () => {
-    const stagingUrl = pcoUrl("staging");
-
-    expect(stagingUrl("api")).toBe("https://api-staging.planningcenter.com");
-    expect(stagingUrl("accounts")).toBe("https://accounts-staging.planningcenter.com");
-    expect(stagingUrl("check-ins")).toBe("https://check-ins-staging.planningcenter.com");
-    expect(stagingUrl("giving")).toBe("https://giving-staging.planningcenter.com");
-    expect(stagingUrl("groups")).toBe("https://groups-staging.planningcenter.com");
-    expect(stagingUrl("people")).toBe("https://people-staging.planningcenter.com");
-    expect(stagingUrl("registrations")).toBe("https://registrations-staging.planningcenter.com");
-    expect(stagingUrl("resources")).toBe("https://resources-staging.planningcenter.com");
-    expect(stagingUrl("services")).toBe("https://services-staging.planningcenter.com");
-  })
+    delete window.location;
+    window.location = new URL("https://planningcenteronline.com");
+  });
 
   afterEach(() => {
-    delete window.location
-    window.location = previousLocation
-  })
-})
+    delete window.location;
+    window.location = previousLocation;
+  });
+
+  describe("and given environment 'production'", () => {
+    test("returns product url using 'https://{product-name}.planningcenteronline.com' scheme", () => {
+      expect(pcoUrl("production")("product-name")).toBe(
+        "https://product-name.planningcenteronline.com"
+      );
+    });
+  });
+
+  describe("and given environment 'staging'", () => {
+    test("returns product url using 'https://{product-name}-staging.planningcenteronline.com' scheme", () => {
+      expect(pcoUrl("staging")("product-name")).toBe(
+        "https://product-name-staging.planningcenteronline.com"
+      );
+    });
+  });
+});
+
+describe("When inferred domain is 'planningcenter.com'", () => {
+  let previousLocation = window.location;
+
+  beforeEach(() => {
+    delete window.location;
+    window.location = new URL("https://planningcenter.com");
+  });
+
+  afterEach(() => {
+    delete window.location;
+    window.location = previousLocation;
+  });
+
+  describe("and given environment 'production'", () => {
+    test("returns product url using 'https://{product-name}.planningcenter.com' scheme", () => {
+      expect(pcoUrl("production")("product-name")).toBe(
+        "https://product-name.planningcenter.com"
+      );
+    });
+  });
+
+  describe("and given environment 'staging'", () => {
+    test("returns product url using 'https://{product-name}-staging.planningcenter.com' scheme", () => {
+      expect(pcoUrl("staging")("product-name")).toBe(
+        "https://product-name-staging.planningcenter.com"
+      );
+    });
+  });
+});
+
+/*
+The develompent tests flip the concern order from `production|staging` intentionally.
+They are both dynamic buth different in their approach.
+`production|staging` allow allow `planningcenteronline.com` and `planningcenter.com`.
+`development` is open-ended and supports any tld.
+*/
+describe("When given environment 'development'", () => {
+  let previousLocation = window.location;
+
+  describe("and inferred domain is pco.codes", () => {
+    beforeEach(() => {
+      delete window.location;
+      window.location = new URL("http://pco.codes");
+    });
+
+    afterEach(() => {
+      delete window.location;
+      window.location = previousLocation;
+    });
+
+    test("returns product url using 'https://{product-name}.pco.codes' scheme", () => {
+      expect(pcoUrl("development")("product-name")).toBe(
+        "http://product-name.pco.codes"
+      );
+    });
+  });
+
+  describe("and inferred domain is pco.test", () => {
+    beforeEach(() => {
+      delete window.location;
+      window.location = new URL("http://pco.test");
+    });
+
+    afterEach(() => {
+      delete window.location;
+      window.location = previousLocation;
+    });
+
+    test("returns product url using 'https://{product-name}.pco.test' scheme", () => {
+      expect(pcoUrl("development")("product-name")).toBe(
+        "http://product-name.pco.test"
+      );
+    });
+  });
+
+  describe("and inferred domain is localhost", () => {
+    beforeEach(() => {
+      delete window.location;
+      window.location = new URL("http://localhost");
+    });
+
+    afterEach(() => {
+      delete window.location;
+      window.location = previousLocation;
+    });
+
+    test("returns product url using 'https://{product-name}.pco.test' scheme", () => {
+      expect(pcoUrl("development")("product-name")).toBe(
+        "http://product-name.pco.test"
+      );
+    });
+  });
+});
+
+describe("When given environment 'test'", () => {
+  test("development url", () => {
+    expect(pcoUrl("test")("product-name")).toBe("http://product-name.pco.test");
+  });
+});
+
+describe("Assorted smoke-tests", () => {
+  let previousLocation = window.location;
+
+  test.each([
+    ["", "", "https://planningcenteronline.com", undefined],
+    [
+      "services",
+      "production",
+      "https://planningcenteronline.com",
+      "https://services.planningcenteronline.com",
+    ],
+    [
+      "api",
+      "staging",
+      "https://planningcenteronline.com",
+      "https://api-staging.planningcenteronline.com",
+    ],
+    [
+      "publishing",
+      "production",
+      "https://planningcenter.com",
+      "https://publishing.planningcenter.com",
+    ],
+    [
+      "check-ins",
+      "staging",
+      "https://planningcenter.com",
+      "https://check-ins-staging.planningcenter.com",
+    ],
+    ["giving", "development", "http://pco.test", "http://giving.pco.test"],
+    [
+      "calendar",
+      "development",
+      "http://pco.codes",
+      "http://calendar.pco.codes",
+    ],
+    [
+      "registrations",
+      "test",
+      "http://pco.test",
+      "http://registrations.pco.test",
+    ],
+    ["accounts", "test", "http://pco.test", "http://accounts.pco.test"],
+  ])(
+    "product %p, given %p, under domain %p",
+    (product, environment, domain, expected) => {
+      delete window.location;
+      window.location = new URL(domain);
+
+      expect(pcoUrl(environment)(product)).toBe(expected);
+
+      delete window.location;
+      window.location = previousLocation;
+    }
+  );
+});
