@@ -1,7 +1,7 @@
 {
   "name": "@planningcenter/url",
   "version": "2.5.0",
-  "description": "A dumb url origin generator in JS",
+  "description": "url utilities for planning center apps",
   "main": "dist/url.js",
   "source": "index.js",
   "amdName": "PLANNINGCENTER.url",
