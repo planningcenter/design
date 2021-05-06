@@ -20,16 +20,16 @@ describe("When incomplete arguments given", () => {
 describe("When no domain inferred", () => {
   describe("and given environment 'production'", () => {
     test("returns product url using 'https://{product-name}.planningcenteronline.com' scheme", () => {
-      expect(pcoUrl("production")("product-name")).toBe(
-        "https://product-name.planningcenteronline.com"
+      expect(pcoUrl("production")("accounts")).toBe(
+        "https://accounts.planningcenteronline.com"
       );
     });
   });
 
   describe("and given environment 'staging'", () => {
     test("returns product url using 'https://{product-name}-staging.planningcenteronline.com' scheme", () => {
-      expect(pcoUrl("staging")("product-name")).toBe(
-        "https://product-name-staging.planningcenteronline.com"
+      expect(pcoUrl("staging")("accounts")).toBe(
+        "https://accounts-staging.planningcenteronline.com"
       );
     });
   });
@@ -50,16 +50,17 @@ describe("When inferred domain is 'planningcenteronline.com'", () => {
 
   describe("and given environment 'production'", () => {
     test("returns product url using 'https://{product-name}.planningcenteronline.com' scheme", () => {
-      expect(pcoUrl("production")("product-name")).toBe(
-        "https://product-name.planningcenteronline.com"
+      pcoUrl("development");
+      expect(pcoUrl("production")("accounts")).toBe(
+        "https://accounts.planningcenteronline.com"
       );
     });
   });
 
   describe("and given environment 'staging'", () => {
     test("returns product url using 'https://{product-name}-staging.planningcenteronline.com' scheme", () => {
-      expect(pcoUrl("staging")("product-name")).toBe(
-        "https://product-name-staging.planningcenteronline.com"
+      expect(pcoUrl("staging")("accounts")).toBe(
+        "https://accounts-staging.planningcenteronline.com"
       );
     });
   });
@@ -80,16 +81,16 @@ describe("When inferred domain is 'planningcenter.com'", () => {
 
   describe("and given environment 'production'", () => {
     test("returns product url using 'https://{product-name}.planningcenter.com' scheme", () => {
-      expect(pcoUrl("production")("product-name")).toBe(
-        "https://product-name.planningcenter.com"
+      expect(pcoUrl("production")("accounts")).toBe(
+        "https://accounts.planningcenter.com"
       );
     });
   });
 
   describe("and given environment 'staging'", () => {
     test("returns product url using 'https://{product-name}-staging.planningcenter.com' scheme", () => {
-      expect(pcoUrl("staging")("product-name")).toBe(
-        "https://product-name-staging.planningcenter.com"
+      expect(pcoUrl("staging")("accounts")).toBe(
+        "https://accounts-staging.planningcenter.com"
       );
     });
   });
@@ -116,8 +117,8 @@ describe("When given environment 'development'", () => {
     });
 
     test("returns product url using 'https://{product-name}.pco.codes' scheme", () => {
-      expect(pcoUrl("development")("product-name")).toBe(
-        "http://product-name.pco.codes"
+      expect(pcoUrl("development")("accounts")).toBe(
+        "http://accounts.pco.codes"
       );
     });
   });
@@ -134,8 +135,8 @@ describe("When given environment 'development'", () => {
     });
 
     test("returns product url using 'https://{product-name}.pco.test' scheme", () => {
-      expect(pcoUrl("development")("product-name")).toBe(
-        "http://product-name.pco.test"
+      expect(pcoUrl("development")("accounts")).toBe(
+        "http://accounts.pco.test"
       );
     });
   });
@@ -152,8 +153,8 @@ describe("When given environment 'development'", () => {
     });
 
     test("returns product url using 'https://{product-name}.pco.test' scheme", () => {
-      expect(pcoUrl("development")("product-name")).toBe(
-        "http://product-name.pco.test"
+      expect(pcoUrl("development")("accounts")).toBe(
+        "http://accounts.pco.test"
       );
     });
   });
@@ -161,7 +162,7 @@ describe("When given environment 'development'", () => {
 
 describe("When given environment 'test'", () => {
   test("development url", () => {
-    expect(pcoUrl("test")("product-name")).toBe("http://product-name.pco.test");
+    expect(pcoUrl("test")("accounts")).toBe("http://accounts.pco.test");
   });
 });
 
@@ -169,7 +170,6 @@ describe("Assorted smoke-tests", () => {
   let previousLocation = window.location;
 
   test.each([
-    ["", "", "https://planningcenteronline.com", undefined],
     [
       "services",
       "production",
