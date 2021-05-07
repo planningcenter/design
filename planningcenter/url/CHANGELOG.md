@@ -1,3 +1,11 @@
+# 2.6.2
+
+- Export types `Environment` and `Product`
+
+# 2.6.1
+
+- Fix types linking in package.json
+
 # 2.6.1
 
 - Remove extranious dependencies
