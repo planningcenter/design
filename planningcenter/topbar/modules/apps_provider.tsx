@@ -1,10 +1,10 @@
 import * as React from "react";
-import pcoUrl from "./pco_url";
+import pcoUrl, * as PCO_URL from "@planningcenter/url";
 import apiRequest, { Fetch, defaultFetch } from "./api_request";
 
 export class AppsProvider extends React.Component<
   {
-    env: string;
+    env: PCO_URL.Environment;
     formatter?: any;
     configuredFetch?: Fetch;
     render: (apps: object[], callback: any) => React.ReactElement<any>;

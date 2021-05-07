@@ -1,6 +1,6 @@
 import * as React from "react";
 import { PointBreak } from "./display_switch";
-import pcURL from "./pco_url";
+import pcURL, * as PCO_URL from "@planningcenter/url";
 import { X as XSymbol } from "./symbols";
 import apiRequest, { Fetch, defaultFetch } from "./api_request";
 
@@ -22,7 +22,7 @@ function formatter(announcements) {
 
 class Provider extends React.Component<
   {
-    env: string;
+    env: PCO_URL.Environment;
     formatter?: any;
     configuredFetch: Fetch;
     children: (announcements: any, callback: any) => React.ReactElement<any>;
@@ -135,7 +135,7 @@ export class StyleProvider extends React.Component<
 export default class PlatformAnnouncements extends React.Component<
   {
     colors: any;
-    env: string;
+    env: PCO_URL.Environment;
     data: object;
     renderItem?: any;
     configuredFetch?: Fetch;

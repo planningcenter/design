@@ -1,10 +1,10 @@
 import * as React from "react";
-import pcoUrl from "./pco_url";
+import pcoUrl, * as PCO_URL from "@planningcenter/url";
 import apiRequest, { Fetch, defaultFetch } from "./api_request";
 
 export class ConnectedPeopleProvider extends React.Component<
   {
-    env: string;
+    env: PCO_URL.Environment;
     configuredFetch?: Fetch;
     render: (
       connectedPeople: object[],
@@ -85,7 +85,7 @@ export class ConnectedPeopleProvider extends React.Component<
 
   componentDidMount() {
     const connectedPeople = JSON.parse(
-      window.localStorage.getItem("Topbar:ConnectedPeople"),
+      window.localStorage.getItem("Topbar:ConnectedPeople")
     );
 
     if (connectedPeople) return this.setState({ connectedPeople });

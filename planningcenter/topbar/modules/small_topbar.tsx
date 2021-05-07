@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import pcoUrl from "./pco_url";
+import pcoUrl, * as PCO_URL from "@planningcenter/url";
 import getAppsSwitchProductPath from "./get_apps_switch_product_path";
 import { StyledRoot } from "./styled_root";
 import { Unbutton } from "./unbutton";
@@ -50,7 +50,7 @@ function UserMenuAppLockup(props) {
 export class Topbar extends React.Component<
   {
     apps: { attributes: { name: string; url: string } }[];
-    env: string;
+    env: PCO_URL.Environment;
     appName: string;
     routes: any;
     colors: any;

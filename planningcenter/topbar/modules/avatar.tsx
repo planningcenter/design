@@ -1,5 +1,5 @@
 import * as React from "react";
-import pcoUrl from "./pco_url";
+import pcoUrl, * as PCO_URL from "@planningcenter/url";
 
 export function Avatar({
   env,
@@ -7,7 +7,7 @@ export function Avatar({
   style,
   ...nativeProps
 }: {
-  env: string;
+  env: PCO_URL.Environment;
   url?: string;
   style?: object;
 }): JSX.Element {

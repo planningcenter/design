@@ -103,7 +103,6 @@ const apps = [
 const shared = {
   // appName: apps[6].attributes.name,
   appName: "Registrations",
-  env: "development",
   style: {
     zIndex: 1,
   },
@@ -406,6 +405,7 @@ class SampleTopbar extends React.Component<
                       <SmallTopbar
                         {...shared}
                         {...staticData}
+                        env="development"
                         apps={apps}
                         connectedPeople={connectedPeople}
                         userAvatarPath={this.props.userAvatarPath}
@@ -444,6 +444,7 @@ class SampleTopbar extends React.Component<
                   mediumTopbar={() => (
                     <MediumTopbar
                       {...shared}
+                      env="development"
                       requestAppsFetch={appsActions.fetch}
                       userAvatarPath={this.props.userAvatarPath}
                       connectedPeople={connectedPeople}
@@ -490,6 +491,7 @@ class SampleTopbar extends React.Component<
                     <NotSmallTopbar
                       {...shared}
                       {...staticData}
+                      env="development"
                       apps={apps}
                       connectedPeople={connectedPeople}
                       userAvatarPath={this.props.userAvatarPath}
