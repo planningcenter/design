@@ -1,3 +1,11 @@
+# 2.6.4
+
+- Add `"people"` to `Product` type definition
+
+# 2.6.3
+
+- Add `"login"` to `Product` type definition
+
 # 2.6.2
 
 - Export types `Environment` and `Product`
