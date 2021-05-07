@@ -6,6 +6,8 @@ export type Product =
   | "check-ins"
   | "giving"
   | "groups"
+  | "login"
+  | "people"
   | "publishing"
   | "registrations"
   | "services";
