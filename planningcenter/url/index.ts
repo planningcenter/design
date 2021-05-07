@@ -1,5 +1,5 @@
-type Environment = "production" | "staging" | "development" | "test";
-type Product =
+export type Environment = "production" | "staging" | "development" | "test";
+export type Product =
   | "api"
   | "accounts"
   | "calendar"
