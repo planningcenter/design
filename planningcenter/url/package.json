@@ -1,7 +1,7 @@
 {
   "name": "@planningcenter/url",
   "type": "module",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "url utilities for planning center apps",
   "source": "index.ts",
   "main": "./dist/url.js",
