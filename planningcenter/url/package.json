@@ -8,7 +8,7 @@
   "exports": "./dist/url.modern.js",
   "module": "./dist/url.module.js",
   "unpkg": "./dist/url.umd.js",
-  "types": "./dist/url.d.ts",
+  "types": "./dist/index.d.ts",
   "amdName": "PLANNINGCENTER.url",
   "repository": "https://github.com/planningcenter/design.git",
   "author": "Michael Chan <mijoch@gmail.com>",
