@@ -31,8 +31,11 @@ yarn add @planningcenter/topbar
 cd ~/Code/planningcenter/design/planningcenter/topbar
 npm i
 npm run dev
-// server available at http://localhost:9000
 ```
+
+The `dev` script starts a server at [http://localhost:9000](http://localhost:9000).
+
+The [`dev/dev.tsx`](./dev/dev.tsx) is the main dev environment component.
 
 ## Migrate
 
