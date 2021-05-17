@@ -60,3 +60,12 @@ npm install
 lerna bootstrap # install and link all package-local dependencies
 npm run dev
 ```
+
+## Links
+
+* (Chromatic dashboard)[https://www.chromatic.com/builds?appId=5dfa692af1d7e20020141e86]
+
+
+## Team access
+
+* The [DX GitHub Team](https://github.com/orgs/planningcenter/teams/dx/edit) has admin rights to [planningcenter/design](https://github.com/planningcenter/design) and [planningcenter/icons](https://github.com/planningcenter/icons/).
