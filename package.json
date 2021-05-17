@@ -25,8 +25,7 @@
   "scripts": {
     "build": "build-storybook",
     "build-storybook": "npm run build",
-    "dev": "start-storybook -p 8000",
-    "chromatic": "CHROMATIC_APP_CODE=tp4s1pka68p chromatic build --build-script-name build"
+    "dev": "start-storybook -p 8000"
   },
   "prettier": {
     "semi": true,

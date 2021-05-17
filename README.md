@@ -42,7 +42,6 @@ Common scripts:
 
 | File/Dir                                     | Why it's there                                                                                     |
 | :------------------------------------------- | :------------------------------------------------------------------------------------------------- |
-| [.circleci/config.yml](.circleci/config.yml) | [circleci](https://circleci.com)                                                                   |
 | [.storybook/](.storybook/)                   | [Storybook](https://storybook.js.org)                                                              |
 | [lerna.json/](lerna.json)                    | [Storybook](https://lerna.js.org)                                                                  |
 | [.nvmrc](.nvmrc)                             | [nvm](github.com/nvm-sh/nvm). Support for those that work in multiple node environments            |
