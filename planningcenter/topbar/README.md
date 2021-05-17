@@ -25,6 +25,15 @@ When starting a new project (rare), check out these existing Topbar compositions
 yarn add @planningcenter/topbar
 ```
 
+## Develop
+
+```bash
+cd ~/Code/planningcenter/design/planningcenter/topbar
+npm i
+npm run dev
+// server available at http://localhost:9000
+```
+
 ## Migrate
 
 These migration docs will guide you thru the process of updating to recent major releases.
