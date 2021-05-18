@@ -37,6 +37,7 @@ Common scripts:
 | Dir                               | Why it's there                                                                                   |
 | :-------------------------------- | :----------------------------------------------------------------------------------------------- |
 | [planningcenter/](/planningceter) | Packages published to the [`@planningcenter` npm org](https://www.npmjs.com/org/planningcenter). |
+| [churchcenter/](/churchcenter)    | Packages published to the [`@churchcenter` npm org](https://www.npmjs.com/org/churchcenter).     |
 
 ## Configuration
 
