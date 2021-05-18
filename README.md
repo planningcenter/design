@@ -50,7 +50,7 @@ Common scripts:
 
 ## Setup
 
-Requirement: Node 10+
+Requirement: Node 10 (PCO Box standard at time of writing)
 
 ```bash
 npm i -g lerna
