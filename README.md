@@ -21,6 +21,11 @@ Global Design supported packages
 - [@planningcenter/typeface](planningcenter/typeface)
 - [@planningcenter/url](planningcenter/url)
 
+## Deprecated packages
+These links can be used to copy/paste the last existing version:
+
+- [@planningcenter/experimental (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/experimental)
+
 ## Scripts
 
 Common scripts:
