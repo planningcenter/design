@@ -25,6 +25,7 @@ Global Design supported packages
 These links can be used to copy/paste the last existing version:
 
 - [@planningcenter/experimental (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/experimental)
+- [@planningcenter/finder (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/finder)
 - [@planningcenter/ui-kit-elements (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/ui-kit-elements)
 
 ## Scripts
