@@ -2,8 +2,10 @@
 [data-color-scheme="dark"][data-contrast="low"] {
   --color-topaz: hsl(207, 90%, 51%);
   --color-turquoise: hsl(172, 52%, 41%);
+  --color-tourmaline: hsl(174, 72%, 31%);
   --color-emerald: hsl(122, 48%, 57%);
   --color-ruby: hsl(1, 75%, 55%);
+  --color-citrine: hsl(42, 81%, 56%);
 
   --color-tint0: hsl(0, 0%, 98%);
   --color-tint1: hsl(0, 0%, 88%);
