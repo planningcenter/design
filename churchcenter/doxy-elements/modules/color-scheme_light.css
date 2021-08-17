@@ -6,8 +6,7 @@
   --color-emerald: hsl(122, 38%, 57%);
   --color-ruby: hsl(1, 83%, 62%);
   --color-citrine: hsl(42, 90%, 60%);
-  --color-marigold: var(--color-citrine);
-
+  
   --color-tint0: hsl(0, 0%, 12%);
   --color-tint1: hsl(0, 0%, 24%);
   --color-tint2: hsl(0, 0%, 45%);
