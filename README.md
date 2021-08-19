@@ -9,7 +9,6 @@ Global Design supported packages
 ## Packages
 
 - [@planningcenter/browserslist-config](planningcenter/browserslist-config)
-- [@planningcenter/components](planningcenter/components)
 - [@planningcenter/elements](planningcenter/elements)
 - [@planningcenter/grids](planningcenter/grids)
 - [@planningcenter/reach](planningcenter/reach)
