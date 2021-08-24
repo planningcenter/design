@@ -6,13 +6,10 @@
 
 Global Design supported packages
 
-## Public packages
+## Packages
 
 - [@planningcenter/browserslist-config](planningcenter/browserslist-config)
-- [@planningcenter/components](planningcenter/components)
 - [@planningcenter/elements](planningcenter/elements)
-- [@planningcenter/experimetal](planningcenter/experimental)
-- [@planningcenter/finder](planningcenter/finder)
 - [@planningcenter/grids](planningcenter/grids)
 - [@planningcenter/reach](planningcenter/reach)
 - [@planningcenter/sweetalert2](planningcenter/sweetalert2)
@@ -21,12 +18,13 @@ Global Design supported packages
 - [@planningcenter/typeface](planningcenter/typeface)
 - [@planningcenter/url](planningcenter/url)
 
-## Deprecated packages
+### Deprecated packages
 These links can be used to copy/paste the last existing version:
 
 - [@planningcenter/experimental (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/experimental)
 - [@planningcenter/finder (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/finder)
 - [@planningcenter/ui-kit-elements (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/ui-kit-elements)
+- @planningcenter/components (transitioned into @planningcenter/elements)
 
 ## Scripts
 
