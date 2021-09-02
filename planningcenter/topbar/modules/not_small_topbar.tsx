@@ -460,6 +460,10 @@ export class Topbar extends React.Component<
     return this.setState({ routesVisible: true });
   }
 
+  getTextColor() {
+    return this.props.colors.text || "#fff";
+  }
+
   render() {
     const ProfileContainer = ({ component, href, ...nativeProps }) =>
       this.props.linkToProfile ? (
@@ -537,7 +541,7 @@ export class Topbar extends React.Component<
               lineHeight: "32px",
               fontSize: "13px",
               borderRadius: "9999px",
-              color: "white",
+              color: this.getTextColor(),
               backgroundColor: this.props.colors.base1,
               display: "flex",
               ...slightBackgroundTransition,
@@ -860,6 +864,10 @@ export class Route extends React.Component<
       return "transparent";
     };
 
+    const getTextColor = () => {
+      return colors.text || "#fff";
+    }
+
     return (
       <a
         style={{
@@ -870,7 +878,7 @@ export class Route extends React.Component<
           paddingLeft: "12px",
           paddingRight: "12px",
           fontSize: "14px",
-          color: "white",
+          color: getTextColor(),
           fontWeight: 600,
           textDecoration: "none",
           textTransform: "capitalize",
