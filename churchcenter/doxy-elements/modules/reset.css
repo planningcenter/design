@@ -1,0 +1,41 @@
+*, *:before, *:after { box-sizing: inherit }
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+p, ul, ol, blockquote { margin-bottom: 1rem }
+
+ul, ol { padding-left: 2rem }
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: var(--color-tint1);
+  font-family: var(--base-font-family);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+strong {
+  font-weight: 600;
+  -webkit-font-smoothing: auto;
+}
+
+a {
+  color: var(--color-turquoise);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+img { max-width: 100% }
