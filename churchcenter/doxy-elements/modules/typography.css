@@ -1,0 +1,50 @@
+:root {
+  --base-font-family: inherit;
+}
+
+h1, .h1 {
+  color: var(--color-tint0);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.333;
+}
+
+h2, .h2 {
+  color: var(--color-tint0);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.333;
+}
+
+h3, .h3 {
+  color: var(--color-tint0);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.333;
+}
+
+h4, .h4 {
+  color: var(--color-tint0);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.333;
+}
+
+h5, .h5 {
+  color: var(--color-tint3);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+pre {
+  border-radius: 4px;
+  background-color: var(--color-tint8);
+  color: var(--color-tint1);
+  display: block;
+  font-size: 0.875rem;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
