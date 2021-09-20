@@ -1,103 +1,128 @@
-[data-button] {
-  -moz-appearance: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-appearance: none;
-  -webkit-user-select: none;
-  appearance: none;
-  box-sizing: border-box;
-  border-width: var(--button--border-width, 1px);
-  border-style: solid;
-  border-color: var(--button--border-color, fuchsia);
-  background-image: var(--button--background-image);
-  background-color: var(--button--background-color, fuchsia);
-  border-radius: var(--button--border-radius, 4px);
-  color: var(--button--color, blue);
+button, input[type=submit] {
   cursor: pointer;
-  display: inline-block;
-  font-weight: var(--button--font-weight, 600);
-  position: relative;
-  user-select: none;
-  vertical-align: middle;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn {
+  align-items: center;
+  background: linear-gradient(135deg, var(--color-topaz) 0%, var(--color-emerald) 100%);
+  border-radius: 30px;
+  border: 1px solid transparent;
+  color: var(--color-tint10);
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 600;
+  height: 40px;
+  justify-content: center;
+  line-height: 1;
+  padding: 0 2rem;
   white-space: nowrap;
-  transition: 100ms all ease-in-out;
-  font-size: var(--button--font-size, 14px);
-  padding: var(--button--padding, 0 16px);
-  line-height: calc(
-    var(--button--height, 32px) - calc(var(--button--border-width, 1px) * 2)
-  );
-  box-shadow: var(--button--box-shadow);
-  background-image: var(--button--background-image);
-}
-input[type="submit"][data-button] {
-  text-align: center;
-}
-button[data-button] {
-}
-a[data-button] {
-  text-align: center;
-  text-decoration: none;
 }
 
-:root {
-  --button--height: 40px;
-  --button--border-radius: 128px;
-  --button--border-width: 0px;
-  --button--font-size: 1rem;
-  --button--padding: 0 32px;
+/* DISABLED */
+.btn[disabled], 
+.btn.disabled-btn {
+  background-image: none;
+  background: var(--color-tint5);
+  color: var(--color-tint7);
 }
 
-[data-button~="action:default"] {
-  --button--color: white;
-  --button--background-image: linear-gradient(
-    135deg,
-    var(--color-turquoise) 0%,
-    var(--color-emerald) 100%
-  );
-}
-
-[data-button~="action:destroy"] {
-  --button--background-color: var(--color-ruby);
-  --button--background-image: transparent;
-  --button--color: white;
-}
-
-[data-button~="variant:outline"] {
-  --button--background-color: transparent;
-  --button--border-color: transparent;
-  --button--border-width: 2px;
+/* SECONDARY (outlined) */
+.btn.secondary-btn {
+  background-image: linear-gradient(var(--color-tint10), var(--color-tint10)), linear-gradient(135deg, var(--color-topaz) 0%, var(--color-emerald) 100%);
   background-origin: border-box;
   background-clip: padding-box, border-box;
-  border-style: double;
+  border: double 2px transparent;
+  color: var(--color-turquoise);
 }
 
-[data-button~="variant:text-only"] {
-  --button--background-color: transparent;
-  --button--background-image: transparent;
-  --button--padding: 0;
+.btn.secondary-btn.destroy-btn {
+  background-image: linear-gradient(var(--color-tint10), var(--color-tint10)), linear-gradient(135deg, var(--color-ruby) 0%, var(--color-ruby) 100%);
+  color: var(--color-ruby);
 }
 
-[data-button~="size:compact"] {
-  --button--height: 32px;
-  --button--padding: 0 14px;
-  --button--font-size: 0.875rem;
+.btn.secondary-btn.compact-btn, .btn.secondary-btn.minor-btn {
+  background-color: var(--color-tint10);
 }
 
-[data-button~="size:minor"] {
-  --button--height: 24px;
-  --button--padding: 0 12px;
-  --button--font-size: 0.75rem;
+.btn.secondary-btn button, .btn.secondary-btn input[type=submit] {
+  background: none;
+  border: none;
+  color: var(--color-turquoise);
 }
 
-[data-button~="action:default"][data-button~="variant:outline"] {
-  --button--background-image: var(--button--outline-variant--background-image);
-  --button--color: var(--color-turquoise);
+/* DESTROY */
+.btn.destroy-btn {
+  background-image: none;
+  background-color: var(--color-ruby);
 }
 
-[data-button~="action:default"][data-button~="variant:text-only"] {
-  --button--color: var(--color-tint2);
+/* BUTTON IN ALERT */
+.btn.alert-btn {
+  background-image: none;
+  background-color: var(--color-topaz);
 }
 
-[data-button~="action:destroy"][data-button~="variant:text-only"] {
-  --button--color: var(--color-ruby);
+/* COMPACT */
+.btn.compact-btn {
+  height: 32px;
+  padding: 0 1rem;
+}
+.btn.compact-btn, .btn.compact-btn input[type=submit] {
+  font-size: 14px;
+}
+
+/* MINOR */
+.btn.minor-btn {
+  border: double 1px transparent;
+  height: 24px;
+  line-height: 1;
+  padding: 0 12px;
+}
+.btn.minor-btn, .btn.minor-btn input[type=submit] {
+  font-size: 12px;
+}
+
+/* MINOR COMPACT */
+.btn.minor-compact-btn {
+  background: none;
+  border: 0;
+  color: var(--color-tint2);
+  height: auto;
+  padding: 0;
+}
+.btn.minor-compact-btn, .btn.minor-compact-btn input[type=submit] {
+  font-size: 12px;
+}
+.btn.minor-compact-btn.destroy-btn {
+  color: var(--color-ruby);
+}
+.btn.minor-compact-btn:before {
+  display: none;
+}
+
+/* JUST TEXT */
+.link-btn, 
+.text-btn {
+  background: none;
+  border: none;
+  color: var(--color-turquoise);
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+.text-btn {
+  color: var(--color-tint2);
+}
+
+.stripped-btn {
+  background: none;
+  border: 0;
+  font-family: inherit;
+  font-weight: normal;
 }
