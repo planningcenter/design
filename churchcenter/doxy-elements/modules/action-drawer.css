@@ -1,0 +1,67 @@
+.action-drawer {
+  background: var(--color-tint9);
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.action-drawer.has-small-absolute-input {
+  padding-bottom: 3rem;
+}
+
+.action-drawer.highlighted-action-drawer {
+  background: var(--info-muted--background-color);
+}
+
+.action-drawer p a {
+  color: var(--color-tourmaline);
+  font-weight: 600;
+}
+
+.action-drawer__footer {
+  background: var(--color-tint8);
+  border-radius: 0 0 3px 3px;
+  margin: 1rem -1rem -1rem;
+  padding: 0.5rem 1rem;
+}
+
+.highlighted-action-drawer .action-drawer__footer {
+  background: var(--action-drawer-footer--highlighted-background-color);
+}
+
+.action-drawer__progress {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 9px;
+  padding-bottom: 3px;
+}
+
+.action-drawer__progress-step {
+  background: var(--color-emerald);
+  border-radius: 4px;
+  height: 4px;
+  margin-left: 4px;
+  width: 2rem;
+}
+
+.action-drawer__progress-step.is-complete {
+  background: var(--color-emerald) !important;
+}
+
+.action-drawer__progress-step.is-current {
+  background: var(--color-tint3);
+}
+
+.action-drawer__progress-step.is-current + .action-drawer__progress-step {
+  background: var(--color-tint5);
+}
+
+.action-drawer__progress-step.is-current + .action-drawer__progress-step + .action-drawer__progress-step {
+  background: var(--color-tint5);
+}
+
+.action-drawer__progress-label {
+  color: var(--color-tint2);
+  font-size: 13px;
+  padding-top: 5px;
+}
