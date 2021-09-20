@@ -2,27 +2,4 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-[data-color-scheme] {
-  --surface-1of1--background-color: var(--color-tint10);
-
-  --surface-1of2--background-color: var(--color-tint8);
-  --surface-2of2--background-color: var(--color-tint10);
-
-  --text--color: var(--color-tint1);
-
-  --heading--color: var(--color-tint0);
-  --heading-5--color: var(--color-tint3);
-
-  --definition-term--color: var(--color-tint3);
-  --definition--color: var(--color-tint1);
-
-  --text-input--border-color: var(--color-tint4);
-
-  --text-input--outline_focus: #d3eafd;
-  --text-input--box-shadow: inset 0 1px 2px var(--color-tint8);
-  --text-input--box-shadow_focus: 0px 0px 3px 0 #a3d3fa;
-
-  --select--border-color: var(--color-tint4);
-  --button--outline-variant--background-image: linear-gradient(white, white),
-    linear-gradient(black, black);
-}
+[data-color-scheme] {}
