@@ -79,12 +79,18 @@
   .card-list.card-list--max-4 .card-list__item { min-width: calc(25% - 32px) }
 }
 
-.card-list-item__image { margin-bottom:12px }
+.card-list-item__image { margin-bottom: 0.75rem }
 
 .card-list-item__image img { 
   border-radius: 4px;
   display: block;
   width: 100%;
+}
+.card-list-item__content {}
+
+.card-list-item__title {
+  font-size: 1rem;
+  margin: 0;
 }
 
 .card-list-item__wrapper-link { 
@@ -93,6 +99,8 @@
   font-weight: inherit;
 }
 
-@media (min-width: 601px){
-  .card-list-item__details { padding-top: 6px }
+.card-list-item__details {
+  font-size: 13px;
+  line-height: 1.5;
+  padding-top: 0.25rem;
 }

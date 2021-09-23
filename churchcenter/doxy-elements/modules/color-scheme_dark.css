@@ -40,22 +40,6 @@
   --success-badge--background-color: hsl(123, 38%, 37%);
   --warning-badge--background-color: hsl(41, 91%, 30%);
 
-  .error-badge {
-    --badge--color: hsl(0, 79%, 96%);
-    --badge--background-color: var(--error-badge--background-color);
-  }
-
-  .success-badge,
-  .open-badge {
-    --badge--color: hsl(120, 36%, 96%);
-    --badge--background-color: var(--success-badge--background-color);
-  }
-  
-  .warning-badge {
-    --badge--color: hsl(39, 89%, 96%);
-    --badge--background-color: var(--warning-badge--background-color);
-  }
-
   /* ALERTS */
   --error-alert--background-color: var(--color-tint8);
   --error-alert--border-color: var(--color-tint4);

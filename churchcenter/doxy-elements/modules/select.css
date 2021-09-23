@@ -1,0 +1,73 @@
+.select {
+  appearance: none;
+  background-color: var(--color-tint10);
+  background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22\a%20%20%20viewBox%3D%220%200%2032%2032%22%20enable-background%3D%22new%200%200%2030%2030%22%20xml%3Aspace%3D%22preserve%22%3E\a%3Cpath%20fill%3D%22%23b7b7b7%22%20d%3D%22M31.858%208.928l-3.54-4.034-12.442%2014.142-12.194-13.9-3.54%204.036%2015.734%2017.934%2015.982-18.178z%22%2F%3E\a%3C%2Fsvg%3E);
+  background-position: calc(100% - 12px) center;
+  background-size: 10px auto;
+  background-repeat: no-repeat;
+  border: 1px solid var(--color-tint5);
+  border-radius: 4px;
+  color: var(--color-tint1);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  height: 40px;
+  padding: 0 33px 0 10px !important;
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.select.small-select,
+.select.sm-select {
+  background-position: calc(100% - 8px) center;
+  height: 32px;
+  padding: 0 25px 0 8px;
+}
+
+.select:disabled {
+  color: #ccc;
+  border-color: #eee;
+  cursor: default;
+}
+
+.select:focus {
+  outline: 0;
+  box-shadow: var(--text-input--focus-box-shadow);
+  border-color: var(--text-input--focus-border-color);
+}
+
+.select.error {
+  background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22\a%20%20%20viewBox%3D%220%200%2032%2032%22%20enable-background%3D%22new%200%200%2030%2030%22%20xml%3Aspace%3D%22preserve%22%3E\a%3Cpath%20fill%3D%22%23df5b4d%22%20d%3D%22M31.858%208.928l-3.54-4.034-12.442%2014.142-12.194-13.9-3.54%204.036%2015.734%2017.934%2015.982-18.178z%22%2F%3E\a%3C%2Fsvg%3E);  
+}
+
+/* Hacks */
+
+/* FF(all): remove dotted inner focus ring */
+.select:focus:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+/* FF(<35): remove background-image where appearance: none is not supported */
+_:-moz-tree-row(hover) { background-image: none }
+
+.select::-ms-expand {
+  background-color: white;
+  border: 0;
+  color: var(--color-tint1);
+  padding-right: 20px;
+}
+
+/* IE 11 */
+@media all and (-ms-high-contrast:none) {
+  *::-ms-backdrop, .select {
+    background-size: 32px 10px;
+    background-position: 100% center;
+  }
+}
+
+select::-ms-expand { display: none }

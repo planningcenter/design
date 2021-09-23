@@ -1,13 +1,16 @@
 /* elements */
+@import "./modules/action-drawer.css";
+@import "./modules/alert.css";
 @import "./modules/badge.css";
-@import "./modules/definition-list.css";
+@import "./modules/breadcrumbs.css";
 @import "./modules/button.css";
-@import "./modules/heading.css";
-@import "./modules/media-card.css";
-@import "./modules/notice.css";
+@import "./modules/card-list.css";
+@import "./modules/checkbox.css";
+@import "./modules/dropdown.css";
+@import "./modules/modal.css";
 @import "./modules/select.css";
-@import "./modules/text.css";
 @import "./modules/text-input.css";
+@import "./modules/typography.css";
 
 /* themes */
 /* proveded online for momentary convenince */
@@ -15,3 +18,9 @@
 @import "./modules/color-scheme_universal.css";
 @import "./modules/color-scheme_dark.css";
 @import "./modules/color-scheme_light.css";
+
+*, *:before, *:after { box-sizing: inherit }
+
+[data-color-scheme="dark"] {
+  border-radius: 4px;  
+}

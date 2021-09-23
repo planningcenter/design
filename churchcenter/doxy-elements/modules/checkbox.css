@@ -1,0 +1,100 @@
+.checkbox {
+  height: 16px;
+  opacity: 0;
+  position: absolute;
+  width: 16px;
+}
+
+.checkbox.large-checkbox {
+  height: 20px;
+  width: 20px;
+}
+
+.checkbox-label {
+  box-sizing: content-box;
+  color: var(--color-tint1);
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0;
+  padding-left: 24px;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* Box */
+.checkbox-label::before {
+  background-color: var(--color-tint10);
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px var(--color-tint4), inset 0 1px 0 var(--color-tint4);
+  content: "";
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 1px;
+  width: 16px;
+}
+
+.action-drawer .checkbox-label::before { top: 4px }
+
+.large-checkbox-label::before {
+  height: 20px;
+  width: 20px;
+  top: -2px;
+}
+
+/* Check */
+.checkbox-label::after {
+  border-width: 2px;
+  border-style: solid;
+  border-right-color: var(--color-tint10);
+  border-bottom-color: var(--color-tint10);
+  border-left-width: 0;
+  border-top-width: 0;
+  content: "";
+  height: 6px;
+  left: 5px;
+  opacity: 0;
+  position: absolute;
+  transform: translateX(0.5px) rotate(45deg);
+  top: 4px;
+  width: 3px;
+}
+
+.action-drawer .checkbox-label::after { top: 7px }
+
+.large-checkbox-label::after {
+  border-bottom-width: 3px;
+  border-right-width: 3px;
+  height: 8px;
+  left: 6px;
+  top: 1px;
+  width: 4px;
+}
+
+.checkbox-label.checked-partial::after {
+  border-right-color: var(--color-tint10);
+  border-bottom-color: var(--color-tint10);
+  border-left-width: 0;
+  border-top-width: 0;
+  border-right-width: 0;
+  left: 4px;
+  top: 3px;
+  transform: none;
+  width: 8px;
+}
+
+/* Disabled */
+.checkbox[disabled] + .checkbox-label { color: var(--color-tint3) }
+.checkbox:checked[disabled] + .checkbox-label:before { background-color: var(--color-tint5) }
+
+/* Focus */
+.checkbox:checked + .checkbox-label::before,
+.checkbox-label.checked-partial::before {
+  background-color: var(--color-emerald);
+}
+.checkbox:focus + .checkbox-label::before { outline: 5px auto var(--color-emerald) }
+.checkbox:checked + .checkbox-label::after,
+.checkbox-label.checked-partial::after { opacity: 1 }

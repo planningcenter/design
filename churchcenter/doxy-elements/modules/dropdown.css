@@ -1,0 +1,111 @@
+.dropdown {
+  font-size: 14px;
+  position: relative;
+}
+
+.dropdown.is-open > .dropdown__menu,
+.dropdown.dropdown--active > .dropdown__menu, 
+.dropdown.is-open > .dropdown__content,
+.dropdown.dropdown--active > .dropdown__content, { display: block }
+
+.dropdown__menu, 
+.dropdown__content,
+[data-reach-menu-list],
+[data-reach-menu-items] {
+  background: var(--color-tint10);
+  border: 1px solid var(--color-tint5);
+  border-radius: 4px;
+  font-size: var(--dropdown-menu--font-size, 0.875rem);
+  margin-top: 2px;
+  min-width: 180px;
+  padding: 4px 0;
+}
+
+.dropdown__menu,
+.dropdown__content {
+  list-style-type: none;
+  display: none;
+  left: 0;
+  position: absolute;
+  z-index: 9;
+}
+
+.dropdown__menu.dropdown__menu--naked,
+.dropdown__content.dropdown__menu--naked {
+  background: inherit;
+  border: inherit;
+  margin-top: inherit;
+  min-width: inherit;
+}
+
+[data-reach-menu-list],
+[data-reach-menu-items] {
+  display: block;
+  outline: none;
+  position: static;
+}
+
+.dropdown__item,
+[data-reach-menu-item] {
+  color: var(--color-tint1);
+  cursor: pointer;
+  display: block;
+  font-size: inherit;
+  padding: 0.25rem 0.75rem;
+  position: relative;
+}
+
+.dropdown__item:focus,
+[data-reach-menu-item]:focus { outline: none }
+
+.dropdown__item:hover,
+[data-reach-menu-item]:hover,
+.dropdown__item[data-selected],
+[data-reach-menu-item][data-selected] { 
+  background: var(--color-tint8);
+  color: var(--color-tint1);
+}
+
+.dropdown__item.active,
+[data-reach-menu-item].active, 
+.dropdown__item.active button,
+[data-reach-menu-item].active button {
+  color: var(--color-tint1);
+  font-weight: 600;
+}
+
+.dropdown__item:first-child,
+[data-reach-menu-item]:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.dropdown__item:last-child,
+[data-reach-menu-item]:last-child { border-bottom: none }
+
+.dropdown__item a,
+[data-reach-menu-item] a,
+.dropdown__item [data-reach-menu-link],
+[data-reach-menu-item] [data-reach-menu-link] {
+  display: block;
+  color: var(--color-tint1);
+  line-height: 1.25;
+}
+
+.dropdown__item a[data-reach-menu-link][data-selected],
+[data-reach-menu-item] a[data-reach-menu-link][data-selected] {
+  color: var(--color-tint1);
+}
+
+.dropdown-item-label { padding: 0.5rem 1rem }
+
+.dropdown-trigger__icon {
+  font-size: 9px;
+  transition: all 0.2s;
+}
+
+.is-open .dropdown-trigger__icon,
+[aria-expanded="true"] .dropdown-trigger__icon {
+  transform: rotateX(-180deg);
+  top: 0;
+}

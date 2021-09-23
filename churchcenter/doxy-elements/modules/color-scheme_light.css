@@ -46,19 +46,6 @@
   --success-badge--background-color: hsl(120, 36%, 96%);
   --warning-badge--background-color: hsl(39, 89%, 96%);
   
-  .error-badge {
-    --badge--background-color: var(--error-badge--background-color);
-    --badge--color: hsl(1, 84%, 45%);
-  }
-  .success-badge,
-  .open-badge {
-    --badge--background-color: var(--success-badge--background-color);
-    --badge--color: hsl(123, 38%, 37%);
-  }
-  .warning-badge {
-    --badge--background-color: var(--warning-badge--background-color);
-    --badge--color: hsl(41, 91%, 30%);
-  }
 
   /* ALERTS */
   --error-alert--background-color: #F8EFED;
@@ -70,33 +57,4 @@
   --info-alert--background-color: #ecf6fe;
   --info-alert--border-color: hsla(207, 90%, 61%, 15%);
 
-/*  */
-  .error-alert {
-    --alert--background-color: var(--error-alert--background-color);
-  }
-  .error-alert.quiet-alert {
-    --alert--color: var(--color-ruby);
-    --alert--border-color: var(--error-alert--border-color);
-  }
-  .success-alert {
-    --alert--background-color: var(--success-alert--background-color);
-  }
-  .success-alert.quiet-alert {
-    --alert--color: var(--color-emerald);
-    --alert--border-color: var(--success-alert--border-color);
-  }
-  .warning-alert {
-    --alert--background-color: var(--warning-alert--background-color);
-  }
-  .warning-alert.quiet-alert {
-    --alert--color: hsl(41, 91%, 30%);
-    --alert--border-color: var(--warning-alert--border-color);
-  }
-  .info-alert {
-    --alert--background-color: var(--info-alert--background-color);
-  }
-  .info-alert.quiet-alert {
-    --alert--color: var(--color-topaz);
-    --alert--border-color: var(--info-alert--border-color);
-  }
 }

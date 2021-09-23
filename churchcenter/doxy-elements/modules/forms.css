@@ -1,0 +1,12 @@
+form, fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.login-form--narrow {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+button, input, select, textarea { font-family: var(--base-font-family) }

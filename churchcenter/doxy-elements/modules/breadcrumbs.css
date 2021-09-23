@@ -6,6 +6,7 @@
   .breadcrumbs {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
 }
 
 .breadcrumbs__layout {
@@ -22,6 +23,7 @@
   color: var(--color-tint1);
   margin-left: 2px;
   padding-left: 0.5rem;
+  text-decoration: none;
 }
 
 .breadcrumbs__page:first-child {
@@ -31,6 +33,7 @@
 @media (max-width: 600px) {
   .breadcrumbs__page:not(.breadcrumbs__current-page) .text {
     display: none;
+  }
 }
 
 .breadcrumbs__page:not(.breadcrumbs__current-page) .icon {
@@ -40,6 +43,7 @@
 @media (min-width: 601px) {
   .breadcrumbs__page:not(.breadcrumbs__current-page) .icon {
     display: none;
+  }
 }
 
 .breadcrumbs__current-page {
@@ -84,8 +88,10 @@
 @media (min-width: 368px) {
   .breadcrumbs__btn.select {
     max-width: 240px;
+  }
 }
 @media (min-width: 601px) {
   .breadcrumbs__btn.select {
     max-width: none;
+  }
 }

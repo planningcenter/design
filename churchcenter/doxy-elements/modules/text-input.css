@@ -1,0 +1,79 @@
+.text-input,
+textarea {
+  background-color: var(--color-tint10);
+  border-radius: 4px;
+  border: 1px solid var(--color-tint5);
+  box-shadow: inset 0 1px 2px var(--color-tint9);
+  color: var(--color-tint1);
+  font-family: var(--base-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  height: 40px;
+  margin: 0;
+  padding: 12px;
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.text-input.small-input,
+.text-input.sm-input {
+  height: 32px;
+  padding: 8px;
+}
+
+.text-input:disabled {
+  box-shadow: none;
+  background-color: var(--color-tint9);
+  color: var(--color-tint4);
+  cursor: not-allowed;
+}
+
+.text-input:focus {
+  outline: 0;
+  box-shadow: var(--text-input--focus-box-shadow);
+  border-color: var(--text-input--focus-border-color);
+}
+
+.text-input::placeholder { color: var(--color-tint4) }
+.text-input::-webkit-input-placeholder { line-height: 1.2 }
+.text-input:-ms-input-placeholder { line-height: 1 }
+
+textarea {
+  height: auto;
+  line-height: 1.4;
+  resize: vertical;
+}
+
+label,
+.label {
+  color: var(--color-tint0);
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 8px;
+}
+
+/* prepnded labels */
+.prepend-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.prepend-label .label {
+  align-items: center;
+  background: var(--color-tint6);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  display: flex;
+  top: 1px;
+  bottom: 1px;
+  left: 1px;
+  padding: 12px;
+  position: absolute;
+  z-index: 1;
+}
+
+.prepend-label .text-input.label-container { padding-left: 56px }
