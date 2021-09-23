@@ -1,132 +1,146 @@
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import {
+  Menu,
+  MenuList,
+  MenuButton,
+  MenuItem,
+  MenuLink,
+} from "@reach/menu-button";
+import {
+  downCaret,
+  rightChevron,
+  threeDots
+} from "@planningcenter/icons/paths/general";
+
 
 import "./index.css";
 
-<Meta title="Church Center/Doxy:Elements" />
+<Meta title="Church Center/Doxy" />
 
-### Badge
+## Badge
+
+To differentiate badges from buttons, badges should be tighter, lighter, and less rounded.
 
 export function SampleBadgeLayout(props) {
   return (
-    <div
-      style={{
-        display: "flex",
-        "--box--margin": "0 0.5rem 0 0",
-        "--box--padding": "0 6px",
-        "--box--border-radius": "4px",
-        padding: "1rem",
-      }}
-      {...props}
-    />
+    <div style={{
+      alignItems: "center",
+      display: "flex",
+      gap: "0.5rem",
+      padding: "1rem",
+      marginBottom: "1rem"
+    }} {...props} />
   );
 }
 
 <Preview>
-  <Story name="badge">
-    <>
-      <SampleBadgeLayout data-color-scheme="dark" data-contrast="low">
-        <span data-badge data-box>
-          Badge
-        </span>
-        <span data-badge="alt:negative" data-box>
-          Negative
-        </span>
-        <span data-badge="alt:positive" data-box>
-          Positive
-        </span>
-        <span data-badge="alt:warning" data-box>
-          Warning
-        </span>
-      </SampleBadgeLayout>
-      <SampleBadgeLayout data-color-scheme="light" data-contrast="low">
-        <span data-badge data-box>
-          Badge
-        </span>
-        <span data-badge="alt:negative" data-box>
-          Negative
-        </span>
-        <span data-badge="alt:positive" data-box>
-          Positive
-        </span>
-        <span data-badge="alt:warning" data-box>
-          Warning
-        </span>
-      </SampleBadgeLayout>
-    </>
-  </Story>
-</Preview>
-
-#### Badge: size
-
-<Preview>
-  <Story name="badge:size">
-    <SampleBadgeLayout 
-      data-color-scheme="light" 
-      data-contrast="low" 
-      style={{ 
-        "--box--padding": "0 6px", 
-        "--box--border-radius": "3px"
-      }}>
-      <span data-badge="size:small" data-box>
-        Size: small
-      </span>
+  <Story name="Badge">
+    <SampleBadgeLayout data-color-scheme="light" data-contrast="low">
+      <span className="badge">Badge</span>
+      <span className="danger-badge badge">Danger</span>
+      <span className="success-badge badge">Success</span>
+      <span className="warning-badge badge">Warning</span>
+    </SampleBadgeLayout>
+    <SampleBadgeLayout data-color-scheme="dark" data-contrast="low">
+      <span className="badge">Badge</span>
+      <span className="danger-badge badge">Danger</span>
+      <span className="success-badge badge">Success</span>
+      <span className="warning-badge badge">Warning</span>
     </SampleBadgeLayout>
   </Story>
 </Preview>
 
-### Button
-
+### Sizes
 <Preview>
-  <Story name="button">
-    <>
-      <div
-        data-color-scheme="dark"
-        data-contrast="low"
-        style={{ padding: "1rem" }}
-      >
-        <h4>action</h4>
-        <button data-button="action:default">Default</button>
-        <button data-button="action:destroy">Destroy</button>
-        <h4>variant</h4>
-        <button data-button="action:default variant:outline">Outline</button>
-        <button data-button="action:default variant:text-only">
-          Text only
-        </button>
-      </div>
-      <div
-        data-color-scheme="light"
-        data-contrast="low"
-        style={{ padding: "1rem" }}
-      >
-        <h4>action</h4>
-        <button data-button="action:default">Default</button>
-        <button data-button="action:destroy">Destroy</button>
-        <h4>variant</h4>
-        <button data-button="action:default variant:outline">Outline</button>
-        <button data-button="action:default variant:text-only">
-          Text only
-        </button>
-      </div>
-    </>
+  <Story name="Badge Sizes">
+    <SampleBadgeLayout data-color-scheme="light" data-contrast="low">
+      <span className="badge">Normal</span>
+      <span className="sm-badge badge">Small</span>
+    </SampleBadgeLayout>
   </Story>
 </Preview>
 
-#### Button: size
+| Badge classes |  |
+| ---- | ---- |
+| Base | <code>.badge</code> | 
+| Options (appended) | <code>.danger-badge</code> <code>.success-badge</code> <code>.warning-badge</code> |
+| Size (appended) | <code>.sm-badge</code> |
+
+```html
+<div class="success-badge badge">Complete</div>
+```
+
+## Button
+
+* Button labels should use sentence case.
+* Plain text links should always be rendered in turquoise.
+
+export function SampleButtonLayout(props) {
+  return (
+    <div style={{
+      alignItems: "center",
+      display: "flex",
+      gap: "0.5rem",
+      padding: "1rem",
+    }} {...props} />
+  );
+}
 
 <Preview>
-  <Story name="button:size">
-    <div
-      data-color-scheme="light"
-      data-contrast="low"
-      style={{ padding: "1rem" }}
-    >
-      <button data-button="action:default size:compact">Compact</button>
-      <button data-button="action:default size:minor">Minor</button>
+  <Story name="Button">
+    <SampleButtonLayout data-color-scheme="light" data-contrast="low">
+      <button className="btn">Primary</button>
+      <button className="secondary-btn btn">Secondary</button>
+      <button className="destroy-btn btn">Destroy</button>
+      <button className="secondary-btn destroy-btn btn">Secondary destroy</button>
+      <button className="link-btn btn">Link</button>
+    </SampleButtonLayout>
+    <SampleButtonLayout data-color-scheme="dark" data-contrast="low">
+      <button className="btn">Primary</button>
+      <button className="secondary-btn btn">Secondary</button>
+      <button className="destroy-btn btn">Destroy</button>
+      <button className="secondary-btn destroy-btn btn">Secondary destroy</button>
+      <button className="link-btn btn">Link</button>
+    </SampleButtonLayout>
+  </Story>
+</Preview>
+
+### Sizes
+
+<Preview>
+  <Story name="Button Sizes">
+    <div data-color-scheme="light" data-contrast="low" style={{
+      display: "flex",
+      gap: "2rem",
+    }}>
+      <div>
+        <h4>Compact</h4>
+        <button className="compact-btn btn">Give now</button>
+      </div>
+      <div>
+        <h4>Minor</h4>
+        <button className="minor-btn secondary-btn btn">+ Add event</button>
+      </div>
+      <div>
+        <h4>Minor Compact</h4>
+        <button className="destroy-btn minor-compact-btn btn">Delete</button>
+      </div>
     </div>
   </Story>
 </Preview>
 
-### Color
+| Button classes |  |
+| ---- | ---- |
+| Base | <code>.btn</code> | 
+| Options (appended) | <code>.secondary-btn</code> <code>.destroy-btn</code> <code>.link-btn</code> |
+| Size (appended) | <code>.compact-btn</code> <code>.minor-btn</code> <code>.minor-compact-btn</code> |
+
+```html
+<button class="secondary-btn minor-btn btn">Open map</div>
+<button class="secondary-btn destroy-btn btn">Delete user</div>
+```
+
+## Color
 
 export function SampleColorLayout(props) {
   return (
@@ -169,120 +183,8 @@ export function Color({ bgColor, color, colorName, colorHsl, ...props }) {
 }
 
 <Preview>
-  <Story name="color">
+  <Story name="Color">
     <>
-      <div
-        data-color-scheme="dark"
-        data-contrast="low"
-        style={{ padding: "1rem" }}
-      >
-        <SampleColorLayout>
-          <Color
-            bgColor="--color-tint0"
-            color="--color-tint10"
-            colorName="Static Gray 98"
-            colorHsl="0, 0%, 98%"
-          />
-          <Color
-            bgColor="--color-tint1"
-            color="--color-tint10"
-            colorName="Static Gray 88"
-            colorHsl="0, 0%, 88%"
-          />
-          <Color
-            bgColor="--color-tint2"
-            color="--color-tint10"
-            colorName="Static Gray 68"
-            colorHsl="0, 0%, 68%"
-          />
-          <Color
-            bgColor="--color-tint3"
-            color="--color-tint10"
-            colorName="Static Gray 50"
-            colorHsl="0, 0%, 50%"
-          />
-          <Color
-            bgColor="--color-tint4"
-            color="--color-tint0"
-            colorName="Static Gray 32"
-            colorHsl="0, 0%, 32%"
-          />
-          <Color
-            bgColor="--color-tint5"
-            color="--color-tint0"
-            colorName="Static Gray 24"
-            colorHsl="0, 0%, 24%"
-          />
-          <Color
-            bgColor="--color-tint6"
-            color="--color-tint0"
-            colorName="Static Gray 19"
-            colorHsl="0, 0%, 19%"
-          />
-          <Color
-            bgColor="--color-tint7"
-            color="--color-tint0"
-            colorName="Static Gray 17"
-            colorHsl="0, 0%, 17%"
-          />
-          <Color
-            bgColor="--color-tint8"
-            color="--color-tint0"
-            colorName="Static Gray 15"
-            colorHsl="0, 0%, 15%"
-          />
-          <Color
-            bgColor="--color-tint9"
-            color="--color-tint0"
-            colorName="Static Gray 12"
-            colorHsl="0, 0%, 12%"
-          />
-          <Color
-            bgColor="--color-tint10"
-            color="--color-tint0"
-            colorName="Static Gray 7"
-            colorHsl="0, 0%, 7%"
-          />
-          <div style={{ display: "flex", width: "100%" }}>
-            <Color
-              bgColor="--color-topaz"
-              color="--color-tint0"
-              colorName="Topaz Dark"
-              colorHsl="207, 90%, 51%"
-            />
-            <Color
-              bgColor="--color-turquoise"
-              color="--color-tint0"
-              colorName="Turquoise Dark"
-              colorHsl="172, 52%, 41%"
-            />
-            <Color
-              bgColor="--color-tourmaline"
-              color="--color-tint0"
-              colorName="Tourmaline Dark"
-              colorHsl="174, 72%, 31%"
-            />
-            <Color
-              bgColor="--color-emerald"
-              color="--color-tint0"
-              colorName="Emerald Dark"
-              colorHsl="122, 48%, 57%"
-            />
-            <Color
-              bgColor="--color-ruby"
-              color="--color-tint0"
-              colorName="Ruby Dark"
-              colorHsl="1, 75%, 55%"
-            />
-            <Color
-              bgColor="--color-citrine"
-              color="--color-tint0"
-              colorName="Citrine Dark"
-              colorHsl="42, 81%, 56%"
-            />
-          </div>
-        </SampleColorLayout>
-      </div>
       <div
         data-color-scheme="light"
         data-contrast="low"
@@ -395,338 +297,904 @@ export function Color({ bgColor, color, colorName, colorHsl, ...props }) {
           </div>
         </SampleColorLayout>
       </div>
-    </>
-  </Story>
-</Preview>
-
-### Definition List
-
-<Preview>
-  <Story name="definition-list">
-    <>
       <div
         data-color-scheme="dark"
         data-contrast="low"
         style={{ padding: "1rem" }}
       >
-        <dl data-definition-list>
-          <dt data-definition-term>Schedule</dt>
-          <dd data-definition>Every weekend at 7pm</dd>
-          <dt data-definition-term>Contact</dt>
-          <dd data-definition>numbercrunchin@gmail.com</dd>
-          <dd data-definition>555.555.1337</dd>
-          <dt data-definition-term>Contact</dt>
-          <dd data-definition>Bob's Janky Apartment</dd>
-          <dd data-definition>Carlsbad, CA, 92009</dd>
-        </dl>
-      </div>
-      <div
-        data-color-scheme="light"
-        data-contrast="low"
-        style={{ padding: "1rem" }}
-      >
-        <dl data-definition-list>
-          <dt data-definition-term>Schedule</dt>
-          <dd data-definition>Every weekend at 7pm</dd>
-          <dt data-definition-term>Contact</dt>
-          <dd data-definition>numbercrunchin@gmail.com</dd>
-          <dd data-definition>555.555.1337</dd>
-          <dt data-definition-term>Contact</dt>
-          <dd data-definition>Bob's Janky Apartment</dd>
-          <dd data-definition>Carlsbad, CA, 92009</dd>
-        </dl>
-      </div>
-    </>
-  </Story>
-</Preview>
-
-### Forms
-
-export function SampleFormLayout({ style, ...props }) {
-  return (
-    <div
-      style={{
-        display: "grid",
-        gap: "1rem",
-        gridTemplateColumns: "repeat(auto-fill, 15rem)",
-        ...style,
-      }}
-      {...props}
-    />
-  );
-}
-
-<Preview>
-  <Story name="forms">
-    <>
-      <SampleFormLayout
-        data-color-scheme="dark"
-        data-contrast="low"
-        style={{ padding: "1rem" }}
-      >
-        <input
-          data-text-input
-          placeholder="enter your name"
-          name="name"
-          type="text"
-        />
-        <select data-select id="something">
-          <option name="one">One</option>
-          <option name="two">Two</option>
-          <option name="three">Three</option>
-        </select>
-      </SampleFormLayout>
-      <SampleFormLayout
-        data-color-scheme="light"
-        data-contrast="low"
-        style={{ padding: "1rem" }}
-      >
-        <input
-          data-text-input
-          placeholder="enter your name"
-          name="name"
-          type="text"
-        />
-        <select data-select id="something">
-          <option name="one">One</option>
-          <option name="two">Two</option>
-          <option name="three">Three</option>
-        </select>
-      </SampleFormLayout>
-    </>
-  </Story>
-</Preview>
-
-### Heading
-
-<Preview>
-  <Story name="heading">
-    <>
-      <div
-        data-color-scheme="dark"
-        data-contrast="low"
-        style={{ padding: "1rem" }}
-      >
-        <h1 data-heading="level:1">Hello CodeSandbox</h1>
-        <h2 data-heading="level:2">Hello CodeSandbox</h2>
-        <h3 data-heading="level:3">Hello CodeSandbox</h3>
-        <h4 data-heading="level:4">Hello CodeSandbox</h4>
-        <h5 data-heading="level:5">Hello CodeSandbox</h5>
-      </div>
-      <div
-        data-color-scheme="light"
-        data-contrast="low"
-        style={{ padding: "1rem" }}
-      >
-        <h1 data-heading="level:1">Hello CodeSandbox</h1>
-        <h2 data-heading="level:2">Hello CodeSandbox</h2>
-        <h3 data-heading="level:3">Hello CodeSandbox</h3>
-        <h4 data-heading="level:4">Hello CodeSandbox</h4>
-        <h5 data-heading="level:5">Hello CodeSandbox</h5>
-      </div>
-    </>
-  </Story>
-</Preview>
-
-### Media card
-
-<Preview>
-  <Story name="media-card">
-    <>
-      <div
-        data-color-scheme="dark"
-        data-contrast="low"
-        style={{ padding: "1rem" }}
-      >
-        <div
-          style={{
-            display: "grid",
-            gap: "1rem",
-            gridTemplateColumns: "repeat(auto-fill, 15rem)",
-          }}
-        >
-          <div data-media-card>
-            <img
-              data-media-card--media
-              src="https://placekitten.com/300/200"
-              alt="kitten"
+        <SampleColorLayout>
+          <Color
+            bgColor="--color-tint0"
+            color="--color-tint10"
+            colorName="Static Gray 98"
+            colorHsl="0, 0%, 98%"
+          />
+          <Color
+            bgColor="--color-tint1"
+            color="--color-tint10"
+            colorName="Static Gray 88"
+            colorHsl="0, 0%, 88%"
+          />
+          <Color
+            bgColor="--color-tint2"
+            color="--color-tint10"
+            colorName="Static Gray 68"
+            colorHsl="0, 0%, 68%"
+          />
+          <Color
+            bgColor="--color-tint3"
+            color="--color-tint10"
+            colorName="Static Gray 50"
+            colorHsl="0, 0%, 50%"
+          />
+          <Color
+            bgColor="--color-tint4"
+            color="--color-tint0"
+            colorName="Static Gray 32"
+            colorHsl="0, 0%, 32%"
+          />
+          <Color
+            bgColor="--color-tint5"
+            color="--color-tint0"
+            colorName="Static Gray 24"
+            colorHsl="0, 0%, 24%"
+          />
+          <Color
+            bgColor="--color-tint6"
+            color="--color-tint0"
+            colorName="Static Gray 19"
+            colorHsl="0, 0%, 19%"
+          />
+          <Color
+            bgColor="--color-tint7"
+            color="--color-tint0"
+            colorName="Static Gray 17"
+            colorHsl="0, 0%, 17%"
+          />
+          <Color
+            bgColor="--color-tint8"
+            color="--color-tint0"
+            colorName="Static Gray 15"
+            colorHsl="0, 0%, 15%"
+          />
+          <Color
+            bgColor="--color-tint9"
+            color="--color-tint0"
+            colorName="Static Gray 12"
+            colorHsl="0, 0%, 12%"
+          />
+          <Color
+            bgColor="--color-tint10"
+            color="--color-tint0"
+            colorName="Static Gray 7"
+            colorHsl="0, 0%, 7%"
+          />
+          <div style={{ display: "flex", width: "100%" }}>
+            <Color
+              bgColor="--color-topaz"
+              color="--color-tint0"
+              colorName="Topaz Dark"
+              colorHsl="207, 90%, 51%"
             />
-            <div data-media-card--description>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <h3 data-heading="level:3">Eleven Disiples</h3>
-                <span data-badge="alt:positive">Open</span>
-              </div>
-              <span data-text>Judas, remember that guy?</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        data-color-scheme="light"
-        data-contrast="low"
-        style={{ padding: "1rem" }}
-      >
-        <div
-          style={{
-            display: "grid",
-            gap: "1rem",
-            gridTemplateColumns: "repeat(auto-fill, 15rem)",
-          }}
-        >
-          <div data-media-card>
-            <img
-              data-media-card--media
-              src="https://placekitten.com/300/200"
-              alt="kitten"
+            <Color
+              bgColor="--color-turquoise"
+              color="--color-tint0"
+              colorName="Turquoise Dark"
+              colorHsl="172, 52%, 41%"
             />
-            <div data-media-card--description>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <h3 data-heading="level:3">Eleven Disiples</h3>
-                <span data-badge="alt:positive">Open</span>
-              </div>
-              <span data-text>Judas, remember that guy?</span>
-            </div>
+            <Color
+              bgColor="--color-tourmaline"
+              color="--color-tint0"
+              colorName="Tourmaline Dark"
+              colorHsl="174, 72%, 31%"
+            />
+            <Color
+              bgColor="--color-emerald"
+              color="--color-tint0"
+              colorName="Emerald Dark"
+              colorHsl="122, 48%, 57%"
+            />
+            <Color
+              bgColor="--color-ruby"
+              color="--color-tint0"
+              colorName="Ruby Dark"
+              colorHsl="1, 75%, 55%"
+            />
+            <Color
+              bgColor="--color-citrine"
+              color="--color-tint0"
+              colorName="Citrine Dark"
+              colorHsl="42, 81%, 56%"
+            />
           </div>
-        </div>
+        </SampleColorLayout>
       </div>
     </>
   </Story>
 </Preview>
 
-### Notice
+## Heading
 
 <Preview>
-  <Story name="notice">
-    <>
-      <div
-        data-color-scheme="dark"
-        data-contrast="low"
-        style={{ 
-          padding: "1rem",
-          "--box--border-radius": "4px",
-          "--box--padding": "1rem",
-          "--box--margin": "0"
-          }}
-      >
-        <div data-notice="alt:warning" data-box>
-          Just letting you know, you should stir the kool-aid before you serve it.
-        </div>
-      </div>
-      <div
-        data-color-scheme="light"
-        data-contrast="low"
-        style={{ 
-          padding: "1rem 1rem 0 1rem",
-          "--box--border-radius": "4px",
-          "--box--padding": "1rem",
-          "--box--margin": "0 0 1rem 0"
-          }}
-      >
-        <div data-notice data-box>
-          You have a form to fill out.
-        </div>
-        <div data-notice="alt:info" data-box>
-          You have a form to fill out.
-        </div>
-        <div data-notice="alt:positive" data-box>
-          Preferences saved
-        </div>
-        <div data-notice="alt:negative" data-box>
-          Your form has errors and could not be submitted.
-        </div>
-        <div data-notice="alt:warning" data-box>
-          Just letting you know, you should stir the kool-aid before you serve it.
-        </div>
-      </div>
-    </>
-  </Story>
-</Preview>
-
-#### Notice: size
-
-<Preview>
-  <Story name="notice:size">
+  <Story name="Heading">
     <div
-        data-color-scheme="light"
-        data-contrast="low"
-        style={{ 
-          padding: "1rem",
-          "--box--border-radius": "4px",
-          "--box--padding": "0.5rem",
-          }}
-      >
-      <span data-notice="size:small" data-box>
-        Size: small
-      </span>
+      data-color-scheme="light"
+      data-contrast="low"
+    >
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
     </div>
   </Story>
 </Preview>
 
-### Surface
+To meet accessibility standards, every page should have an `<h1>...</h1>`, and other headings should be used in the correct order:
 
-export function SampleSurfaceLayout({ style, ...props }) {
-  return (
+```html
+<h1>Page or Section title</h1>
+<h2>Section subtitle</h2>
+<h3>A tertiary title</h3>
+```
+
+ Heading tags have default styles without the need for css class names. However, we may not always want our heading tags to have their default style. For example, we might have an `<h2>Section title</h2>` but want it to have `<h3>` styles. In these cases, we can use the css classes for the heading level style you desire. 
+
+| Heading classes |  |
+| ---- | ---- |
+| Options | <code>.h1</code> <code>.h2</code> <code>.h3</code> <code>.h4</code> <code>.h5</code>  |
+
+```html
+<h1>I'm a level 1 heading with level 1 heading styles</h1>
+
+<h1 class="h3">I'm a level 1 heading with level 3 heading styles</h1>
+```
+
+## Media Card
+
+<Preview>
+  <Story name="Media Card">
+      <div
+        data-color-scheme="light"
+        data-contrast="low"
+        className="card-list"
+        style={{marginBottom: "2rem", marginLeft: "1rem", padding: "1rem"}}
+      >
+        <div className="card-list__item">
+          <div className="card-list-item__image">  
+            <img
+              src="https://www.placecage.com/g/300/200"
+              alt="Cage"
+            />
+          </div>
+          <div className="card-list-item__content">
+            <div style={{display: "flex", alignItems: "flex-start", justifyContent: "space-between"}}>
+              <h1 className="card-list-item__title">Sir Nicholas</h1>
+              <span className="success-badge badge">Open</span>
+            </div>
+            <div className="card-list-item__details">Every good story seems to begin with a snake.</div>
+          </div>
+        </div>
+        <div className="card-list__item">
+          <div className="card-list-item__image">  
+            <img
+              src="https://www.stevensegallery.com/300/200"
+              alt="Segallin' it"
+            />
+          </div>
+          <div className="card-list-item__content">
+            <div style={{display: "flex", alignItems: "flex-start", justifyContent: "space-between"}}>
+              <h1 className="card-list-item__title">Segallin' It</h1>
+              <span className="badge">Closed</span>
+            </div>
+            <div className="card-list-item__details">If I Find Out You're Lying, I'll Come Back And Kill You In Your Own Kitchen!</div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-color-scheme="dark"
+        data-contrast="low"
+        className="card-list"
+        style={{padding: "1rem", marginLeft: "1rem"}}
+      >
+        <div className="card-list__item">
+          <div className="card-list-item__image">  
+            <img
+              src="https://www.placecage.com/g/300/200"
+              alt="Cage"
+            />
+          </div>
+          <div className="card-list-item__content">
+            <div style={{display: "flex", alignItems: "flex-start", justifyContent: "space-between"}}>
+              <h1 className="card-list-item__title">Sir Nicholas</h1>
+              <span className="success-badge badge">Open</span>
+            </div>
+            <div className="card-list-item__details">Every good story seems to begin with a snake.</div>
+          </div>
+        </div>
+        <div className="card-list__item">
+          <div className="card-list-item__image">  
+            <img
+              src="https://www.stevensegallery.com/300/200"
+              alt="Segallin' it"
+            />
+          </div>
+          <div className="card-list-item__content">
+            <div style={{display: "flex", alignItems: "flex-start", justifyContent: "space-between"}}>
+              <h1 className="card-list-item__title">Segallin' It</h1>
+              <span className="badge">Closed</span>
+            </div>
+            <div className="card-list-item__details">If I Find Out You're Lying, I'll Come Back And Kill You In Your Own Kitchen!</div>
+          </div>
+        </div>
+      </div>
+  </Story>
+</Preview>
+
+| Card list elements |  |
+| ---- | ---- |
+| base element | <code>.card-list__item</code> |
+| image | <code>.card-list-item__image</code> (intended to wrap the `img` tag) |
+| content | <code>.card-list-item__content</code> (wrapper element) |
+| title | <code>.card-list-item__title</code> |
+| details | <code>.card-list-item__details</code> |
+
+### Card markup structure
+```html
+<div className="card-list__item">
+  <div className="card-list-item__image">  
+    <img src="" alt="" />
+  </div>
+  <div className="card-list-item__content">
+    <h1 className="card-list-item__title">Sir Nicholas</h1>
+    <div className="card-list-item__details">...</div>
+  </div>
+</div>
+```
+To make an entire card clickable, wrap it in an anchor with a `card-list-item__wrapper-link` class:
+```html
+<a href="" class="card-list-item__wrapper-link">
+  <div class="card-list__item">...</div>
+</a>
+```
+
+To display multiple cards, wrap them in a `card-list` container:
+```html
+<section class="card-list">
+  <article class="card-list__item">...</article>
+  <article class="card-list__item">...</article>
+</section>
+```
+
+
+## Alert
+
+<Preview>
+  <Story name="Alert">
     <div
+      data-color-scheme="light"
+      data-contrast="low"
+      style={{ padding: "1rem" }}
+    >
+      <div className="alert">
+        A basic alert.
+      </div>
+      <div className="quiet-alert alert">
+        A quiet basic alert.
+      </div>
+      <div className="info-alert alert">
+        An information alert.
+      </div>
+      <div className="quiet-alert info-alert alert">
+        A quiet information alert.
+      </div>
+      <div className="success-alert alert">
+        A success alert.
+      </div>
+      <div className="quiet-alert success-alert alert">
+        A quiet success alert.
+      </div>
+      <div className="error-alert alert">
+        An error alert.
+      </div>
+      <div className="quiet-alert error-alert alert">
+        A quiet error alert.
+      </div>
+      <div className="warning-alert alert">
+        A warning alert.
+      </div>
+      <div className="quiet-alert warning-alert alert">
+        A quiet warning alert.
+      </div>
+    </div>
+    <div
+      data-color-scheme="dark"
+      data-contrast="low"
+      style={{ padding: "1rem" }}
+    >
+      <div className="alert">
+        A basic alert.
+      </div>
+      <div className="quiet-alert alert">
+        A quiet basic alert.
+      </div>
+      <div className="info-alert alert">
+        An information alert.
+      </div>
+      <div className="quiet-alert info-alert alert">
+        A quiet information alert.
+      </div>
+      <div className="success-alert alert">
+        A success alert.
+      </div>
+      <div className="quiet-alert success-alert alert">
+        A quiet success alert.
+      </div>
+      <div className="error-alert alert">
+        An error alert.
+      </div>
+      <div className="quiet-alert error-alert alert">
+        A quiet error alert.
+      </div>
+      <div className="warning-alert alert">
+        A warning alert.
+      </div>
+      <div className="quiet-alert warning-alert alert">
+        A quiet warning alert.
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+### Sizes
+
+<Preview>
+  <Story name="Alert Sizes">
+    <div
+        data-color-scheme="light"
+        data-contrast="low"
+      >
+      <div className="sm-alert alert">
+        Size: small
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+| Alert classes |  |
+| ---- | ---- |
+| Base | <code>.alert</code> | 
+| Options (appended) | <code>.info-alert</code> <code>.error-alert</code> <code>.success-alert</code> <code>.warning-alert</code> |
+| Variation (appended) | <code>.quiet-alert</code> |
+| Size (appended) | <code>.sm-alert</code> |
+
+```html
+<div class="success-alert alert">A success alert.</div>
+
+<div class="quiet-alert success-alert alert">A quiet success alert.</div>
+```
+
+## Action Drawer
+
+<Preview>
+  <Story name="Action Drawer">
+    <div data-color-scheme="light" data-contrast="low" style={{padding: "1rem"}}>
+      <div className="action-drawer">
+        Action drawers are padded, rounded containers for diferentiating content.
+        <h4>What can you put in an action drawer?</h4>
+        <ul>
+          <li>You can put lists here</li>
+          <li>You can put images here, too</li>
+          <li>You can put pretty much anything here</li>
+        </ul>
+        <div className="action-drawer__footer" style={{textAlign: "right"}}>
+          <button className="minor-btn secondary-btn btn">+ Add something</button>
+        </div>
+      </div>
+    </div>
+    <div data-color-scheme="dark" data-contrast="low" style={{padding: "1rem"}}>
+      <div className="action-drawer">
+        Action drawers are padded, rounded containers for diferentiating content.
+        <h4>What can you put in an action drawer?</h4>
+        <ul>
+          <li>You can put lists here</li>
+          <li>You can put images here, too</li>
+          <li>You can put pretty much anything here</li>
+        </ul>
+        <div className="action-drawer__footer" style={{textAlign: "right"}}>
+          <button className="minor-btn secondary-btn btn">+ Add something</button>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+| Action drawer options |  |
+| ---- | ---- |
+| base element | <code>.action-drawer</code> |
+| footer (optional) | <code>.action-drawer__footer</code> |
+
+```html
+<div class="action-drawer">
+   Put some content here.
+   
+   <div class="action-drawer__footer">An optional footer</div>
+</div>
+```
+
+## Select
+<Preview>
+  <Story name="Forms">
+    <div data-color-scheme="light" data-contrast="low" style={{padding: "1rem"}}>
+      <select name="get-it" className="select">
+        <option value="1">Select the thing</option>
+        <option value="2">That one</option>
+        <option value="3">Another one</option>
+      </select>
+    </div>
+    <div data-color-scheme="dark" data-contrast="low" style={{padding: "1rem"}}>
+      <select name="get-it" className="select">
+        <option value="1">Select the thing</option>
+        <option value="2">That one</option>
+        <option value="3">Another one</option>
+      </select>
+    </div>
+  </Story>
+</Preview>
+
+### Sizes
+<Preview>
+  <Story name="Select Sizes">
+    <div
+        data-color-scheme="light"
+        data-contrast="low"
+      >
+      <div style={{display: "flex", gap: "1rem"}}>
+        <select name="get-it" className="select">
+          <option value="1">Normal select</option>
+          <option value="2">That one</option>
+          <option value="3">Another one</option>
+        </select>
+        <select name="get-it" className="small-select select">
+          <option value="1">Small select</option>
+          <option value="2">That one</option>
+          <option value="3">Another one</option>
+        </select>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+| Select classes |  |
+| ---- | ---- |
+| Base | <code>.select</code> | 
+| Size (appended) | <code>.sm-select</code> |
+
+```html
+<select name="tha-options" className="select">
+  <option value="1">Options 1</option>
+  <option value="2">Options 2</option>
+  <option value="3">Option 3</option>
+</select>
+```
+
+## Text Input
+
+<Preview>
+  <Story name="Text Input">
+    <div
+      data-color-scheme="light"
+      data-contrast="low"
+      style={{padding: "1rem"}}
+    >
+      <label htmlFor="the-input">Name</label>
+      <input type="text" className="text-input" name="the-input" id="the-input" placeholder="Enter your name" />
+    </div>
+    <div
+      data-color-scheme="dark"
+      data-contrast="low"
+      style={{padding: "1rem"}}
+    >
+      <label htmlFor="the-dark-input">Name</label>
+      <input type="text" className="text-input" name="the-input" id="the-dark-input" placeholder="Enter your name" />
+    </div>
+  </Story>
+</Preview>
+
+### Sizes
+<Preview>
+  <Story name="Text Input Sizes">
+    <div
+        data-color-scheme="light"
+        data-contrast="low"
+      >
+      <div style={{display: "flex", gap: "1rem"}}>
+        <div>
+          <label htmlFor="the-first-input">Name</label>
+          <input type="text" className="text-input" name="the-first-input" id="the-first-input" placeholder="Enter your name" />
+        </div>
+        <div>
+          <label htmlFor="the-small-input">Name</label>
+          <input type="text" name="the-small-input" id="the-small-input" className="text-input sm-input" placeholder="Enter your name" />
+        </div>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+| Text Input classes |  |
+| ---- | ---- |
+| Base | n/a | 
+| Size | <code>.sm-input</code> |
+
+```html
+<label for="the-input">Name</label>
+<input type="text" className="text-input" name="the-input" id="the-input" placeholder="Enter your name" />
+```
+
+### Prepended Labels
+<Preview>
+  <Story name="Prepended Labels">
+    <div
+        data-color-scheme="light"
+        data-contrast="low"
+      >
+      <div className="prepend-label">
+        <div className="label">$</div>
+        <input className="text-input label-container" type="text" placeholder="enter an amount to give" />
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+```html
+<div className="prepend-label">
+  <div className="label">$</div>
+  <input className="text-input label-container" type="text" placeholder="enter an amount to give" />
+</div>
+```
+
+## Textarea
+
+<Preview>
+  <Story name="Textarea">
+    <div
+      data-color-scheme="light"
+      data-contrast="low"
+      style={{padding: "1rem"}}
+    >
+      <label htmlFor="the-textarea">Enter your message</label>
+      <textarea name="the-textarea" id="the-textarea" />
+    </div>
+    <div
+      data-color-scheme="dark"
+      data-contrast="low"
+      style={{padding: "1rem"}}
+    >
+      <label htmlFor="the-dark-textarea">Enter your message</label>
+      <textarea name="the-dark-textarea" id="the-dark-textarea" />
+    </div>
+  </Story>
+</Preview>
+
+```html
+<label htmlFor="the-textarea">Enter your message</label>
+<textarea name="the-textarea" />
+```
+
+## Checkbox
+<Preview>
+  <Story name="Checkbox">
+    <div
+      data-color-scheme="light"
+      data-contrast="low"
+      style={{padding: "1rem"}}
+    >
+      <input type="checkbox" className="checkbox" name="first-checkbox" id="first-checkbox" />
+      <label htmlFor="first-checkbox" className="checkbox-label">Pickles</label>
+    </div>
+    <div
+      data-color-scheme="dark"
+      data-contrast="low"
+      style={{padding: "1rem"}}
+    >
+      <input type="checkbox" className="checkbox" name="dark-checkbox" id="dark-checkbox" />
+      <label htmlFor="dark-checkbox" className="checkbox-label">Pickles</label>
+    </div>
+  </Story>
+</Preview>
+
+### Sizes
+<Preview>
+  <Story name="Checkbox Sizes">
+    <div
+      data-color-scheme="light"
+      data-contrast="low"
+      style={{display: "flex", gap: "1rem"}}
+    >
+      <div>
+        <input type="checkbox" className="checkbox" name="second-checkbox" id="second-checkbox" />
+        <label htmlFor="second-checkbox" className="checkbox-label">Pickles</label>
+      </div>
+      <div>
+        <input type="checkbox" className="large-checkbox checkbox" name="large-checkbox" id="large-checkbox" />
+        <label htmlFor="large-checkbox" className="large-checkbox-label checkbox-label">Pickles</label>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+| Checkbox classes |  |
+| ---- | ---- |
+| Input | <code>.checkbox</code> | 
+| Label | <code>.checkbox-label</code> (the label should always follow the input)|
+| Large checkbox (appended) | <code>.large-checkbox</code> |
+| Large label (appended) | <code>.large-checkbox-label</code> |
+
+```html
+<input type="checkbox" className="checkbox" name="tha-checkbox" id="tha-checkbox" />
+<label htmlFor="tha-checkbox" className="checkbox-label">Pickles</label>
+```
+
+## Modal
+
+<Preview>
+  <Story name="Modal">
+    <div
+      data-color-scheme="light"
+      data-contrast="low"
+      style={{padding: "1rem", marginBottom: "1rem"}}
+      className="modal--open"
+    >
+      <div className="modal" style={{marginTop: 0}}>
+        <div className="modal__header">
+          <div className="modal-title">Modal title</div>
+        </div>
+        <div className="modal__body">
+          This is the modal body content.
+        </div>
+        <div className="modal__footer">
+          <div style={{textAlign: "right"}}>
+            <button className="compact-btn btn">Do a small thing</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-color-scheme="dark"
+      data-contrast="low"
+      style={{padding: "1rem"}}
+      className="modal--open"
+    >
+      <div className="modal" style={{marginTop: 0}}>
+        <div className="modal__header">
+          <div className="modal-title">Modal title</div>
+        </div>
+        <div className="modal__body">
+          This is the modal body content.
+        </div>
+        <div className="modal__footer">
+          <div style={{textAlign: "right"}}>
+            <button className="compact-btn btn">Do a small thing</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+| Modal elements |  |
+| ---- | ---- |
+| base element | <code>.modal</code> |
+| header | <code>.modal__header</code> |
+| title | <code>.modal-title</code> |
+| body | <code>.modal__body</code> |
+
+| Modal control |
+| ---- |
+| modal is hidden by default; will be visible when a parent class name of <code>.modal--open</code> is present. |
+| <code>.modal-layer</code> should wrap <code>.modal</code> in order for the modal to have the appearance of sitting above the page. |
+
+### Modal markup structure
+```html
+<body class="modal--open">
+  <div class="modal-layer">
+    <div className="modal">
+      <div className="modal__header">
+        <div className="modal-title">...</div>
+      </div>
+      <div className="modal__body">
+        ...
+      </div>
+      <div className="modal__footer">
+        ...
+      </div>
+    </div>
+  </div>
+</body>
+```
+
+export function Icon({ desc, name, path, title, style, ...props }) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      role="img"
       style={{
-        display: "grid",
-        gap: "1rem",
-        gridTemplateColumns: "repeat(auto-fill, 15rem)",
-        "--box--padding": "2rem",
-        "--box--border-radius": ".25rem",
+        display: "inline-block",
+        verticalAlign: "text-top",
+        height: "1em",
+        width: "1em",
+        fontSize: "1em",
         ...style,
       }}
       {...props}
-    />
+    >
+      <title>{title}</title>
+      <desc>{desc}</desc>
+      <path d={path} fill="currentColor" />
+    </svg>
   );
 }
 
+## Dropdown Menu
+For dropdowns, we use [Reach MenuButton](https://reach.tech/menu-button/). We use a few of our own class names for custom styling.
+
 <Preview>
-  <Story name="surface">
-    <>
-      <SampleSurfaceLayout
-        data-color-scheme="dark"
-        data-contrast="low"
-        data-surface="depth:2"
-        style={{ padding: "1rem" }}
-      >
-        <div data-surface data-box>
-          one
-        </div>
-        <div data-surface data-box>
-          two
-        </div>
-        <div data-surface data-box>
-          three
-        </div>
-      </SampleSurfaceLayout>
-      <SampleSurfaceLayout
-        data-color-scheme="light"
-        data-contrast="low"
-        data-surface="depth:2"
-        style={{ padding: "1rem" }}
-      >
-        <div data-surface data-box>
-          one
-        </div>
-        <div data-surface data-box>
-          two
-        </div>
-        <div data-surface data-box>
-          three
-        </div>
-      </SampleSurfaceLayout>
-    </>
+  <Story name="Dropdown Menu">
+    <div
+      data-color-scheme="light"
+      data-contrast="low"
+      style={{paddingBottom: "1rem"}}
+    >
+      <Menu>
+        <MenuButton className="compact-btn secondary-btn btn">
+          Open menu
+          <span data-reach-menu-button-toggle-icon style={{marginLeft: "4px"}}>
+            <Icon
+              title="Down caret"
+              desc="Open Church Center Publishing status menu"
+              path={downCaret}
+            />
+          </span>
+        </MenuButton>
+        <MenuList>
+          <MenuLink
+            className="dropdown-menu-item"
+            target="_blank"
+            rel="noreferrer"
+            href=""
+          >
+            Overview
+          </MenuLink>
+        </MenuList>
+      </Menu>
+    </div>
   </Story>
 </Preview>
+
+| Dropdown classes |  |
+| ---- | ---- |
+| <code>MenuButton</code> | use the button class you desire; in most cases, <code>.secondary-btn.btn</code> |
+| <code>MenuLink</code> | <code>.dropdown-menu-item</code> |
+
+```html
+<Menu>
+  <MenuButton className="compact-btn secondary-btn btn">
+    Open menu
+    <span data-reach-menu-button-toggle-icon style={{marginLeft: "4px"}}>
+      <DownCaretIcon />
+    </span>
+  </MenuButton>
+  <MenuList>
+    <MenuLink
+      className="dropdown-menu-item"
+      href=""
+    >
+      Link text
+    </MenuLink>
+  </MenuList>
+</Menu>
+```
+
+## Breadcrumbs
+
+<Preview>
+  <Story name="Breadcrumbs">
+    <div
+      data-color-scheme="light"
+      data-contrast="low"
+      style={{marginBottom: "1rem"}}
+    >
+      <nav aria-label="Breadcrumb" className="breadcrumbs">
+        <div className="breadcrumbs__layout">
+          <a className="breadcrumbs__page" aria-label="Parent Page Name" href="">
+            <span className="text">Parent Page Name</span>
+            <span className="icon">
+              <Icon
+              title="three dots"
+              desc="three dots indicating more options"
+              path={threeDots}
+            />
+            </span>
+          </a>
+          <span className="breadcrumbs__divider-icon">
+            <Icon
+              title="right chevron"
+              desc="chevron pointing right"
+              path={rightChevron}
+            />
+          </span>
+          <div className="breadcrumbs__page breadcrumbs__current-page" aria-current="location">
+            Page Name
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div
+      data-color-scheme="dark"
+      data-contrast="low"
+    >
+      <nav aria-label="Breadcrumb" className="breadcrumbs">
+        <div className="breadcrumbs__layout">
+          <a className="breadcrumbs__page" aria-label="Parent Page Name" href="">
+            <span className="text">Parent Page Name</span>
+            <span className="icon">
+              <Icon
+              title="three dots"
+              desc="three dots indicating more options"
+              path={threeDots}
+            />
+            </span>
+          </a>
+          <span className="breadcrumbs__divider-icon">
+            <Icon
+              title="right chevron"
+              desc="chevron pointing right"
+              path={rightChevron}
+            />
+          </span>
+          <div className="breadcrumbs__page breadcrumbs__current-page" aria-current="location">
+            Page Name
+          </div>
+        </div>
+      </nav>
+    </div>
+  </Story>
+</Preview>
+
+| Breadcrumbs elements |    |
+| ---- | ---- |
+| base element | <code>.breadcrumbs</code> |
+| layout container (provides flex container with height and max width) | <code>.breadcrumbs__layout</code> |
+| page link | <code>.breadcrumbs__page</code> |
+| active page class (appended) | <code>.breadcrumbs__current-page</code> |
+| link text | <code>.text</code> |
+| link icon | <code>.icon</code> (link icon is only shown on mobile screens, and replaces the text link) |
+| divider icon | <code>.breadcrumbs__divider-icon</code> |
+
+```html
+<nav aria-label="Breadcrumb" className="breadcrumbs">
+  <div className="breadcrumbs__layout">
+    <a className="breadcrumbs__page" aria-label="Parent Page Name" href="">
+      <span className="text">Parent Page Name</span>
+      <span className="icon">
+        <Icon
+        title="three dots"
+        desc="three dots indicating more options"
+        path={threeDots}
+      />
+      </span>
+    </a>
+    <span className="breadcrumbs__divider-icon">
+      <Icon
+        title="right chevron"
+        desc="chevron pointing right"
+        path={rightChevron}
+      />
+    </span>
+    <div className="breadcrumbs__page breadcrumbs__current-page" aria-current="location">
+      Page Name
+    </div>
+  </div>
+</nav>
+```
