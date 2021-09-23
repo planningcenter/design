@@ -1,3 +1,4 @@
+import React from "react"
 // WARNING:
 // This file contains static examples for visual regression tests.
 // Nothing in this file should be copied or used.
