@@ -1,4 +1,4 @@
-@import "./screen_reader_text.css";
+@import "./minions-adapter.css";
 @import "./point.css";
 @import "./point-auto.css";
 @import "./point-xs.css";
@@ -6,3 +6,24 @@
 @import "./point-md.css";
 @import "./point-lg.css";
 @import "./point-xl.css";
+@import "./screen_reader_text.css";
+
+.circle { border-radius: 100% }
+
+.disabled, [disabled] { cursor: not-allowed }
+
+.first-letter-lowercase:first-letter { text-transform: lowercase }
+
+.hide { display: none }
+
+.unstyled {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.overflow-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
