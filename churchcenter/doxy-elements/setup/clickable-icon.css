@@ -1,0 +1,8 @@
+.clickable-icon {
+  color: var(--color-tint3);
+  font-size: 14px;
+  padding: 12px;
+  transition: color 0.2s;
+}
+.clickable-icon:hover { color: var(--color-tint1) }
+.clickable-icon.c-ruby:hover { color: #c71612 }

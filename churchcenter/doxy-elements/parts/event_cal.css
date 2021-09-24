@@ -1,0 +1,30 @@
+.event-cal {
+	 align-items: center;
+	 background: var(--color-tint7);
+	 border-radius: 4px;
+	 color: var(--color-tint2);
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+}
+ .event-detail__cal .event-cal {
+	 height: 80px;
+	 width: 80px;
+}
+ .event-cal__month {
+	 font-size: 12px;
+	 line-height: 1;
+	 text-transform: uppercase;
+}
+ .event-detail__cal .event-cal__month {
+	 font-size: 16px;
+}
+ .event-cal__day {
+	 font-size: 18px;
+	 line-height: 1;
+	 padding-top: 2px;
+}
+ .event-detail__cal .event-cal__day {
+	 font-size: 24px;
+	 padding-top: 4px;
+}

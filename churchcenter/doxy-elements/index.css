@@ -7,8 +7,11 @@
 @import "./modules/card-list.css";
 @import "./modules/checkbox.css";
 @import "./modules/dropdown.css";
+@import "./modules/forms.css";
+@import "./modules/media-tile.css";
 @import "./modules/modal.css";
 @import "./modules/select.css";
+@import "./modules/status-bar.css";
 @import "./modules/text-input.css";
 @import "./modules/typography.css";
 

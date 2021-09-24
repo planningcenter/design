@@ -65,7 +65,10 @@ html.modal--open--but-on-html-for-mobile-scroll-bugz > body {
   padding: 1rem;
   position: absolute;
   right: 0;
-  @include vertical-align;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   z-index: 1;
 }
 

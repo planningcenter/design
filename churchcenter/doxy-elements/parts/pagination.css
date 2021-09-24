@@ -1,0 +1,61 @@
+.kaminari-pagination {
+	 margin: 20px 0;
+	 text-align: center;
+}
+ .kaminari-pagination ul {
+	 display: inline-block;
+	 font-size: 14px;
+	 margin-bottom: 0;
+	 margin-left: 0;
+	 padding-left: 0;
+	 border-radius: 3px;
+}
+ .kaminari-pagination ul > li {
+	 display: inline;
+}
+ .kaminari-pagination ul > li > a, .kaminari-pagination ul > li > span {
+	 color: emerald;
+	 cursor: pointer;
+	 padding: 4px 8px;
+}
+ .kaminari-pagination ul > li.gap span {
+	 cursor: default;
+}
+ .kaminari-pagination ul > .active > a, .kaminari-pagination ul > .active > span {
+	 color: var(--color-tint3);
+	 cursor: default;
+	 font-weight: 600;
+}
+ .kaminari-pagination ul > .disabled > a, .kaminari-pagination ul > .disabled > span {
+	 color: var(--color-tint5);
+	 cursor: default;
+	 background-color: transparent;
+	 border-color: transparent;
+}
+ .kaminari-pagination ul > .disabled > a:hover, .kaminari-pagination ul > .disabled > span:hover, .kaminari-pagination ul > .disabled > a:focus, .kaminari-pagination ul > .disabled > span:focus {
+	 color: var(--color-tint5);
+	 cursor: default;
+	 background-color: transparent;
+}
+ .kaminari-pagination ul > .prev a, .kaminari-pagination ul > .next a, .kaminari-pagination ul > .prev span, .kaminari-pagination ul > .next span {
+	 color: var(--color-turquoise);
+}
+ @media (max-width: 600px) {
+	 .kaminari-pagination ul > .prev a, .kaminari-pagination ul > .prev span {
+		 margin-right: 0.5rem;
+	}
+}
+ @media (max-width: 600px) {
+	 .kaminari-pagination ul > .next a, .kaminari-pagination ul > .next span {
+		 margin-left: 0.5rem;
+	}
+}
+ .kaminari-pagination ul > .first a, .kaminari-pagination ul > .last a, .kaminari-pagination ul > .first span, .kaminari-pagination ul > .last span {
+	 color: var(--color-turquoise);
+}
+ @media (max-width: 600px) {
+	 .kaminari-pagination ul > li:not(.first):not(.prev):not(.next):not(.last) {
+		 display: none;
+	}
+}
+ 

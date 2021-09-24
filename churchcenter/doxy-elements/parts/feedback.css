@@ -1,0 +1,184 @@
+.inline-success-message {
+	 margin: 0;
+	 position: absolute;
+	 width: 90px;
+	 margin-top: -13px;
+	 top: 50%;
+	 right: 10px;
+	 z-index: 5;
+	 opacity: 1;
+	 pointer-events: none;
+}
+ .ism-text-span {
+	 margin-left: -1px;
+	 text-indent: 32px;
+	 background-color: var(--color-emerald);
+	 border-radius: 50px;
+	 height: 26px;
+	 color: #fff;
+	 font-size: 13px;
+	 font-weight: 800;
+	 line-height: 26px;
+	 overflow: hidden;
+	 width: 0;
+	 opacity: 0;
+	 animation: text 0.4s 0.65s ease-in-out forwards;
+}
+ .ism-checkmark {
+	 position: absolute;
+	 width: 26px;
+	 height: 26px;
+	 border-radius: 50%;
+	 z-index: 1;
+	 stroke-width: 6;
+	 stroke: #fff;
+	 stroke-miterlimit: 10;
+	 box-shadow: inset 0 0 0 var(--color-emerald);
+	 animation: fill 0.4s ease-in-out 0.4s forwards;
+}
+ .ism-checkmark.failed {
+	 animation: none;
+	 box-shadow: inset 0 0 0 30px var(--color-ruby);
+	 padding: 0;
+}
+ .ism-checkmark.failed .ism-checkmark__circle {
+	 stroke: var(--color-ruby);
+}
+ .ism-checkmark.failed .ism-checkmark__check {
+	 stroke-dasharray: 166;
+	 stroke-dashoffset: 0;
+	 stroke-width: 10;
+	 stroke-miterlimit: 10;
+	 stroke: #fff;
+	 fill: none;
+	 animation: none;
+	 transform: scale(0.6);
+}
+ .ism-checkmark__circle {
+	 stroke-dasharray: 166;
+	 stroke-dashoffset: 166;
+	 stroke-width: 3;
+	 stroke-miterlimit: 10;
+	 stroke: var(--color-emerald);
+	 fill: none;
+	 animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+ .ism-checkmark__check {
+	 transform-origin: 50% 50%;
+	 stroke-dasharray: 48;
+	 stroke-dashoffset: 48;
+	 animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+ @keyframes stroke {
+	 100% {
+		 stroke-dashoffset: 0;
+	}
+}
+ @keyframes fill {
+	 100% {
+		 box-shadow: inset 0 0 0 30px var(--color-emerald);
+	}
+}
+ @keyframes text {
+	 100% {
+		 width: 100%;
+		 opacity: 1;
+	}
+}
+ @keyframes fadeOut {
+	 0% {
+		 opacity: 1;
+	}
+	 100% {
+		 opacity: 0;
+		 pointer-events: none;
+	}
+}
+ @keyframes fadeInLeft {
+	 0% {
+		 opacity: 0;
+		 right: -40px;
+	}
+	 100% {
+		 opacity: 1;
+		 right: 0;
+	}
+}
+ @keyframes fadeOutRight {
+	 0% {
+		 opacity: 1;
+		 right: 0;
+	}
+	 100% {
+		 opacity: 0;
+		 right: 8px;
+	}
+}
+ @keyframes animatedIcon {
+	 0% {
+		 opacity: 0;
+		 transform: scale(0.1) rotate(-60deg);
+	}
+	 100% {
+		 opacity: 1;
+		 transform: scale(1) rotate(0deg);
+	}
+}
+ @keyframes animatedText {
+	 0% {
+		 opacity: 0;
+		 transform: scale(0.25);
+	}
+	 100% {
+		 opacity: 1;
+		 transform: scale(1);
+	}
+}
+ .inline-success-notification {
+	 margin: 0;
+	 position: absolute;
+	 width: auto;
+	 top: calc(50% - 2px);
+	 transform: translateY(-50%);
+	 right: 0;
+	 z-index: 5;
+	 opacity: 0;
+	 pointer-events: none;
+	 overflow: hidden;
+	 display: flex;
+	 align-items: center !important;
+	 justify-content: center;
+	 border-radius: 16px;
+	 padding: 4px;
+	 background: var(--color-emerald);
+	 animation: fadeInLeft 0.4s ease-out forwards, fadeOutRight 0.4s 4s cubic-bezier(0.6, 0.14, 1, 0.69) forwards;
+}
+ .inline-success-notification .inline-success-notification--icon {
+	 display: inline-flex;
+	 align-items: center;
+	 justify-content: center;
+	 padding: 2px 4px;
+	 margin: 0;
+}
+ .inline-success-notification .inline-success-notification--icon svg {
+	 display: block;
+	 fill: #fff;
+	 height: 14px;
+	 opacity: 0;
+	 animation: animatedIcon 0.25s 0.1s cubic-bezier(0.65, 0, 0.45, 1) 1 forwards;
+}
+ .inline-success-notification .inline-success-notification-text {
+	 display: inline-flex;
+	 align-items: center;
+	 justify-content: center;
+	 color: #fff;
+	 font-weight: 600;
+	 font-size: 13px;
+	 padding: 0 8px 0 0;
+	 margin: 0;
+	 opacity: 0;
+	 line-height: 0;
+	 transform-origin: left center;
+	 animation: animatedText 0.25s 0.1s cubic-bezier(0.65, 0, 0.45, 1) 1 forwards;
+}
+ 

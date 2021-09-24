@@ -1,0 +1,100 @@
+.icon-svg {
+	 display: inline-block;
+	 width: 2em;
+	 height: 2em;
+	 fill: currentColor;
+}
+ .icon-svg--payment {
+	 font-size: 16px;
+}
+ .svg-ach-path1 {
+	 fill: #2980b9;
+}
+ .svg-ach-path2 {
+	 fill: #116fa2;
+}
+ .svg-ach-path3, .svg-ach-path4, .svg-ach-path5 {
+	 fill: #fff;
+}
+ .svg-amex-path1 {
+	 fill: #3473db;
+}
+ .svg-amex-path2 {
+	 fill: rgba(0, 0, 0, 0.1);
+}
+ .svg-amex-path3, .svg-amex-path4 {
+	 fill: #fff;
+}
+ .svg-credit-card-path1 {
+	 fill: #27ae60;
+}
+ .svg-credit-card-path2 {
+	 fill: #3c4244;
+}
+ .svg-credit-card-path3, .svg-credit-card-path4 {
+	 fill: #e2eef2;
+}
+ .svg-credit-card-path5 {
+	 fill: rgba(44, 62, 80, 0.4);
+}
+ .svg-discover-path1 {
+	 fill: #333;
+}
+ .svg-discover-path2 {
+	 fill: #f39c12;
+}
+ .svg-discover-path3, .svg-discover-path4, .svg-discover-path5, .svg-discover-path6, .svg-discover-path7, .svg-discover-path8, .svg-discover-path9 {
+	 fill: #fff;
+}
+ .svg-mastercard-path1 {
+	 fill: #34495e;
+}
+ .svg-mastercard-path2 {
+	 fill: #e74c3c;
+}
+ .svg-mastercard-path3 {
+	 fill: #f1c40f;
+}
+ .svg-mastercard-path4 {
+	 fill: #f39c12;
+}
+ .svg-mastercard-path5, .svg-mastercard-path6, .svg-mastercard-path7, .svg-mastercard-path8, .svg-mastercard-path9, .svg-mastercard-path10, .svg-mastercard-path11, .svg-mastercard-path12, .svg-mastercard-path13, .svg-mastercard-path14 {
+	 fill: #fff;
+}
+ .svg-visa-path1 {
+	 fill: #1260a0;
+}
+ .svg-visa-path2, .svg-visa-path3, .svg-visa-path4, .svg-visa-path5 {
+	 fill: #fff;
+}
+ .svg-visa-path6 {
+	 fill: #f39c12;
+}
+ .svg-check-path1 {
+	 fill: #efe5ce;
+}
+ .svg-check-path2, .svg-check-path3, .svg-check-path5 {
+	 fill: #d3c4a7;
+}
+ .svg-check-path4, .svg-check-path8 {
+	 fill: #44423d;
+}
+ .svg-check-path6, .svg-check-path7, .svg-check-path9, .svg-check-path10 {
+	 fill: #fcc846;
+}
+ .svg-cash-path1, .svg-cash-path3 {
+	 fill: #8fce6a;
+}
+ .svg-cash-path2 {
+	 fill: #599930;
+}
+ .svg-bank-path1, .svg-bank-path2, .svg-bank-path3, .svg-bank-path4, .svg-bank-path5, .svg-bank-path6, .svg-bank-path7, .svg-bank-path8 {
+	 fill: #bdbdbd;
+}
+ .svg-new-credit-card-path1, .svg-new-credit-card-path2, .svg-new-credit-card-path3 {
+	 fill: #bdbdbd;
+}
+ .svg-apple-pay-path1, .svg-apple-pay-path2, .svg-apple-pay-path3, .svg-apple-pay-path4, .svg-apple-pay-path5, .svg-apple-pay-path6 {
+	 fill: #111;
+}
+ 

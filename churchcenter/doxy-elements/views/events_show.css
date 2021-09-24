@@ -1,0 +1,26 @@
+.item-show__image, .events-show__placeholder {
+	 margin: -1rem -1.5rem 1rem -1.5rem;
+}
+ @media (min-width: 720px) {
+	 .item-show__image, .events-show__placeholder {
+		 margin: 0;
+	}
+}
+ @media (max-width: 719px) {
+	 .item-show__image .event-placeholder, .events-show__placeholder .event-placeholder {
+		 border-radius: 0;
+	}
+}
+ .item-show__image img, .events-show__placeholder img {
+	 margin: 0 auto;
+}
+ @media (min-width: 720px) {
+	 .item-show__image img, .events-show__placeholder img {
+		 border-radius: 4px;
+	}
+}
+ .item-show__title {
+	 font-size: 24px;
+	 font-weight: 500;
+}
+ 

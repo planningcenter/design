@@ -1,0 +1,31 @@
+[data-color-scheme="dark"][data-contrast="low"] {
+	 --error-badge--background-color: #d31612;
+	 --success-badge--background-color: #3a823e;
+	 --warning-badge--background-color: #926607;
+	 --error-notice--background-color: var(--color-tint8);
+	 --error-notice--border-color: var(--color-tint4);
+	 --success-notice--background-color: var(--color-tint8);
+	 --success-notice--border-color: var(--color-tint4);
+	 --warning-notice--background-color: var(--color-tint8);
+	 --warning-notice--border-color: var(--color-tint4);
+	 --info-notice--background-color: var(--color-tint8);
+	 --info-notice--border-color: var(--color-tint4);
+	 --notice--background-color: var(--success-notice--background-color);
+	 --notice--color: var(--color-tint1);
+}
+ [data-color-scheme="dark"][data-contrast="low"] .error-badge {
+	 --badge--color: #fdeded;
+	 --badge--background-color: var(--error-badge--background-color);
+}
+ [data-color-scheme="dark"][data-contrast="low"] .success-badge, [data-color-scheme="dark"][data-contrast="low"] .open-badge {
+	 --badge--color: #f1f8f1;
+	 --badge--background-color: var(--success-badge--background-color);
+}
+ [data-color-scheme="dark"][data-contrast="low"] .warning-badge {
+	 --badge--color: #fef8ec;
+	 --badge--background-color: var(--warning-badge--background-color);
+}
+ [data-color-scheme="dark"][data-contrast="low"] .quiet-alert {
+	 --notice--border-color: var(--color-tint4);
+}
+ 

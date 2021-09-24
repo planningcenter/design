@@ -1,0 +1,58 @@
+[data-color-scheme="light"][data-contrast="low"] {
+	 --action-drawer-footer--highlighted-background-color: #e2f1fd;
+	 --info-muted--background-color: #ecf6fe;
+	 --text-input--focus-border-color: #d3eafd;
+	 --text-input--focus-box-shadow: 0px 0px 3px 0 #a3d3fa;
+	 --error-badge--background-color: #fdeded;
+	 --success-badge--background-color: #f1f8f1;
+	 --warning-badge--background-color: #fef8ec;
+	 --error-notice--background-color: #f8efed;
+	 --error-notice--border-color: rgba(239, 85, 82, 30);
+	 --success-notice--background-color: #f3f7f1;
+	 --success-notice--border-color: rgba(104, 187, 108, 30);
+	 --warning-notice--background-color: #faf4e5;
+	 --warning-notice--border-color: rgba(245, 190, 61, 15);
+	 --info-notice--background-color: #ecf6fe;
+	 --info-notice--border-color: rgba(66, 165, 245, 15);
+}
+ [data-color-scheme="light"][data-contrast="low"] .error-badge {
+	 --badge--background-color: var(--error-badge--background-color);
+	 --badge--color: #d31612;
+}
+ [data-color-scheme="light"][data-contrast="low"] .success-badge, [data-color-scheme="light"][data-contrast="low"] .open-badge {
+	 --badge--background-color: var(--success-badge--background-color);
+	 --badge--color: #3a823e;
+}
+ [data-color-scheme="light"][data-contrast="low"] .warning-badge {
+	 --badge--background-color: var(--warning-badge--background-color);
+	 --badge--color: #926607;
+}
+ [data-color-scheme="light"][data-contrast="low"] .error-alert {
+	 --notice--background-color: var(--error-notice--background-color);
+}
+ [data-color-scheme="light"][data-contrast="low"] .error-alert.quiet-alert {
+	 --notice--color: var(--color-ruby);
+	 --notice--border-color: var(--error-notice--border-color);
+}
+ [data-color-scheme="light"][data-contrast="low"] .success-alert {
+	 --notice--background-color: var(--success-notice--background-color);
+}
+ [data-color-scheme="light"][data-contrast="low"] .success-alert.quiet-alert {
+	 --notice--color: var(--color-emerald);
+	 --notice--border-color: var(--success-notice--border-color);
+}
+ [data-color-scheme="light"][data-contrast="low"] .warning-alert {
+	 --notice--background-color: var(--warning-notice--background-color);
+}
+ [data-color-scheme="light"][data-contrast="low"] .warning-alert.quiet-alert {
+	 --notice--color: #926607;
+	 --notice--border-color: var(--warning-notice--border-color);
+}
+ [data-color-scheme="light"][data-contrast="low"] .info-alert {
+	 --notice--background-color: var(--info-notice--background-color);
+}
+ [data-color-scheme="light"][data-contrast="low"] .info-alert.quiet-alert {
+	 --notice--color: var(--color-topaz);
+	 --notice--border-color: var(--info-notice--border-color);
+}
+ 

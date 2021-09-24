@@ -1,0 +1,23 @@
+.page-container {
+	 height: 100vh;
+}
+ .page-content {
+	 padding: 1.5rem;
+}
+ @media (min-width: 720px) {
+	 .page-content {
+		 padding: 2rem;
+	}
+}
+ @media all and (-ms-high-contrast: none) {
+	 *::-ms-backdrop, .page-container {
+		 display: block !important;
+	}
+	 *::-ms-backdrop, .page-content {
+		 min-height: calc(100% - 166px);
+	}
+	 *::-ms-backdrop, .site-footer {
+		 margin-top: 0 !important;
+	}
+}
+ 

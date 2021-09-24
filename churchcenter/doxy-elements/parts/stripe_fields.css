@@ -1,0 +1,15 @@
+.stripe-fields .StripeElement {
+	 padding: 8px 4px;
+	 border: 1px solid var(--color-tint5);
+	 box-shadow: inset 0 1px 2px var(--color-tint9);
+	 border-radius: 4px;
+}
+ .stripe-fields .StripeElement--invalid {
+	 border-color: var(--color-ruby);
+}
+ .stripe-fields #card-errors {
+	 color: var(--color-ruby);
+	 font-size: 14px;
+	 padding-top: 4px;
+}
+ 

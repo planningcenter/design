@@ -1,0 +1,39 @@
+.org-result {
+	 background-color: white;
+	 color: var(--color-tint1);
+	 cursor: pointer;
+	 display: flex;
+	 flex-direction: column;
+	 font-size: 1rem;
+	 justify-content: space-between;
+	 margin-top: 1rem;
+	 text-align: center;
+	 width: calc(50% - 8px);
+	 border: 1px solid var(--color-tint6);
+	 border-image: initial;
+	 border-radius: 4px;
+	 padding: 1.5rem;
+	 transition: box-shadow 0.2s ease 0s;
+}
+ .org-result:nth-child(odd) {
+	 margin-right: 0.5rem;
+}
+ .org-result:nth-child(even) {
+	 margin-left: 0.5rem;
+}
+ .org-result:hover {
+	 box-shadow: inset 0 0 0 2px rgba(220, 220, 220, 0.2);
+}
+ .org-result__contact {
+	 margin-top: 1.5rem;
+}
+ .org-result__name {
+	 color: var(--color-tint1);
+	 font-weight: 600;
+}
+ .org-result__website {
+	 color: var(--color-tint2);
+	 font-size: 14px;
+	 font-weight: 400;
+}
+ 

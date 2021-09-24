@@ -1,0 +1,148 @@
+.swal-overlay {
+	 background: rgba(250, 250, 250, 0.9);
+}
+ .swal-modal {
+	 box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	 border-radius: 8px;
+	 padding: 32px;
+}
+ .swal-icon {
+	 height: 64px;
+	 margin: 0 auto 24px;
+	 width: 64px;
+}
+ .swal-icon:first-child {
+	 margin-top: 0;
+}
+ .swal-icon--error {
+	 border: 0;
+	 background-image: url(data:image/svg+xml;
+	 base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgYXJpYS1sYWJlbGxlZGJ5PSJ0aXRsZSIgcm9sZT0iaW1nIiBjbGFzcz0ic3ltYm9sIHN5bWJvbC1leGNsYW1hdGlvbi1jaXJjbGUiPjx0aXRsZSBpZD0idGl0bGUiPmV4Y2xhbWF0aW9uLWNpcmNsZSBpY29uPC90aXRsZT48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik04LjAzMi0uMDA5YTcuOTc3IDcuOTc3IDAgMSAwIDcuOTc3IDcuOTc3QTcuOTc3IDcuOTc3IDAgMCAwIDguMDMyLS4wMDl6TTkuNiAxMi4xMzdjLjAxMi4zLS4xNTEuNDQ4LS40ODIuNDQ4SDdhLjUyOS41MjkgMCAwIDEtLjM0OC0uMTIxLjQuNCAwIDAgMS0uMTUxLS4zMjh2LTEuODlhLjQzLjQzIDAgMCAxIC4xNTItLjM0NkEuNTEuNTEgMCAwIDEgNyA5Ljc3M2gyLjExN2EuNDY0LjQ2NCAwIDAgMSAuMzU0LjEzNC40NzIuNDcyIDAgMCAxIC4xMjguMzQxem0tLjExNS00LjAyYS40MTkuNDE5IDAgMCAxLS4xNDguMzE0LjUxMi41MTIgMCAwIDEtLjM0OC4xMzRoLTEuOWEuNS41IDAgMCAxLS4zNDgtLjEzNC40MTkuNDE5IDAgMCAxLS4xNDgtLjMxNEw2LjQxOCAzLjhhLjQyNi40MjYgMCAwIDEgLjEzMy0uMzE0LjUuNSAwIDAgMSAuMzYzLS4xMzRIOS4yYS41LjUgMCAwIDEgLjM0OC4xMzQuNDE1LjQxNSAwIDAgMSAuMTUyLjMxNHoiIGRhdGEtbmFtZT0iTGF5ZXIgMSIgcm9sZT0icHJlc2VudGF0aW9uIiBmaWxsPSIjREY1QTRDIi8+PC9zdmc+);
+}
+ .swal-icon--error__line {
+	 display: none;
+}
+ .swal-icon--warning {
+	 border: 0;
+	 background-image: url(data:image/svg+xml;
+	 base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+PGcgaWQ9IkxheWVyXzEiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PGNpcmNsZSBmaWxsPSIjZjViMzRiIiBjeD0iOCIgY3k9IjgiIHI9IjcuOTc3Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTcuOTk1LDMuMDczYS40MzcuNDM3LDAsMCwxLC4zLjExNiwxLjEzMSwxLjEzMSwwLDAsMSwuMjEzLjI2Mmw0LjE1NCw3LjE4M2EuOS45LDAsMCwxLC4wODkuMTg1LjYyNS42MjUsMCwwLDEsLjAzNS4yMTQuNC40LDAsMCwxLS4yLjM4MS44NzcuODc3LDAsMCwxLS40MzcuMTE2SDMuODVhLjg4Ljg4LDAsMCwxLS40MzctLjExNi40LjQsMCwwLDEtLjItLjM4MS42OTMuNjkzLDAsMCwxLC4xMjQtLjRMNy40NzcsMy40NTFhMS4xMjcsMS4xMjcsMCwwLDEsLjIxMi0uMjYyQS40MzcuNDM3LDAsMCwxLDcuOTk1LDMuMDczWm0uNCw1LjU5NGEuMjA1LjIwNSwwLDAsMCwuMi0uMmwuMDg3LTIuNjkzYS4yMDcuMjA3LDAsMCwwLS4yLS4ySDcuNTIxYS4xOS4xOSwwLDAsMC0uMTQ3LjA2LjIuMiwwLDAsMC0uMDU0LjE0MWwuMDY5LDIuNjkzYS4yLjIsMCwwLDAsLjA2LjE0MS4xOTMuMTkzLDAsMCwwLC4xNDEuMDZabS4yNDcuNzU2YS4yMjYuMjI2LDAsMCwwLS4wNTItLjE1My4xNzkuMTc5LDAsMCwwLS4xNDQtLjA2SDcuNTU2YS4yLjIsMCwwLDAtLjE0MS4wNTguMi4yLDAsMCwwLS4wNjEuMTU1di44NDlhLjE4Ny4xODcsMCwwLDAsLjA2MS4xNDcuMi4yLDAsMCwwLC4xNDEuMDU0aC44ODlhLjE3Mi4xNzIsMCwwLDAsLjItLjJaIi8+PC9nPjwvc3ZnPg0K);
+}
+ .swal-icon--warning__body, .swal-icon--warning__dot {
+	 display: none;
+}
+ .swal-icon--info {
+	 border: 0;
+	 background-image: url(data:image/svg+xml;
+	 base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI+DQogIDx0aXRsZT5pbmZvLWNpcmNsZS1vPC90aXRsZT4NCiAgPGcgaWQ9IkxheWVyXzEiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+DQogICAgPGNpcmNsZSBjbGFzcz0iY2xzLTEiIGZpbGw9IiM1MGIyYTkiIGN4PSI4LjAzMiIgY3k9IjcuOTY4IiByPSI3Ljk3NyIvPg0KICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZmlsbD0iI0ZGRkZGRiIgZD0iTTEwLjA1NCwxMS41bC0uNzcyLjMzMmEuNTcyLjU3MiwwLDAsMS0uNzUxLS42MTNsLjgyMi00LjI4OGEuNzA5LjcwOSwwLDAsMC0uNy0uOEg2LjE4MmMtLjM2MiwwLS40NjkuMTkyLS40NjkuMzE5cy4xODEuMjQ1Ljc0Ni4zOTQuMzYyLjUxMS4zNDEuNy0uNDM3LDIuNDYxLS41MTEsMi45MTktLjU3NSwyLjM2NSwxLjQzOCwyLjQ1YTMuMjY1LDMuMjY1LDAsMCwwLDIuNDc4LTFBLjI0Mi4yNDIsMCwwLDAsMTAuMDU0LDExLjVaTTguNSw1LjYyOUExLjM2OSwxLjM2OSwwLDEsMCw3LjEzMSw0LjI2LDEuMzY5LDEuMzY5LDAsMCwwLDguNSw1LjYyOVoiLz4NCiAgPC9nPg0KPC9zdmc+);
+}
+ .swal-icon--info:before, .swal-icon--info:after {
+	 display: none;
+}
+ .swal-icon--success {
+	 border: 0;
+	 background-image: url("data:image/svg+xml,%3Csvg fill='%2369c36e' id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctitle%3Echeck-circle%3C/title%3E%3Cpath d='M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM7,11.63,3.43,8.07,4.57,6.93,7,9.37l4.43-4.44,1.14,1.14Z'/%3E%3C/svg%3E%0A");
+}
+ .swal-icon--success:before, .swal-icon--success:after, .swal-icon--success__line, .swal-icon--success__ring, .swal-icon--success__hide-corners {
+	 display: none;
+}
+ .swal-title {
+	 color: var(--color-tint2);
+	 font-weight: 600;
+	 font-size: 30px;
+	 letter-spacing: -0.0125em;
+	 margin-bottom: 24px;
+	 padding: 0;
+}
+ .swal-title:not(:last-child) {
+	 margin-bottom: 16px;
+}
+ .swal-content {
+	 margin: 0;
+	 padding: 0;
+}
+ .swal-content p {
+	 margin-bottom: 16px;
+}
+ .swal-text {
+	 color: var(--color-tint1);
+	 line-height: 1.4;
+	 margin: 0;
+}
+ .swal-footer {
+	 border-top: 1px solid var(--color-tint6);
+	 margin: 24px -32px -32px;
+	 padding: 16px;
+	 text-align: center;
+}
+ .swal-button {
+	 align-items: center;
+	 background-color: #42a5f5;
+	 border-color: #2a99f4;
+	 border-radius: 3px;
+	 border-style: solid;
+	 border-width: 1px;
+	 color: white;
+	 cursor: pointer;
+	 display: inline-flex;
+	 font-weight: 600;
+	 justify-content: center;
+	 line-height: 2.3;
+	 padding: 0 1em;
+	 text-align: center;
+	 text-decoration: none;
+	 transition: all 0.2s;
+}
+ .swal-button:not([disabled]):hover {
+	 background-color: #2a99f4;
+}
+ .swal-button:focus {
+	 box-shadow: 0 0 1px 2px rgba(66, 165, 245, .75), 0 1px 1px rgba(0, 0, 0, .15);
+}
+ .swal-button--confirm:not([disabled]):hover, .swal-button--delete:not([disabled]):hover {
+	 background-color: #2a99f4;
+}
+ .swal-button--confirm:focus, .swal-button--delete:focus {
+	 box-shadow: 0 0 1px 2px rgba(66, 165, 245, .75), 0 1px 1px rgba(0, 0, 0, .15);
+}
+ .success .swal-button--confirm, .success .swal-button--delete {
+	 background-color: #69c36e;
+	 border-color: #57bc5c;
+	 color: white;
+}
+ .success .swal-button--confirm:not([disabled]):hover, .success .swal-button--delete:not([disabled]):hover {
+	 background-color: #64b969;
+}
+ .success .swal-button--confirm:focus, .success .swal-button--delete:focus {
+	 box-shadow: 0 0 1px 2px rgba(105, 195, 110, .75), 0 1px 1px rgba(0, 0, 0, .15);
+}
+ .info .swal-button--confirm, .info .swal-button--delete {
+	 background-color: #42a5f5;
+	 border-color: #2a99f4;
+	 color: white;
+}
+ .info .swal-button--confirm:not([disabled]):hover, .info .swal-button--delete:not([disabled]):hover {
+	 background-color: #2a99f4;
+}
+ .info .swal-button--confirm:focus, .info .swal-button--delete:focus {
+	 box-shadow: 0 0 1px 2px rgba(66, 165, 245, .75), 0 1px 1px rgba(0, 0, 0, .15);
+}
+ .warning .swal-button--confirm, .warning .swal-button--delete, .error .swal-button--confirm, .error .swal-button--delete {
+	 background-color: #df5a4c;
+	 border-color: #db4636;
+	 color: white;
+}
+ .warning .swal-button--confirm:not([disabled]):hover, .warning .swal-button--delete:not([disabled]):hover, .error .swal-button--confirm:not([disabled]):hover, .error .swal-button--delete:not([disabled]):hover {
+	 background-color: #d45648;
+}
+ .warning .swal-button--confirm:focus, .warning .swal-button--delete:focus, .error .swal-button--confirm:focus, .error .swal-button--delete:focus {
+	 box-shadow: 0 0 1px 2px rgba(223, 90, 76, .75), 0 1px 1px rgba(0, 0, 0, .15);
+}
+ .swal-button--cancel {
+	 background-color: #f5f5f5;
+	 border-color: #ccc;
+	 color: #999;
+}
+ .swal-button--cancel:not([disabled]):hover {
+	 background-color: #ebebeb;
+}
+ 

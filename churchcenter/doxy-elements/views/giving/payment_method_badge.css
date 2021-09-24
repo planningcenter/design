@@ -1,0 +1,17 @@
+.payment-method-badge {
+  align-items: center;
+  display: flex;
+  margin-bottom: -8px;
+  margin-top: -3px;
+}
+
+.payment-method-badge__icon {
+  position: relative;
+  top: 1px;
+}
+
+.payment-method-badge__meta {
+  color: var(--color-tint2);
+  font-size: 13px;
+  margin-left: 4px;
+}

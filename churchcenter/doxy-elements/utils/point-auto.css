@@ -1,0 +1,64 @@
+.m-a{margin:auto}
+.mt-a{margin-top:auto}
+.mr-a{margin-right:auto}
+.mb-a{margin-bottom:auto}
+.ml-a{margin-left:auto}
+.t-a{top:auto}
+.r-a{right:auto}
+.b-a{bottom:auto}
+.l-a{left:auto}
+
+@media (min-width: 601px){ .m-a\@xs{margin:auto} }
+@media (min-width: 480px){ .mt-a\@xs{margin-top:auto} }
+@media (min-width: 480px){ .mr-a\@xs{margin-right:auto} }
+@media (min-width: 480px){ .mb-a\@xs{margin-bottom:auto} }
+@media (min-width: 480px){ .ml-a\@xs{margin-left:auto} }
+
+@media (min-width: 480px){ .t-a\@xs{top:auto} }
+@media (min-width: 480px){ .r-a\@xs{right:auto} }
+@media (min-width: 480px){ .b-a\@xs{bottom:auto} }
+@media (min-width: 480px){ .l-a\@xs{left:auto} }
+
+@media (min-width: 601px){ .m-a\@sm{margin:auto} }
+@media (min-width: 601px){ .mt-a\@sm{margin-top:auto} }
+@media (min-width: 601px){ .mr-a\@sm{margin-right:auto} }
+@media (min-width: 601px){ .mb-a\@sm{margin-bottom:auto} }
+@media (min-width: 601px){ .ml-a\@sm{margin-left:auto} }
+
+@media (min-width: 601px){ .t-a\@sm{top:auto} }
+@media (min-width: 601px){ .r-a\@sm{right:auto} }
+@media (min-width: 601px){ .b-a\@sm{bottom:auto} }
+@media (min-width: 601px){ .l-a\@sm{left:auto} }
+
+@media (min-width: 720px){ .m-a\@md{margin:auto} }
+@media (min-width: 720px){ .mt-a\@md{margin-top:auto} }
+@media (min-width: 720px){ .mr-a\@md{margin-right:auto} }
+@media (min-width: 720px){ .mb-a\@md{margin-bottom:auto} }
+@media (min-width: 720px){ .ml-a\@md{margin-left:auto} }
+
+@media (min-width: 720px){ .t-a\@md{top:auto} }
+@media (min-width: 720px){ .r-a\@md{right:auto} }
+@media (min-width: 720px){ .b-a\@md{bottom:auto} }
+@media (min-width: 720px){ .l-a\@md{left:auto} }
+
+@media (min-width: 960px){ .m-a\@lg{margin:auto} }
+@media (min-width: 960px){ .mt-a\@lg{margin-top:auto} }
+@media (min-width: 960px){ .mr-a\@lg{margin-right:auto} }
+@media (min-width: 960px){ .mb-a\@lg{margin-bottom:auto} }
+@media (min-width: 960px){ .ml-a\@lg{margin-left:auto} }
+
+@media (min-width: 960px){ .t-a\@lg{top:auto} }
+@media (min-width: 960px){ .r-a\@lg{right:auto} }
+@media (min-width: 960px){ .b-a\@lg{bottom:auto} }
+@media (min-width: 960px){ .l-a\@lg{left:auto} }
+
+@media (min-width: 1200px){ .m-a\@xl{margin:auto} }
+@media (min-width: 1200px){ .mt-a\@xl{margin-top:auto} }
+@media (min-width: 1200px){ .mr-a\@xl{margin-right:auto} }
+@media (min-width: 1200px){ .mb-a\@xl{margin-bottom:auto} }
+@media (min-width: 1200px){ .ml-a\@xl{margin-left:auto} }
+
+@media (min-width: 1200px){ .t-a\@xl{top:auto} }
+@media (min-width: 1200px){ .r-a\@xl{right:auto} }
+@media (min-width: 1200px){ .b-a\@xl{bottom:auto} }
+@media (min-width: 1200px){ .l-a\@xl{left:auto} }

@@ -1,0 +1,16 @@
+.profile-item__image {
+	 max-height: 58px;
+	 width: 100px;
+}
+ @media (min-width: 321px) {
+	 .profile-item__image {
+		 max-height: 86px;
+		 width: 152px;
+	}
+}
+
+ .profile-item__image img {
+	 border-radius: 4px;
+	 display: block;
+}
+ 

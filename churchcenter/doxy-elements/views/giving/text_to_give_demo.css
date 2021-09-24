@@ -1,0 +1,51 @@
+@media (max-width: 719px) {
+	 .text-to-give-manage-btn {
+		 white-space: normal !important;
+		 height: auto !important;
+		 line-height: 1.4 !important;
+		 padding-top: 6px !important;
+		 padding-bottom: 6px !important;
+		 text-align: center;
+	}
+}
+ .text-to-give-demo {
+	 border-radius: 4px;
+	 border: 1px solid var(--color-tint6);
+	 padding: 24px;
+}
+ .text-bubble {
+	 border-radius: 24px;
+	 display: inline-block;
+	 margin-bottom: 1rem;
+	 padding: 8px 16px;
+	 position: relative;
+}
+ .text-bubble:after {
+	 border-style: solid;
+	 bottom: 3px;
+	 content: " ";
+	 height: 0;
+	 position: absolute;
+	 width: 0;
+}
+ .text-bubble.text-bubble--user {
+	 background: var(--color-emerald);
+	 color: white;
+}
+ .text-bubble.text-bubble--user:after {
+	 border-width: 14px 0 0 14px;
+	 border-color: transparent transparent transparent var(--color-emerald);
+	 right: -4px;
+	 transform: rotate(16deg);
+}
+ .text-bubble.text-bubble--system {
+	 background: var(--color-tint6);
+	 color: var(--color-tint1);
+}
+ .text-bubble.text-bubble--system:after {
+	 border-width: 14px 14px 0 0;
+	 border-color: transparent var(--color-tint6) transparent transparent;
+	 left: -4px;
+	 transform: rotate(-16deg);
+}
+ 

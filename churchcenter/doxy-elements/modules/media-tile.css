@@ -1,0 +1,14 @@
+.media-tile {
+  align-items: center;
+  background: var(--color-tint7);
+  border-radius: 4px;
+  color: var(--color-tint2);
+  display: flex;
+  font-size: 24px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lg-media-tile {
+  font-size: 32px;
+}
