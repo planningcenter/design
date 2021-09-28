@@ -1,4 +1,4 @@
-# 7.0.0 (prerelease)
+# 7.0.0
 
 - Add CSRF support to login ([#46](https://github.com/planningcenter/design/pull/46) @danielma)
   - [First implementation in Accounts](https://github.com/ministrycentered/accounts/pull/1877/files)
@@ -15,6 +15,7 @@
   - `@types/react-dom`: `^16.9.10` => `^17.0.0`
 - Unlock modern builds by removing `--format cjs` flag for improved bundling app-side
 - Add `referer` query parameter to `AppSwitch` urls: [Accounts PR](https://github.com/ministrycentered/accounts/pull/1910)
+- Add the ability to override the topbar’s link colors via props in `NotSmallTopbar` [#122](https://github.com/planningcenter/design/pull/122)
 
 # 6.1.0 (prerelease)
 
