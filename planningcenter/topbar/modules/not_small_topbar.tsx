@@ -10,6 +10,7 @@ import { slightBackgroundTransition, fontFamily, IEFlex1 } from "./styles";
 import { MonoAppIcon } from "./mono_app_icon";
 import { MonoAppName } from "./mono_app_name";
 import { ColorAppIcon } from "./color_app_icon";
+import { BellIcon } from "../index";
 
 // TODO: extract to component. Used now by MediumTopbar
 export class AppsButton extends React.Component<
@@ -401,6 +402,25 @@ export const Popup: React.StatelessComponent<{
   />
 );
 
+const Notification = ({ notifications = false, style = {}, ...props }) => {
+  const colors = {
+    // People
+    base0: "#5781CF",
+    base1: "#3F70CB",
+    base2: "#3063BF",
+    base3: "#184595",
+  };
+
+  return (
+    <a
+      href="#"
+      {...props}
+      style={{ alignItems: "center", display: "flex", ...style }}
+    >
+      <BellIcon dot={notifications} fill={colors.base3} stroke={colors.base0} />
+    </a>
+  );
+};
 export class Topbar extends React.Component<
   {
     apps: { attributes: { name: string; url: string } }[];
@@ -510,6 +530,27 @@ export class Topbar extends React.Component<
 
         <div style={{ margin: "auto" }} />
 
+
+        <Hoverable
+          active={{ backgroundColor: this.props.colors.base2 }}
+          hover={{ backgroundColor: this.props.colors.base1 }}
+          onClick={() =>
+            this.setState(({ notificationsMenuVisible }) => ({
+              notificationsMenuVisible: !notificationsMenuVisible,
+            }))
+          }
+          style={{
+            alignItems: "center",
+            borderRadius: "50%",
+            cursor: "pointer",
+            display: "flex",
+            justifyContent: "center",
+            padding: "4px",
+            ...slightBackgroundTransition,
+          }}
+        >
+          <Notification notifications={true} />
+        </Hoverable>
 
         {this.props.search({
           hideRoutes: this.hideRoutes,
