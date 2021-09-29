@@ -12,6 +12,12 @@ import { MonoAppName } from "./mono_app_name";
 import { ColorAppIcon } from "./color_app_icon";
 import { BellIcon } from "../index";
 
+interface Notification {
+  appName: string;
+  time: string;
+  title: string;
+}
+
 const DUMMY_DATA_UNREAD = [
   {
     appName: "Registrations",
@@ -621,6 +627,7 @@ export class Topbar extends React.Component<
     requestSwitchConnectedPerson: any;
     requestClearAppsCache: any;
     requestClearConnectedPeopleCache: any;
+    useDummyNotifications: boolean;
     linkToProfile?: boolean;
   },
   {
@@ -628,12 +635,17 @@ export class Topbar extends React.Component<
     notificationsMenuVisible: boolean;
     routesVisible: boolean;
     userMenuVisible: boolean;
+    notifications: {
+      unread: Notification[];
+      read: Notification[];
+    };
   }
 > {
   public static defaultProps = {
     search: () => null,
     linkToProfile: true,
     showOrgName: true,
+    useDummyNotifications: false,
   };
 
   constructor(props: any) {
@@ -644,6 +656,10 @@ export class Topbar extends React.Component<
       notificationsMenuVisible: false,
       routesVisible: true,
       userMenuVisible: false,
+      notifications: {
+        unread: props.useDummyNotifications ? DUMMY_DATA_UNREAD : [],
+        read: props.useDummyNotifications ? DUMMY_DATA_READ : [],
+      },
     };
 
     this.hideRoutes = this.hideRoutes.bind(this);
@@ -738,7 +754,9 @@ export class Topbar extends React.Component<
             ...slightBackgroundTransition,
           }}
         >
-          <Notification notifications={true} />
+          <Notification
+            notifications={this.state.notifications.unread.length > 0}
+          />
         </Hoverable>
 
         {this.props.search({
