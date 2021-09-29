@@ -412,11 +412,11 @@ export const NotificationsMenu = (props) => {
       >
         <menu style={{ margin: 0, minWidth: 180, padding: "4px 0" }}>
           <Headline>Unread</Headline>
-          {DUMMY_DATA_UNREAD.map(({ appName, time, title }, idx) => (
+          {props.notifications.unread.map(({ appName, time, title }, idx) => (
             <NotificationItem {...{ appName, time, title }} />
           ))}
           <Headline>Previous</Headline>
-          {DUMMY_DATA_READ.map(({ appName, time, title }, idx) => (
+          {props.notifications.read.map(({ appName, time, title }, idx) => (
             <NotificationItem isRead {...{ appName, time, title }} />
           ))}
           <ShowMoreButton />
@@ -728,6 +728,7 @@ export class Topbar extends React.Component<
 
         <NotificationsMenu
           env={this.props.env}
+          notifications={this.state.notifications}
           toggle={() =>
             this.setState(({ notificationsMenuVisible }) => ({
               notificationsMenuVisible: !notificationsMenuVisible,
