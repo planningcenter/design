@@ -427,8 +427,8 @@ export class Topbar extends React.Component<
   },
   {
     appsMenuVisible: boolean;
-    userMenuVisible: boolean;
     routesVisible: boolean;
+    userMenuVisible: boolean;
   }
 > {
   public static defaultProps = {
@@ -441,8 +441,8 @@ export class Topbar extends React.Component<
     super(props);
 
     this.state = {
-      routesVisible: true,
       appsMenuVisible: false,
+      routesVisible: true,
       userMenuVisible: false,
     };
 
@@ -863,7 +863,7 @@ export class Route extends React.Component<
 
     const getTextColor = () => {
       return colors.text || "#fff";
-    }
+    };
 
     return (
       <a
