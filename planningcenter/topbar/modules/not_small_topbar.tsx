@@ -417,7 +417,6 @@ export class Topbar extends React.Component<
     search?: any;
     style?: any;
     showOrgName?: boolean;
-    notifications?: any;
     requestAppsFetch: any;
     requestConnectedPeopleFetch: any;
     requestUnlinkConnectedPeople: any;
@@ -433,7 +432,6 @@ export class Topbar extends React.Component<
   }
 > {
   public static defaultProps = {
-    notifications: () => null,
     search: () => null,
     linkToProfile: true,
     showOrgName: true,
@@ -512,7 +510,6 @@ export class Topbar extends React.Component<
 
         <div style={{ margin: "auto" }} />
 
-        {this.props.notifications()}
 
         {this.props.search({
           hideRoutes: this.hideRoutes,
