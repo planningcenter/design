@@ -29,7 +29,7 @@
 [data-preformatted-content] ol ul,
 [data-preformatted-content] ul ol, 
 [data-preformatted-content] ul ul, {
-  margin-bottom: 0;
+  margin-bottom: 0
 }
 
 [data-preformatted-content] a {
