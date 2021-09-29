@@ -12,6 +12,37 @@ import { MonoAppName } from "./mono_app_name";
 import { ColorAppIcon } from "./color_app_icon";
 import { BellIcon } from "../index";
 
+const DUMMY_DATA_UNREAD = [
+  {
+    appName: "Registrations",
+    time: "Yesterday at 3:35am",
+    title: "Signups are available for Traditional Service, June 1-August 30",
+  },
+  {
+    appName: "Calendar",
+    time: "Sunday at 10:11am",
+    title: "There's a scheduling conflict on July 10",
+  },
+  {
+    appName: "Groups",
+    time: "Friday at 8:03pm",
+    title: "Attendance is requested for Weekly Meeting (Vista Small Group)",
+  },
+];
+
+const DUMMY_DATA_READ = [
+  {
+    appName: "Registrations",
+    time: "April 12 at 12:30pm",
+    title: "Backitup Numbercrunch has registered for New Members Class",
+  },
+  {
+    appName: "People",
+    time: "April 10 at 2:44pm",
+    title: "A potential duplicate was created for Benadryl Custardbath",
+  },
+];
+
 // TODO: extract to component. Used now by MediumTopbar
 export class AppsButton extends React.Component<
   {
@@ -323,6 +354,72 @@ const HelpIcon = ({ colors }) => (
   </svg>
 );
 
+export const NotificationsMenu = (props) => {
+  const Headline = (props) => (
+    <h1
+      style={{
+        color: "#747676",
+        fontSize: "12px",
+        letterSpacing: "0.15em",
+        padding: "4px 16px 0px",
+        textTransform: "uppercase",
+      }}
+      {...props}
+    />
+  );
+
+  const ShowMoreButton = (props) => (
+    <Hoverable hover={{ backgroundColor: "#f7f7f7" }}>
+      <p
+        style={{
+          cursor: "pointer",
+          color: "#414141",
+          fontSize: "12px",
+          fontWeight: 600,
+          margin: "0 16px",
+          padding: "8px 16px 8px",
+          textAlign: "center",
+        }}
+        {...props}
+      >
+        Show more...
+      </p>
+    </Hoverable>
+  );
+
+  return (
+    <PopupRoot>
+      <Popup
+        cleanup={!props.visible}
+        component={Outsider}
+        onOutsideClick={props.toggle}
+        style={{
+          marginTop: "8px",
+          ...(props.visible
+            ? { opacity: 1, transition: "none", visibility: "visible" }
+            : {
+                opacity: 0,
+                transition: "all 120ms ease-in",
+                visibility: "hidden",
+              }),
+        }}
+      >
+        <menu style={{ margin: 0, minWidth: 180, padding: "4px 0" }}>
+          <Headline>Unread</Headline>
+          {DUMMY_DATA_UNREAD.map(({ appName, time, title }, idx) => (
+            <NotificationItem {...{ appName, time, title }} />
+          ))}
+          <Headline>Previous</Headline>
+          {DUMMY_DATA_READ.map(({ appName, time, title }, idx) => (
+            <NotificationItem isRead {...{ appName, time, title }} />
+          ))}
+          <ShowMoreButton />
+        </menu>
+      </Popup>
+    </PopupRoot>
+  );
+};
+
 export class Outsider extends React.Component<
   {
     component: any;
@@ -421,6 +518,87 @@ const Notification = ({ notifications = false, style = {}, ...props }) => {
     </a>
   );
 };
+
+const NotificationItem = ({
+  appName,
+  isRead = false,
+  title,
+  time,
+  ...props
+}) => {
+  return (
+    <HoverableListItem
+      component="a"
+      style={{
+        display: "flex",
+        alignItems: "flex-start",
+        overflow: "hidden",
+        padding: "8px 16px",
+        textDecoration: "none",
+        verticalAlign: "middle",
+        width: "280px",
+        ...fontFamily,
+      }}
+      href="#"
+      data-turbolinks={false}
+    >
+      {!isRead && (
+        <div
+          style={{
+            alignItems: "center",
+            display: "flex",
+            height: "8px",
+            justifyContent: "center",
+            lineHeight: "8px",
+            marginRight: "8px",
+            marginTop: "4px",
+            width: "8px",
+          }}
+        >
+          <svg height="8" viewBox="0 0 8 8" width="8">
+            <title>unread dot</title>
+            <circle cx="4" cy="4" r="4" fill="#2462f5" />
+          </svg>
+        </div>
+      )}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          flexGrow: 1,
+        }}
+      >
+        <div
+          style={{
+            color: isRead ? "#747676" : "#333",
+            fontSize: "14px",
+            fontWeight: 500,
+            marginBottom: "4px",
+          }}
+        >
+          {title}
+        </div>
+        <div style={{ alignContent: "center", display: "flex" }}>
+          {!isRead && (
+            <div style={{ marginRight: "4px" }}>
+              <ColorAppIcon appName={appName.replace(/[\s-]/, "")} size={12} />
+            </div>
+          )}
+          <div
+            style={{
+              color: isRead ? "#979797" : "#747676",
+              fontSize: "12px",
+            }}
+          >
+            {/* TODO: use datetime and convert readable string */}
+            {time}
+          </div>
+        </div>
+      </div>
+    </HoverableListItem>
+  );
+};
+
 export class Topbar extends React.Component<
   {
     apps: { attributes: { name: string; url: string } }[];
@@ -447,6 +625,7 @@ export class Topbar extends React.Component<
   },
   {
     appsMenuVisible: boolean;
+    notificationsMenuVisible: boolean;
     routesVisible: boolean;
     userMenuVisible: boolean;
   }
@@ -462,6 +641,7 @@ export class Topbar extends React.Component<
 
     this.state = {
       appsMenuVisible: false,
+      notificationsMenuVisible: false,
       routesVisible: true,
       userMenuVisible: false,
     };
@@ -530,6 +710,15 @@ export class Topbar extends React.Component<
 
         <div style={{ margin: "auto" }} />
 
+        <NotificationsMenu
+          env={this.props.env}
+          toggle={() =>
+            this.setState(({ notificationsMenuVisible }) => ({
+              notificationsMenuVisible: !notificationsMenuVisible,
+            }))
+          }
+          visible={this.state.notificationsMenuVisible}
+        />
 
         <Hoverable
           active={{ backgroundColor: this.props.colors.base2 }}
