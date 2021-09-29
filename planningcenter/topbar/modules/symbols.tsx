@@ -13,31 +13,41 @@ export const Bell: React.StatelessComponent<{
   stroke = "#000",
   style,
   ...props
-}) => (
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    style={{ display: "block", ...style }}
-    {...props}
-  >
-    <title>bell</title>
+}) => {
+  const bellPath = (
     <path
       d="M21.482,16.626,19.1,13.649V9a7,7,0,0,0-14,0v4.649L2.478,16.929A1.89,1.89,0,0,0,3.952,20H9.285a2.983,2.983,0,0,0,5.633,0H19.86a2.077,2.077,0,0,0,1.622-3.374ZM19.86,18H4.182l2.7-3.375A1,1,0,0,0,7.1,14V9a5,5,0,0,1,10,0v5a1,1,0,0,0,.219.625l2.6,3.25Z"
-      fill={fill}
+      fill="white"
     />
-    {dot && (
-      <circle
-        cx="18"
-        cy="6"
-        r="5.5"
-        fill={dotFill}
-        stroke={stroke}
-        strokeWidth="3"
+  );
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      style={{ display: "block", ...style }}
+      {...props}
+    >
+      <title>bell</title>
+      <defs>
+        <mask id="mask-no-dot">{bellPath}</mask>
+        <mask id="mask-dot">
+          {bellPath}
+          <circle cx="18" cy="6" fill="black" r="7" />
+        </mask>
+      </defs>
+      <rect
+        fill={fill}
+        height="24"
+        mask={dot ? "url(#mask-dot)" : "url(#mask-no-dot"}
+        width="24"
+        x="0"
+        y="0"
       />
-    )}
-  </svg>
-);
+      {dot && <circle cx="18" cy="6" r="4" fill={dotFill} />}
+    </svg>
+  );
+};
 
 export const Spyglass: React.StatelessComponent<{
   fill?: string;
