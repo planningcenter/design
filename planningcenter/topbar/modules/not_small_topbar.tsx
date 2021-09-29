@@ -11,6 +11,7 @@ import { MonoAppIcon } from "./mono_app_icon";
 import { MonoAppName } from "./mono_app_name";
 import { ColorAppIcon } from "./color_app_icon";
 import { BellIcon } from "../index";
+import apiRequest, { defaultFetch } from "./api_request";
 
 interface Notification {
   appName: string;
@@ -676,6 +677,16 @@ export class Topbar extends React.Component<
 
   getTextColor() {
     return this.props.colors.text || "#fff";
+  }
+
+  componentDidMount() {
+    apiRequest(
+      defaultFetch,
+      `${pcoUrl(this.props.env)("api")}/notifications/v2/me/notifications`
+    ).then(({ json }) => {
+      this.props.useDummyNotifications ||
+        this.setState({ notifications: { unread: [], read: [] } });
+    });
   }
 
   render() {
