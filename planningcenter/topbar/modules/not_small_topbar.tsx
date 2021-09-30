@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import pcoUrl, * as PCO_URL from "@planningcenter/url";
+import datetimeFmt from "@churchcenter/datetime-fmt";
 import getAppsSwitchProductPath from "./get_apps_switch_product_path";
 import { StyledRoot } from "./styled_root";
 import { Unbutton } from "./unbutton";
@@ -712,9 +713,10 @@ export class Topbar extends React.Component<
 
       const notifications = json.data.reduce(
         (acc, notificationResp) => {
-          const createdAt: string = new Date(
-            notificationResp.attributes.createdAt
-          ).toLocaleString();
+          const createdAt: string = datetimeFmt.datetime(
+            notificationResp.attributes.created_at,
+            { style: "relative" }
+          );
 
           const appName: string = this.findInIncluded(
             notificationResp.relationships.app.data,

@@ -39,6 +39,7 @@
   },
   "gitHead": "8db0fa77136a0426af3411f348feb02a86f0e028",
   "dependencies": {
+    "@churchcenter/datetime-fmt": "^1.3.0",
     "@planningcenter/url": "^2.6.4"
   }
 }
