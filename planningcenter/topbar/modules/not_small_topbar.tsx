@@ -15,24 +15,25 @@ import apiRequest, { defaultFetch } from "./api_request";
 
 interface NotificationFromApi {
   appName: string;
-  time: string;
+  createdAt: string;
+  link?: string;
   title: string;
 }
 
 const DUMMY_DATA_UNREAD: NotificationFromApi[] = [
   {
     appName: "Registrations",
-    time: "Yesterday at 3:35am",
+    createdAt: "Yesterday at 3:35am",
     title: "Signups are available for Traditional Service, June 1-August 30",
   },
   {
     appName: "Calendar",
-    time: "Sunday at 10:11am",
+    createdAt: "Sunday at 10:11am",
     title: "There's a scheduling conflict on July 10",
   },
   {
     appName: "Groups",
-    time: "Friday at 8:03pm",
+    createdAt: "Friday at 8:03pm",
     title: "Attendance is requested for Weekly Meeting (Vista Small Group)",
   },
 ];
@@ -40,12 +41,12 @@ const DUMMY_DATA_UNREAD: NotificationFromApi[] = [
 const DUMMY_DATA_READ: NotificationFromApi[] = [
   {
     appName: "Registrations",
-    time: "April 12 at 12:30pm",
+    createdAt: "April 12 at 12:30pm",
     title: "Backitup Numbercrunch has registered for New Members Class",
   },
   {
     appName: "People",
-    time: "April 10 at 2:44pm",
+    createdAt: "April 10 at 2:44pm",
     title: "A potential duplicate was created for Benadryl Custardbath",
   },
 ];
@@ -413,13 +414,24 @@ export const NotificationsMenu = (props) => {
       >
         <menu style={{ margin: 0, minWidth: 180, padding: "4px 0" }}>
           <Headline>Unread</Headline>
-          {props.notifications.unread.map(({ appName, time, title }, idx) => (
-            <NotificationItem {...{ appName, time, title }} />
-          ))}
+          {props.notifications.unread.map(
+            ({ appName, createdAt, title }: NotificationFromApi, idx) => (
+              <NotificationItem
+                {...{ appName, createdAt, title }}
+                key={createdAt}
+              />
+            )
+          )}
           <Headline>Previous</Headline>
-          {props.notifications.read.map(({ appName, time, title }, idx) => (
-            <NotificationItem isRead {...{ appName, time, title }} />
-          ))}
+          {props.notifications.read.map(
+            ({ appName, createdAt, title }: NotificationFromApi, idx) => (
+              <NotificationItem
+                isRead
+                {...{ appName, createdAt, title }}
+                key={createdAt}
+              />
+            )
+          )}
           <ShowMoreButton />
         </menu>
       </Popup>
@@ -530,7 +542,7 @@ const NotificationItem = ({
   appName,
   isRead = false,
   title,
-  time,
+  createdAt,
   ...props
 }) => {
   return (
@@ -598,7 +610,7 @@ const NotificationItem = ({
             }}
           >
             {/* TODO: use datetime and convert readable string */}
-            {time}
+            {createdAt}
           </div>
         </div>
       </div>
