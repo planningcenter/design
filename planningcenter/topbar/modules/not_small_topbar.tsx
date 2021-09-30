@@ -532,17 +532,13 @@ const NotificationBell = ({
   };
 
   return (
-    <a
-      href="#"
-      {...props}
-      style={{ alignItems: "center", display: "flex", ...style }}
-    >
+    <div {...props} style={{ alignItems: "center", display: "flex", ...style }}>
       <BellIcon
         dot={indicatorVisible}
         fill={colors.base3}
         stroke={colors.base0}
       />
-    </a>
+    </div>
   );
 };
 
