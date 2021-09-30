@@ -13,13 +13,13 @@ import { ColorAppIcon } from "./color_app_icon";
 import { BellIcon } from "../index";
 import apiRequest, { defaultFetch } from "./api_request";
 
-interface Notification {
+interface NotificationFromApi {
   appName: string;
   time: string;
   title: string;
 }
 
-const DUMMY_DATA_UNREAD = [
+const DUMMY_DATA_UNREAD: NotificationFromApi[] = [
   {
     appName: "Registrations",
     time: "Yesterday at 3:35am",
@@ -37,7 +37,7 @@ const DUMMY_DATA_UNREAD = [
   },
 ];
 
-const DUMMY_DATA_READ = [
+const DUMMY_DATA_READ: NotificationFromApi[] = [
   {
     appName: "Registrations",
     time: "April 12 at 12:30pm",
@@ -637,8 +637,8 @@ export class Topbar extends React.Component<
     routesVisible: boolean;
     userMenuVisible: boolean;
     notifications: {
-      unread: Notification[];
-      read: Notification[];
+      unread: NotificationFromApi[];
+      read: NotificationFromApi[];
     };
   }
 > {
