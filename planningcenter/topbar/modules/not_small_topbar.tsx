@@ -691,13 +691,58 @@ export class Topbar extends React.Component<
     return this.props.colors.text || "#fff";
   }
 
+  findInIncluded({ type, id }, included) {
+    return included.find((i) => {
+      return i.type === type && i.id === id;
+    });
+  }
+
   componentDidMount() {
     apiRequest(
       defaultFetch,
-      `${pcoUrl(this.props.env)("api")}/notifications/v2/me/notifications`
+      `${pcoUrl(this.props.env)(
+        "api"
+      )}/notifications/v2/me/notifications?include=app,web_payloads`
     ).then(({ json }) => {
-      this.props.useDummyNotifications ||
-        this.setState({ notifications: { unread: [], read: [] } });
+      if (this.props.useDummyNotifications) return;
+
+      const notifications = json.data.reduce(
+        (acc, notificationResp) => {
+          const createdAt: string = new Date(
+            notificationResp.attributes.createdAt
+          ).toLocaleString();
+
+          const appName: string = this.findInIncluded(
+            notificationResp.relationships.app.data,
+            json.included
+          )?.attributes?.name;
+
+          // TODO: handle the fact that there could be multiple web payloads
+          const notificationData = JSON.parse(
+            this.findInIncluded(
+              {
+                type: "Payload",
+                id: notificationResp.relationships.web_payloads.data[0].id,
+              },
+              json.included
+            )?.attributes?.content
+          );
+
+          const notification: NotificationFromApi = {
+            appName,
+            createdAt,
+            link: notificationData.link,
+            title: notificationData.title,
+          };
+
+          return notificationResp.attributes.read_at
+            ? { ...acc, read: [...acc.read, notification] }
+            : { ...acc, unread: [...acc.unread, notification] };
+        },
+        { read: [], unread: [] }
+      );
+
+      this.setState({ notifications });
     });
   }
 
