@@ -518,7 +518,11 @@ export const Popup: React.StatelessComponent<{
   />
 );
 
-const Notification = ({ notifications = false, style = {}, ...props }) => {
+const NotificationBell = ({
+  indicatorVisible = false,
+  style = {},
+  ...props
+}) => {
   const colors = {
     // People
     base0: "#5781CF",
@@ -533,7 +537,11 @@ const Notification = ({ notifications = false, style = {}, ...props }) => {
       {...props}
       style={{ alignItems: "center", display: "flex", ...style }}
     >
-      <BellIcon dot={notifications} fill={colors.base3} stroke={colors.base0} />
+      <BellIcon
+        dot={indicatorVisible}
+        fill={colors.base3}
+        stroke={colors.base0}
+      />
     </a>
   );
 };
@@ -640,7 +648,7 @@ export class Topbar extends React.Component<
     requestSwitchConnectedPerson: any;
     requestClearAppsCache: any;
     requestClearConnectedPeopleCache: any;
-    useDummyNotifications: boolean;
+    useDummyNotifications?: boolean;
     linkToProfile?: boolean;
   },
   {
@@ -823,8 +831,8 @@ export class Topbar extends React.Component<
             ...slightBackgroundTransition,
           }}
         >
-          <Notification
-            notifications={this.state.notifications.unread.length > 0}
+          <NotificationBell
+            indicatorVisible={this.state.notifications.unread.length > 0}
           />
         </Hoverable>
 
