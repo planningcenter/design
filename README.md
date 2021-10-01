@@ -14,11 +14,12 @@ Global Design supported packages
 - [@planningcenter/reach](planningcenter/reach)
 - [@planningcenter/sweetalert2](planningcenter/sweetalert2)
 - [@planningcenter/system](planningcenter/system)
-- [@planningcenter/topbar](planningcenter/topbar)
+- [@planningcenter/topbar](planningcenter/topbar) (extracted to [ministrycentered/topbar](https://github.com/ministrycentered/topbar) as of > v7.0.0)
 - [@planningcenter/typeface](planningcenter/typeface)
 - [@planningcenter/url](planningcenter/url)
 
 ### Deprecated packages
+
 These links can be used to copy/paste the last existing version:
 
 - [@planningcenter/experimental (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/experimental)
@@ -46,12 +47,12 @@ Common scripts:
 
 ## Configuration
 
-| File/Dir                                     | Why it's there                                                                                     |
-| :------------------------------------------- | :------------------------------------------------------------------------------------------------- |
-| [.storybook/](.storybook/)                   | [Storybook](https://storybook.js.org)                                                              |
-| [lerna.json/](lerna.json)                    | [Storybook](https://lerna.js.org)                                                                  |
-| [.nvmrc](.nvmrc)                             | [nvm](github.com/nvm-sh/nvm). Support for those that work in multiple node environments            |
-| [notes](./notes)                             | Transitional documentation and notes. Retairned as a part of — yet unformalized — decision matrix. |
+| File/Dir                   | Why it's there                                                                                     |
+| :------------------------- | :------------------------------------------------------------------------------------------------- |
+| [.storybook/](.storybook/) | [Storybook](https://storybook.js.org)                                                              |
+| [lerna.json/](lerna.json)  | [Storybook](https://lerna.js.org)                                                                  |
+| [.nvmrc](.nvmrc)           | [nvm](github.com/nvm-sh/nvm). Support for those that work in multiple node environments            |
+| [notes](./notes)           | Transitional documentation and notes. Retairned as a part of — yet unformalized — decision matrix. |
 
 ## Setup
 
@@ -68,9 +69,8 @@ npm run dev
 
 ## Links
 
-* (Chromatic dashboard)[https://www.chromatic.com/builds?appId=5dfa692af1d7e20020141e86]
-
+- (Chromatic dashboard)[https://www.chromatic.com/builds?appId=5dfa692af1d7e20020141e86]
 
 ## Team access
 
-* The [DX GitHub Team](https://github.com/orgs/planningcenter/teams/dx/edit) has admin rights to [planningcenter/design](https://github.com/planningcenter/design) and [planningcenter/icons](https://github.com/planningcenter/icons/).
+- The [DX GitHub Team](https://github.com/orgs/planningcenter/teams/dx/edit) has admin rights to [planningcenter/design](https://github.com/planningcenter/design) and [planningcenter/icons](https://github.com/planningcenter/icons/).
