@@ -25,6 +25,13 @@
   padding: var(--list--padding, 0 0 0 2em);
 }
 
+[data-preformatted-content] ol ol,
+[data-preformatted-content] ol ul,
+[data-preformatted-content] ul ol, 
+[data-preformatted-content] ul ul, {
+  margin-bottom: 0
+}
+
 [data-preformatted-content] a {
   font-weight: var(--link--font-weight, 600);
   text-decoration: var(--link--font-weight, none);
