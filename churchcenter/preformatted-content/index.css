@@ -34,7 +34,7 @@
 
 [data-preformatted-content] a {
   font-weight: var(--link--font-weight, 600);
-  text-decoration: var(--link--font-weight, none);
+  text-decoration: var(--link--text-decoration, none);
 }
 
 [data-preformatted-content] blockquote {
