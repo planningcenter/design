@@ -1,6 +1,6 @@
 {
   "name": "@churchcenter/preformatted-content",
-  "version": "0.0.11",
+  "version": "0.0.10",
   "description": "Shared styles for uncontrolled, user formatted content",
   "style": "dist/preformatted-content.css",
   "files": [
@@ -30,5 +30,5 @@
     "postcss-custom-properties": "^9.1.1",
     "postcss-import": "^12.0.1"
   },
-  "gitHead": "72f1eaff8a9dd8af1be828b560fc631428aaf83d"
+  "gitHead": "c257b886ed451bf48f31b35141e1f4ea9d33c269"
 }
