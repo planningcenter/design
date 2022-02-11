@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "microbundle": "^0.13.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "sweetalert2": "^10.15.0"
   },
   "dependencies": {
