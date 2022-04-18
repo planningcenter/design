@@ -14,9 +14,14 @@ Global Design supported packages
 - [@planningcenter/reach](planningcenter/reach)
 - [@planningcenter/sweetalert2](planningcenter/sweetalert2)
 - [@planningcenter/system](planningcenter/system)
-- [@planningcenter/topbar](planningcenter/topbar) (extracted to [ministrycentered/topbar](https://github.com/ministrycentered/topbar) as of > v7.0.0)
 - [@planningcenter/typeface](planningcenter/typeface)
-- [@planningcenter/url](planningcenter/url)
+
+### Extracted packages
+
+Packages that were once housed here but have been extracted from the monorepo.
+
+- `@planningcenter/topbar` extracted to [ministrycentered/topbar](https://github.com/ministrycentered/topbar) for versions >7.0.0
+- `@planningcenter/url` extracted to [planningcenter/url](https://github.com/planningcenter/url) for versions >2.6.4
 
 ### Deprecated packages
 
