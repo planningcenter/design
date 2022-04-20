@@ -9,7 +9,6 @@ Global Design supported packages
 ## Packages
 
 - [@planningcenter/elements](planningcenter/elements)
-- [@planningcenter/reach](planningcenter/reach)
 - [@planningcenter/sweetalert2](planningcenter/sweetalert2)
 - [@planningcenter/system](planningcenter/system)
 - [@planningcenter/typeface](planningcenter/typeface)
@@ -19,6 +18,7 @@ Global Design supported packages
 Packages that were once housed here but have been extracted from the monorepo.
 
 - `@planningcenter/browserslist-config` extracted to [planningcenter/browserslist-config](https://github.com/planningcenter/browserslist-config) for versions >1.0.0.alpha.14
+- `@planningcenter/reach` extracted to [planningcenter/reach](https://github.com/planningcenter/reach) for versions > 0.0.4
 - `@planningcenter/topbar` extracted to [ministrycentered/topbar](https://github.com/ministrycentered/topbar) for versions >7.0.0
 - `@planningcenter/url` extracted to [planningcenter/url](https://github.com/planningcenter/url) for versions >2.6.4
 
