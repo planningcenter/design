@@ -8,7 +8,6 @@ Global Design supported packages
 
 ## Packages
 
-- [@planningcenter/browserslist-config](planningcenter/browserslist-config)
 - [@planningcenter/elements](planningcenter/elements)
 - [@planningcenter/grids](planningcenter/grids)
 - [@planningcenter/reach](planningcenter/reach)
@@ -20,6 +19,7 @@ Global Design supported packages
 
 Packages that were once housed here but have been extracted from the monorepo.
 
+- `@planningcenter/browserslist-config` extracted to [planningcenter/browserslist-config](https://github.com/planningcenter/browserslist-config) for versions >1.0.0.alpha.14
 - `@planningcenter/topbar` extracted to [ministrycentered/topbar](https://github.com/ministrycentered/topbar) for versions >7.0.0
 - `@planningcenter/url` extracted to [planningcenter/url](https://github.com/planningcenter/url) for versions >2.6.4
 
