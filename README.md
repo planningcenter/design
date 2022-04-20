@@ -9,7 +9,6 @@ Global Design supported packages
 ## Packages
 
 - [@planningcenter/elements](planningcenter/elements)
-- [@planningcenter/grids](planningcenter/grids)
 - [@planningcenter/reach](planningcenter/reach)
 - [@planningcenter/sweetalert2](planningcenter/sweetalert2)
 - [@planningcenter/system](planningcenter/system)
@@ -29,6 +28,7 @@ These links can be used to copy/paste the last existing version:
 
 - [@planningcenter/experimental (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/experimental)
 - [@planningcenter/finder (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/finder)
+- [@planningcenter/grids (last commit)](https://github.com/planningcenter/design/tree/f2327bd7e02e750aedb3b88dc5fcf680eca738b8/planningcenter/grids)
 - [@planningcenter/ui-kit-elements (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/ui-kit-elements)
 - @planningcenter/components (transitioned into @planningcenter/elements)
 
