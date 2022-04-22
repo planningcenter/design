@@ -8,7 +8,8 @@ Global Design supported packages
 
 ## Packages
 
-- [@planningcenter/elements](planningcenter/elements)
+The monorepo experiment proved to be more of a hindrance than a help.
+All the packages that once lived in this repo have either been extracted or deprecated.
 
 ### Extracted packages
 
@@ -28,6 +29,7 @@ Packages that were once housed here but have been extracted from the monorepo.
 These links can be used to copy/paste the last existing version:
 
 - [@planningcenter/experimental (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/experimental)
+- [@planningcenter/elements (last commit)](https://github.com/planningcenter/design/tree/d3f73716af61a197d9a6a59708b233e8aa5b869d/planningcenter/elements)
 - [@planningcenter/finder (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/finder)
 - [@planningcenter/grids (last commit)](https://github.com/planningcenter/design/tree/f2327bd7e02e750aedb3b88dc5fcf680eca738b8/planningcenter/grids)
 - [@planningcenter/ui-kit-elements (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/ui-kit-elements)
