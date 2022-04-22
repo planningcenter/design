@@ -31,6 +31,7 @@ Packages that were once housed here but have been extracted from the monorepo.
 
 These links can be used to copy/paste the last existing version:
 
+- [@churchcenter/doxy-elements (last commit)](https://github.com/planningcenter/design/tree/4dd756cf08c70f0a0430e0cd9af97c06808f319d/churchcenter/doxy-elements)
 - [@planningcenter/experimental (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/experimental)
 - [@planningcenter/elements (last commit)](https://github.com/planningcenter/design/tree/d3f73716af61a197d9a6a59708b233e8aa5b869d/planningcenter/elements)
 - [@planningcenter/finder (last commit)](https://github.com/planningcenter/design/tree/aaa70764f6757814d14854fc019f65480d317e1a/planningcenter/finder)
