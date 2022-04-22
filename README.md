@@ -15,6 +15,7 @@ All the packages that once lived in this repo have either been extracted or depr
 
 Packages that were once housed here but have been extracted from the monorepo.
 
+- `@churchcenter/publishing-status` extracted to [planningcenter/publishing-status](https://github.com/planningcenter/publishing-status) for version >0.0.10
 - `@planningcenter/browserslist-config` extracted to [planningcenter/browserslist-config](https://github.com/planningcenter/browserslist-config) for versions >1.0.0.alpha.14
 - `@planningcenter/reach` extracted to [planningcenter/reach](https://github.com/planningcenter/reach) for versions >0.0.4
 - `@planningcenter/sweetalert2` extracted to [planningcenter/sweetalert2](https://github.com/planningcenter/sweetalert2) for versions >1.0.1-beta.0
