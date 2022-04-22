@@ -21,6 +21,7 @@ Packages that were once housed here but have been extracted from the monorepo.
 - `@planningcenter/topbar` extracted to [ministrycentered/topbar](https://github.com/ministrycentered/topbar) for versions >7.0.0
 - `@planningcenter/typeface` extracted to [planningcenter/typeface](https://github.com/planningcenter/typeface) for versions >1.0.0-alpha.1
 - `@planningcenter/url` extracted to [planningcenter/url](https://github.com/planningcenter/url) for versions >2.6.4
+- `@planningcenter/utilities` extracted to [planningcenter/utilities](https://github.com/planningcenter/utilities)
 
 ### Deprecated packages
 
