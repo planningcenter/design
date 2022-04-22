@@ -9,7 +9,6 @@ Global Design supported packages
 ## Packages
 
 - [@planningcenter/elements](planningcenter/elements)
-- [@planningcenter/typeface](planningcenter/typeface)
 
 ### Extracted packages
 
@@ -20,6 +19,7 @@ Packages that were once housed here but have been extracted from the monorepo.
 - `@planningcenter/sweetalert2` extracted to [planningcenter/sweetalert2](https://github.com/planningcenter/sweetalert2) for versions >1.0.1-beta.0
 - `@planningcenter/system` extracted to [planningcenter/system](https://github.com/planningcenter/system) for versions >0.0.9
 - `@planningcenter/topbar` extracted to [ministrycentered/topbar](https://github.com/ministrycentered/topbar) for versions >7.0.0
+- `@planningcenter/typeface` extracted to [planningcenter/typeface](https://github.com/planningcenter/typeface) for versions >1.0.0-alpha.1
 - `@planningcenter/url` extracted to [planningcenter/url](https://github.com/planningcenter/url) for versions >2.6.4
 
 ### Deprecated packages
