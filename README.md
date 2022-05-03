@@ -1,3 +1,8 @@
+# DEPRECATED AND ARCHIVED
+
+This repo has been archived because all the packages contained within this monorepo have been extracted.
+See below for the new homes of the extracted packages.
+
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![Generic badge](https://img.shields.io/badge/maintained%20by-global%20design-green.svg)](https://shields.io/)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
